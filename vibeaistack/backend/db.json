@@ -7,8 +7,19 @@
       "specialty": "registration",
       "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-18:00",
-      "tags": ["anmeldung", "address", "adresse", "registration", "wohnsitz", "residence", "certificate", "bescheinigung"],
-      "eligibility": ["all_residents"],
+      "tags": [
+        "anmeldung",
+        "address",
+        "adresse",
+        "registration",
+        "wohnsitz",
+        "residence",
+        "certificate",
+        "bescheinigung"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
       "description": "Mandatory address registration and official residence documentation"
     },
     {
@@ -18,8 +29,19 @@
       "specialty": "immigration",
       "address": "Alte Waage 15, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-16:00",
-      "tags": ["visa", "visum", "residence_permit", "aufenthaltstitel", "immigration", "einwanderung", "student", "studierende"],
-      "eligibility": ["non_eu"],
+      "tags": [
+        "visa",
+        "visum",
+        "residence_permit",
+        "aufenthaltstitel",
+        "immigration",
+        "einwanderung",
+        "student",
+        "studierende"
+      ],
+      "eligibility": [
+        "non_eu"
+      ],
       "description": "Residence permits, visa extensions, and legal stay management"
     },
     {
@@ -29,8 +51,19 @@
       "specialty": "tax",
       "address": "Wilhelmstraße 3, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-15:00",
-      "tags": ["tax_id", "steuer-id", "tax_return", "steuererklärung", "tax", "steuer", "finance", "finanzen"],
-      "eligibility": ["all_residents"],
+      "tags": [
+        "tax_id",
+        "steuer-id",
+        "tax_return",
+        "steuererklärung",
+        "tax",
+        "steuer",
+        "finance",
+        "finanzen"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
       "description": "Tax identification and income tax matters"
     },
     {
@@ -40,8 +73,18 @@
       "specialty": "social_benefits",
       "address": "Nimes-Straße 1, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-16:00",
-      "tags": ["bürgergeld", "citizens_allowance", "financial_help", "finanzielle_hilfe", "housing_support", "mietzuschuss"],
-      "eligibility": ["low_income", "job_seekers"],
+      "tags": [
+        "bürgergeld",
+        "citizens_allowance",
+        "financial_help",
+        "finanzielle_hilfe",
+        "housing_support",
+        "mietzuschuss"
+      ],
+      "eligibility": [
+        "low_income",
+        "job_seekers"
+      ],
       "description": "Financial support and reintegration into the labor market"
     },
     {
@@ -51,8 +94,18 @@
       "specialty": "job_support",
       "address": "Cyriaksring 10, 38118 Braunschweig",
       "hours": "Mon-Fri 08:00-16:00",
-      "tags": ["jobs", "arbeit", "career", "karriere", "internships", "praktikum"],
-      "eligibility": ["students", "job_seekers"],
+      "tags": [
+        "jobs",
+        "arbeit",
+        "career",
+        "karriere",
+        "internships",
+        "praktikum"
+      ],
+      "eligibility": [
+        "students",
+        "job_seekers"
+      ],
       "description": "Career counseling, job search, and employment services"
     },
     {
@@ -62,8 +115,17 @@
       "specialty": "social_services",
       "address": "Naumburgstraße 25, 38124 Braunschweig",
       "hours": "Mon-Fri 08:00-15:00",
-      "tags": ["financial_aid", "finanzielle_hilfe", "emergency", "notfall", "social_aid", "sozialhilfe"],
-      "eligibility": ["vulnerable_groups"],
+      "tags": [
+        "financial_aid",
+        "finanzielle_hilfe",
+        "emergency",
+        "notfall",
+        "social_aid",
+        "sozialhilfe"
+      ],
+      "eligibility": [
+        "vulnerable_groups"
+      ],
       "description": "Social assistance and emergency support"
     },
     {
@@ -73,8 +135,17 @@
       "specialty": "rent_support",
       "address": "Naumburgstraße 25, 38124 Braunschweig",
       "hours": "Mon-Fri 08:00-15:00",
-      "tags": ["rent", "miete", "subsidy", "förderung", "housing_benefit", "wohngeld"],
-      "eligibility": ["low_income"],
+      "tags": [
+        "rent",
+        "miete",
+        "subsidy",
+        "förderung",
+        "housing_benefit",
+        "wohngeld"
+      ],
+      "eligibility": [
+        "low_income"
+      ],
       "description": "Housing allowance support"
     },
     {
@@ -84,8 +155,18 @@
       "specialty": "housing_access",
       "address": "Naumburgstraße 25, 38124 Braunschweig",
       "hours": "Mon-Fri 08:00-15:00",
-      "tags": ["social_housing", "sozialwohnung", "housing", "wohnung", "accommodation", "wohnraum"],
-      "eligibility": ["low_income", "families"],
+      "tags": [
+        "social_housing",
+        "sozialwohnung",
+        "housing",
+        "wohnung",
+        "accommodation",
+        "wohnraum"
+      ],
+      "eligibility": [
+        "low_income",
+        "families"
+      ],
       "description": "Access to subsidized housing programs"
     },
     {
@@ -95,259 +176,4631 @@
       "specialty": "public_health",
       "address": "Hamburger Straße 226, 38114 Braunschweig",
       "hours": "Mon-Fri 08:00-15:00",
-      "tags": ["health", "gesundheit", "vaccination", "impfung", "certificate", "bescheinigung"],
-      "eligibility": ["all_residents"],
+      "tags": [
+        "health",
+        "gesundheit",
+        "vaccination",
+        "impfung",
+        "certificate",
+        "bescheinigung"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
       "description": "Public health services and certifications"
     },
     {
-  "name": "Familienbüro Braunschweig",
-  "type": "government",
-  "category": "family",
-  "specialty": "family_support",
-  "address": "Eiermarkt 4-5, 38100 Braunschweig",
-  "hours": "Mon-Fri 09:00-16:00",
-  "tags": ["family", "familie", "children", "kinder", "advice", "beratung"],
-  "eligibility": ["families"],
-  "description": "Advisory services for families and parents"
-},
-{
-  "name": "Jugendamt Braunschweig",
-  "type": "government",
-  "category": "family",
-  "specialty": "youth_services",
-  "address": "Eiermarkt 4-5, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-16:00",
-  "tags": ["children", "kinder", "youth", "jugend", "support", "unterstützung"],
-  "eligibility": ["families", "minors"],
-  "description": "Child and youth welfare services"
-},
-{
-  "name": "Kita Service Braunschweig",
-  "type": "government",
-  "category": "family",
-  "specialty": "childcare",
-  "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-16:00",
-  "tags": ["kita", "childcare", "kinderbetreuung", "daycare", "betreuung"],
-  "eligibility": ["families"],
-  "description": "Kindergarten placement services"
-},
-{
-  "name": "Elterngeldstelle Niedersachsen",
-  "type": "government",
-  "category": "family",
-  "specialty": "parental_benefits",
-  "address": "Braunschweig Region",
-  "hours": "Mon-Fri 08:00-14:00",
-  "tags": ["elterngeld", "parental benefit", "eltern", "parents", "family support", "familienleistung"],
-  "eligibility": ["families"],
-  "description": "Parental financial support"
-},
-{
-  "name": "BAföG Amt Braunschweig",
-  "type": "government",
-  "category": "education",
-  "specialty": "student_finance",
-  "address": "Universitätsplatz 1, 38106 Braunschweig",
-  "hours": "Mon-Fri 09:00-15:00",
-  "tags": ["bafög", "student finance", "studienfinanzierung", "students", "studierende"],
-  "eligibility": ["students"],
-  "description": "Student financial aid (BAföG)"
-},
-{
-  "name": "KFZ-Zulassungsstelle Braunschweig",
-  "type": "government",
-  "category": "mobility",
-  "specialty": "vehicle_registration",
-  "address": "Friedrich-Seele-Straße 7, 38122 Braunschweig",
-  "hours": "Mon-Fri 08:00-15:00",
-  "tags": ["car", "auto", "registration", "zulassung", "vehicle", "fahrzeug", "license plate", "kennzeichen"],
-  "eligibility": ["vehicle_owners"],
-  "description": "Vehicle registration services"
-},
-{
-  "name": "Führerscheinstelle Braunschweig",
-  "type": "government",
-  "category": "mobility",
-  "specialty": "driving_license",
-  "address": "Friedrich-Seele-Straße 7, 38122 Braunschweig",
-  "hours": "Mon-Fri 08:00-15:00",
-  "tags": ["driving", "fahren", "license", "führerschein", "driver license", "führerschein"],
-  "eligibility": ["drivers"],
-  "description": "Driving license issuance and conversion"
-},
-{
-  "name": "Hundesteuerstelle Braunschweig",
-  "type": "government",
-  "category": "pets",
-  "specialty": "dog_registration",
-  "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-16:00",
-  "tags": ["dog", "hund", "tax", "steuer", "pet", "haustier"],
-  "eligibility": ["pet_owners"],
-  "description": "Dog registration and taxation"
-},
-{
-  "name": "Volkshochschule Braunschweig",
-  "type": "public_service",
-  "category": "education",
-  "specialty": "language_courses",
-  "address": "Alte Schwertfegerstraße 5, 38100 Braunschweig",
-  "hours": "Mon-Fri 09:00-18:00",
-  "tags": ["german", "deutsch", "integration", "integration", "language course", "sprachkurs"],
-  "eligibility": ["all_residents"],
-  "description": "Language and integration courses"
-},
-{
-  "name": "Stadtbibliothek Braunschweig",
-  "type": "public_service",
-  "category": "social",
-  "specialty": "library",
-  "address": "Schlossplatz 2, 38100 Braunschweig",
-  "hours": "Mon-Sat 10:00-18:00",
-  "tags": ["study", "lernen", "books", "bücher", "library", "bibliothek"],
-  "eligibility": ["all_residents"],
-  "description": "Public library and study spaces"
-},
-{
-  "name": "Standesamt Braunschweig",
-  "type": "government",
-  "category": "legal",
-  "specialty": "civil_registry",
-  "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-13:00",
-  "tags": ["marriage", "heirat", "birth", "geburt", "certificate", "urkunde", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Civil registry services (birth, marriage certificates)"
-},
-{
-  "name": "Ordnungsamt Braunschweig",
-  "type": "government",
-  "category": "legal",
-  "specialty": "public_order",
-  "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-15:00",
-  "tags": ["permits", "genehmigungen", "regulations", "vorschriften", "order", "ordnung", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Public order, permits, and regulatory services"
-},
-{
-  "name": "Polizeikommissariat Braunschweig Mitte",
-  "type": "government",
-  "category": "security",
-  "specialty": "police_station",
-  "address": "Friedrich-Voigtländer-Straße 41, 38104 Braunschweig",
-  "hours": "24/7",
-  "tags": ["police", "polizei", "emergency", "notfall", "crime", "kriminalität", "report", "anzeige", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Main police station for emergencies, crime reporting, and public safety"
-},
-{
-  "name": "Polizeikommissariat Braunschweig Süd",
-  "type": "government",
-  "category": "security",
-  "specialty": "police_station",
-  "address": "Saarstraße 2, 38116 Braunschweig",
-  "hours": "24/7",
-  "tags": ["police", "polizei", "emergency", "notfall", "crime", "kriminalität", "report", "anzeige", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Police station for the southern districts of Braunschweig"
-},
-{
-  "name": "Polizeikommissariat Braunschweig Nord",
-  "type": "government",
-  "category": "security",
-  "specialty": "police_station",
-  "address": "Hamburger Straße 226, 38114 Braunschweig",
-  "hours": "24/7",
-  "tags": ["police", "polizei", "emergency", "notfall", "crime", "kriminalität", "report", "anzeige", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Police station covering northern Braunschweig districts"
-},
-{
-  "name": "Polizei Niedersachsen – Notruf 110 (Braunschweig)",
-  "type": "government",
-  "category": "security",
-  "specialty": "emergency_service",
-  "address": "Germany-wide emergency service",
-  "hours": "24/7",
-  "tags": ["emergency", "notruf", "110", "police", "polizei", "urgent", "dringend", "stehlen", "klauen", "geklaut", "diebstahl"],
-  "eligibility": ["all_residents"],
-  "description": "Emergency police hotline for immediate danger situations"
-},{
-  "name": "Gymnasium Neue Oberschule Braunschweig",
-  "type": "public_service",
-  "category": "education",
-  "specialty": "secondary_school",
-  "address": "Heinrichstraße 16, 38106 Braunschweig",
-  "hours": "Mon-Fri 08:00-15:00",
-  "tags": ["school", "schule", "gymnasium", "secondary", "sekundarstufe", "students", "schüler"],
-  "eligibility": ["students"],
-  "description": "Secondary school providing general education leading to Abitur"
-},
-{
-  "name": "Grundschule Altmühlstraße Braunschweig",
-  "type": "public_service",
-  "category": "education",
-  "specialty": "primary_school",
-  "address": "Altmühlstraße 21, 38120 Braunschweig",
-  "hours": "Mon-Fri 08:00-13:00",
-  "tags": ["school", "schule", "primary", "grundschule", "children", "kinder", "education", "bildung"],
-  "eligibility": ["children"],
-  "description": "Primary school for early childhood education"
-},
-{
-  "name": "Technische Universität Braunschweig",
-  "type": "public_service",
-  "category": "education",
-  "specialty": "university",
-  "address": "Universitätsplatz 2, 38106 Braunschweig",
-  "hours": "Mon-Fri 08:00-18:00",
-  "tags": ["university", "universität", "study", "studium", "students", "studierende", "education", "bildung"],
-  "eligibility": ["students"],
-  "description": "Public university offering a wide range of academic programs"
-},{
-  "name": "Hausarztpraxis Braunschweig Zentrum",
-  "type": "healthcare",
-  "category": "health",
-  "specialty": "general_practitioner",
-  "address": "Dankwardstraße 12, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-17:00",
-  "tags": ["doctor", "arzt", "general practitioner", "hausarzt", "health", "gesundheit", "checkup", "untersuchung"],
-  "eligibility": ["all_residents"],
-  "description": "General practitioner for primary healthcare and medical advice"
-},
-{
-  "name": "Kinderarztpraxis Braunschweig",
-  "type": "healthcare",
-  "category": "health",
-  "specialty": "pediatrics",
-  "address": "Celler Straße 45, 38114 Braunschweig",
-  "hours": "Mon-Fri 08:00-16:00",
-  "tags": ["pediatrician", "kinderarzt", "children", "kinder", "doctor", "arzt", "health", "gesundheit"],
-  "eligibility": ["children"],
-  "description": "Medical care for infants, children, and adolescents"
-},
-{
-  "name": "Zahnarztpraxis Braunschweig",
-  "type": "healthcare",
-  "category": "health",
-  "specialty": "dentist",
-  "address": "Waisenhausdamm 8, 38100 Braunschweig",
-  "hours": "Mon-Fri 08:00-18:00",
-  "tags": ["dentist", "zahnarzt", "teeth", "zähne", "health", "gesundheit", "treatment", "behandlung"],
-  "eligibility": ["all_residents"],
-  "description": "Dental care and oral health services"
-},
-{
-  "name": "Notaufnahme Städtisches Klinikum Braunschweig",
-  "type": "healthcare",
-  "category": "health",
-  "specialty": "emergency_room",
-  "address": "Salzdahlumer Straße 90, 38126 Braunschweig",
-  "hours": "24/7",
-  "tags": ["emergency", "notaufnahme", "hospital", "krankenhaus", "urgent", "dringend", "doctor", "arzt"],
-  "eligibility": ["all_residents"],
-  "description": "Emergency medical care for urgent and life-threatening conditions"
+      "name": "Familienbüro Braunschweig",
+      "type": "government",
+      "category": "family",
+      "specialty": "family_support",
+      "address": "Eiermarkt 4-5, 38100 Braunschweig",
+      "hours": "Mon-Fri 09:00-16:00",
+      "tags": [
+        "family",
+        "familie",
+        "children",
+        "kinder",
+        "advice",
+        "beratung"
+      ],
+      "eligibility": [
+        "families"
+      ],
+      "description": "Advisory services for families and parents"
+    },
+    {
+      "name": "Jugendamt Braunschweig",
+      "type": "government",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Eiermarkt 4-5, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": [
+        "children",
+        "kinder",
+        "youth",
+        "jugend",
+        "support",
+        "unterstützung"
+      ],
+      "eligibility": [
+        "families",
+        "minors"
+      ],
+      "description": "Child and youth welfare services"
+    },
+    {
+      "name": "Kita Service Braunschweig",
+      "type": "government",
+      "category": "family",
+      "specialty": "childcare",
+      "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": [
+        "kita",
+        "childcare",
+        "kinderbetreuung",
+        "daycare",
+        "betreuung"
+      ],
+      "eligibility": [
+        "families"
+      ],
+      "description": "Kindergarten placement services"
+    },
+    {
+      "name": "Elterngeldstelle Niedersachsen",
+      "type": "government",
+      "category": "family",
+      "specialty": "parental_benefits",
+      "address": "Braunschweig Region",
+      "hours": "Mon-Fri 08:00-14:00",
+      "tags": [
+        "elterngeld",
+        "parental benefit",
+        "eltern",
+        "parents",
+        "family support",
+        "familienleistung"
+      ],
+      "eligibility": [
+        "families"
+      ],
+      "description": "Parental financial support"
+    },
+    {
+      "name": "BAföG Amt Braunschweig",
+      "type": "government",
+      "category": "education",
+      "specialty": "student_finance",
+      "address": "Universitätsplatz 1, 38106 Braunschweig",
+      "hours": "Mon-Fri 09:00-15:00",
+      "tags": [
+        "bafög",
+        "student finance",
+        "studienfinanzierung",
+        "students",
+        "studierende"
+      ],
+      "eligibility": [
+        "students"
+      ],
+      "description": "Student financial aid (BAföG)"
+    },
+    {
+      "name": "KFZ-Zulassungsstelle Braunschweig",
+      "type": "government",
+      "category": "mobility",
+      "specialty": "vehicle_registration",
+      "address": "Friedrich-Seele-Straße 7, 38122 Braunschweig",
+      "hours": "Mon-Fri 08:00-15:00",
+      "tags": [
+        "car",
+        "auto",
+        "registration",
+        "zulassung",
+        "vehicle",
+        "fahrzeug",
+        "license plate",
+        "kennzeichen"
+      ],
+      "eligibility": [
+        "vehicle_owners"
+      ],
+      "description": "Vehicle registration services"
+    },
+    {
+      "name": "Führerscheinstelle Braunschweig",
+      "type": "government",
+      "category": "mobility",
+      "specialty": "driving_license",
+      "address": "Friedrich-Seele-Straße 7, 38122 Braunschweig",
+      "hours": "Mon-Fri 08:00-15:00",
+      "tags": [
+        "driving",
+        "fahren",
+        "license",
+        "führerschein",
+        "driver license",
+        "führerschein"
+      ],
+      "eligibility": [
+        "drivers"
+      ],
+      "description": "Driving license issuance and conversion"
+    },
+    {
+      "name": "Hundesteuerstelle Braunschweig",
+      "type": "government",
+      "category": "pets",
+      "specialty": "dog_registration",
+      "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": [
+        "dog",
+        "hund",
+        "tax",
+        "steuer",
+        "pet",
+        "haustier"
+      ],
+      "eligibility": [
+        "pet_owners"
+      ],
+      "description": "Dog registration and taxation"
+    },
+    {
+      "name": "Volkshochschule Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "language_courses",
+      "address": "Alte Schwertfegerstraße 5, 38100 Braunschweig",
+      "hours": "Mon-Fri 09:00-18:00",
+      "tags": [
+        "german",
+        "deutsch",
+        "integration",
+        "integration",
+        "language course",
+        "sprachkurs"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Language and integration courses"
+    },
+    {
+      "name": "Stadtbibliothek Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "library",
+      "address": "Schlossplatz 2, 38100 Braunschweig",
+      "hours": "Mon-Sat 10:00-18:00",
+      "tags": [
+        "study",
+        "lernen",
+        "books",
+        "bücher",
+        "library",
+        "bibliothek"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Public library and study spaces"
+    },
+    {
+      "name": "Standesamt Braunschweig",
+      "type": "government",
+      "category": "legal",
+      "specialty": "civil_registry",
+      "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-13:00",
+      "tags": [
+        "marriage",
+        "heirat",
+        "birth",
+        "geburt",
+        "certificate",
+        "urkunde",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Civil registry services (birth, marriage certificates)"
+    },
+    {
+      "name": "Ordnungsamt Braunschweig",
+      "type": "government",
+      "category": "legal",
+      "specialty": "public_order",
+      "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-15:00",
+      "tags": [
+        "permits",
+        "genehmigungen",
+        "regulations",
+        "vorschriften",
+        "order",
+        "ordnung",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Public order, permits, and regulatory services"
+    },
+    {
+      "name": "Polizeikommissariat Braunschweig Mitte",
+      "type": "government",
+      "category": "security",
+      "specialty": "police_station",
+      "address": "Friedrich-Voigtländer-Straße 41, 38104 Braunschweig",
+      "hours": "24/7",
+      "tags": [
+        "police",
+        "polizei",
+        "emergency",
+        "notfall",
+        "crime",
+        "kriminalität",
+        "report",
+        "anzeige",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Main police station for emergencies, crime reporting, and public safety"
+    },
+    {
+      "name": "Polizeikommissariat Braunschweig Süd",
+      "type": "government",
+      "category": "security",
+      "specialty": "police_station",
+      "address": "Saarstraße 2, 38116 Braunschweig",
+      "hours": "24/7",
+      "tags": [
+        "police",
+        "polizei",
+        "emergency",
+        "notfall",
+        "crime",
+        "kriminalität",
+        "report",
+        "anzeige",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Police station for the southern districts of Braunschweig"
+    },
+    {
+      "name": "Polizeikommissariat Braunschweig Nord",
+      "type": "government",
+      "category": "security",
+      "specialty": "police_station",
+      "address": "Hamburger Straße 226, 38114 Braunschweig",
+      "hours": "24/7",
+      "tags": [
+        "police",
+        "polizei",
+        "emergency",
+        "notfall",
+        "crime",
+        "kriminalität",
+        "report",
+        "anzeige",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Police station covering northern Braunschweig districts"
+    },
+    {
+      "name": "Polizei Niedersachsen – Notruf 110 (Braunschweig)",
+      "type": "government",
+      "category": "security",
+      "specialty": "emergency_service",
+      "address": "Germany-wide emergency service",
+      "hours": "24/7",
+      "tags": [
+        "emergency",
+        "notruf",
+        "110",
+        "police",
+        "polizei",
+        "urgent",
+        "dringend",
+        "stehlen",
+        "klauen",
+        "geklaut",
+        "diebstahl"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Emergency police hotline for immediate danger situations"
+    },
+    {
+      "name": "Gymnasium Neue Oberschule Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "secondary_school",
+      "address": "Heinrichstraße 16, 38106 Braunschweig",
+      "hours": "Mon-Fri 08:00-15:00",
+      "tags": [
+        "school",
+        "schule",
+        "gymnasium",
+        "secondary",
+        "sekundarstufe",
+        "students",
+        "schüler"
+      ],
+      "eligibility": [
+        "students"
+      ],
+      "description": "Secondary school providing general education leading to Abitur"
+    },
+    {
+      "name": "Grundschule Altmühlstraße Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "primary_school",
+      "address": "Altmühlstraße 21, 38120 Braunschweig",
+      "hours": "Mon-Fri 08:00-13:00",
+      "tags": [
+        "school",
+        "schule",
+        "primary",
+        "grundschule",
+        "children",
+        "kinder",
+        "education",
+        "bildung"
+      ],
+      "eligibility": [
+        "children"
+      ],
+      "description": "Primary school for early childhood education"
+    },
+    {
+      "name": "Technische Universität Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "university",
+      "address": "Universitätsplatz 2, 38106 Braunschweig",
+      "hours": "Mon-Fri 08:00-18:00",
+      "tags": [
+        "university",
+        "universität",
+        "study",
+        "studium",
+        "students",
+        "studierende",
+        "education",
+        "bildung"
+      ],
+      "eligibility": [
+        "students"
+      ],
+      "description": "Public university offering a wide range of academic programs"
+    },
+    {
+      "name": "Hausarztpraxis Braunschweig Zentrum",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "general_practitioner",
+      "address": "Dankwardstraße 12, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-17:00",
+      "tags": [
+        "doctor",
+        "arzt",
+        "general practitioner",
+        "hausarzt",
+        "health",
+        "gesundheit",
+        "checkup",
+        "untersuchung"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "General practitioner for primary healthcare and medical advice"
+    },
+    {
+      "name": "Kinderarztpraxis Braunschweig",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "pediatrics",
+      "address": "Celler Straße 45, 38114 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": [
+        "pediatrician",
+        "kinderarzt",
+        "children",
+        "kinder",
+        "doctor",
+        "arzt",
+        "health",
+        "gesundheit"
+      ],
+      "eligibility": [
+        "children"
+      ],
+      "description": "Medical care for infants, children, and adolescents"
+    },
+    {
+      "name": "Zahnarztpraxis Braunschweig",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "dentist",
+      "address": "Waisenhausdamm 8, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-18:00",
+      "tags": [
+        "dentist",
+        "zahnarzt",
+        "teeth",
+        "zähne",
+        "health",
+        "gesundheit",
+        "treatment",
+        "behandlung"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Dental care and oral health services"
+    },
+    {
+      "name": "Notaufnahme Städtisches Klinikum Braunschweig",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "emergency_room",
+      "address": "Salzdahlumer Straße 90, 38126 Braunschweig",
+      "hours": "24/7",
+      "tags": [
+        "emergency",
+        "notaufnahme",
+        "hospital",
+        "krankenhaus",
+        "urgent",
+        "dringend",
+        "doctor",
+        "arzt"
+      ],
+      "eligibility": [
+        "all_residents"
+      ],
+      "description": "Emergency medical care for urgent and life-threatening conditions"
+    },
+    {
+      "name": "Kita Volkmarode (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ziegelkamp 8, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "volkmarode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Querumer Straße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Querumer Straße 53, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "querumer_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Schefflerstraße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schefflerstraße 30, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "schefflerstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Stöckheim (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Bruchweg 6, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "stoeckheim"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Städt. Klinikum, Betriebskita (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Fichtengrund 4, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "staedt_klinikum_betriebskita"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Roseliesstraße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Roseliesstraße 39, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "roseliesstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Muldeweg (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ilmenaustraße 31, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "muldeweg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Ilmenaustraße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ilmenaustraße 24, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "ilmenaustrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Timmerlah (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kirchstraße 10 b, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "timmerlah"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Kinderwerk, Betriebskita (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kramerstraße 10, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "kinderwerk_betriebskita"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Chemnitzstraße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Chemnitzstraße 10, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "chemnitzstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Fremersdorfer Straße (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Fremersdorfer Straße 13, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "fremersdorfer_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita Lammer Busch Ost II (AWO)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lammer Busch 131, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "awo",
+        "lammer_busch_ost_ii"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
+    },
+    {
+      "name": "Kita St. Marien (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Köterei 4, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_marien"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Nikolaus (Außengruppe Auctorhaus) (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ägidienmarkt 11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_nikolaus_aussengruppe_auctorhaus"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Nikolaus (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Böcklerstraße 230, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_nikolaus"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Bernward (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kolpingweg 1, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_bernward"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Maximilian Kolbe (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Donaustraße 11, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_maximilian_kolbe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Kjeld (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Pfingststraße 1 a, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_kjeld"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita St. Joseph (Caritasverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Goslarsche Straße 7, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "caritasverband",
+        "st_joseph"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
+    },
+    {
+      "name": "Kita Schatzkiste (ChristusZentrum BS)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Am Alten Bahnhof 15, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "christuszentrum_bs",
+        "schatzkiste"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: ChristusZentrum BS."
+    },
+    {
+      "name": "Kita St. Leonhard International (CJD)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Leonhardplatz 6 a, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "cjd",
+        "st_leonhard_international"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: CJD."
+    },
+    {
+      "name": "Kita St. Leonhard International Postanschrift (CJD)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Georg-Westermann-Allee 76, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "cjd",
+        "st_leonhard_international_postanschrift"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: CJD."
+    },
+    {
+      "name": "Kita Mein Weg (Der Paritätische)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Itzweg 4, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "der_paritaetische",
+        "mein_weg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
+    },
+    {
+      "name": "Kita Broitzem (Der Paritätische)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Landeshuter Weg 1 a, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "der_paritaetische",
+        "broitzem"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
+    },
+    {
+      "name": "Kita Farbklecks (Der Paritätische)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Helene-Künne-Allee 9, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "der_paritaetische",
+        "farbklecks"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
+    },
+    {
+      "name": "Kita Geitelde (Der Paritätische)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Geiteldestraße 40, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "der_paritaetische",
+        "geitelde"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
+    },
+    {
+      "name": "Kita Quäker Nachbarschaftsheim (Der Paritätische)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Pestalozzistraße 12, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "der_paritaetische",
+        "quaeker_nachbarschaftsheim"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
+    },
+    {
+      "name": "Kita Broitzemer Straße (Außengruppe Ilmweg) (DRK)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ilmweg 40, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "drk",
+        "broitzemer_strasse_aussengruppe_ilmweg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
+    },
+    {
+      "name": "Kita Broitzemer Straße (DRK)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Broitzemer Straße 1, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "drk",
+        "broitzemer_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
+    },
+    {
+      "name": "Kita Spinnerstraße (DRK)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Spinnerstraße 33, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "drk",
+        "spinnerstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
+    },
+    {
+      "name": "Kita Wilde Wiese (DRK)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lammer Busch 9, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "drk",
+        "wilde_wiese"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
+    },
+    {
+      "name": "Kita Kind in Hondelage e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hegerdorfstraße 46, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "kind_in_hondelage_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Kleine Raupe e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Wabestraße 37, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "kleine_raupe_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Heinrichstraße (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Heinrichstraße 13, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "heinrichstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Kobold e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Husarenstraße 62, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "kobold_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Kindergarten an St. Matthäus e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Herz.-Elisabeth-Str. 80 a, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "kindergarten_an_st_matthaeus_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita AG Kinderstall e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Herz.-Elisabeth-Str. 80, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "ag_kinderstall_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Grabowski e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Marienstraße 36, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "grabowski_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Kinderbutze e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Helmstedter Straße 20, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "kinderbutze_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Rasselbande e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Helmstedter Straße 20, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "rasselbande_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Fröhlicher Anfang e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Adolfstraße 39 c, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "froehlicher_anfang_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Heidberger Kindergarten (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Dresdenstraße 140, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "heidberger_kindergarten"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Die Sieben Zwerge e. V. (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Heinz-Scheer-Straße 6, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "die_sieben_zwerge_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Rübe (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Goslarsche Straße 2, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "ruebe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Flohkiste (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Cyriaksring 55 a, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "flohkiste"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Höfenstraße (Eltern-Kind-Gruppe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Höfenstraße 16, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "eltern_kind_gruppe",
+        "hoefenstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
+    },
+    {
+      "name": "Kita Stephanus-Kindergarten (Ev.-Freik. Kindergarten Heidberg e.V.)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Halberstadtstraße 9, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_freik_kindergarten_heidberg_e_v",
+        "stephanus_kindergarten"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-Freik. Kindergarten Heidberg e.V.."
+    },
+    {
+      "name": "Kita St. Thomas Volkmarode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Am Feuerteich 8 a, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_thomas_volkmarode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Thomas Volkmarode (Außengruppe) (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kirchgasse 6, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_thomas_volkmarode_aussengruppe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Schapen (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schapenstraße 2 a, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "schapen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Liliput Bienrode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Maschweg 14 a, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "liliput_bienrode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Zachäus Waggum (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Opferkamp 3, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "zachaeus_waggum"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Bevenrode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schulweg 36, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "bevenrode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Pauli-Matthäus (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Böcklinstraße 28, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_pauli_matthaeus"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Magni (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hinter der Magnikirche 8, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_magni"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Johannis (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Leonhardstraße 40, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_johannis"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Magni (Außengruppe Adolfstraße) (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Adolfstraße 36, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_magni_aussengruppe_adolfstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Dietrich-Bonhoeffer Melverode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Görlitzstraße 17, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "dietrich_bonhoeffer_melverode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Stöckheim (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Gebrüder-Grimm-Str. 2 d, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "stoeckheim"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Mascherode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schulgasse 1 a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "mascherode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Arche Noah (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lechstraße 61, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "arche_noah"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Mittenmank (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lechstraße 61 a, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "mittenmank"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Ahrplatz (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ahrplatz 14, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "ahrplatz"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Petri Rüningen (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schwarzer Weg 2, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_petri_rueningen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Martini (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kreuzstraße 1 c, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_martini"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Kreuzkirche (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Große Straße 12 b, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "kreuzkirche"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Wichern (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Sulzbacher Straße 41, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "wichern"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Geschwister-Sperling (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Adolf-Bingel-Straße 59, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "geschwister_sperling"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Völkenrode (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Pöttgerbrink 6, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "voelkenrode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Watenbüttel (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schulberg 5, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "watenbuettel"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Marien Lamme (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lammer Heide 9-12, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_marien_lamme"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Sternschnuppe Wenden (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Rathenowstraße 15, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "sternschnuppe_wenden"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Schunterarche Thune (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Thunstraße 15 a, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "schunterarche_thune"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Schunterzwerge (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Heideblick 14, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "schunterzwerge"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Andreas (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hamburger Straße 18, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_andreas"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Christuskirche (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Am Schwarzen Berge 18, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "christuskirche"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita St. Georg (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Freyastraße 20 a, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "st_georg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Dankeskirche (Ev.-luth. Propsteiverband)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Elsa-Brändstöm-Straße 1, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "ev_luth_propsteiverband",
+        "dankeskirche"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
+    },
+    {
+      "name": "Kita Heinrich-Jasper-Haus (Falkenheim)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Tostmannplatz 12, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "falkenheim",
+        "heinrich_jasper_haus"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Falkenheim."
+    },
+    {
+      "name": "Kita SieKids Ackermäuse, Betriebskita (Fröbel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ackerstraße 19 a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "froebel",
+        "siekids_ackermaeuse_betriebskita"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Fröbel."
+    },
+    {
+      "name": "Kita Heinrich-der-Löwe (Fröbel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Braunschweiger Straße 1, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "froebel",
+        "heinrich_der_loewe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Fröbel."
+    },
+    {
+      "name": "Kita Glühwürmchen (Glühwürmchen)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Madamenweg 162, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "gluehwuermchen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Glühwürmchen."
+    },
+    {
+      "name": "Kita Hubeta-Kindergarten (Hubeta)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "An der Schule 10, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "hubeta",
+        "hubeta_kindergarten"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Hubeta."
+    },
+    {
+      "name": "Kita Wilde Hummel (Humanistischer Verband Deutschlands)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hermannstraße 24, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "humanistischer_verband_deutschlands",
+        "wilde_hummel"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Humanistischer Verband Deutschlands."
+    },
+    {
+      "name": "Kita VW Löwenkinder (Impuls)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ohefeld 1, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "impuls",
+        "vw_loewenkinder"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Impuls."
+    },
+    {
+      "name": "Kita Betriebskita VW-Financial Kita Frech Daxe (Impuls)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Käferweg 1, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "impuls",
+        "betriebskita_vw_financial_kita_frech_daxe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Impuls."
+    },
+    {
+      "name": "Kita Die kleinen Murmeltiere, Betriebskita (Krippe) (Johanniter)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Bundesallee 100, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "johanniter",
+        "die_kleinen_murmeltiere_betriebskita_krippe"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
+    },
+    {
+      "name": "Kita Mitgaustraße (Johanniter)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Mitgaustraße 12, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "johanniter",
+        "mitgaustrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
+    },
+    {
+      "name": "Kita Warnekamp (Johanniter)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Warnekamp 1, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "johanniter",
+        "warnekamp"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
+    },
+    {
+      "name": "Kita KiTaKaramba (Karamba)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Friedrich-Voigtländer-Straße 40, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "karamba",
+        "kitakaramba"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Karamba."
+    },
+    {
+      "name": "Kita St. Albertus Magnus (Kath. Kirchengemeinde)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Brucknerstraße 1, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kath_kirchengemeinde",
+        "st_albertus_magnus"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Kath. Kirchengemeinde."
+    },
+    {
+      "name": "Kita Kindergarten Ölper (Kindergarten Ölper)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Celler Heerstraße 38, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kindergarten_oelper"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Kindergarten Ölper."
+    },
+    {
+      "name": "Kita Augensternchen (Kita Augensternchen UG)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Obergstr. 5, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kita_augensternchen_ug",
+        "augensternchen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Kita Augensternchen UG. Hinweis: eröffnet voraussichtlich zu Nov. 2024"
+    },
+    {
+      "name": "Kita Klitzeklein (Klitzeklein)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Mühlenpfordtstraße 5, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "klitzeklein"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Klitzeklein."
+    },
+    {
+      "name": "Kita Kornblumenstraße (Klitzeklein)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kornblumenstraße 3, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "klitzeklein",
+        "kornblumenstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Klitzeklein."
+    },
+    {
+      "name": "Kita Krümelkeks e. V. (Krümelkeks)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Madamenweg 113, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kruemelkeks",
+        "kruemelkeks_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Krümelkeks."
+    },
+    {
+      "name": "Kita Krümelkiste (Krümelkiste)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Bundesallee 34, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kruemelkiste"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Krümelkiste."
+    },
+    {
+      "name": "Kita Kuschelnest (Kuschelnest)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Sackring 33, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "kuschelnest"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Kuschelnest."
+    },
+    {
+      "name": "Kita Außengruppe Peterskamp (Lebenshilfe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Marie-Juchacz-Platz 7, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "lebenshilfe",
+        "aussengruppe_peterskamp"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe. Hinweis: schließt zum 31.07.2024"
+    },
+    {
+      "name": "Kita Schiefer Berg (Lebenshilfe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schiefer Berg 100, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "lebenshilfe",
+        "schiefer_berg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe."
+    },
+    {
+      "name": "Kita Hasenwinkel (Lebenshilfe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hasenwinkel 3, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "lebenshilfe",
+        "hasenwinkel"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe."
+    },
+    {
+      "name": "Kita liebevoll (liebevoll)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Pippelweg 69 d, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "liebevoll"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: liebevoll."
+    },
+    {
+      "name": "Kita Marienkäfer (Marienkäfer)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Goeppert-Mayer-Straße 2, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "marienkaefer"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Marienkäfer."
+    },
+    {
+      "name": "Kita Spatz 21 (Netzwerk Nächstenliebe)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Spatzenstieg 21, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "netzwerk_naechstenliebe",
+        "spatz_21"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Netzwerk Nächstenliebe."
+    },
+    {
+      "name": "Kita Sonnenschein (Sonnenschein)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Braunstraße 22, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "sonnenschein"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Sonnenschein."
+    },
+    {
+      "name": "Kita Hondelage (Außengruppe Dibbesdorf) (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Nesselweg 1, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "hondelage_aussengruppe_dibbesdorf"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Alsterplatz (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Alsterplatz 2, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "alsterplatz"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Alsterplatz (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Wiedweg 8, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "alsterplatz"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Siegmundstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Siegmundstraße 2 a, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "siegmundstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Hondelage (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "In den Heistern 5, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "hondelage"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Gliesmarode (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hermann-Dürre-Weg 1, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "gliesmarode"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Riddagshausen (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Johanniterstraße 5, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "riddagshausen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Peterskamp (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Marie-Juchacz-Platz 7, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "peterskamp"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig. Hinweis: schließt zum 31.07.2024"
+    },
+    {
+      "name": "Kita Querum (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Duisburger Straße 1, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "querum"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Böcklinstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Böcklinstraße 29, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "boecklinstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Karlstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Karlstraße 35, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "karlstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Kasernenstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kasernenstraße 15, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "kasernenstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Grünewaldstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Grünewaldstraße 11, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "gruenewaldstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Prinzenpark (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ebertallee 100, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "prinzenpark"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Prinzenpark (Außenstelle Kastanienallee) (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kastanienallee 71, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "prinzenpark_aussenstelle_kastanienallee"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Volkskindergarten (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Leopoldstraße 30, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "volkskindergarten"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Neue Knochenhauerstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Neue Knochenhauerstraße 5 und 10, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "neue_knochenhauerstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Magnitorwall (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Magnitorwall 7, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "magnitorwall"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Leiferde (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Lüdersstraße 27, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "leiferde"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Lindenbergsiedlung (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kopernikusstraße 11, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "lindenbergsiedlung"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Fichtengrund (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Fichtengrund 4, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "fichtengrund"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Südstadt (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Nietzschestraße 22, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "suedstadt"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Rautheim (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Gemeindestraße 4 a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "rautheim"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Recknitzstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Recknitzstraße 10, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "recknitzstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Christian-Friedrich-Krull-Straße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Christian-Friedrich-Krull-Straße 5, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "christian_friedrich_krull_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Frankfurter Straße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Frankfurter Str. 15 a, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "frankfurter_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Schwedenheim (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hugo-Luther-Str. 60, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "schwedenheim"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Madamenweg (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Madamenweg 35, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "madamenweg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Schölkestraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Schölkestraße 1 d, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "schoelkestrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Leibnizplatz (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Leibnizplatz 15, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "leibnizplatz"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Gartenstadt (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Wurmbergstraße 48, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "gartenstadt"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Dorothea-Erxleben-Straße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Dorothea-Erxleben-Straße 9, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "dorothea_erxleben_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Schölkestraße (Außengruppe Ölper) (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Celler Heerstraße 38, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "schoelkestrasse_aussengruppe_oelper"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Lamme (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Frankenstraße 6 b, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "lamme"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Rühme (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Am Wendenturm 8, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "ruehme"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Pfälzerstraße (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Pfälzerstraße 34 d, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "pfaelzerstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Schuntersiedlung (Stadt Braunschweig)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Mergesstraße 13 b, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "stadt_braunschweig",
+        "schuntersiedlung"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
+    },
+    {
+      "name": "Kita Sterntaler (Sterntaler)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Alter Weg 8, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "sterntaler"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Sterntaler."
+    },
+    {
+      "name": "Kita Morgenstern (Sterntaler)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Steinriedendamm 40 c, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "sterntaler",
+        "morgenstern"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Sterntaler."
+    },
+    {
+      "name": "Kita Kita Zwerge (Studentenwerk)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Fallersleber-Tor-Wall 10, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "studentenwerk",
+        "kita_zwerge"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Studentenwerk."
+    },
+    {
+      "name": "Kita Spatzennest (Studentenwerk)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Konstantin-Uhde-Str. 20, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "studentenwerk",
+        "spatzennest"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Studentenwerk."
+    },
+    {
+      "name": "Kita Rumpelstilzchen e. V. (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Alte Salzdahlumer Straße 202, 2 b, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "rumpelstilzchen_e_v"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Meerkatzen (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ebertallee 25, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "meerkatzen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Bevenroder Straße (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Bevenroder Straße 45, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "bevenroder_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Waldgruppen (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Querumer Forst, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "waldgruppen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Husarenstraße (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Husarenstraße 30, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "husarenstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Kleine Riesen (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Altewiekring 52, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "kleine_riesen"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Kurt-Schumacher-Straße (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Kurt-Schumacher Straße 7, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "kurt_schumacher_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Bimbambule (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "An der Rothenburg 2, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "bimbambule"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Am Grasplatz (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Am Grasplatz 5, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "am_grasplatz"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Daimlerstraße (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Daimlerstraße 10 a, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "daimlerstrasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Hopfengarten (Till Eulenspiegel)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Hopfengarten 20a, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "till_eulenspiegel",
+        "hopfengarten"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
+    },
+    {
+      "name": "Kita Waldkindergarten BS (Waldkindergarten BS e.V.)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Ilmweg 36, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "waldkindergarten_bs_e_v",
+        "waldkindergarten_bs"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Waldkindergarten BS e.V.."
+    },
+    {
+      "name": "Kita Am Giersberg (Waldorfkindergarten)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Giersbergstraße 1, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "waldorfkindergarten",
+        "am_giersberg"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Waldorfkindergarten."
+    },
+    {
+      "name": "Kita Rudolf-Steiner-Straße (Waldorfkindergarten)",
+      "type": "childcare",
+      "category": "family",
+      "specialty": "kita",
+      "address": "Rudolf-Steiner-Str. 4, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "kita",
+        "kindertagesstaette",
+        "familie",
+        "braunschweig",
+        "waldorfkindergarten",
+        "rudolf_steiner_strasse"
+      ],
+      "eligibility": [
+        "children_0_6",
+        "families"
+      ],
+      "description": "Kindertagesstaette in Braunschweig. Traeger: Waldorfkindergarten."
+    },
+    {
+      "name": "Kinder- und Jugendtreff im Bebelhof (AWO, Kreisverband Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Hans-Porner-Straße 20 A, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "awo_kreisverband_braunschweig",
+        "kinder_und_jugendtreff_im_bebelhof"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Broitzem -Schiene (AWO, Kreisverband Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Steinbrink 3, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "awo_kreisverband_braunschweig",
+        "kinder_und_jugendzentrum_broitzem_schiene"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendtreff Geitelde (AWO, Kreisverband Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Geiteldestraße 48, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "awo_kreisverband_braunschweig",
+        "kinder_und_jugendtreff_geitelde"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Kreuzstraße (Bethanien Diakonissen Stiftung)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Kreuzstraße 110/111, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "bethanien_diakonissen_stiftung",
+        "kinder_und_jugendzentrum_kreuzstrasse"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Bethanien Diakonissen Stiftung."
+    },
+    {
+      "name": "Akki - Aktivspielplatz Schwarzer Berg (Bund der Deutschen Katholischen Jugend (BDKJ))",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Am Schwarzen Berge 36 E, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "bund_der_deutschen_katholischen_jugend_bdkj",
+        "akki_aktivspielplatz_schwarzer_berg"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Bund der Deutschen Katholischen Jugend (BDKJ)."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Lamme (DER PARITÄTISCHE Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Lammer Heide 7, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "der_paritaetische_braunschweig",
+        "kinder_und_jugendzentrum_lamme"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: DER PARITÄTISCHE Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Wenden (DRK Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Heideblick 22, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "drk_braunschweig",
+        "kinder_und_jugendzentrum_wenden"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: DRK Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Gliesmarode (Ev.-luth. Kircheng. Riddagsh. -Gliesmarode)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "An der Bugenhagenkirche 2, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_luth_kircheng_riddagsh_gliesmarode",
+        "kinder_und_jugendzentrum_gliesmarode"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kircheng. Riddagsh. -Gliesmarode."
+    },
+    {
+      "name": "Aktivspielplatz Gliesmarode (Ev.-luth. Kircheng. Riddagsh.-Gliesmarode)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Karl-Hintze-Weg 6, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_luth_kircheng_riddagsh_gliesmarode",
+        "aktivspielplatz_gliesmarode"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kircheng. Riddagsh.-Gliesmarode."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Magni (Ev.-luth. Kirchengemeinde St. Magni)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Hinter der Magnikirche 6 b, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_luth_kirchengemeinde_st_magni",
+        "kinder_und_jugendzentrum_magni"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kirchengemeinde St. Magni."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Hondelage (Ev.-luth. Pfarramt St. Johannes)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Johannesweg 2, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_luth_pfarramt_st_johannes",
+        "kinder_und_jugendzentrum_hondelage"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Pfarramt St. Johannes."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Kiez (Ev.-luth. Propstei Braunschweig)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Herzogin-Elisabeth-Straße 80A, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_luth_propstei_braunschweig",
+        "kinder_und_jugendzentrum_kiez"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Propstei Braunschweig."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Kreuzstraße (Ev.-meth. Kirche e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Kreuzstraße 110, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "ev_meth_kirche_e_v",
+        "kinder_und_jugendzentrum_kreuzstrasse"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-meth. Kirche e. V.."
+    },
+    {
+      "name": "Heinrich-Jasper-Haus (Falkenheim e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Tostmannplatz 12, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "falkenheim_e_v",
+        "heinrich_jasper_haus"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Falkenheim e. V.."
+    },
+    {
+      "name": "Jugendzentrum Stöckheim (Jugendzentrum Stöckheim e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Siekgraben 46, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "jugendzentrum_stoeckheim_e_v",
+        "jugendzentrum_stoeckheim"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum in der Grundschule (Jugendzentrum Stöckheim e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Rüninger Weg 11, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "jugendzentrum_stoeckheim_e_v",
+        "kinder_und_jugendzentrum_in_der_grundschule"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
+    },
+    {
+      "name": "Kinder- und Jugendtreff Leiferde (Jugendzentrum Stöckheim e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Fischerbrücke 2, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "jugendzentrum_stoeckheim_e_v",
+        "kinder_und_jugendtreff_leiferde"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Drachenflug (PPTZ e. V. (Pädagogisch-Psychologisches Therapie-Zentrum))",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Frankfurter Straße 253, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "pptz_e_v_paedagogisch_psychologisches_therapie_zentrum",
+        "kinder_und_jugendzentrum_drachenflug"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: PPTZ e. V. (Pädagogisch-Psychologisches Therapie-Zentrum)."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Mühle (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "An der Neustadtmühle 3, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_muehle"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum B 58 (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Bültenweg 58, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_b_58"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Selam (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Hamburger Straße 34, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_selam"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Heidberg (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Gerastraße 18, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_heidberg"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Rüningen (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Leiferder Weg 1, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_rueningen"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Spielstube Hebbelstraße (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Hebbelstraße 2 + 8, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "spielstube_hebbelstrasse"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Rotation (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Emsstraße 50, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_rotation"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Turm (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Saarplatz 3, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_turm"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Rühme (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Gifhorner Straße 175, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_ruehme"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Jugendtreff Waggum (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Fröbelweg 2, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "jugendtreff_waggum"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Jugendzentrum Querum (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Bevenroder Straße 37, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "jugendzentrum_querum"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendtreff Rautheim (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Braunschweiger Straße 4a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendtreff_rautheim"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Kinder- und Jugendzentrum Roxy (Stadt BS)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Welfenplatz 17, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "stadt_bs",
+        "kinder_und_jugendzentrum_roxy"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
+    },
+    {
+      "name": "Abenteuerspielplatz Melverode (Verein zur Förderung der offenen Kinder- und Jugendarbeit in Melverode e. V.)",
+      "type": "youth",
+      "category": "community",
+      "specialty": "youth_center",
+      "address": "Leipziger Straße 100, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugendzentrum",
+        "kinder",
+        "teenager",
+        "freizeit",
+        "braunschweig",
+        "verein_zur_foerderung_der_offenen_kinder_und_jugendarbeit_in_melverode_e_v",
+        "abenteuerspielplatz_melverode"
+      ],
+      "eligibility": [
+        "children",
+        "teens",
+        "families"
+      ],
+      "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Verein zur Förderung der offenen Kinder- und Jugendarbeit in Melverode e. V.."
+    }
+  ]
 }
-]}
