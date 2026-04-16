@@ -2,7 +2,7 @@
   const navigationItems = [
     { key: "search", href: "/index.html", label: "Service search" },
     { key: "survey", href: "/form.html", label: "Health check" },
-    { key: "add", href: "/add.html", label: "Add entry" }
+    { key: "add", href: "/providers.html", label: "For providers" }
   ];
 
   function joinClasses(...values) {

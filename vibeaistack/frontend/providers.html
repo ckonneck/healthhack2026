@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass | Submit a Service</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <main class="page-shell">
+    <header id="pageHeader" class="page-header"></header>
+
+    <section class="panel page-section content-width--narrow section-shell">
+      <div class="section-header">
+        <p class="eyebrow">For providers</p>
+        <h2 class="section-title">Submit a service</h2>
+        <p class="section-description">
+          Share a new listing or service update so Care Compass can review it for the directory.
+        </p>
+      </div>
+
+      <div class="card card-stack">
+        <p class="card-copy">
+          This provider route is ready for the upcoming submission flow.
+        </p>
+        <p class="field-hint">
+          Have the service name, short description, and access details ready for the next pass.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+
+  <script>
+    const pageHeader = document.getElementById("pageHeader");
+
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Submit a service",
+      description: "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
+      currentNav: "add"
+    });
+  </script>
+</body>
+</html>
