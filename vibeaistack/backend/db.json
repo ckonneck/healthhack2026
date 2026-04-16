@@ -274,5 +274,80 @@
   "tags": ["emergency", "notruf", "110", "police", "polizei", "urgent", "dringend", "stehlen", "klauen", "geklaut", "diebstahl"],
   "eligibility": ["all_residents"],
   "description": "Emergency police hotline for immediate danger situations"
+},{
+  "name": "Gymnasium Neue Oberschule Braunschweig",
+  "type": "public_service",
+  "category": "education",
+  "specialty": "secondary_school",
+  "address": "Heinrichstraße 16, 38106 Braunschweig",
+  "hours": "Mon-Fri 08:00-15:00",
+  "tags": ["school", "schule", "gymnasium", "secondary", "sekundarstufe", "students", "schüler"],
+  "eligibility": ["students"],
+  "description": "Secondary school providing general education leading to Abitur"
+},
+{
+  "name": "Grundschule Altmühlstraße Braunschweig",
+  "type": "public_service",
+  "category": "education",
+  "specialty": "primary_school",
+  "address": "Altmühlstraße 21, 38120 Braunschweig",
+  "hours": "Mon-Fri 08:00-13:00",
+  "tags": ["school", "schule", "primary", "grundschule", "children", "kinder", "education", "bildung"],
+  "eligibility": ["children"],
+  "description": "Primary school for early childhood education"
+},
+{
+  "name": "Technische Universität Braunschweig",
+  "type": "public_service",
+  "category": "education",
+  "specialty": "university",
+  "address": "Universitätsplatz 2, 38106 Braunschweig",
+  "hours": "Mon-Fri 08:00-18:00",
+  "tags": ["university", "universität", "study", "studium", "students", "studierende", "education", "bildung"],
+  "eligibility": ["students"],
+  "description": "Public university offering a wide range of academic programs"
+},{
+  "name": "Hausarztpraxis Braunschweig Zentrum",
+  "type": "healthcare",
+  "category": "health",
+  "specialty": "general_practitioner",
+  "address": "Dankwardstraße 12, 38100 Braunschweig",
+  "hours": "Mon-Fri 08:00-17:00",
+  "tags": ["doctor", "arzt", "general practitioner", "hausarzt", "health", "gesundheit", "checkup", "untersuchung"],
+  "eligibility": ["all_residents"],
+  "description": "General practitioner for primary healthcare and medical advice"
+},
+{
+  "name": "Kinderarztpraxis Braunschweig",
+  "type": "healthcare",
+  "category": "health",
+  "specialty": "pediatrics",
+  "address": "Celler Straße 45, 38114 Braunschweig",
+  "hours": "Mon-Fri 08:00-16:00",
+  "tags": ["pediatrician", "kinderarzt", "children", "kinder", "doctor", "arzt", "health", "gesundheit"],
+  "eligibility": ["children"],
+  "description": "Medical care for infants, children, and adolescents"
+},
+{
+  "name": "Zahnarztpraxis Braunschweig",
+  "type": "healthcare",
+  "category": "health",
+  "specialty": "dentist",
+  "address": "Waisenhausdamm 8, 38100 Braunschweig",
+  "hours": "Mon-Fri 08:00-18:00",
+  "tags": ["dentist", "zahnarzt", "teeth", "zähne", "health", "gesundheit", "treatment", "behandlung"],
+  "eligibility": ["all_residents"],
+  "description": "Dental care and oral health services"
+},
+{
+  "name": "Notaufnahme Städtisches Klinikum Braunschweig",
+  "type": "healthcare",
+  "category": "health",
+  "specialty": "emergency_room",
+  "address": "Salzdahlumer Straße 90, 38126 Braunschweig",
+  "hours": "24/7",
+  "tags": ["emergency", "notaufnahme", "hospital", "krankenhaus", "urgent", "dringend", "doctor", "arzt"],
+  "eligibility": ["all_residents"],
+  "description": "Emergency medical care for urgent and life-threatening conditions"
 }
 ]}

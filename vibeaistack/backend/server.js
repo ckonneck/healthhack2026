@@ -12,6 +12,55 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+// ─────────────────────────────
+// EMBEDDING CACHE
+// ─────────────────────────────
+const embeddingCache = new Map();
+
+// ─────────────────────────────
+// BUILD TEXT FOR EMBEDDING
+// ─────────────────────────────
+function buildEmbeddingText(entry) {
+  return [
+    entry.name,
+    entry.specialty,
+    entry.description,
+    ...(entry.tags || [])
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+// ─────────────────────────────
+// COSINE SIMILARITY
+// ─────────────────────────────
+function cosineSimilarity(a, b) {
+  const dot = a.reduce((sum, val, i) => sum + val * b[i], 0);
+  const magA = Math.sqrt(a.reduce((sum, val) => sum + val * val, 0));
+  const magB = Math.sqrt(b.reduce((sum, val) => sum + val * val, 0));
+  return dot / (magA * magB);
+}
+
+// ─────────────────────────────
+// GET EMBEDDING (WITH CACHE)
+// ─────────────────────────────
+async function getEmbedding(text) {
+  if (!client) return null;
+
+  if (embeddingCache.has(text)) {
+    return embeddingCache.get(text);
+  }
+
+  const res = await client.embeddings.create({
+    model: "text-embedding-3-small",
+    input: text
+  });
+
+  const vector = res.data[0].embedding;
+  embeddingCache.set(text, vector);
+  return vector;
+}
 // ─────────────────────────────
 // DB HELPERS
 // ─────────────────────────────
@@ -83,45 +132,47 @@ function safeText(...parts) {
 // ─────────────────────────────
 // KEYWORD SCORING (SAFE)
 // ─────────────────────────────
-function getTopMatches(text, db) {
-  console.log("🧠 DB SIZE INSIDE MATCH:", db?.length);
+async function getTopMatches(text, db) {
+  console.log("🧠 EMBEDDING MATCH MODE");
 
-  if (!db || db.length === 0) {
-    console.warn("⚠️ DB IS EMPTY AT MATCH TIME");
+  if (!client) {
+    console.warn("⚠️ No AI client — cannot use embeddings");
+    return { matches: [] };
   }
 
-  const keywords = text.toLowerCase().split(/\s+/).filter(w => w.length > 2);
-  console.log("🔑 KEYWORDS:", keywords);
+  if (!db || db.length === 0) {
+    console.warn("⚠️ DB EMPTY");
+    return { matches: [] };
+  }
 
-  const scored = db.map(entry => {
-    let score = 0;
+  try {
+    // 👉 embed user query
+    const queryVec = await getEmbedding(text);
 
-    const content = (
-      (entry.name || "") +
-      " " +
-      (entry.specialty || "") +
-      " " +
-      (entry.description || "") +
-      " " +
-      (entry.tags || []).join(" ")
-    ).toLowerCase();
+    const scored = [];
 
-    keywords.forEach(word => {
-      if (content.includes(word)) score++;
-    });
+    for (const entry of db) {
+      const content = buildEmbeddingText(entry);
 
-    return { ...entry, score };
-  });
+      const entryVec = await getEmbedding(content);
+      if (!entryVec) continue;
 
-  const matches = scored
-    .filter(e => e.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 5);
+      const score = cosineSimilarity(queryVec, entryVec);
 
-  console.log("🏁 FINAL MATCH COUNT:", matches.length);
-  console.log("🏁 TOP MATCHES:", matches.map(m => m.name));
+      scored.push({ ...entry, score });
+    }
 
-  return { keywords, matches };
+    const matches = scored
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    console.log("🏁 TOP MATCHES:", matches.map(m => m.name));
+    return { matches };
+
+  } catch (err) {
+    console.error("⚠️ Embedding match failed:", err.message);
+    return { matches: [] };
+  }
 }
 // ─────────────────────────────
 // HEALTH CHECK
@@ -149,11 +200,11 @@ app.post("/add", (req, res) => {
 // ─────────────────────────────
 // SEARCH
 // ─────────────────────────────
-app.post("/search", (req, res) => {
+app.post("/search",async (req, res) => {
   const query = req.body.query || "";
   const db = loadDB();
 
-  const { matches } = getTopMatches(query, db);
+  const { matches } = await getTopMatches(query, db);
 
   res.json({ results: matches });
 });
@@ -201,7 +252,7 @@ app.post("/assess", async (req, res) => {
   const db = loadDB();
   const text = `${problem} ${notes}`;
 
-  const { matches } = getTopMatches(text, db);
+  const { matches } = await getTopMatches(text, db);
 
   console.log("Top matches:", matches.map(m => m.title));
 
@@ -260,7 +311,7 @@ app.post("/ask", async (req, res) => {
   const query = req.body.query || "";
   const db = loadDB();
   console.log("📊 DB LOADED IN ROUTE:", db.length);
-  const { matches } = getTopMatches(query, db);
+  const { matches } = await getTopMatches(query, db);
   console.log("📤 SENDING MATCHES:", matches.length);
   if (!client) {
     return res.json({
