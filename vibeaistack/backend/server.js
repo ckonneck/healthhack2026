@@ -15,28 +15,41 @@ app.use(express.json());
 // ─────────────────────────────
 // DB HELPERS
 // ─────────────────────────────
+import path from "path";
+
+const DB_PATH = path.resolve(process.cwd(), "db.json");
+
 function loadDB() {
   try {
-    const raw = fs.readFileSync("./db.json", "utf-8");
+    console.log("📂 DB PATH:", DB_PATH);
+
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+
+    console.log("📄 RAW DB LENGTH:", raw.length);
+    console.log("📄 RAW DB PREVIEW:", raw.slice(0, 200));
+
     const parsed = JSON.parse(raw);
 
-    // SUPPORT BOTH STRUCTURES:
-    // 1) [ ...services ]
-    // 2) { services: [ ... ] }
+    console.log("📦 PARSED TYPE:", Array.isArray(parsed) ? "array" : typeof parsed);
+    console.log("📦 PARSED KEYS:", parsed && typeof parsed === "object" ? Object.keys(parsed) : parsed);
 
     if (Array.isArray(parsed)) return parsed;
-    if (Array.isArray(parsed.services)) return parsed.services;
+    if (parsed && Array.isArray(parsed.services)) return parsed.services;
 
-    console.warn("⚠️ DB format invalid:", parsed);
+    console.warn("⚠️ DB format invalid");
     return [];
   } catch (err) {
-    console.error("⚠️ DB load failed:", err.message);
+    console.error("❌ DB LOAD FAILED:", err.message);
     return [];
   }
 }
 
 function saveDB(data) {
-  fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error("⚠️ DB save failed:", err.message);
+  }
 }
 
 // ─────────────────────────────
@@ -71,39 +84,42 @@ function safeText(...parts) {
 // KEYWORD SCORING (SAFE)
 // ─────────────────────────────
 function getTopMatches(text, db) {
-  const keywords = text
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(w => w.length > 2);
+  console.log("🧠 DB SIZE INSIDE MATCH:", db?.length);
 
-  const list = Array.isArray(db) ? db : [];
+  if (!db || db.length === 0) {
+    console.warn("⚠️ DB IS EMPTY AT MATCH TIME");
+  }
 
-  const scored = list.map(entry => {
+  const keywords = text.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  console.log("🔑 KEYWORDS:", keywords);
+
+  const scored = db.map(entry => {
     let score = 0;
 
-    const content = [
-      entry.name,
-      entry.type,
-      entry.specialty,
-      entry.description,
-      ...(entry.tags || [])
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
+    const content = (
+      (entry.name || "") +
+      " " +
+      (entry.specialty || "") +
+      " " +
+      (entry.description || "") +
+      " " +
+      (entry.tags || []).join(" ")
+    ).toLowerCase();
 
     keywords.forEach(word => {
-      if (content.includes(word)) score += 1;
+      if (content.includes(word)) score++;
     });
-    console.log("HITTING 1");
+
     return { ...entry, score };
   });
 
   const matches = scored
     .filter(e => e.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 10);
-console.log("HITTING THE 2");
+    .slice(0, 5);
+
+  console.log("🏁 FINAL MATCH COUNT:", matches.length);
+  console.log("🏁 TOP MATCHES:", matches.map(m => m.name));
 
   return { keywords, matches };
 }
@@ -240,11 +256,12 @@ app.post("/assess", async (req, res) => {
 // ASK
 // ─────────────────────────────
 app.post("/ask", async (req, res) => {
+  console.log("📨 REQUEST BODY:", req.body);
   const query = req.body.query || "";
   const db = loadDB();
-
+  console.log("📊 DB LOADED IN ROUTE:", db.length);
   const { matches } = getTopMatches(query, db);
-
+  console.log("📤 SENDING MATCHES:", matches.length);
   if (!client) {
     return res.json({
       answer:

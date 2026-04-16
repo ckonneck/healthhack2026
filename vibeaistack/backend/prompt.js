@@ -25,6 +25,8 @@ IMPORTANT RULES:
 - NEVER give emergency instructions beyond "seek emergency care"
 - If unsure, prefer general support services
 - Be structured and practical
+
+
 `
     },
     {
@@ -55,6 +57,12 @@ TASK
 OUTPUT FORMAT (STRICT)
 
 You MUST respond in TWO PARTS:
+LANGUAGE RULE:
+- Detect the language of the user's input.
+- If the input is primarily German, respond in German.
+- If the input is primarily English, respond in English.
+- If mixed, prefer the language of the first sentence or majority language.
+- Keep terminology consistent within the chosen language.
 
 PART 1 - SUMMARY (plain text)
 Write 2–4 sentences explaining:
