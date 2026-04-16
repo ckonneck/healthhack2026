@@ -59,14 +59,14 @@
 }
 
 .nav-link:hover {
-  background: var(--color-surface);
+  background: var(--color-surface-subtle);
   border-color: var(--color-border-strong);
   text-decoration: none;
 }
 
 .nav-link[aria-current="page"] {
   background: var(--color-accent-soft);
-  border-color: #c7dbe2;
+  border-color: var(--color-border-accent);
   color: var(--color-accent-hover);
 }
 
@@ -93,6 +93,7 @@
   color: var(--color-text);
   font-size: var(--font-size-sm);
   font-weight: 600;
+  line-height: 1.4;
 }
 
 .field-hint,
@@ -123,14 +124,14 @@ select {
   border-radius: var(--radius-md);
   background: var(--color-surface);
   color: var(--color-text);
-  box-shadow: inset 0 1px 2px rgba(23, 48, 58, 0.03);
+  box-shadow: var(--shadow-inset-sm);
   transition: border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease;
 }
 
 .field-control::placeholder,
 input::placeholder,
 textarea::placeholder {
-  color: #7a8d95;
+  color: var(--color-placeholder);
 }
 
 textarea,
@@ -154,7 +155,7 @@ select:focus-visible,
 button:focus-visible,
 .nav-link:focus-visible,
 .button-link:focus-visible {
-  outline: 3px solid rgba(15, 107, 131, 0.18);
+  outline: 3px solid var(--color-focus-ring);
   outline-offset: 2px;
   border-color: var(--color-focus);
 }
@@ -174,7 +175,7 @@ input[aria-invalid="true"],
 textarea[aria-invalid="true"],
 select[aria-invalid="true"] {
   border-color: var(--color-danger);
-  box-shadow: 0 0 0 3px rgba(179, 93, 93, 0.12);
+  box-shadow: var(--shadow-danger-ring);
 }
 
 .button,
@@ -183,6 +184,7 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-2);
   min-height: 3rem;
   padding: 0.8rem 1.15rem;
   border: 1px solid transparent;
@@ -190,6 +192,7 @@ button,
   font-size: var(--font-size-sm);
   font-weight: 600;
   line-height: 1.2;
+  text-decoration: none;
   transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
 }
 
@@ -199,7 +202,7 @@ button,
 .button-link,
 .button--primary {
   background: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-on-accent);
   box-shadow: var(--shadow-sm);
 }
 
@@ -230,7 +233,7 @@ button:disabled,
 .button-link--secondary,
 .button--secondary {
   background: var(--color-surface);
-  color: var(--color-text);
+  color: var(--color-accent-hover);
   border-color: var(--color-border);
   box-shadow: none;
 }
@@ -238,8 +241,8 @@ button:disabled,
 .button-secondary:hover,
 .button-link--secondary:hover,
 .button--secondary:hover {
-  background: var(--color-surface-subtle);
-  border-color: var(--color-border-strong);
+  background: var(--color-accent-soft);
+  border-color: var(--color-border-accent);
 }
 
 .button-ghost,
@@ -269,6 +272,13 @@ button:disabled,
 .card-list {
   display: grid;
   gap: var(--space-4);
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.results-grid > .empty-state,
+.card-list > .empty-state {
+  grid-column: 1 / -1;
 }
 
 .card {
@@ -320,7 +330,7 @@ button:disabled,
   align-items: center;
   min-height: 1.75rem;
   padding: 0.25rem 0.6rem;
-  border: 1px solid #d4e2e8;
+  border: 1px solid var(--color-border-accent);
   border-radius: var(--radius-pill);
   background: var(--color-accent-soft);
   color: var(--color-accent-hover);
@@ -329,7 +339,10 @@ button:disabled,
 }
 
 .empty-state {
+  min-height: 9rem;
+  align-content: center;
   background: var(--color-surface-subtle);
+  border-color: var(--color-border-strong);
   border-style: dashed;
 }
 

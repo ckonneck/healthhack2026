@@ -115,7 +115,7 @@
 
 .survey-message--error {
   background: var(--color-danger-soft);
-  border-color: #e6c6c6;
+  border-color: var(--color-danger-border);
   color: var(--color-danger-text);
 }
 
@@ -181,7 +181,7 @@
 
 .option-input:focus-visible + .option-tile,
 .choice-input:focus-visible + .choice-card {
-  outline: 3px solid rgba(15, 107, 131, 0.18);
+  outline: 3px solid var(--color-focus-ring);
   outline-offset: 2px;
   border-color: var(--color-focus);
 }
@@ -189,7 +189,7 @@
 .option-input:checked + .option-tile,
 .choice-input:checked + .choice-card {
   background: var(--color-accent-soft);
-  border-color: #9cb9c3;
+  border-color: var(--color-border-accent-strong);
   box-shadow: inset 0 0 0 1px rgba(29, 95, 115, 0.1);
 }
 
@@ -209,11 +209,12 @@
 .option-group[aria-invalid="true"] .option-tile,
 .choice-group[aria-invalid="true"] .choice-card {
   border-color: var(--color-danger);
-  box-shadow: 0 0 0 3px rgba(179, 93, 93, 0.12);
+  box-shadow: var(--shadow-danger-ring);
 }
 
 .survey-actions {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
   padding-top: var(--space-4);
@@ -227,6 +228,11 @@
 @media (min-width: 980px) {
   .result-layout {
     grid-template-columns: minmax(18rem, 28rem) minmax(0, 1fr);
+  }
+
+  .survey-panel {
+    position: sticky;
+    top: var(--space-5);
   }
 }
 
