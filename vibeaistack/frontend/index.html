@@ -10,13 +10,9 @@
 <body>
   <main class="page-shell">
     <header class="site-header">
-      <div class="brand-block">
+      <div class="site-ident">
         <p class="eyebrow">Care Compass</p>
-        <h1 class="brand-title">Find health and community support with more clarity.</h1>
-        <p class="brand-subtitle">
-          Search the service directory, review practical details, or use the guided health check to
-          get a calm starting point for next steps.
-        </p>
+        <p class="site-name">Health and community support, in one clear place.</p>
       </div>
 
       <nav class="nav-links" aria-label="Primary">
@@ -26,8 +22,65 @@
       </nav>
     </header>
 
-    <section class="panel content-width--wide stack">
-      <div class="stack-sm">
+    <section class="panel hero page-section content-width--wide">
+      <div class="hero-content">
+        <p class="eyebrow">Care Navigation</p>
+        <h1 class="hero-title">Find the right health or community support without the guesswork.</h1>
+        <p class="hero-subtitle">
+          Start with a guided health check or search the directory directly to review practical
+          service options and next steps.
+        </p>
+        <div class="button-row hero-actions">
+          <a class="button-link" href="/form.html">Start health check</a>
+          <a class="button-link button-link--secondary" href="#directory-search">Search services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section content-width--wide stack">
+      <div class="section-intro stack-sm">
+        <p class="eyebrow">How It Works</p>
+        <h2 class="section-title">A simple path to your next step</h2>
+        <p class="section-description">
+          Care Compass helps you move from uncertainty to a short list of relevant support options.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="card step-card">
+          <span class="step-number">1</span>
+          <div class="stack-sm">
+            <h3 class="card-title">Start with what you need</h3>
+            <p class="card-copy">
+              Use the guided health check or enter a plain-language search term.
+            </p>
+          </div>
+        </article>
+
+        <article class="card step-card">
+          <span class="step-number">2</span>
+          <div class="stack-sm">
+            <h3 class="card-title">Review matching services</h3>
+            <p class="card-copy">
+              See relevant options with practical details like location, hours, and specialty.
+            </p>
+          </div>
+        </article>
+
+        <article class="card step-card">
+          <span class="step-number">3</span>
+          <div class="stack-sm">
+            <h3 class="card-title">Choose a calmer next step</h3>
+            <p class="card-copy">
+              Use the results as a starting point for reaching the right kind of support.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="directory-search" class="panel page-section content-width--wide stack">
+      <div class="section-intro stack-sm">
         <p class="eyebrow">Directory Search</p>
         <h2 class="section-title">Search by need, topic, or service type</h2>
         <p class="section-description">
@@ -40,13 +93,14 @@
         <div class="field">
           <label class="field-label" for="q">Search services</label>
           <input id="q" placeholder="Try: counselling, dental clinic, food pantry" />
+          <p class="field-hint">Use simple keywords to explore available health and support services.</p>
         </div>
         <button onclick="search()">Search</button>
       </div>
     </section>
 
-    <section class="panel content-width--wide stack">
-      <div class="stack-sm">
+    <section class="panel page-section content-width--wide stack">
+      <div class="section-intro stack-sm">
         <p class="eyebrow">Results</p>
         <h2 class="section-title">Service matches</h2>
         <p class="section-description">
