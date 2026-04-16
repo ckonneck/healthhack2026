@@ -22,12 +22,75 @@
 
       <div class="card card-stack">
         <p class="card-copy">
-          This provider route is ready for the upcoming submission flow.
+          All fields are required in this step. This form validates the service entry structure only.
         </p>
         <p class="field-hint">
-          Have the service name, short description, and access details ready for the next pass.
+          No data will be saved yet. The frontend is being aligned with the current service schema first.
         </p>
       </div>
+
+      <form id="providerForm" class="form-grid" novalidate>
+        <label class="field" for="name">
+          <span class="field-label">Service name</span>
+          <input id="name" name="name" class="field-control" type="text" required autocomplete="organization" />
+          <p id="nameError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="type">
+          <span class="field-label">Service type</span>
+          <select id="type" name="type" class="field-control" required>
+            <option value="">Select a service type</option>
+            <option value="clinic">clinic</option>
+            <option value="counseling">counseling</option>
+            <option value="public_office">public office</option>
+            <option value="support_center">support center</option>
+            <option value="ngo">ngo</option>
+            <option value="legal_aid">legal aid</option>
+            <option value="housing_support">housing support</option>
+            <option value="therapy">therapy</option>
+            <option value="other">other</option>
+          </select>
+          <p id="typeError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="specialty">
+          <span class="field-label">Specialty</span>
+          <input id="specialty" name="specialty" class="field-control" type="text" required autocomplete="off" />
+          <p id="specialtyError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="address">
+          <span class="field-label">Address</span>
+          <input id="address" name="address" class="field-control" type="text" required autocomplete="street-address" />
+          <p id="addressError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="hours">
+          <span class="field-label">Opening hours</span>
+          <input id="hours" name="hours" class="field-control" type="text" required autocomplete="off" />
+          <p id="hoursError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="tags">
+          <span class="field-label">Tags</span>
+          <input id="tags" name="tags" class="field-control" type="text" required autocomplete="off" aria-describedby="tagsHint tagsError" />
+          <p id="tagsHint" class="field-hint">Separate tags with commas</p>
+          <p id="tagsError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <label class="field" for="description">
+          <span class="field-label">Description</span>
+          <textarea id="description" name="description" class="field-control field-control--textarea" required></textarea>
+          <p id="descriptionError" class="field-error" aria-live="polite"></p>
+        </label>
+
+        <div class="button-row">
+          <button type="submit" class="button button--primary">Review submission</button>
+          <a class="button button--secondary" href="/index.html">Back to search</a>
+        </div>
+
+        <p id="formStatus" class="field-hint" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
@@ -35,11 +98,170 @@
 
   <script>
     const pageHeader = document.getElementById("pageHeader");
+    const providerForm = document.getElementById("providerForm");
+    const formStatus = document.getElementById("formStatus");
 
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
       title: "Submit a service",
       description: "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
       currentNav: "add"
+    });
+
+    const formState = {
+      name: "",
+      type: "",
+      specialty: "",
+      address: "",
+      hours: "",
+      tags: "",
+      description: ""
+    };
+
+    const formErrors = {
+      name: "",
+      type: "",
+      specialty: "",
+      address: "",
+      hours: "",
+      tags: "",
+      description: ""
+    };
+
+    const touchedFields = {
+      name: false,
+      type: false,
+      specialty: false,
+      address: false,
+      hours: false,
+      tags: false,
+      description: false
+    };
+
+    const fieldLabels = {
+      name: "Service name",
+      type: "Service type",
+      specialty: "Specialty",
+      address: "Address",
+      hours: "Opening hours",
+      tags: "Tags",
+      description: "Description"
+    };
+
+    function getFieldElement(fieldName) {
+      return document.getElementById(fieldName);
+    }
+
+    function getErrorElement(fieldName) {
+      return document.getElementById(`${fieldName}Error`);
+    }
+
+    function parseTags(value) {
+      return value
+        .split(",")
+        .map(tag => tag.trim())
+        .filter(Boolean);
+    }
+
+    function validateField(fieldName) {
+      const value = formState[fieldName].trim();
+
+      if (fieldName === "tags") {
+        if (!parseTags(formState.tags).length) {
+          return "Enter at least one tag.";
+        }
+
+        return "";
+      }
+
+      if (!value) {
+        return `${fieldLabels[fieldName]} is required.`;
+      }
+
+      return "";
+    }
+
+    function applyFieldState(fieldName) {
+      const input = getFieldElement(fieldName);
+      const errorText = touchedFields[fieldName] ? formErrors[fieldName] : "";
+      const errorElement = getErrorElement(fieldName);
+
+      input.value = formState[fieldName];
+      input.setAttribute("aria-invalid", errorText ? "true" : "false");
+      errorElement.textContent = errorText;
+    }
+
+    function validateAllFields() {
+      let isValid = true;
+
+      Object.keys(formState).forEach(fieldName => {
+        const error = validateField(fieldName);
+        formErrors[fieldName] = error;
+
+        if (error) {
+          isValid = false;
+        }
+      });
+
+      return isValid;
+    }
+
+    function buildServicePayload() {
+      return {
+        name: formState.name.trim(),
+        type: formState.type.trim(),
+        specialty: formState.specialty.trim(),
+        address: formState.address.trim(),
+        hours: formState.hours.trim(),
+        tags: parseTags(formState.tags),
+        description: formState.description.trim()
+      };
+    }
+
+    Object.keys(formState).forEach(fieldName => {
+      const input = getFieldElement(fieldName);
+
+      input.addEventListener("input", event => {
+        formState[fieldName] = event.target.value;
+
+        if (touchedFields[fieldName]) {
+          formErrors[fieldName] = validateField(fieldName);
+          applyFieldState(fieldName);
+        }
+      });
+
+      input.addEventListener("blur", () => {
+        touchedFields[fieldName] = true;
+        formErrors[fieldName] = validateField(fieldName);
+        applyFieldState(fieldName);
+      });
+
+      applyFieldState(fieldName);
+    });
+
+    providerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      Object.keys(touchedFields).forEach(fieldName => {
+        touchedFields[fieldName] = true;
+      });
+
+      const isValid = validateAllFields();
+
+      Object.keys(formState).forEach(applyFieldState);
+
+      if (!isValid) {
+        formStatus.textContent = "Please fix the highlighted fields before reviewing this service entry.";
+        const firstInvalidField = Object.keys(formErrors).find(fieldName => formErrors[fieldName]);
+
+        if (firstInvalidField) {
+          getFieldElement(firstInvalidField).focus();
+        }
+
+        return;
+      }
+
+      const payload = buildServicePayload();
+      formStatus.textContent = `Entry ready for backend wiring. The current schema-aligned payload includes ${payload.tags.length} tag${payload.tags.length === 1 ? "" : "s"}. No data was saved.`;
     });
   </script>
 </body>
