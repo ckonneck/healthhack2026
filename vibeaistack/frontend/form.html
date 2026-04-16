@@ -9,35 +9,12 @@
 
 <body>
   <main class="page-shell">
-    <header class="site-header">
-      <div class="brand-block">
-        <p class="eyebrow">Care Compass</p>
-        <h1 class="brand-title">Describe what is going on and get a calmer starting point.</h1>
-        <p class="brand-subtitle">
-          This guided check helps organize what you are experiencing and suggests relevant service
-          categories based on the current backend response.
-        </p>
-      </div>
-
-      <nav class="nav-links" aria-label="Primary">
-        <a class="nav-link" href="/index.html">Service search</a>
-        <a class="nav-link" aria-current="page" href="/form.html">Health check</a>
-        <a class="nav-link" href="/add.html">Add entry</a>
-      </nav>
-    </header>
+    <header id="pageHeader" class="page-header"></header>
 
     <div class="result-layout">
       <section class="panel page-section content-width--narrow survey-panel">
         <div class="survey-shell">
-          <div class="survey-progress-block">
-            <div class="survey-progress-top">
-              <p class="eyebrow">Guided Intake</p>
-              <p id="surveyStepLabel" class="survey-step-label">Step 1 of 4</p>
-            </div>
-            <div class="survey-progress-bar" aria-hidden="true">
-              <span id="surveyProgressFill" class="survey-progress-fill"></span>
-            </div>
-          </div>
+          <div id="surveyProgress"></div>
 
           <p id="surveyMessage" class="survey-message survey-message--helper" aria-live="polite"></p>
 
@@ -52,7 +29,7 @@
 
               <label class="field">
                 <span class="field-label">Main concern</span>
-                <input id="problem" placeholder="What is your main issue?" />
+                <input id="problem" class="field-control" placeholder="What is your main issue?" />
               </label>
             </section>
 
@@ -67,35 +44,10 @@
               <div class="form-grid">
                 <label class="field">
                   <span class="field-label">Duration</span>
-                  <input id="duration" placeholder="How long has this been happening?" />
+                  <input id="duration" class="field-control" placeholder="How long has this been happening?" />
                 </label>
 
-                <div class="choice-group">
-                  <span class="field-label">Severity</span>
-                  <div class="choice-grid" role="radiogroup" aria-label="Severity">
-                    <label class="choice-option">
-                      <input class="choice-input" type="radio" name="severity" value="mild" />
-                      <span class="choice-card">
-                        <span class="choice-title">Mild</span>
-                      </span>
-                    </label>
-
-                    <label class="choice-option">
-                      <input class="choice-input" type="radio" name="severity" value="moderate" />
-                      <span class="choice-card">
-                        <span class="choice-title">Moderate</span>
-                      </span>
-                    </label>
-
-                    <label class="choice-option">
-                      <input class="choice-input" type="radio" name="severity" value="severe" />
-                      <span class="choice-card">
-                        <span class="choice-title">Severe</span>
-                      </span>
-                    </label>
-                  </div>
-                  <p class="field-hint">Pick the closest fit.</p>
-                </div>
+                <div id="severityField"></div>
               </div>
             </section>
 
@@ -109,7 +61,7 @@
 
               <label class="field">
                 <span class="field-label">Age</span>
-                <input id="age" placeholder="Age (optional)" />
+                <input id="age" class="field-control" placeholder="Age (optional)" />
               </label>
             </section>
 
@@ -123,47 +75,82 @@
 
               <label class="field">
                 <span class="field-label">Additional notes</span>
-                <textarea id="notes" placeholder="Share any symptoms, constraints, or context that might help."></textarea>
+                <textarea id="notes" class="field-control field-control--textarea" placeholder="Share any symptoms, constraints, or context that might help."></textarea>
                 <p class="field-hint">Include any details that could help narrow the right type of support.</p>
               </label>
             </section>
           </div>
 
           <div class="survey-actions">
-            <button id="prevButton" type="button" class="button-secondary">Previous</button>
-            <button id="nextButton" type="button">Continue</button>
+            <button id="prevButton" type="button" class="button button--secondary">Previous</button>
+            <button id="nextButton" type="button" class="button button--primary">Continue</button>
           </div>
         </div>
       </section>
 
-      <section class="panel page-section content-width--wide stack">
-        <div class="stack-sm">
+      <section class="panel page-section content-width--wide section-shell">
+        <div class="section-header">
           <p class="eyebrow">Recommendations</p>
-          <h2 class="section-title">Suggested support options</h2>
+          <h2 class="section-title">Your guidance page</h2>
           <p class="section-description">
-            Your summary and any grouped service recommendations will appear here after submission.
+            Your summary, recommended starting point, and additional service guidance will appear here after submission.
           </p>
         </div>
 
-        <div id="result" class="group-list">
-          <div class="card empty-state">
-            <div class="empty-title">No recommendations yet</div>
-            <p class="empty-copy">
-              Complete the form to see a summary and any relevant service categories returned by the app.
-            </p>
-          </div>
-        </div>
+        <div id="result" class="results-shell"></div>
       </section>
     </div>
   </main>
 
+  <script src="/app.js"></script>
   <script>
+    const pageHeader = document.getElementById("pageHeader");
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Describe what is going on and get a calmer starting point.",
+      description: "This guided check helps organize what you are experiencing and suggests relevant service categories based on the current backend response.",
+      currentNav: "survey"
+    });
+
+    const surveyProgress = document.getElementById("surveyProgress");
+    surveyProgress.innerHTML = CareCompassUI.renderProgressIndicator({
+      eyebrow: "Guided Intake",
+      currentStep: 1,
+      totalSteps: 4,
+      labelId: "surveyStepLabel",
+      fillId: "surveyProgressFill"
+    });
+
+    const severityField = document.getElementById("severityField");
+    severityField.innerHTML = CareCompassUI.renderOptionTileGroup({
+      label: "Severity",
+      name: "severity",
+      hint: "Pick the closest fit.",
+      ariaLabel: "Severity",
+      options: [
+        { label: "Mild", value: "mild" },
+        { label: "Moderate", value: "moderate" },
+        { label: "Severe", value: "severe" }
+      ]
+    });
+
     const surveySteps = Array.from(document.querySelectorAll(".survey-step"));
     const surveyStepLabel = document.getElementById("surveyStepLabel");
     const surveyProgressFill = document.getElementById("surveyProgressFill");
     const surveyMessage = document.getElementById("surveyMessage");
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
+    const resultsContainer = document.getElementById("result");
+    const problemInput = document.getElementById("problem");
+    const durationInput = document.getElementById("duration");
+    const ageInput = document.getElementById("age");
+    const notesInput = document.getElementById("notes");
+    const groupNames = {
+      medical: "Medical",
+      mental_health: "Mental health",
+      social_support: "Social support",
+      emergency: "Emergency"
+    };
+    const recommendationOrder = ["emergency", "medical", "mental_health", "social_support"];
     let currentStep = 0;
 
     function setSurveyMessage(text, variant = "helper") {
@@ -219,33 +206,272 @@
       updateSurveyStep({ focus: true });
     });
 
-    function renderEmptyState(title, message) {
+    function formatValue(value) {
+      if (!value) {
+        return "";
+      }
+
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    }
+
+    function getSnapshotEntries(data) {
+      return [
+        { label: "Main concern", value: data.problem || "" },
+        { label: "Duration", value: data.duration || "" },
+        { label: "Severity", value: formatValue(data.severity || "") },
+        { label: "Age", value: data.age || "" }
+      ].filter(entry => entry.value);
+    }
+
+    function getOrderedGroups(groups = {}) {
+      return recommendationOrder
+        .map(key => ({
+          key,
+          label: groupNames[key] || key,
+          items: Array.isArray(groups[key]) ? groups[key].filter(Boolean) : []
+        }))
+        .filter(group => group.items.length);
+    }
+
+    function getPrimaryRecommendation(groups) {
+      const orderedGroups = getOrderedGroups(groups);
+
+      if (!orderedGroups.length) {
+        return null;
+      }
+
+      return {
+        groupKey: orderedGroups[0].key,
+        groupLabel: orderedGroups[0].label,
+        service: orderedGroups[0].items[0]
+      };
+    }
+
+    function getAdditionalRecommendations(groups) {
+      const orderedGroups = getOrderedGroups(groups);
+      const recommendations = [];
+
+      orderedGroups.forEach((group, groupIndex) => {
+        group.items.forEach((service, itemIndex) => {
+          if (groupIndex === 0 && itemIndex === 0) {
+            return;
+          }
+
+          recommendations.push({
+            groupKey: group.key,
+            groupLabel: group.label,
+            service
+          });
+        });
+      });
+
+      return recommendations;
+    }
+
+    function renderTagList(tags) {
+      return CareCompassUI.renderTagList(tags);
+    }
+
+    function renderServiceMeta(service) {
+      return CareCompassUI.renderMetaStack(
+        [service.address, service.hours, service.specialty],
+        "Location, hours, and specialty details will appear here when available."
+      );
+    }
+
+    function buildNextSteps(primaryRecommendation) {
+      if (!primaryRecommendation) {
+        return [
+          "Review the short summary and recommended starting point once your results are ready.",
+          "Compare any additional services that appear below to see what fits best.",
+          "If needed, update your answers or browse the full service directory."
+        ];
+      }
+
+      const serviceName = primaryRecommendation.service.name || "the recommended service";
+
+      return [
+        `Review the details for ${serviceName} and confirm whether it fits your needs.`,
+        "Use the address, hours, and specialty notes to decide how you want to reach out.",
+        "If it does not feel right, compare the additional services below or revise your answers."
+      ];
+    }
+
+    function renderSnapshotGrid(entries) {
+      const snapshotEntries = entries.length
+        ? entries
+        : [
+            { label: "Main concern", value: "Your main concern will appear here" },
+            { label: "Duration", value: "Timing details will appear here" },
+            { label: "Severity", value: "Severity details will appear here" }
+          ];
+
       return `
-        <div class="card empty-state">
-          <div class="empty-title">${title}</div>
-          <p class="empty-copy">${message}</p>
+        <div class="snapshot-grid">
+          ${snapshotEntries.map(entry => `
+            <div class="snapshot-item">
+              <span class="snapshot-label">${entry.label}</span>
+              <span class="snapshot-value">${entry.value}</span>
+            </div>
+          `).join("")}
         </div>
+      `;
+    }
+
+    function renderPrimaryRecommendation(primaryRecommendation) {
+      if (!primaryRecommendation) {
+        return `
+          <article class="card results-card results-card--primary">
+            <div class="results-heading-row">
+              <div class="stack-sm">
+                <p class="results-subtitle">Start here</p>
+                <h3 class="results-title">A primary recommendation will appear here</h3>
+              </div>
+            </div>
+            <p class="results-lead">
+              Once the survey is complete, Care Compass will highlight the clearest place to begin.
+            </p>
+            ${CareCompassUI.renderMetaStack([], "Relevant service details will appear here when available.")}
+          </article>
+        `;
+      }
+
+      const { groupLabel, service } = primaryRecommendation;
+
+      return `
+        <article class="card results-card results-card--primary">
+          <div class="results-heading-row">
+            <div class="stack-sm">
+              <p class="results-subtitle">Start here</p>
+              <h3 class="results-title">${service.name || "Recommended service"}</h3>
+            </div>
+            <span class="results-badge">${groupLabel}</span>
+          </div>
+
+          <div class="recommendation-stack">
+            ${renderServiceMeta(service)}
+            ${service.reason ? `<p class="recommendation-reason">${service.reason}</p>` : ""}
+            ${renderTagList(service.tags)}
+          </div>
+        </article>
+      `;
+    }
+
+    function renderAdditionalServices(additionalRecommendations) {
+      if (!additionalRecommendations.length) {
+        return `
+          <div class="fallback-box">
+            <p class="card-copy">
+              Additional matching services will appear here when there is more than one relevant option.
+            </p>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="results-service-grid">
+          ${additionalRecommendations.slice(0, 6).map(({ groupLabel, service }) => `
+            <article class="card service-card">
+              <div class="service-card-group">
+                <h4 class="card-title">${service.name || "Service option"}</h4>
+                <span class="results-badge">${groupLabel}</span>
+              </div>
+              ${renderServiceMeta(service)}
+              ${service.reason ? `<p class="card-copy">${service.reason}</p>` : ""}
+              ${renderTagList(service.tags)}
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderResultsShell({
+      introTitle,
+      introCopy,
+      summaryText,
+      snapshotEntries = [],
+      primaryRecommendation = null,
+      additionalRecommendations = [],
+      nextSteps = [],
+      fallbackText
+    }) {
+      return `
+        <div class="results-intro">
+          <p class="eyebrow">Guidance summary</p>
+          <h3 class="results-title">${introTitle}</h3>
+          <p class="results-lead">${introCopy}</p>
+        </div>
+
+        <div class="results-summary-grid">
+          <article class="card results-card">
+            <div class="stack-sm">
+              <p class="results-subtitle">Needs snapshot</p>
+              <h3 class="results-title">What you shared</h3>
+              <p class="card-copy">${summaryText}</p>
+            </div>
+            ${renderSnapshotGrid(snapshotEntries)}
+          </article>
+
+          ${renderPrimaryRecommendation(primaryRecommendation)}
+        </div>
+
+        <article class="card results-card">
+          <div class="stack-sm">
+            <p class="results-subtitle">Next steps</p>
+            <h3 class="results-title">What to do next</h3>
+          </div>
+          <ul class="results-list">
+            ${nextSteps.map(step => `<li><p class="card-copy">${step}</p></li>`).join("")}
+          </ul>
+        </article>
+
+        <article class="card results-card">
+          <div class="stack-sm">
+            <p class="results-subtitle">Additional helpful services</p>
+            <h3 class="results-title">Other options to consider</h3>
+          </div>
+          ${renderAdditionalServices(additionalRecommendations)}
+        </article>
+
+        <article class="card results-card results-card--muted">
+          <div class="stack-sm">
+            <p class="results-subtitle">Need more support?</p>
+            <h3 class="results-title">Fallback help</h3>
+          </div>
+          <div class="fallback-box">
+            <p class="card-copy">${fallbackText}</p>
+            <div class="button-row results-actions">
+              <a class="button button--secondary" href="/index.html">Browse full directory</a>
+            </div>
+          </div>
+        </article>
       `;
     }
 
     async function submitForm() {
       const selectedSeverity = document.querySelector('input[name="severity"]:checked');
       const data = {
-        problem: problem.value,
-        duration: duration.value,
+        problem: problemInput.value,
+        duration: durationInput.value,
         severity: selectedSeverity ? selectedSeverity.value : "",
-        age: age.value,
-        notes: notes.value
+        age: ageInput.value,
+        notes: notesInput.value
       };
 
       const container = document.getElementById("result");
       nextButton.disabled = true;
       prevButton.disabled = true;
       setSurveyMessage("Preparing recommendations.", "helper");
-      container.innerHTML = renderEmptyState(
-        "Finding options",
-        "Reviewing your input and preparing the available service groups."
-      );
+      container.innerHTML = renderResultsShell({
+        introTitle: "Building your guidance page",
+        introCopy: "Reviewing your answers and organizing the clearest place to start.",
+        summaryText: "Your current survey answers are being reviewed.",
+        snapshotEntries: getSnapshotEntries(data),
+        primaryRecommendation: null,
+        additionalRecommendations: [],
+        nextSteps: buildNextSteps(null),
+        fallbackText: "If the results do not feel right, you can adjust your answers or browse the full directory."
+      });
 
       try {
         const res = await fetch("http://localhost:3000/assess", {
@@ -281,77 +507,67 @@
           }
         }
 
-        let html = "";
-
-        if (summary) {
-          html += `
-            <article class="card card-highlight">
-              <h3 class="card-title">Summary</h3>
-              <p class="card-copy">${summary}</p>
-            </article>
-          `;
-        }
+        const primaryRecommendation = getPrimaryRecommendation(groups);
+        const additionalRecommendations = getAdditionalRecommendations(groups);
+        const summaryText = summary || "This page reflects the details you shared in the survey.";
+        const snapshotEntries = getSnapshotEntries(data);
+        const nextSteps = buildNextSteps(primaryRecommendation);
 
         if (!groups) {
-          html += renderEmptyState(
-            "No structured results found",
-            "The response did not include grouped service recommendations this time."
-          );
-          container.innerHTML = html;
+          container.innerHTML = renderResultsShell({
+            introTitle: "We could not organize a clear recommendation yet",
+            introCopy: "Your survey answers are still captured below so you can review what was shared.",
+            summaryText,
+            snapshotEntries,
+            primaryRecommendation: null,
+            additionalRecommendations: [],
+            nextSteps,
+            fallbackText: "If none of these suggestions feel right, adjust your answers on the left or browse the full directory for a broader set of services."
+          });
           setSurveyMessage("You can adjust your answers and try again.", "helper");
           return;
         }
 
-        const groupNames = {
-          medical: "Medical",
-          mental_health: "Mental health",
-          social_support: "Social support",
-          emergency: "Emergency"
-        };
-
-        for (const key in groups) {
-          const items = groups[key];
-          if (!items || items.length === 0) continue;
-
-          html += `<section class="group-block"><h3 class="group-title">${groupNames[key] || key}</h3><div class="card-list">`;
-
-          items.forEach(s => {
-            const tags = Array.isArray(s.tags) ? s.tags.filter(Boolean) : [];
-
-            html += `
-              <article class="card">
-                <h4 class="card-title">${s.name || "Unknown service"}</h4>
-                <div class="meta-stack">
-                  ${s.address ? `<p class="meta-row">${s.address}</p>` : ""}
-                  ${s.hours ? `<p class="meta-row">${s.hours}</p>` : ""}
-                  ${s.specialty ? `<p class="meta-row">${s.specialty}</p>` : ""}
-                  ${s.reason ? `<p class="meta-row">Recommended because: ${s.reason}</p>` : ""}
-                </div>
-                ${tags.length ? `<div class="tag-list">${tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>` : ""}
-              </article>
-            `;
-          });
-
-          html += `</div></section>`;
-        }
-
-        container.innerHTML = html || renderEmptyState(
-          "No recommendations found",
-          "No grouped recommendations were available for this response."
-        );
+        container.innerHTML = renderResultsShell({
+          introTitle: "Here is a practical place to start",
+          introCopy: "Use this page as a simple starting point based on the needs you described.",
+          summaryText,
+          snapshotEntries,
+          primaryRecommendation,
+          additionalRecommendations,
+          nextSteps,
+          fallbackText: "If these suggestions do not feel right, adjust your answers on the left or browse the full service directory for more options."
+        });
         setSurveyMessage("You can go back and adjust any answer, then run it again.", "helper");
       } catch (error) {
         console.error("Assess request failed:", error);
-        container.innerHTML = renderEmptyState(
-          "Something went wrong",
-          "We couldn't load recommendations right now. Please try again."
-        );
+        container.innerHTML = renderResultsShell({
+          introTitle: "We could not load recommendations right now",
+          introCopy: "The page structure is ready, but we were not able to populate it this time.",
+          summaryText: "Your survey responses are still available on the left if you want to try again.",
+          snapshotEntries: getSnapshotEntries(data),
+          primaryRecommendation: null,
+          additionalRecommendations: [],
+          nextSteps: buildNextSteps(null),
+          fallbackText: "Try again in a moment, adjust your answers, or browse the full directory while this page is unavailable."
+        });
         setSurveyMessage("We couldn't load recommendations right now. Please try again.", "error");
       } finally {
         nextButton.disabled = false;
         prevButton.disabled = currentStep === 0;
       }
     }
+
+    resultsContainer.innerHTML = renderResultsShell({
+      introTitle: "A clearer starting point will appear here",
+      introCopy: "After the survey, Care Compass will organize your results into a simple guidance page.",
+      summaryText: "A short summary of what you share in the survey will appear here so you can review it quickly.",
+      snapshotEntries: [],
+      primaryRecommendation: null,
+      additionalRecommendations: [],
+      nextSteps: buildNextSteps(null),
+      fallbackText: "If the first recommendation does not feel right, you can update your answers or browse the full directory for more options."
+    });
 
     updateSurveyStep();
   </script>

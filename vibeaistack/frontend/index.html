@@ -9,20 +9,9 @@
 
 <body>
   <main class="page-shell">
-    <header class="site-header">
-      <div class="site-ident">
-        <p class="eyebrow">Care Compass</p>
-        <p class="site-name">Health and community support, in one clear place.</p>
-      </div>
+    <header id="pageHeader" class="page-header"></header>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a class="nav-link" aria-current="page" href="/index.html">Service search</a>
-        <a class="nav-link" href="/form.html">Health check</a>
-        <a class="nav-link" href="/add.html">Add entry</a>
-      </nav>
-    </header>
-
-    <section class="panel hero page-section content-width--wide">
+    <section class="panel hero page-section content-width--wide section-shell">
       <div class="hero-content">
         <p class="eyebrow">Care Navigation</p>
         <h1 class="hero-title">Find the right health or community support without the guesswork.</h1>
@@ -31,14 +20,14 @@
           service options and next steps.
         </p>
         <div class="button-row hero-actions">
-          <a class="button-link" href="/form.html">Start health check</a>
-          <a class="button-link button-link--secondary" href="#directory-search">Search services</a>
+          <a class="button button--primary" href="/form.html">Start health check</a>
+          <a class="button button--secondary" href="#directory-search">Search services</a>
         </div>
       </div>
     </section>
 
-    <section class="page-section content-width--wide stack">
-      <div class="section-intro stack-sm">
+    <section class="page-section content-width--wide section-shell">
+      <div class="section-header">
         <p class="eyebrow">How It Works</p>
         <h2 class="section-title">A simple path to your next step</h2>
         <p class="section-description">
@@ -47,7 +36,7 @@
       </div>
 
       <div class="steps-grid">
-        <article class="card step-card">
+        <article class="card card-stack step-card">
           <span class="step-number">1</span>
           <div class="stack-sm">
             <h3 class="card-title">Start with what you need</h3>
@@ -57,7 +46,7 @@
           </div>
         </article>
 
-        <article class="card step-card">
+        <article class="card card-stack step-card">
           <span class="step-number">2</span>
           <div class="stack-sm">
             <h3 class="card-title">Review matching services</h3>
@@ -67,7 +56,7 @@
           </div>
         </article>
 
-        <article class="card step-card">
+        <article class="card card-stack step-card">
           <span class="step-number">3</span>
           <div class="stack-sm">
             <h3 class="card-title">Choose a calmer next step</h3>
@@ -79,8 +68,8 @@
       </div>
     </section>
 
-    <section id="directory-search" class="panel page-section content-width--wide stack">
-      <div class="section-intro stack-sm">
+    <section id="directory-search" class="panel page-section content-width--wide section-shell">
+      <div class="section-header">
         <p class="eyebrow">Directory Search</p>
         <h2 class="section-title">Search by need, topic, or service type</h2>
         <p class="section-description">
@@ -92,15 +81,15 @@
       <div class="search-row">
         <div class="field">
           <label class="field-label" for="q">Search services</label>
-          <input id="q" placeholder="Try: counselling, dental clinic, food pantry" />
+          <input id="q" class="field-control" placeholder="Try: counselling, dental clinic, food pantry" />
           <p class="field-hint">Use simple keywords to explore available health and support services.</p>
         </div>
-        <button onclick="search()">Search</button>
+        <button class="button button--primary" onclick="search()">Search</button>
       </div>
     </section>
 
-    <section class="panel page-section content-width--wide stack">
-      <div class="section-intro stack-sm">
+    <section class="panel page-section content-width--wide section-shell">
+      <div class="section-header">
         <p class="eyebrow">Results</p>
         <h2 class="section-title">Service matches</h2>
         <p class="section-description">
@@ -109,9 +98,9 @@
       </div>
 
       <div id="results" class="results-grid">
-        <div class="card empty-state">
-          <div class="empty-title">Start with a search</div>
-          <p class="empty-copy">
+        <div class="card card-stack empty-state">
+          <div class="empty-state__title empty-title">Start with a search</div>
+          <p class="empty-state__copy empty-copy">
             Enter a need, service type, or keyword above to explore available support options.
           </p>
         </div>
@@ -119,31 +108,38 @@
     </section>
   </main>
 
+  <script src="/app.js"></script>
   <script src="/api.js"></script>
 
   <script>
+    const pageHeader = document.getElementById("pageHeader");
+    const queryInput = document.getElementById("q");
+    const resultsContainer = document.getElementById("results");
+
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Health and community support, in one clear place.",
+      currentNav: "search",
+      compact: true,
+      titleTag: "p",
+      titleClass: "site-name"
+    });
+
     function renderEmptyState(title, message) {
-      return `
-        <div class="card empty-state">
-          <div class="empty-title">${title}</div>
-          <p class="empty-copy">${message}</p>
-        </div>
-      `;
+      return CareCompassUI.renderEmptyState({ title, message });
     }
 
     async function search() {
-      const q = document.getElementById("q").value.trim();
-      const results = document.getElementById("results");
+      const q = queryInput.value.trim();
 
       if (!q) {
-        results.innerHTML = renderEmptyState(
+        resultsContainer.innerHTML = renderEmptyState(
           "Enter a search term",
           "Add a topic or need above to search the current service directory."
         );
         return;
       }
 
-      results.innerHTML = renderEmptyState(
+      resultsContainer.innerHTML = renderEmptyState(
         "Searching directory",
         "Looking for services that match your request."
       );
@@ -157,21 +153,21 @@
       const data = await res.json();
 
       if (!data.results || data.results.length === 0) {
-        results.innerHTML = renderEmptyState(
+        resultsContainer.innerHTML = renderEmptyState(
           "No matches found",
           "No services matched that search yet. Try a broader term or check the guided health form for another route."
         );
         return;
       }
 
-      results.innerHTML = data.results.map(r => `
-        <article class="card">
+      resultsContainer.innerHTML = data.results.map(r => `
+        <article class="card card-stack">
           <h3 class="card-title">${r.name || "Unnamed service"}</h3>
-          <div class="meta-stack">
-            <p class="meta-row">${r.address || "Location details are not available yet."}</p>
-            <p class="meta-row">${r.hours || "Hours are not listed yet."}</p>
-            ${r.specialty ? `<p class="meta-row">${r.specialty}</p>` : ""}
-          </div>
+          ${CareCompassUI.renderMetaStack([
+            r.address || "Location details are not available yet.",
+            r.hours || "Hours are not listed yet.",
+            r.specialty
+          ])}
         </article>
       `).join("");
     }

@@ -9,50 +9,46 @@
 
 <body>
   <main class="page-shell">
-    <header class="site-header">
-      <div class="brand-block">
-        <p class="eyebrow">Care Compass</p>
-        <h1 class="brand-title">Directory entry details</h1>
-        <p class="brand-subtitle">
-          Review the full entry details stored for this resource.
-        </p>
-      </div>
+    <header id="pageHeader" class="page-header"></header>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a class="nav-link" href="/index.html">Service search</a>
-        <a class="nav-link" href="/form.html">Health check</a>
-        <a class="nav-link" href="/add.html">Add entry</a>
-      </nav>
-    </header>
-
-    <section class="panel page-section content-width--narrow">
+    <section class="panel page-section content-width--narrow section-shell">
       <div id="content" class="detail-body"></div>
     </section>
   </main>
 
+  <script src="/app.js"></script>
   <script src="/data.js"></script>
 
   <script>
+    const pageHeader = document.getElementById("pageHeader");
+    const content = document.getElementById("content");
+
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Directory entry details",
+      description: "Review the full entry details stored for this resource.",
+      currentNav: ""
+    });
+
     const id = location.hash.replace("#", "");
     const item = getData().find(i => i.id === id);
 
     content.innerHTML = item
       ? `
-          <div class="stack-sm">
+          <div class="section-header section-header--compact">
             <p class="eyebrow">Saved Entry</p>
             <h2 class="section-title">${item.title}</h2>
           </div>
-          <div class="card">
+          <div class="card card-stack">
             <p class="detail-copy">${item.details}</p>
           </div>
-          <a class="button-link button-link--secondary" href="/index.html">Back to search</a>
+          <a class="button button--secondary" href="/index.html">Back to search</a>
         `
       : `
-          <div class="card empty-state">
-            <div class="empty-title">Entry not found</div>
-            <p class="empty-copy">We could not find a saved item for this link.</p>
-          </div>
-          <a class="button-link button-link--secondary" href="/index.html">Back to search</a>
+          ${CareCompassUI.renderEmptyState({
+            title: "Entry not found",
+            message: "We could not find a saved item for this link."
+          })}
+          <a class="button button--secondary" href="/index.html">Back to search</a>
         `;
   </script>
 </body>
