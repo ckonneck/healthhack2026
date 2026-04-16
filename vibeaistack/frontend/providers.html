@@ -6,6 +6,65 @@
   <title>Care Compass | Submit a Service</title>
   <link rel="stylesheet" href="/styles.css" />
   <style>
+    .provider-page {
+      gap: var(--space-6);
+    }
+
+    .provider-note-list {
+      display: grid;
+      gap: var(--space-3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .provider-note-item {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-base);
+      line-height: var(--line-height-body);
+    }
+
+    .provider-note-item::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      margin-top: 0.45rem;
+      flex: none;
+      border-radius: 999px;
+      background: var(--color-border-accent);
+    }
+
+    .provider-workspace {
+      display: grid;
+      gap: var(--space-5);
+      align-items: start;
+      grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 1fr);
+    }
+
+    .provider-main-stack,
+    .provider-form-stack,
+    .provider-success-stack {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .provider-section-card {
+      gap: var(--space-4);
+    }
+
+    .provider-field-grid {
+      display: grid;
+      gap: var(--space-4);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .provider-hours-card {
+      gap: var(--space-4);
+    }
+
     .provider-hours-field {
       display: grid;
       gap: var(--space-3);
@@ -19,6 +78,79 @@
       display: grid;
       gap: var(--space-3);
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .provider-hours-grid--custom {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .provider-form-footer {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .provider-form-actions,
+    .provider-success-actions {
+      justify-content: flex-start;
+    }
+
+    .provider-form-actions .button,
+    .provider-success-actions .button {
+      min-width: 11rem;
+    }
+
+    .provider-status {
+      margin: 0;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface-subtle);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-sm);
+      line-height: 1.5;
+    }
+
+    .provider-status[hidden] {
+      display: none;
+    }
+
+    .provider-status--error {
+      border-color: var(--color-danger);
+      background: color-mix(in srgb, var(--color-danger) 8%, white);
+      color: var(--color-danger-text);
+    }
+
+    .provider-status--success {
+      border-color: var(--color-border-accent);
+      background: var(--color-accent-soft);
+      color: var(--color-accent-hover);
+    }
+
+    .provider-preview-card {
+      position: sticky;
+      top: var(--space-5);
+      align-self: start;
+    }
+
+    .provider-preview-surface {
+      display: grid;
+      gap: var(--space-4);
+      padding: 1rem 1.05rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface-subtle);
+    }
+
+    .provider-preview-heading {
+      margin: 0;
+      color: var(--color-text);
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .provider-preview-placeholder {
+      color: var(--color-text-soft);
     }
 
     .provider-preview-details {
@@ -48,6 +180,40 @@
     .provider-preview-tags {
       margin-top: 0;
     }
+
+    .provider-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .provider-workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .provider-preview-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .provider-field-grid,
+      .provider-hours-grid--custom {
+        grid-template-columns: 1fr;
+      }
+
+      .provider-form-actions > *,
+      .provider-success-actions > * {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 
@@ -55,7 +221,7 @@
   <main class="page-shell">
     <header id="pageHeader" class="page-header"></header>
 
-    <section class="panel page-section content-width--narrow section-shell">
+    <section class="panel page-section content-width--wide section-shell provider-page">
       <div class="section-header">
         <p class="eyebrow">For providers</p>
         <h2 class="section-title">Submit a service</h2>
@@ -65,163 +231,223 @@
       </div>
 
       <div class="card card-stack">
-        <p class="card-copy">
-          All fields are required in this step. This form prepares a service entry using the current service schema.
-        </p>
-        <p class="field-hint">
-          Successful submissions are stored only in this browser for now, so you can review the final object before backend wiring.
-        </p>
+        <div class="section-header section-header--compact">
+          <p class="eyebrow">Before you submit</p>
+          <h3 class="card-title">Prepare a clear, reviewable listing</h3>
+        </div>
+        <ul class="provider-note-list">
+          <li class="provider-note-item">Use the official service name, specialty, and full address.</li>
+          <li class="provider-note-item">Set the opening hours with the day and time selectors so they are easy to review.</li>
+          <li class="provider-note-item">Successful submissions stay in this browser only for now, so you can confirm the listing before backend wiring.</li>
+        </ul>
       </div>
 
-      <form id="providerForm" class="form-grid" novalidate>
-        <label class="field" for="name">
-          <span class="field-label">Service name</span>
-          <input id="name" name="name" class="field-control" type="text" required autocomplete="organization" />
-          <p id="nameError" class="field-error" aria-live="polite"></p>
-        </label>
+      <div class="provider-workspace">
+        <div class="provider-main-stack">
+          <form id="providerForm" class="provider-form-stack" novalidate>
+            <section class="card card-stack provider-section-card">
+              <div class="section-header section-header--compact">
+                <p class="eyebrow">Service details</p>
+                <h3 class="card-title">Basic listing information</h3>
+                <p class="card-copy">Add the main details providers need to recognize and review the service.</p>
+              </div>
 
-        <label class="field" for="type">
-          <span class="field-label">Service type</span>
-          <select id="type" name="type" class="field-control" required>
-            <option value="">Select a service type</option>
-            <option value="clinic">clinic</option>
-            <option value="counseling">counseling</option>
-            <option value="public_office">public office</option>
-            <option value="support_center">support center</option>
-            <option value="ngo">ngo</option>
-            <option value="legal_aid">legal aid</option>
-            <option value="housing_support">housing support</option>
-            <option value="therapy">therapy</option>
-            <option value="other">other</option>
-          </select>
-          <p id="typeError" class="field-error" aria-live="polite"></p>
-        </label>
+              <div class="provider-field-grid">
+                <label class="field" for="name">
+                  <span class="field-label">Service name</span>
+                  <input id="name" name="name" class="field-control" type="text" required autocomplete="organization" />
+                  <p id="nameError" class="field-error" aria-live="polite"></p>
+                </label>
 
-        <label class="field" for="specialty">
-          <span class="field-label">Specialty</span>
-          <input id="specialty" name="specialty" class="field-control" type="text" required autocomplete="off" />
-          <p id="specialtyError" class="field-error" aria-live="polite"></p>
-        </label>
+                <label class="field" for="type">
+                  <span class="field-label">Service type</span>
+                  <select id="type" name="type" class="field-control" required>
+                    <option value="">Select a service type</option>
+                    <option value="clinic">clinic</option>
+                    <option value="counseling">counseling</option>
+                    <option value="public_office">public office</option>
+                    <option value="support_center">support center</option>
+                    <option value="ngo">ngo</option>
+                    <option value="legal_aid">legal aid</option>
+                    <option value="housing_support">housing support</option>
+                    <option value="therapy">therapy</option>
+                    <option value="other">other</option>
+                  </select>
+                  <p id="typeError" class="field-error" aria-live="polite"></p>
+                </label>
 
-        <label class="field" for="address">
-          <span class="field-label">Address</span>
-          <input id="address" name="address" class="field-control" type="text" required autocomplete="street-address" />
-          <p id="addressError" class="field-error" aria-live="polite"></p>
-        </label>
+                <label class="field" for="specialty">
+                  <span class="field-label">Specialty</span>
+                  <input id="specialty" name="specialty" class="field-control" type="text" required autocomplete="off" />
+                  <p id="specialtyError" class="field-error" aria-live="polite"></p>
+                </label>
 
-        <fieldset class="provider-hours-field" aria-describedby="hoursHint hoursError">
-          <legend class="field-label">Opening hours</legend>
+                <label class="field" for="address">
+                  <span class="field-label">Address</span>
+                  <input id="address" name="address" class="field-control" type="text" required autocomplete="street-address" />
+                  <p id="addressError" class="field-error" aria-live="polite"></p>
+                </label>
+              </div>
+            </section>
 
-          <div class="provider-hours-grid">
-            <label class="field" for="hoursDays">
-              <span class="field-label">Days</span>
-              <select id="hoursDays" name="hoursDays" class="field-control" required>
-                <option value="Mon-Fri">Mon-Fri</option>
-                <option value="Mon-Thu">Mon-Thu</option>
-                <option value="Tue-Sat">Tue-Sat</option>
-                <option value="Mon-Sat">Mon-Sat</option>
-                <option value="Sat-Sun">Sat-Sun</option>
-                <option value="Mon-Sun">Mon-Sun</option>
-                <option value="custom">Custom range</option>
-              </select>
-            </label>
+            <section class="card card-stack provider-hours-card">
+              <div class="section-header section-header--compact">
+                <p class="eyebrow">Availability</p>
+                <h3 class="card-title">Opening hours</h3>
+                <p class="card-copy">Choose a day pattern and a clear time range so the final listing is easy to read.</p>
+              </div>
 
-            <label id="hoursCustomDaysField" class="field" for="hoursCustomDays" hidden>
-              <span class="field-label">Custom day range</span>
-              <input id="hoursCustomDays" name="hoursCustomDays" class="field-control" type="text" autocomplete="off" disabled />
-            </label>
+              <fieldset class="provider-hours-field" aria-describedby="hoursHint hoursError">
+                <legend class="provider-sr-only">Opening hours</legend>
 
-            <label class="field" for="hoursOpen">
-              <span class="field-label">Opens</span>
-              <input id="hoursOpen" name="hoursOpen" class="field-control" type="time" required />
-            </label>
+                <div class="provider-hours-grid">
+                  <label class="field" for="hoursPattern">
+                    <span class="field-label">Day range</span>
+                    <select id="hoursPattern" name="hoursPattern" class="field-control" required>
+                      <option value="Mon-Fri">Mon-Fri</option>
+                      <option value="Mon-Sat">Mon-Sat</option>
+                      <option value="Mon-Sun">Mon-Sun</option>
+                      <option value="Sat-Sun">Weekends</option>
+                      <option value="custom">Custom day range</option>
+                    </select>
+                  </label>
 
-            <label class="field" for="hoursClose">
-              <span class="field-label">Closes</span>
-              <input id="hoursClose" name="hoursClose" class="field-control" type="time" required />
-            </label>
+                  <label class="field" for="hoursOpen">
+                    <span class="field-label">Opens</span>
+                    <input id="hoursOpen" name="hoursOpen" class="field-control" type="time" required />
+                  </label>
+
+                  <label class="field" for="hoursClose">
+                    <span class="field-label">Closes</span>
+                    <input id="hoursClose" name="hoursClose" class="field-control" type="time" required />
+                  </label>
+                </div>
+
+                <div id="hoursCustomDaysField" class="provider-hours-grid provider-hours-grid--custom" hidden>
+                  <label class="field" for="hoursStartDay">
+                    <span class="field-label">Start day</span>
+                    <select id="hoursStartDay" name="hoursStartDay" class="field-control" disabled>
+                      <option value="">Choose a start day</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </label>
+
+                  <label class="field" for="hoursEndDay">
+                    <span class="field-label">End day</span>
+                    <select id="hoursEndDay" name="hoursEndDay" class="field-control" disabled>
+                      <option value="">Choose an end day</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </label>
+                </div>
+
+                <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times.</p>
+                <p id="hoursError" class="field-error" aria-live="polite"></p>
+              </fieldset>
+            </section>
+
+            <section class="card card-stack provider-section-card">
+              <div class="section-header section-header--compact">
+                <p class="eyebrow">Listing details</p>
+                <h3 class="card-title">Search and description details</h3>
+                <p class="card-copy">These details help make the service easier to identify and review.</p>
+              </div>
+
+              <label class="field" for="tags">
+                <span class="field-label">Tags</span>
+                <input id="tags" name="tags" class="field-control" type="text" required autocomplete="off" aria-describedby="tagsHint tagsError" />
+                <p id="tagsHint" class="field-hint">Separate tags with commas so they can be stored as clear search terms.</p>
+                <p id="tagsError" class="field-error" aria-live="polite"></p>
+              </label>
+
+              <label class="field" for="description">
+                <span class="field-label">Description</span>
+                <textarea id="description" name="description" class="field-control field-control--textarea" required></textarea>
+                <p id="descriptionError" class="field-error" aria-live="polite"></p>
+              </label>
+            </section>
+
+            <div class="provider-form-footer">
+              <div class="button-row provider-form-actions">
+                <button type="submit" class="button button--primary">Submit service</button>
+                <a class="button button--secondary" href="/index.html">Back to search</a>
+              </div>
+
+              <p id="formStatus" class="provider-status" hidden aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div id="submissionResult" class="provider-success-stack" hidden>
+            <div class="card card-stack" role="status" aria-live="polite">
+              <div class="section-header section-header--compact">
+                <p class="eyebrow">Submission ready</p>
+                <h3 class="card-title">Service listing prepared successfully</h3>
+                <p class="card-copy">Review the listing preview and add another service if you need to prepare one more entry.</p>
+              </div>
+              <p id="submissionStatus" class="provider-status provider-status--success" hidden></p>
+            </div>
+
+            <div class="button-row provider-success-actions">
+              <button id="addAnotherButton" type="button" class="button button--primary">Add another service</button>
+              <button id="doneButton" type="button" class="button button--secondary">Done</button>
+            </div>
           </div>
-
-          <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times.</p>
-          <p id="hoursError" class="field-error" aria-live="polite"></p>
-        </fieldset>
-
-        <label class="field" for="tags">
-          <span class="field-label">Tags</span>
-          <input id="tags" name="tags" class="field-control" type="text" required autocomplete="off" aria-describedby="tagsHint tagsError" />
-          <p id="tagsHint" class="field-hint">Separate tags with commas</p>
-          <p id="tagsError" class="field-error" aria-live="polite"></p>
-        </label>
-
-        <label class="field" for="description">
-          <span class="field-label">Description</span>
-          <textarea id="description" name="description" class="field-control field-control--textarea" required></textarea>
-          <p id="descriptionError" class="field-error" aria-live="polite"></p>
-        </label>
-
-        <div class="button-row">
-          <button type="submit" class="button button--primary">Submit service</button>
-          <a class="button button--secondary" href="/index.html">Back to search</a>
         </div>
 
-        <p id="formStatus" class="field-hint" aria-live="polite"></p>
-      </form>
-
-      <div id="submissionResult" class="section-shell" hidden>
-        <div class="card card-stack" role="status" aria-live="polite">
-          <div class="section-header section-header--compact">
-            <p class="eyebrow">Submission ready</p>
-            <h3 class="card-title">Service entry prepared successfully</h3>
-          </div>
-          <p class="card-copy">
-            The service object was created locally for review and stored only in this browser for the provider flow.
-          </p>
-          <p id="submissionStatus" class="field-hint"></p>
-        </div>
-
-        <div class="card card-stack">
+        <aside class="card card-stack provider-preview-card">
           <div class="section-header section-header--compact">
             <p class="eyebrow">Listing preview</p>
-            <h3 class="card-title">How your service listing will look</h3>
+            <h3 class="card-title">How the service listing reads</h3>
+            <p class="card-copy">This preview updates as you complete the form.</p>
           </div>
 
-          <div class="stack-sm">
-            <h4 id="previewName" class="card-title"></h4>
-            <p id="previewDescription" class="card-copy"></p>
+          <div class="provider-preview-surface">
+            <div class="stack-sm">
+              <h4 id="previewName" class="provider-preview-heading provider-preview-placeholder">Service name will appear here</h4>
+              <p id="previewDescription" class="card-copy provider-preview-placeholder">Add a short description so the listing is easy to review.</p>
+            </div>
+
+            <dl class="provider-preview-details">
+              <div class="provider-preview-row">
+                <dt class="field-label">Service type</dt>
+                <dd id="previewType" class="provider-preview-value provider-preview-placeholder">Choose a service type</dd>
+              </div>
+
+              <div class="provider-preview-row">
+                <dt class="field-label">Specialty</dt>
+                <dd id="previewSpecialty" class="provider-preview-value provider-preview-placeholder">Add the main specialty</dd>
+              </div>
+
+              <div class="provider-preview-row">
+                <dt class="field-label">Address</dt>
+                <dd id="previewAddress" class="provider-preview-value provider-preview-placeholder">Add the full service address</dd>
+              </div>
+
+              <div class="provider-preview-row">
+                <dt class="field-label">Opening hours</dt>
+                <dd id="previewHours" class="provider-preview-value provider-preview-placeholder">Select days and times</dd>
+              </div>
+            </dl>
+
+            <div class="stack-sm">
+              <p class="field-label">Tags</p>
+              <div id="previewTags" class="tag-list provider-preview-tags"></div>
+              <p id="previewTagsEmpty" class="field-hint">Tags will appear here after you add them.</p>
+            </div>
           </div>
-
-          <dl class="provider-preview-details">
-            <div class="provider-preview-row">
-              <dt class="field-label">Service type</dt>
-              <dd id="previewType" class="provider-preview-value"></dd>
-            </div>
-
-            <div class="provider-preview-row">
-              <dt class="field-label">Specialty</dt>
-              <dd id="previewSpecialty" class="provider-preview-value"></dd>
-            </div>
-
-            <div class="provider-preview-row">
-              <dt class="field-label">Address</dt>
-              <dd id="previewAddress" class="provider-preview-value"></dd>
-            </div>
-
-            <div class="provider-preview-row">
-              <dt class="field-label">Opening hours</dt>
-              <dd id="previewHours" class="provider-preview-value"></dd>
-            </div>
-          </dl>
-
-          <div class="stack-sm">
-            <p class="field-label">Tags</p>
-            <div id="previewTags" class="tag-list provider-preview-tags"></div>
-          </div>
-        </div>
-
-        <div class="button-row">
-          <button id="addAnotherButton" type="button" class="button button--primary">Add another service</button>
-          <button id="doneButton" type="button" class="button button--secondary">Done</button>
-        </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -236,9 +462,10 @@
     const addAnotherButton = document.getElementById("addAnotherButton");
     const doneButton = document.getElementById("doneButton");
     const submissionStatus = document.getElementById("submissionStatus");
-    const hoursDaysInput = document.getElementById("hoursDays");
+    const hoursPatternInput = document.getElementById("hoursPattern");
     const hoursCustomDaysField = document.getElementById("hoursCustomDaysField");
-    const hoursCustomDaysInput = document.getElementById("hoursCustomDays");
+    const hoursStartDayInput = document.getElementById("hoursStartDay");
+    const hoursEndDayInput = document.getElementById("hoursEndDay");
     const hoursOpenInput = document.getElementById("hoursOpen");
     const hoursCloseInput = document.getElementById("hoursClose");
     const hoursHint = document.getElementById("hoursHint");
@@ -248,8 +475,18 @@
     const previewAddress = document.getElementById("previewAddress");
     const previewHours = document.getElementById("previewHours");
     const previewTags = document.getElementById("previewTags");
+    const previewTagsEmpty = document.getElementById("previewTagsEmpty");
     const previewDescription = document.getElementById("previewDescription");
     const PROVIDER_STORAGE_KEY = "care_compass_provider_services";
+    const DAY_ORDER = {
+      Mon: 0,
+      Tue: 1,
+      Wed: 2,
+      Thu: 3,
+      Fri: 4,
+      Sat: 5,
+      Sun: 6
+    };
     let lastSavedSignature = "";
     let lastSavedAt = 0;
 
@@ -269,8 +506,9 @@
     };
 
     const hoursState = {
-      dayRange: "Mon-Fri",
-      customDays: "",
+      pattern: "Mon-Fri",
+      customStart: "",
+      customEnd: "",
       open: "",
       close: ""
     };
@@ -307,8 +545,18 @@
 
     function getFieldElement(fieldName) {
       if (fieldName === "hours") {
-        if (hoursState.dayRange === "custom" && !hoursState.customDays.trim()) {
-          return hoursCustomDaysInput;
+        if (hoursState.pattern === "custom") {
+          if (!hoursState.customStart) {
+            return hoursStartDayInput;
+          }
+
+          if (!hoursState.customEnd) {
+            return hoursEndDayInput;
+          }
+
+          if (DAY_ORDER[hoursState.customEnd] < DAY_ORDER[hoursState.customStart]) {
+            return hoursEndDayInput;
+          }
         }
 
         if (!hoursState.open) {
@@ -319,7 +567,7 @@
           return hoursCloseInput;
         }
 
-        return hoursDaysInput;
+        return hoursPatternInput;
       }
 
       return document.getElementById(fieldName);
@@ -346,9 +594,17 @@
     }
 
     function getHoursDayRangeValue() {
-      return hoursState.dayRange === "custom"
-        ? hoursState.customDays.trim()
-        : hoursState.dayRange.trim();
+      if (hoursState.pattern !== "custom") {
+        return hoursState.pattern.trim();
+      }
+
+      if (!hoursState.customStart || !hoursState.customEnd) {
+        return "";
+      }
+
+      return hoursState.customStart === hoursState.customEnd
+        ? hoursState.customStart
+        : `${hoursState.customStart}-${hoursState.customEnd}`;
     }
 
     function buildHoursValue() {
@@ -364,29 +620,35 @@
     function updateHoursHint() {
       const hoursValue = buildHoursValue();
       hoursHint.textContent = hoursValue
-        ? `Saved as ${hoursValue}.`
-        : "Choose a day range plus opening and closing times.";
+        ? `This will be saved as ${hoursValue}.`
+        : hoursState.pattern === "custom"
+          ? "Choose a start day, an end day, and the opening and closing times."
+          : "Choose a day range plus opening and closing times.";
     }
 
     function applyHoursState() {
       const errorText = touchedFields.hours ? formErrors.hours : "";
-      const isCustomRange = hoursState.dayRange === "custom";
+      const isCustomRange = hoursState.pattern === "custom";
 
-      hoursDaysInput.value = hoursState.dayRange;
+      hoursPatternInput.value = hoursState.pattern;
       hoursCustomDaysField.hidden = !isCustomRange;
-      hoursCustomDaysInput.disabled = !isCustomRange;
-      hoursCustomDaysInput.value = hoursState.customDays;
+      hoursStartDayInput.disabled = !isCustomRange;
+      hoursEndDayInput.disabled = !isCustomRange;
+      hoursStartDayInput.value = hoursState.customStart;
+      hoursEndDayInput.value = hoursState.customEnd;
       hoursOpenInput.value = hoursState.open;
       hoursCloseInput.value = hoursState.close;
 
-      [hoursDaysInput, hoursOpenInput, hoursCloseInput].forEach(input => {
+      [hoursPatternInput, hoursOpenInput, hoursCloseInput].forEach(input => {
         input.setAttribute("aria-invalid", errorText ? "true" : "false");
       });
 
       if (isCustomRange) {
-        hoursCustomDaysInput.setAttribute("aria-invalid", errorText ? "true" : "false");
+        hoursStartDayInput.setAttribute("aria-invalid", errorText ? "true" : "false");
+        hoursEndDayInput.setAttribute("aria-invalid", errorText ? "true" : "false");
       } else {
-        hoursCustomDaysInput.removeAttribute("aria-invalid");
+        hoursStartDayInput.removeAttribute("aria-invalid");
+        hoursEndDayInput.removeAttribute("aria-invalid");
       }
 
       getErrorElement("hours").textContent = errorText;
@@ -445,8 +707,17 @@
     }
 
     function setFormStatus(message = "", variant = "hint") {
+      formStatus.hidden = !message;
       formStatus.textContent = message;
-      formStatus.className = variant === "error" ? "field-error" : "field-hint";
+      formStatus.className = variant === "error"
+        ? "provider-status provider-status--error"
+        : "provider-status";
+    }
+
+    function setSubmissionStatus(message = "") {
+      submissionStatus.hidden = !message;
+      submissionStatus.textContent = message;
+      submissionStatus.className = "provider-status provider-status--success";
     }
 
     function validateRequiredValue(fieldName) {
@@ -461,10 +732,18 @@
 
     function validateField(fieldName) {
       if (fieldName === "hours") {
-        const dayRange = getHoursDayRangeValue();
+        if (!hoursState.pattern) {
+          return "Choose a day range for these opening hours.";
+        }
 
-        if (!dayRange) {
-          return "Choose the days this service is open.";
+        if (hoursState.pattern === "custom") {
+          if (!hoursState.customStart || !hoursState.customEnd) {
+            return "Choose both the first and last day for the custom range.";
+          }
+
+          if (DAY_ORDER[hoursState.customEnd] < DAY_ORDER[hoursState.customStart]) {
+            return "The end day must be the same day or later than the start day.";
+          }
         }
 
         if (!hoursState.open || !hoursState.close) {
@@ -531,10 +810,17 @@
       };
     }
 
+    function setPreviewText(element, value, fallback, formatter = input => input) {
+      const hasValue = Boolean(value);
+      element.textContent = hasValue ? formatter(value) : fallback;
+      element.classList.toggle("provider-preview-placeholder", !hasValue);
+    }
+
     function renderPreviewTags(tags) {
       previewTags.innerHTML = "";
+      previewTagsEmpty.hidden = Array.isArray(tags) && tags.length > 0;
 
-      tags.forEach(tag => {
+      (tags || []).forEach(tag => {
         const tagElement = document.createElement("span");
         tagElement.className = "tag";
         tagElement.textContent = tag;
@@ -542,21 +828,29 @@
       });
     }
 
+    function renderPreview(service = buildServicePayload()) {
+      setPreviewText(previewName, service.name, "Service name will appear here");
+      setPreviewText(
+        previewDescription,
+        service.description,
+        "Add a short description so the listing is easy to review."
+      );
+      setPreviewText(previewType, service.type, "Choose a service type", formatLabel);
+      setPreviewText(previewSpecialty, service.specialty, "Add the main specialty", formatLabel);
+      setPreviewText(previewAddress, service.address, "Add the full service address");
+      setPreviewText(previewHours, service.hours, "Select days and times");
+      renderPreviewTags(service.tags);
+    }
+
     function showSubmissionResult(payload, persistenceResult) {
       providerForm.hidden = true;
       submissionResult.hidden = false;
-      previewName.textContent = payload.name;
-      previewType.textContent = formatLabel(payload.type);
-      previewSpecialty.textContent = payload.specialty;
-      previewAddress.textContent = payload.address;
-      previewHours.textContent = payload.hours;
-      previewDescription.textContent = payload.description;
-      renderPreviewTags(payload.tags);
+      renderPreview(payload);
 
       if (persistenceResult.duplicatePrevented) {
-        submissionStatus.textContent = "An identical service was already stored a moment ago, so a duplicate entry was not added.";
+        setSubmissionStatus("An identical service was already stored a moment ago, so a duplicate entry was not added.");
       } else {
-        submissionStatus.textContent = `Saved locally under ${PROVIDER_STORAGE_KEY}. Stored services in this browser: ${persistenceResult.total}.`;
+        setSubmissionStatus(`Saved locally under ${PROVIDER_STORAGE_KEY}. Stored services in this browser: ${persistenceResult.total}.`);
       }
 
       console.group("Provider submission payload");
@@ -577,8 +871,9 @@
         applyFieldState(fieldName);
       });
 
-      hoursState.dayRange = "Mon-Fri";
-      hoursState.customDays = "";
+      hoursState.pattern = "Mon-Fri";
+      hoursState.customStart = "";
+      hoursState.customEnd = "";
       hoursState.open = "";
       hoursState.close = "";
       formErrors.hours = "";
@@ -586,16 +881,10 @@
       applyHoursState();
 
       setFormStatus("");
-      submissionStatus.textContent = "";
-      previewName.textContent = "";
-      previewType.textContent = "";
-      previewSpecialty.textContent = "";
-      previewAddress.textContent = "";
-      previewHours.textContent = "";
-      previewDescription.textContent = "";
-      previewTags.innerHTML = "";
+      setSubmissionStatus("");
       submissionResult.hidden = true;
       providerForm.hidden = false;
+      renderPreview();
 
       if (focusInput) {
         getFieldElement("name").focus();
@@ -604,15 +893,22 @@
 
     Object.keys(formState).forEach(fieldName => {
       const input = getFieldElement(fieldName);
-
-      input.addEventListener("input", event => {
+      const syncField = event => {
         formState[fieldName] = event.target.value;
 
         if (touchedFields[fieldName]) {
           formErrors[fieldName] = validateField(fieldName);
           applyFieldState(fieldName);
         }
-      });
+
+        renderPreview();
+      };
+
+      input.addEventListener("input", syncField);
+
+      if (input.tagName === "SELECT") {
+        input.addEventListener("change", syncField);
+      }
 
       input.addEventListener("blur", () => {
         touchedFields[fieldName] = true;
@@ -626,8 +922,9 @@
     function updateHoursValue(stateKey, value) {
       hoursState[stateKey] = value;
 
-      if (stateKey === "dayRange" && value !== "custom") {
-        hoursState.customDays = "";
+      if (stateKey === "pattern" && value !== "custom") {
+        hoursState.customStart = "";
+        hoursState.customEnd = "";
       }
 
       if (touchedFields.hours) {
@@ -635,11 +932,13 @@
       }
 
       applyHoursState();
+      renderPreview();
     }
 
     [
-      { input: hoursDaysInput, stateKey: "dayRange", eventName: "change" },
-      { input: hoursCustomDaysInput, stateKey: "customDays", eventName: "input" },
+      { input: hoursPatternInput, stateKey: "pattern", eventName: "change" },
+      { input: hoursStartDayInput, stateKey: "customStart", eventName: "change" },
+      { input: hoursEndDayInput, stateKey: "customEnd", eventName: "change" },
       { input: hoursOpenInput, stateKey: "open", eventName: "input" },
       { input: hoursCloseInput, stateKey: "close", eventName: "input" }
     ].forEach(({ input, stateKey, eventName }) => {
@@ -655,6 +954,7 @@
     });
 
     applyHoursState();
+    renderPreview();
 
     providerForm.addEventListener("submit", event => {
       event.preventDefault();
