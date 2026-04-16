@@ -27,51 +27,113 @@
     </header>
 
     <div class="result-layout">
-      <section class="panel page-section content-width--narrow stack">
-        <div class="stack-sm">
-          <p class="eyebrow">Guided Intake</p>
-          <h2 class="section-title">Share a few details</h2>
-          <p class="section-description">
-            Provide the basics below. Keep it short and practical if you like.
-          </p>
-        </div>
-
-        <div class="form-grid">
-          <label class="field">
-            <span class="field-label">Main concern</span>
-            <input id="problem" placeholder="What is your main issue?" />
-          </label>
-
-          <div class="split-fields">
-            <label class="field">
-              <span class="field-label">Duration</span>
-              <input id="duration" placeholder="How long has this been happening?" />
-            </label>
-
-            <label class="field">
-              <span class="field-label">Severity</span>
-              <select id="severity">
-                <option value="">Select severity</option>
-                <option>mild</option>
-                <option>moderate</option>
-                <option>severe</option>
-              </select>
-            </label>
+      <section class="panel page-section content-width--narrow survey-panel">
+        <div class="survey-shell">
+          <div class="survey-progress-block">
+            <div class="survey-progress-top">
+              <p class="eyebrow">Guided Intake</p>
+              <p id="surveyStepLabel" class="survey-step-label">Step 1 of 4</p>
+            </div>
+            <div class="survey-progress-bar" aria-hidden="true">
+              <span id="surveyProgressFill" class="survey-progress-fill"></span>
+            </div>
           </div>
 
-          <label class="field">
-            <span class="field-label">Age</span>
-            <input id="age" placeholder="Age (optional)" />
-          </label>
+          <p id="surveyMessage" class="survey-message survey-message--helper" aria-live="polite"></p>
 
-          <label class="field">
-            <span class="field-label">Additional notes</span>
-            <textarea id="notes" placeholder="Share any symptoms, constraints, or context that might help."></textarea>
-            <p class="field-hint">Include any details that could help narrow the right type of support.</p>
-          </label>
+          <div class="survey-steps">
+            <section class="survey-step" data-step-help="Share the main issue in your own words.">
+              <div class="survey-step-header">
+                <h2 class="survey-question">Main concern</h2>
+                <p class="survey-step-copy">
+                  Start with the main issue you want help with.
+                </p>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Main concern</span>
+                <input id="problem" placeholder="What is your main issue?" />
+              </label>
+            </section>
+
+            <section class="survey-step" data-step-help="Choose the closest match for timing and severity.">
+              <div class="survey-step-header">
+                <h2 class="survey-question">Duration and severity</h2>
+                <p class="survey-step-copy">
+                  A short timing note and a severity estimate can help narrow the right type of support.
+                </p>
+              </div>
+
+              <div class="form-grid">
+                <label class="field">
+                  <span class="field-label">Duration</span>
+                  <input id="duration" placeholder="How long has this been happening?" />
+                </label>
+
+                <div class="choice-group">
+                  <span class="field-label">Severity</span>
+                  <div class="choice-grid" role="radiogroup" aria-label="Severity">
+                    <label class="choice-option">
+                      <input class="choice-input" type="radio" name="severity" value="mild" />
+                      <span class="choice-card">
+                        <span class="choice-title">Mild</span>
+                      </span>
+                    </label>
+
+                    <label class="choice-option">
+                      <input class="choice-input" type="radio" name="severity" value="moderate" />
+                      <span class="choice-card">
+                        <span class="choice-title">Moderate</span>
+                      </span>
+                    </label>
+
+                    <label class="choice-option">
+                      <input class="choice-input" type="radio" name="severity" value="severe" />
+                      <span class="choice-card">
+                        <span class="choice-title">Severe</span>
+                      </span>
+                    </label>
+                  </div>
+                  <p class="field-hint">Pick the closest fit.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="survey-step" data-step-help="Age is optional. Add it only if it feels relevant.">
+              <div class="survey-step-header">
+                <h2 class="survey-question">Age</h2>
+                <p class="survey-step-copy">
+                  This step is optional.
+                </p>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Age</span>
+                <input id="age" placeholder="Age (optional)" />
+              </label>
+            </section>
+
+            <section class="survey-step" data-step-help="Add any extra context that could help clarify the situation.">
+              <div class="survey-step-header">
+                <h2 class="survey-question">Additional notes</h2>
+                <p class="survey-step-copy">
+                  Include extra symptoms, constraints, or context if it would help.
+                </p>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Additional notes</span>
+                <textarea id="notes" placeholder="Share any symptoms, constraints, or context that might help."></textarea>
+                <p class="field-hint">Include any details that could help narrow the right type of support.</p>
+              </label>
+            </section>
+          </div>
+
+          <div class="survey-actions">
+            <button id="prevButton" type="button" class="button-secondary">Previous</button>
+            <button id="nextButton" type="button">Continue</button>
+          </div>
         </div>
-
-        <button onclick="submitForm()">Find services</button>
       </section>
 
       <section class="panel page-section content-width--wide stack">
@@ -96,6 +158,67 @@
   </main>
 
   <script>
+    const surveySteps = Array.from(document.querySelectorAll(".survey-step"));
+    const surveyStepLabel = document.getElementById("surveyStepLabel");
+    const surveyProgressFill = document.getElementById("surveyProgressFill");
+    const surveyMessage = document.getElementById("surveyMessage");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    let currentStep = 0;
+
+    function setSurveyMessage(text, variant = "helper") {
+      surveyMessage.textContent = text || "";
+      surveyMessage.className = `survey-message survey-message--${variant}`;
+    }
+
+    function focusActiveStep() {
+      const activeStep = surveySteps[currentStep];
+      const firstField = activeStep.querySelector("input, textarea, select");
+
+      if (firstField) {
+        firstField.focus();
+      }
+    }
+
+    function updateSurveyStep(options = {}) {
+      const { focus = false } = options;
+      const totalSteps = surveySteps.length;
+      const progress = ((currentStep + 1) / totalSteps) * 100;
+
+      surveySteps.forEach((step, index) => {
+        step.hidden = index !== currentStep;
+      });
+
+      surveyStepLabel.textContent = `Step ${currentStep + 1} of ${totalSteps}`;
+      surveyProgressFill.style.width = `${progress}%`;
+      prevButton.disabled = currentStep === 0;
+      nextButton.textContent = currentStep === totalSteps - 1 ? "Find services" : "Continue";
+      setSurveyMessage(surveySteps[currentStep].dataset.stepHelp || "", "helper");
+
+      if (focus) {
+        focusActiveStep();
+      }
+    }
+
+    prevButton.addEventListener("click", () => {
+      if (currentStep === 0) {
+        return;
+      }
+
+      currentStep -= 1;
+      updateSurveyStep({ focus: true });
+    });
+
+    nextButton.addEventListener("click", () => {
+      if (currentStep === surveySteps.length - 1) {
+        submitForm();
+        return;
+      }
+
+      currentStep += 1;
+      updateSurveyStep({ focus: true });
+    });
+
     function renderEmptyState(title, message) {
       return `
         <div class="card empty-state">
@@ -106,111 +229,131 @@
     }
 
     async function submitForm() {
+      const selectedSeverity = document.querySelector('input[name="severity"]:checked');
       const data = {
         problem: problem.value,
         duration: duration.value,
-        severity: severity.value,
+        severity: selectedSeverity ? selectedSeverity.value : "",
         age: age.value,
         notes: notes.value
       };
 
       const container = document.getElementById("result");
+      nextButton.disabled = true;
+      prevButton.disabled = true;
+      setSurveyMessage("Preparing recommendations.", "helper");
       container.innerHTML = renderEmptyState(
         "Finding options",
         "Reviewing your input and preparing the available service groups."
       );
 
-      const res = await fetch("http://localhost:3000/assess", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+      try {
+        const res = await fetch("http://localhost:3000/assess", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
 
-      const result = await res.json();
+        const result = await res.json();
 
-      let summary = "";
-      let groups = null;
+        let summary = "";
+        let groups = null;
 
-      if (result.summary && result.groups) {
-        summary = result.summary;
-        groups = result.groups;
-      } else {
-        const raw = result.answer || "";
-        const jsonMatch = raw.match(/\{[\s\S]*\}/);
+        if (result.summary && result.groups) {
+          summary = result.summary;
+          groups = result.groups;
+        } else {
+          const raw = result.answer || "";
+          const jsonMatch = raw.match(/\{[\s\S]*\}/);
 
-        if (jsonMatch) {
-          try {
-            const parsed = JSON.parse(jsonMatch[0]);
-            groups = parsed.groups;
-            summary = parsed.summary || "";
-          } catch (e) {
-            console.error("JSON parse failed:", e);
+          if (jsonMatch) {
+            try {
+              const parsed = JSON.parse(jsonMatch[0]);
+              groups = parsed.groups;
+              summary = parsed.summary || "";
+            } catch (e) {
+              console.error("JSON parse failed:", e);
+            }
+          }
+
+          if (!summary) {
+            summary = raw.split("{")[0].trim();
           }
         }
 
-        if (!summary) {
-          summary = raw.split("{")[0].trim();
-        }
-      }
+        let html = "";
 
-      let html = "";
-
-      if (summary) {
-        html += `
-          <article class="card card-highlight">
-            <h3 class="card-title">Summary</h3>
-            <p class="card-copy">${summary}</p>
-          </article>
-        `;
-      }
-
-      if (!groups) {
-        html += renderEmptyState(
-          "No structured results found",
-          "The response did not include grouped service recommendations this time."
-        );
-        container.innerHTML = html;
-        return;
-      }
-
-      const groupNames = {
-        medical: "Medical",
-        mental_health: "Mental health",
-        social_support: "Social support",
-        emergency: "Emergency"
-      };
-
-      for (const key in groups) {
-        const items = groups[key];
-        if (!items || items.length === 0) continue;
-
-        html += `<section class="group-block"><h3 class="group-title">${groupNames[key] || key}</h3><div class="card-list">`;
-
-        items.forEach(s => {
-          const tags = Array.isArray(s.tags) ? s.tags.filter(Boolean) : [];
-
+        if (summary) {
           html += `
-            <article class="card">
-              <h4 class="card-title">${s.name || "Unknown service"}</h4>
-              <div class="meta-stack">
-                ${s.address ? `<p class="meta-row">${s.address}</p>` : ""}
-                ${s.hours ? `<p class="meta-row">${s.hours}</p>` : ""}
-                ${s.specialty ? `<p class="meta-row">${s.specialty}</p>` : ""}
-                ${s.reason ? `<p class="meta-row">Recommended because: ${s.reason}</p>` : ""}
-              </div>
-              ${tags.length ? `<div class="tag-list">${tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>` : ""}
+            <article class="card card-highlight">
+              <h3 class="card-title">Summary</h3>
+              <p class="card-copy">${summary}</p>
             </article>
           `;
-        });
+        }
 
-        html += `</div></section>`;
+        if (!groups) {
+          html += renderEmptyState(
+            "No structured results found",
+            "The response did not include grouped service recommendations this time."
+          );
+          container.innerHTML = html;
+          setSurveyMessage("You can adjust your answers and try again.", "helper");
+          return;
+        }
+
+        const groupNames = {
+          medical: "Medical",
+          mental_health: "Mental health",
+          social_support: "Social support",
+          emergency: "Emergency"
+        };
+
+        for (const key in groups) {
+          const items = groups[key];
+          if (!items || items.length === 0) continue;
+
+          html += `<section class="group-block"><h3 class="group-title">${groupNames[key] || key}</h3><div class="card-list">`;
+
+          items.forEach(s => {
+            const tags = Array.isArray(s.tags) ? s.tags.filter(Boolean) : [];
+
+            html += `
+              <article class="card">
+                <h4 class="card-title">${s.name || "Unknown service"}</h4>
+                <div class="meta-stack">
+                  ${s.address ? `<p class="meta-row">${s.address}</p>` : ""}
+                  ${s.hours ? `<p class="meta-row">${s.hours}</p>` : ""}
+                  ${s.specialty ? `<p class="meta-row">${s.specialty}</p>` : ""}
+                  ${s.reason ? `<p class="meta-row">Recommended because: ${s.reason}</p>` : ""}
+                </div>
+                ${tags.length ? `<div class="tag-list">${tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>` : ""}
+              </article>
+            `;
+          });
+
+          html += `</div></section>`;
+        }
+
+        container.innerHTML = html || renderEmptyState(
+          "No recommendations found",
+          "No grouped recommendations were available for this response."
+        );
+        setSurveyMessage("You can go back and adjust any answer, then run it again.", "helper");
+      } catch (error) {
+        console.error("Assess request failed:", error);
+        container.innerHTML = renderEmptyState(
+          "Something went wrong",
+          "We couldn't load recommendations right now. Please try again."
+        );
+        setSurveyMessage("We couldn't load recommendations right now. Please try again.", "error");
+      } finally {
+        nextButton.disabled = false;
+        prevButton.disabled = currentStep === 0;
       }
-
-      container.innerHTML = html || renderEmptyState(
-        "No recommendations found",
-        "No grouped recommendations were available for this response."
-      );
     }
+
+    updateSurveyStep();
   </script>
 </body>
 </html>
