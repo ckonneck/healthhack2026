@@ -1,105 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vibe Wiki AI</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f0f0f;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 60px;
-    }
-
-    input {
-      width: 420px;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      background: #00ffcc;
-      cursor: pointer;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 14px;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  backdrop-filter: blur(10px);
-  transition: 0.2s;
-
-  max-width: 100%;
-  overflow: hidden;
-}
-
-    a {
-      color: #00ffcc;
-      margin-top: 10px;
-      display: block;
-    }
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  margin: 0;
-  color: #ddd;
-}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
+  <main class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">Care Compass</p>
+        <h1 class="brand-title">Find health and community support with more clarity.</h1>
+        <p class="brand-subtitle">
+          Search the service directory, review practical details, or use the guided health check to
+          get a calm starting point for next steps.
+        </p>
+      </div>
 
-<h1>🔍 Wiki AI Search</h1>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" aria-current="page" href="/index.html">Service search</a>
+        <a class="nav-link" href="/form.html">Health check</a>
+        <a class="nav-link" href="/add.html">Add entry</a>
+      </nav>
+    </header>
 
-<a href="/add.html">➕ Add Entry</a>
-<a href="/form.html">🩺 Health Check</a>
+    <section class="panel content-width--wide stack">
+      <div class="stack-sm">
+        <p class="eyebrow">Directory Search</p>
+        <h2 class="section-title">Search by need, topic, or service type</h2>
+        <p class="section-description">
+          Try everyday phrases like “urgent care”, “mental health support”, “weekend clinic”, or
+          “food assistance”.
+        </p>
+      </div>
 
-<input id="q" placeholder="Search your wiki..." />
+      <div class="search-row">
+        <div class="field">
+          <label class="field-label" for="q">Search services</label>
+          <input id="q" placeholder="Try: counselling, dental clinic, food pantry" />
+        </div>
+        <button onclick="search()">Search</button>
+      </div>
+    </section>
 
-<button onclick="search()">Search</button>
+    <section class="panel content-width--wide stack">
+      <div class="stack-sm">
+        <p class="eyebrow">Results</p>
+        <h2 class="section-title">Service matches</h2>
+        <p class="section-description">
+          Matching services will appear here with location and availability details when available.
+        </p>
+      </div>
 
-<div id="results"></div>
+      <div id="results" class="results-grid">
+        <div class="card empty-state">
+          <div class="empty-title">Start with a search</div>
+          <p class="empty-copy">
+            Enter a need, service type, or keyword above to explore available support options.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script src="/api.js"></script>
+  <script src="/api.js"></script>
 
-<script>async function search() {
-  const q = document.getElementById("q").value;
+  <script>
+    function renderEmptyState(title, message) {
+      return `
+        <div class="card empty-state">
+          <div class="empty-title">${title}</div>
+          <p class="empty-copy">${message}</p>
+        </div>
+      `;
+    }
 
-  const res = await fetch("http://localhost:3000/services", {
-    method: "POST",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({ query: q })
-  });
+    async function search() {
+      const q = document.getElementById("q").value.trim();
+      const results = document.getElementById("results");
 
-  const data = await res.json();
+      if (!q) {
+        results.innerHTML = renderEmptyState(
+          "Enter a search term",
+          "Add a topic or need above to search the current service directory."
+        );
+        return;
+      }
 
-  const results = document.getElementById("results");
+      results.innerHTML = renderEmptyState(
+        "Searching directory",
+        "Looking for services that match your request."
+      );
 
-  results.innerHTML = data.results.map(r => `
-    <div class="card">
-      <div class="title">${r.name}</div>
-      <div>${r.address}</div>
-      <div>${r.hours}</div>
-    </div>
-  `).join("");
-}
-</script>
+      const res = await fetch("http://localhost:3000/services", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: q })
+      });
 
+      const data = await res.json();
+
+      if (!data.results || data.results.length === 0) {
+        results.innerHTML = renderEmptyState(
+          "No matches found",
+          "No services matched that search yet. Try a broader term or check the guided health form for another route."
+        );
+        return;
+      }
+
+      results.innerHTML = data.results.map(r => `
+        <article class="card">
+          <h3 class="card-title">${r.name || "Unnamed service"}</h3>
+          <div class="meta-stack">
+            <p class="meta-row">${r.address || "Location details are not available yet."}</p>
+            <p class="meta-row">${r.hours || "Hours are not listed yet."}</p>
+            ${r.specialty ? `<p class="meta-row">${r.specialty}</p>` : ""}
+          </div>
+        </article>
+      `).join("");
+    }
+  </script>
 </body>
 </html>

@@ -1,229 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Health Navigator</title>
-
-  <style>
-    body {
-      font-family: system-ui;
-      background: #0d0d0d;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px;
-    }
-
-    h1 { margin-bottom: 20px; }
-
-    .form {
-      width: 100%;
-      max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea, select {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      background: #1c1c1c;
-      color: white;
-    }
-
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    button {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: #00ffcc;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #result {
-      margin-top: 25px;
-      width: 100%;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .group-title {
-      margin-top: 20px;
-      font-size: 14px;
-      opacity: 0.7;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .card {
-      background: #1c1c1c;
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .name {
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .meta {
-      font-size: 13px;
-      opacity: 0.8;
-      margin-bottom: 6px;
-    }
-
-    .tags {
-      font-size: 12px;
-      opacity: 0.6;
-    }
-
-    .empty {
-      opacity: 0.6;
-      margin-top: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass | Health Check</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
-
-<h1>🧭 Health Navigator</h1>
-
-<div class="form">
-  <input id="problem" placeholder="What is your main issue?" />
-  <input id="duration" placeholder="How long has this been happening?" />
-
-  <select id="severity">
-    <option value="">Severity</option>
-    <option>mild</option>
-    <option>moderate</option>
-    <option>severe</option>
-  </select>
-
-  <input id="age" placeholder="Age (optional)" />
-  <textarea id="notes" placeholder="Additional notes..."></textarea>
-
-  <button onclick="submitForm()">Find Services</button>
-</div>
-
-<div id="result"></div>
-
-<script>
-async function submitForm() {
-  const data = {
-    problem: problem.value,
-    duration: duration.value,
-    severity: severity.value,
-    age: age.value,
-    notes: notes.value
-  };
-
-  const res = await fetch("http://localhost:3000/assess", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  });
-
-  const result = await res.json();
-  const container = document.getElementById("result");
-
-  let summary = "";
-  let groups = null;
-
-  // ─────────────────────────────
-  // CASE 1: backend already structured
-  // ─────────────────────────────
-  if (result.summary && result.groups) {
-    summary = result.summary;
-    groups = result.groups;
-  }
-
-  // ─────────────────────────────
-  // CASE 2: AI returned hybrid text (summary + JSON)
-  // ─────────────────────────────
-  else {
-    const raw = result.answer || "";
-
-    // extract JSON block
-    const jsonMatch = raw.match(/\{[\s\S]*\}/);
-
-    if (jsonMatch) {
-      try {
-        const parsed = JSON.parse(jsonMatch[0]);
-        groups = parsed.groups;
-        summary = parsed.summary || "";
-      } catch (e) {
-        console.error("JSON parse failed:", e);
-      }
-    }
-
-    // fallback summary (everything before JSON)
-    if (!summary) {
-      summary = raw.split("{")[0].trim();
-    }
-  }
-
-  // ─────────────────────────────
-  // RENDER UI
-  // ─────────────────────────────
-  let html = "";
-
-  // summary box
-  if (summary) {
-    html += `
-      <div class="card">
-        <div class="name">🧭 Summary</div>
-        <div class="meta">${summary}</div>
+  <main class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">Care Compass</p>
+        <h1 class="brand-title">Describe what is going on and get a calmer starting point.</h1>
+        <p class="brand-subtitle">
+          This guided check helps organize what you are experiencing and suggests relevant service
+          categories based on the current backend response.
+        </p>
       </div>
-    `;
-  }
 
-  if (!groups) {
-    html += `<div class="card">No structured results found.</div>`;
-    container.innerHTML = html;
-    return;
-  }
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="/index.html">Service search</a>
+        <a class="nav-link" aria-current="page" href="/form.html">Health check</a>
+        <a class="nav-link" href="/add.html">Add entry</a>
+      </nav>
+    </header>
 
-  // render grouped services
-  const groupNames = {
-    medical: "🏥 Medical",
-    mental_health: "🧠 Mental Health",
-    social_support: "🤝 Social Support",
-    emergency: "🚨 Emergency"
-  };
+    <div class="result-layout">
+      <section class="panel content-width--narrow stack">
+        <div class="stack-sm">
+          <p class="eyebrow">Guided Intake</p>
+          <h2 class="section-title">Share a few details</h2>
+          <p class="section-description">
+            Provide the basics below. Keep it short and practical if you like.
+          </p>
+        </div>
 
-  for (const key in groups) {
-    const items = groups[key];
-    if (!items || items.length === 0) continue;
+        <div class="form-grid">
+          <label class="field">
+            <span class="field-label">Main concern</span>
+            <input id="problem" placeholder="What is your main issue?" />
+          </label>
 
-    html += `<div class="group-title">${groupNames[key] || key}</div>`;
+          <div class="split-fields">
+            <label class="field">
+              <span class="field-label">Duration</span>
+              <input id="duration" placeholder="How long has this been happening?" />
+            </label>
 
-    items.forEach(s => {
-      html += `
-        <div class="card">
-          <div class="name">${s.name || "Unknown service"}</div>
-          <div class="meta">${s.address || ""}</div>
-          <div class="meta">${s.hours || ""}</div>
-          <div class="meta">${s.specialty || ""}</div>
-          <div class="tags">${(s.tags || []).join(", ")}</div>
-          <div class="meta">💡 ${s.reason || ""}</div>
+            <label class="field">
+              <span class="field-label">Severity</span>
+              <select id="severity">
+                <option value="">Select severity</option>
+                <option>mild</option>
+                <option>moderate</option>
+                <option>severe</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Age</span>
+            <input id="age" placeholder="Age (optional)" />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Additional notes</span>
+            <textarea id="notes" placeholder="Share any symptoms, constraints, or context that might help."></textarea>
+          </label>
+        </div>
+
+        <button onclick="submitForm()">Find services</button>
+      </section>
+
+      <section class="panel content-width--wide stack">
+        <div class="stack-sm">
+          <p class="eyebrow">Recommendations</p>
+          <h2 class="section-title">Suggested support options</h2>
+          <p class="section-description">
+            Your summary and any grouped service recommendations will appear here after submission.
+          </p>
+        </div>
+
+        <div id="result" class="group-list">
+          <div class="card empty-state">
+            <div class="empty-title">No recommendations yet</div>
+            <p class="empty-copy">
+              Complete the form to see a summary and any relevant service categories returned by the app.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    function renderEmptyState(title, message) {
+      return `
+        <div class="card empty-state">
+          <div class="empty-title">${title}</div>
+          <p class="empty-copy">${message}</p>
         </div>
       `;
-    });
-  }
+    }
 
-  container.innerHTML = html;
-}
-</script>
+    async function submitForm() {
+      const data = {
+        problem: problem.value,
+        duration: duration.value,
+        severity: severity.value,
+        age: age.value,
+        notes: notes.value
+      };
 
+      const container = document.getElementById("result");
+      container.innerHTML = renderEmptyState(
+        "Finding options",
+        "Reviewing your input and preparing the available service groups."
+      );
+
+      const res = await fetch("http://localhost:3000/assess", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      let summary = "";
+      let groups = null;
+
+      if (result.summary && result.groups) {
+        summary = result.summary;
+        groups = result.groups;
+      } else {
+        const raw = result.answer || "";
+        const jsonMatch = raw.match(/\{[\s\S]*\}/);
+
+        if (jsonMatch) {
+          try {
+            const parsed = JSON.parse(jsonMatch[0]);
+            groups = parsed.groups;
+            summary = parsed.summary || "";
+          } catch (e) {
+            console.error("JSON parse failed:", e);
+          }
+        }
+
+        if (!summary) {
+          summary = raw.split("{")[0].trim();
+        }
+      }
+
+      let html = "";
+
+      if (summary) {
+        html += `
+          <article class="card card-highlight">
+            <h3 class="card-title">Summary</h3>
+            <p class="card-copy">${summary}</p>
+          </article>
+        `;
+      }
+
+      if (!groups) {
+        html += renderEmptyState(
+          "No structured results found",
+          "The response did not include grouped service recommendations this time."
+        );
+        container.innerHTML = html;
+        return;
+      }
+
+      const groupNames = {
+        medical: "Medical",
+        mental_health: "Mental health",
+        social_support: "Social support",
+        emergency: "Emergency"
+      };
+
+      for (const key in groups) {
+        const items = groups[key];
+        if (!items || items.length === 0) continue;
+
+        html += `<section class="group-block"><h3 class="group-title">${groupNames[key] || key}</h3><div class="card-list">`;
+
+        items.forEach(s => {
+          const tags = Array.isArray(s.tags) ? s.tags.filter(Boolean) : [];
+
+          html += `
+            <article class="card">
+              <h4 class="card-title">${s.name || "Unknown service"}</h4>
+              <div class="meta-stack">
+                ${s.address ? `<p class="meta-row">${s.address}</p>` : ""}
+                ${s.hours ? `<p class="meta-row">${s.hours}</p>` : ""}
+                ${s.specialty ? `<p class="meta-row">${s.specialty}</p>` : ""}
+                ${s.reason ? `<p class="meta-row">Recommended because: ${s.reason}</p>` : ""}
+              </div>
+              ${tags.length ? `<div class="tag-list">${tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>` : ""}
+            </article>
+          `;
+        });
+
+        html += `</div></section>`;
+      }
+
+      container.innerHTML = html || renderEmptyState(
+        "No recommendations found",
+        "No grouped recommendations were available for this response."
+      );
+    }
+  </script>
 </body>
 </html>

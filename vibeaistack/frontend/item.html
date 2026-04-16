@@ -1,19 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass | Entry</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
 <body>
+  <main class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">Care Compass</p>
+        <h1 class="brand-title">Directory entry details</h1>
+        <p class="brand-subtitle">
+          Review the full entry details stored for this resource.
+        </p>
+      </div>
 
-<div id="content"></div>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="/index.html">Service search</a>
+        <a class="nav-link" href="/form.html">Health check</a>
+        <a class="nav-link" href="/add.html">Add entry</a>
+      </nav>
+    </header>
 
-<script src="/data.js"></script>
+    <section class="panel content-width--narrow">
+      <div id="content" class="detail-body"></div>
+    </section>
+  </main>
 
-<script>
-const id = location.hash.replace("#", "");
-const item = getData().find(i => i.id === id);
+  <script src="/data.js"></script>
 
-content.innerHTML = item
-  ? `<h1>${item.title}</h1><p>${item.details}</p>`
-  : "Not found";
-</script>
+  <script>
+    const id = location.hash.replace("#", "");
+    const item = getData().find(i => i.id === id);
 
+    content.innerHTML = item
+      ? `
+          <div class="stack-sm">
+            <p class="eyebrow">Saved Entry</p>
+            <h2 class="section-title">${item.title}</h2>
+          </div>
+          <div class="card">
+            <p class="detail-copy">${item.details}</p>
+          </div>
+          <a class="button-link button-link--secondary" href="/index.html">Back to search</a>
+        `
+      : `
+          <div class="card empty-state">
+            <div class="empty-title">Entry not found</div>
+            <p class="empty-copy">We could not find a saved item for this link.</p>
+          </div>
+          <a class="button-link button-link--secondary" href="/index.html">Back to search</a>
+        `;
+  </script>
 </body>
 </html>

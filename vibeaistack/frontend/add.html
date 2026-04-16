@@ -1,32 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass | Add Entry</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
 <body>
+  <main class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">Care Compass</p>
+        <h1 class="brand-title">Add or update a directory entry.</h1>
+        <p class="brand-subtitle">
+          Use this form to add a new resource record without changing the rest of the application flow.
+        </p>
+      </div>
 
-<h1>Add Entry</h1>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="/index.html">Service search</a>
+        <a class="nav-link" href="/form.html">Health check</a>
+        <a class="nav-link" aria-current="page" href="/add.html">Add entry</a>
+      </nav>
+    </header>
 
-<input id="id" placeholder="id" />
-<input id="title" placeholder="title" />
-<input id="info" placeholder="info" />
-<textarea id="details" placeholder="details"></textarea>
+    <section class="panel content-width--narrow stack">
+      <div class="stack-sm">
+        <p class="eyebrow">Entry Form</p>
+        <h2 class="section-title">Resource details</h2>
+        <p class="section-description">
+          Keep entries concise and clear so people can quickly understand what support is offered.
+        </p>
+      </div>
 
-<button onclick="save()">Save</button>
+      <div class="form-grid">
+        <label class="field">
+          <span class="field-label">Entry ID</span>
+          <input id="id" placeholder="clinic-001" />
+        </label>
 
-<script src="/api.js"></script>
+        <label class="field">
+          <span class="field-label">Title</span>
+          <input id="title" placeholder="Downtown Community Clinic" />
+        </label>
 
-<script>
-function save() {
-  const entry = {
-    id: id.value,
-    title: title.value,
-    info: info.value,
-    details: details.value
-  };
+        <label class="field">
+          <span class="field-label">Short info</span>
+          <input id="info" placeholder="Walk-in primary care and health guidance" />
+        </label>
 
-  saveToBackend(entry);
-  alert("Saved!");
-  location.href = "/index.html";
-}
-</script>
+        <label class="field">
+          <span class="field-label">Details</span>
+          <textarea id="details" placeholder="Add practical details, eligibility notes, or access instructions."></textarea>
+        </label>
+      </div>
 
+      <div class="button-row">
+        <button onclick="save()">Save entry</button>
+        <a class="button-link button-link--secondary" href="/index.html">Back to search</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/api.js"></script>
+
+  <script>
+    function save() {
+      const entry = {
+        id: id.value,
+        title: title.value,
+        info: info.value,
+        details: details.value
+      };
+
+      saveToBackend(entry);
+      alert("Saved!");
+      location.href = "/index.html";
+    }
+  </script>
 </body>
 </html>
