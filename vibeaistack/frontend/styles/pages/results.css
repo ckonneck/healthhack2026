@@ -6,6 +6,7 @@
 .results-intro {
   display: grid;
   gap: var(--space-3);
+  max-width: 42rem;
 }
 
 .results-summary-grid {
@@ -19,8 +20,8 @@
 }
 
 .results-card--primary {
-  border-color: #b8d0d7;
-  background: linear-gradient(180deg, #fbfdfe 0%, #f4fafc 100%);
+  border-color: var(--color-border-accent-strong);
+  background: var(--color-surface-accent);
   box-shadow: var(--shadow-md);
 }
 
@@ -65,7 +66,7 @@
   align-items: center;
   min-height: 2rem;
   padding: 0.3rem 0.7rem;
-  border: 1px solid #c9dde4;
+  border: 1px solid var(--color-border-accent);
   border-radius: var(--radius-pill);
   background: var(--color-accent-soft);
   color: var(--color-accent-hover);
@@ -112,8 +113,8 @@
 
 .recommendation-reason {
   padding: 0.85rem 0.95rem;
-  border-left: 3px solid #9cb9c3;
-  background: rgba(233, 242, 245, 0.7);
+  border-left: 3px solid var(--color-border-accent-strong);
+  background: var(--color-accent-soft);
   color: var(--color-text-muted);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
@@ -161,6 +162,7 @@
 .service-card {
   display: grid;
   gap: var(--space-3);
+  height: 100%;
 }
 
 .service-card-group {

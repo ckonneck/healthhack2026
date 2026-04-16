@@ -15,6 +15,8 @@ body {
   color: var(--color-text);
   font-family: "Avenir Next", "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: var(--line-height-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -24,6 +26,11 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
 }
 
 button,

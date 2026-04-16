@@ -5,19 +5,26 @@
   --color-surface: #ffffff;
   --color-surface-subtle: #fafbfc;
   --color-surface-muted: #f1f4f5;
+  --color-surface-accent: #f4fafc;
   --color-border: #d7dee2;
   --color-border-strong: #bcc8ce;
+  --color-border-accent: #c7dbe2;
+  --color-border-accent-strong: #9cb9c3;
   --color-text: #17303a;
   --color-text-muted: #4d6169;
-  --color-text-soft: #6b7f87;
+  --color-text-soft: #62757d;
   --color-accent: #1d5f73;
   --color-accent-hover: #174c5d;
   --color-accent-soft: #e9f2f5;
+  --color-on-accent: #ffffff;
   --color-focus: #0f6b83;
+  --color-focus-ring: rgba(15, 107, 131, 0.18);
+  --color-placeholder: #748790;
   --color-disabled-bg: #edf1f3;
   --color-disabled-text: #8a989f;
   --color-danger: #b35d5d;
   --color-danger-soft: #f7f1f1;
+  --color-danger-border: #e6c6c6;
   --color-danger-text: #7e3b3b;
 
   --space-1: 0.25rem;
@@ -36,6 +43,8 @@
 
   --shadow-sm: 0 1px 2px rgba(17, 34, 40, 0.05);
   --shadow-md: 0 8px 24px rgba(17, 34, 40, 0.06);
+  --shadow-inset-sm: inset 0 1px 2px rgba(23, 48, 58, 0.03);
+  --shadow-danger-ring: 0 0 0 3px rgba(179, 93, 93, 0.12);
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;

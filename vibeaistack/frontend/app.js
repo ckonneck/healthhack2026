@@ -48,7 +48,7 @@
 
   function renderEmptyState({ title, message, className = "" }) {
     return `
-      <div class="${joinClasses("card", "card-stack", "empty-state", className)}">
+      <div class="${joinClasses("card", "card-stack", "empty-state", className)}" role="status">
         <div class="empty-state__title empty-title">${title}</div>
         <p class="empty-state__copy empty-copy">${message}</p>
       </div>
