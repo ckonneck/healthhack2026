@@ -12,31 +12,93 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+// ─────────────────────────────
+// EMBEDDING CACHE
+// ─────────────────────────────
+const embeddingCache = new Map();
+
+// ─────────────────────────────
+// BUILD TEXT FOR EMBEDDING
+// ─────────────────────────────
+function buildEmbeddingText(entry) {
+  return [
+    entry.name,
+    entry.specialty,
+    entry.description,
+    ...(entry.tags || [])
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+// ─────────────────────────────
+// COSINE SIMILARITY
+// ─────────────────────────────
+function cosineSimilarity(a, b) {
+  const dot = a.reduce((sum, val, i) => sum + val * b[i], 0);
+  const magA = Math.sqrt(a.reduce((sum, val) => sum + val * val, 0));
+  const magB = Math.sqrt(b.reduce((sum, val) => sum + val * val, 0));
+  return dot / (magA * magB);
+}
+
+// ─────────────────────────────
+// GET EMBEDDING (WITH CACHE)
+// ─────────────────────────────
+async function getEmbedding(text) {
+  if (!client) return null;
+
+  if (embeddingCache.has(text)) {
+    return embeddingCache.get(text);
+  }
+
+  const res = await client.embeddings.create({
+    model: "text-embedding-3-small",
+    input: text
+  });
+
+  const vector = res.data[0].embedding;
+  embeddingCache.set(text, vector);
+  return vector;
+}
 // ─────────────────────────────
 // DB HELPERS
 // ─────────────────────────────
+import path from "path";
+
+const DB_PATH = path.resolve(process.cwd(), "db.json");
+
 function loadDB() {
   try {
-    const raw = fs.readFileSync("./db.json", "utf-8");
+    console.log("📂 DB PATH:", DB_PATH);
+
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+
+    console.log("📄 RAW DB LENGTH:", raw.length);
+    console.log("📄 RAW DB PREVIEW:", raw.slice(0, 200));
+
     const parsed = JSON.parse(raw);
 
-    // SUPPORT BOTH STRUCTURES:
-    // 1) [ ...services ]
-    // 2) { services: [ ... ] }
+    console.log("📦 PARSED TYPE:", Array.isArray(parsed) ? "array" : typeof parsed);
+    console.log("📦 PARSED KEYS:", parsed && typeof parsed === "object" ? Object.keys(parsed) : parsed);
 
     if (Array.isArray(parsed)) return parsed;
-    if (Array.isArray(parsed.services)) return parsed.services;
+    if (parsed && Array.isArray(parsed.services)) return parsed.services;
 
-    console.warn("⚠️ DB format invalid:", parsed);
+    console.warn("⚠️ DB format invalid");
     return [];
   } catch (err) {
-    console.error("⚠️ DB load failed:", err.message);
+    console.error("❌ DB LOAD FAILED:", err.message);
     return [];
   }
 }
 
 function saveDB(data) {
-  fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error("⚠️ DB save failed:", err.message);
+  }
 }
 
 function loadDBDocument() {
@@ -121,42 +183,47 @@ function safeText(...parts) {
 // ─────────────────────────────
 // KEYWORD SCORING (SAFE)
 // ─────────────────────────────
-function getTopMatches(text, db) {
-  const keywords = text
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(w => w.length > 2);
+async function getTopMatches(text, db) {
+  console.log("🧠 EMBEDDING MATCH MODE");
 
-  const list = Array.isArray(db) ? db : [];
+  if (!client) {
+    console.warn("⚠️ No AI client — cannot use embeddings");
+    return { matches: [] };
+  }
 
-  const scored = list.map(entry => {
-    let score = 0;
+  if (!db || db.length === 0) {
+    console.warn("⚠️ DB EMPTY");
+    return { matches: [] };
+  }
 
-    const content = [
-      entry.name,
-      entry.type,
-      entry.specialty,
-      entry.description,
-      ...(entry.tags || [])
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
+  try {
+    // 👉 embed user query
+    const queryVec = await getEmbedding(text);
 
-    keywords.forEach(word => {
-      if (content.includes(word)) score += 1;
-    });
-    console.log("HITTING 1");
-    return { ...entry, score };
-  });
+    const scored = [];
 
-  const matches = scored
-    .filter(e => e.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10);
-console.log("HITTING THE 2");
+    for (const entry of db) {
+      const content = buildEmbeddingText(entry);
 
-  return { keywords, matches };
+      const entryVec = await getEmbedding(content);
+      if (!entryVec) continue;
+
+      const score = cosineSimilarity(queryVec, entryVec);
+
+      scored.push({ ...entry, score });
+    }
+
+    const matches = scored
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    console.log("🏁 TOP MATCHES:", matches.map(m => m.name));
+    return { matches };
+
+  } catch (err) {
+    console.error("⚠️ Embedding match failed:", err.message);
+    return { matches: [] };
+  }
 }
 // ─────────────────────────────
 // HEALTH CHECK
@@ -199,11 +266,11 @@ app.post("/add", (req, res) => {
 // ─────────────────────────────
 // SEARCH
 // ─────────────────────────────
-app.post("/search", (req, res) => {
+app.post("/search",async (req, res) => {
   const query = req.body.query || "";
   const db = loadDB();
 
-  const { matches } = getTopMatches(query, db);
+  const { matches } = await getTopMatches(query, db);
 
   res.json({ results: matches });
 });
@@ -251,7 +318,7 @@ app.post("/assess", async (req, res) => {
   const db = loadDB();
   const text = `${problem} ${notes}`;
 
-  const { matches } = getTopMatches(text, db);
+  const { matches } = await getTopMatches(text, db);
 
   console.log("Top matches:", matches.map(m => m.title));
 
@@ -306,11 +373,12 @@ app.post("/assess", async (req, res) => {
 // ASK
 // ─────────────────────────────
 app.post("/ask", async (req, res) => {
+  console.log("📨 REQUEST BODY:", req.body);
   const query = req.body.query || "";
   const db = loadDB();
-
-  const { matches } = getTopMatches(query, db);
-
+  console.log("📊 DB LOADED IN ROUTE:", db.length);
+  const { matches } = await getTopMatches(query, db);
+  console.log("📤 SENDING MATCHES:", matches.length);
   if (!client) {
     return res.json({
       answer:
