@@ -22,10 +22,10 @@
 
       <div class="card card-stack">
         <p class="card-copy">
-          All fields are required in this step. This form validates the service entry structure only.
+          All fields are required in this step. Valid service entries are saved through the current backend route.
         </p>
         <p class="field-hint">
-          No data will be saved yet. The frontend is being aligned with the current service schema first.
+          The saved entry will follow the same service schema already used in the backend service list.
         </p>
       </div>
 
@@ -85,21 +85,52 @@
         </label>
 
         <div class="button-row">
-          <button type="submit" class="button button--primary">Review submission</button>
+          <button id="submitButton" type="submit" class="button button--primary">Submit service</button>
           <a class="button button--secondary" href="/index.html">Back to search</a>
         </div>
 
         <p id="formStatus" class="field-hint" aria-live="polite"></p>
       </form>
+
+      <div id="submissionResult" class="section-shell" hidden>
+        <div class="card card-stack" role="status" aria-live="polite">
+          <div class="section-header section-header--compact">
+            <p class="eyebrow">Submission ready</p>
+            <h3 class="card-title">Service entry prepared successfully</h3>
+          </div>
+          <p class="card-copy">
+            The service object was created and saved through the existing backend submission path.
+          </p>
+        </div>
+
+        <div class="card card-stack">
+          <div class="section-header section-header--compact">
+            <p class="eyebrow">JSON Preview</p>
+            <h3 class="card-title">Schema-aligned payload</h3>
+          </div>
+          <pre id="payloadPreview"></pre>
+        </div>
+
+        <div class="button-row">
+          <button id="addAnotherButton" type="button" class="button button--primary">Add another service</button>
+          <a class="button button--secondary" href="/index.html">Done</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <script src="/app.js"></script>
+  <script src="/api.js"></script>
 
   <script>
     const pageHeader = document.getElementById("pageHeader");
     const providerForm = document.getElementById("providerForm");
     const formStatus = document.getElementById("formStatus");
+    const submitButton = document.getElementById("submitButton");
+    const submissionResult = document.getElementById("submissionResult");
+    const payloadPreview = document.getElementById("payloadPreview");
+    const addAnotherButton = document.getElementById("addAnotherButton");
+    let isSubmitting = false;
 
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
       title: "Submit a service",
@@ -159,12 +190,32 @@
       return value
         .split(",")
         .map(tag => tag.trim())
-        .filter(Boolean);
+        .filter(Boolean)
+        .map(tag => tag.toLowerCase());
+    }
+
+    function setFormStatus(message = "", variant = "hint") {
+      formStatus.textContent = message;
+      formStatus.className = variant === "error" ? "field-error" : "field-hint";
+    }
+
+    function setSubmittingState(submitting) {
+      isSubmitting = submitting;
+      submitButton.disabled = submitting;
+      submitButton.textContent = submitting ? "Saving service..." : "Submit service";
+    }
+
+    function validateRequiredValue(fieldName) {
+      const value = formState[fieldName].trim();
+
+      if (!value) {
+        return `${fieldLabels[fieldName]} is required.`;
+      }
+
+      return "";
     }
 
     function validateField(fieldName) {
-      const value = formState[fieldName].trim();
-
       if (fieldName === "tags") {
         if (!parseTags(formState.tags).length) {
           return "Enter at least one tag.";
@@ -173,11 +224,7 @@
         return "";
       }
 
-      if (!value) {
-        return `${fieldLabels[fieldName]} is required.`;
-      }
-
-      return "";
+      return validateRequiredValue(fieldName);
     }
 
     function applyFieldState(fieldName) {
@@ -217,6 +264,35 @@
       };
     }
 
+    function showSubmissionResult(payload) {
+      providerForm.hidden = true;
+      submissionResult.hidden = false;
+      payloadPreview.textContent = JSON.stringify(payload, null, 2);
+
+      console.group("Provider submission payload");
+      console.log("Final service object:");
+      console.log(payload);
+      console.log("JSON preview:");
+      console.log(JSON.stringify(payload, null, 2));
+      console.groupEnd();
+    }
+
+    function resetFormState() {
+      Object.keys(formState).forEach(fieldName => {
+        formState[fieldName] = "";
+        formErrors[fieldName] = "";
+        touchedFields[fieldName] = false;
+        applyFieldState(fieldName);
+      });
+
+      setFormStatus("");
+      setSubmittingState(false);
+      payloadPreview.textContent = "";
+      submissionResult.hidden = true;
+      providerForm.hidden = false;
+      getFieldElement("name").focus();
+    }
+
     Object.keys(formState).forEach(fieldName => {
       const input = getFieldElement(fieldName);
 
@@ -238,8 +314,12 @@
       applyFieldState(fieldName);
     });
 
-    providerForm.addEventListener("submit", event => {
+    providerForm.addEventListener("submit", async event => {
       event.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
 
       Object.keys(touchedFields).forEach(fieldName => {
         touchedFields[fieldName] = true;
@@ -250,7 +330,7 @@
       Object.keys(formState).forEach(applyFieldState);
 
       if (!isValid) {
-        formStatus.textContent = "Please fix the highlighted fields before reviewing this service entry.";
+        setFormStatus("Please fix the highlighted fields before submitting this service entry.", "error");
         const firstInvalidField = Object.keys(formErrors).find(fieldName => formErrors[fieldName]);
 
         if (firstInvalidField) {
@@ -261,7 +341,22 @@
       }
 
       const payload = buildServicePayload();
-      formStatus.textContent = `Entry ready for backend wiring. The current schema-aligned payload includes ${payload.tags.length} tag${payload.tags.length === 1 ? "" : "s"}. No data was saved.`;
+      setSubmittingState(true);
+      setFormStatus("Saving this service entry.");
+
+      try {
+        const result = await saveToBackend(payload);
+        setFormStatus("");
+        showSubmissionResult(result.service || payload);
+      } catch (error) {
+        setFormStatus(error.message || "Unable to save this service right now.", "error");
+      } finally {
+        setSubmittingState(false);
+      }
+    });
+
+    addAnotherButton.addEventListener("click", () => {
+      resetFormState();
     });
   </script>
 </body>

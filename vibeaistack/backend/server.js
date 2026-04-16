@@ -39,6 +39,57 @@ function saveDB(data) {
   fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
 }
 
+function loadDBDocument() {
+  try {
+    const raw = fs.readFileSync("./db.json", "utf-8");
+    const parsed = JSON.parse(raw);
+
+    if (Array.isArray(parsed)) {
+      return { services: parsed };
+    }
+
+    if (Array.isArray(parsed.services)) {
+      return parsed;
+    }
+
+    return { services: [] };
+  } catch (err) {
+    console.error("⚠️ DB document load failed:", err.message);
+    return { services: [] };
+  }
+}
+
+function saveDBDocument(data) {
+  fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+}
+
+function normalizeServiceEntry(entry = {}) {
+  const cleanText = value => (typeof value === "string" ? value.trim() : "");
+  const rawTags = Array.isArray(entry.tags)
+    ? entry.tags
+    : typeof entry.tags === "string"
+      ? entry.tags.split(",")
+      : [];
+
+  const service = {
+    name: cleanText(entry.name),
+    type: cleanText(entry.type),
+    specialty: cleanText(entry.specialty),
+    address: cleanText(entry.address),
+    hours: cleanText(entry.hours),
+    tags: rawTags
+      .map(tag => cleanText(String(tag)).toLowerCase())
+      .filter(Boolean),
+    description: cleanText(entry.description)
+  };
+
+  const missing = Object.entries(service)
+    .filter(([key, value]) => (key === "tags" ? !value.length : !value))
+    .map(([key]) => key);
+
+  return { service, missing };
+}
+
 // ─────────────────────────────
 // OPENAI (OPTIONAL)
 // ─────────────────────────────
@@ -121,13 +172,28 @@ app.get("/", (req, res) => {
 // ADD ENTRY
 // ─────────────────────────────
 app.post("/add", (req, res) => {
-  const db = loadDB();
+  const { service, missing } = normalizeServiceEntry(req.body || {});
 
-  const list = Array.isArray(db) ? db : [];
-  list.push(req.body);
+  if (missing.length) {
+    return res.status(400).json({
+      ok: false,
+      error: `Missing required fields: ${missing.join(", ")}`
+    });
+  }
 
-  saveDB(list);
-  res.json({ ok: true });
+  const dbDocument = loadDBDocument();
+
+  if (!Array.isArray(dbDocument.services)) {
+    dbDocument.services = [];
+  }
+
+  dbDocument.services.push(service);
+  saveDBDocument(dbDocument);
+
+  res.json({
+    ok: true,
+    service
+  });
 });
 
 // ─────────────────────────────
