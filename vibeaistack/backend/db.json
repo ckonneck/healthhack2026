@@ -1,0 +1,112 @@
+{
+  "services": [
+    {
+      "name": "Dr. Anna Müller - General Practitioner",
+      "type": "doctor",
+      "specialty": "general_medicine",
+      "address": "Hauptstraße 12, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": ["fever", "pain", "infection", "checkup", "primary_care"],
+      "description": "General health consultations and basic diagnostics"
+    },
+    {
+      "name": "Orthopedic Center Braunschweig",
+      "type": "clinic",
+      "specialty": "orthopedics",
+      "address": "Ringstraße 44, 38102 Braunschweig",
+      "hours": "Mon-Fri 09:00-18:00",
+      "tags": ["bone", "knee", "leg", "back_pain", "injury", "mobility"],
+      "description": "Treatment of musculoskeletal issues and injuries"
+    },
+    {
+      "name": "Neurology Practice Dr. Schmidt",
+      "type": "doctor",
+      "specialty": "neurology",
+      "address": "Am Klinikum 5, 38106 Braunschweig",
+      "hours": "Mon-Thu 09:00-15:00",
+      "tags": ["headache", "nerve", "brain", "dizziness", "chronic_pain"],
+      "description": "Neurological diagnostics and treatment"
+    },
+    {
+      "name": "Child Health Center North",
+      "type": "clinic",
+      "specialty": "pediatrics",
+      "address": "Kinderweg 3, 38108 Braunschweig",
+      "hours": "Mon-Fri 08:00-17:00",
+      "tags": ["child", "baby", "fever", "vaccination", "growth", "development"],
+      "description": "Healthcare for infants, children, and adolescents"
+    },
+    {
+      "name": "Mental Health Support Center",
+      "type": "clinic",
+      "specialty": "psychology",
+      "address": "Ruhestraße 9, 38100 Braunschweig",
+      "hours": "Mon-Fri 10:00-19:00",
+      "tags": ["anxiety", "depression", "stress", "therapy", "mental_health"],
+      "description": "Psychological counseling and therapy services"
+    },
+    {
+      "name": "Emergency Medical Center Braunschweig",
+      "type": "hospital",
+      "specialty": "emergency",
+      "address": "Klinikweg 1, 38126 Braunschweig",
+      "hours": "24/7",
+      "tags": ["emergency", "accident", "severe_pain", "urgent", "trauma"],
+      "description": "Emergency and acute care services"
+    },
+    {
+      "name": "Social Welfare Office Braunschweig",
+      "type": "social",
+      "specialty": "financial_support",
+      "address": "Stadtplatz 7, 38100 Braunschweig",
+      "hours": "Mon-Fri 09:00-12:00",
+      "tags": ["benefits", "unemployment", "financial_aid", "support", "housing_help"],
+      "description": "Financial assistance and social support programs"
+    },
+    {
+      "name": "Family Support Services",
+      "type": "social",
+      "specialty": "family_support",
+      "address": "Familienweg 2, 38104 Braunschweig",
+      "hours": "Mon-Fri 09:00-17:00",
+      "tags": ["childcare", "family", "support", "parenting", "youth"],
+      "description": "Support for families and children"
+    },
+    {
+      "name": "Employment Agency Braunschweig",
+      "type": "social",
+      "specialty": "employment",
+      "address": "Jobstraße 10, 38100 Braunschweig",
+      "hours": "Mon-Fri 08:00-16:00",
+      "tags": ["job", "unemployment", "career", "training", "income"],
+      "description": "Job placement and employment support"
+    },
+    {
+      "name": "Housing Assistance Center",
+      "type": "social",
+      "specialty": "housing",
+      "address": "Wohnstraße 6, 38118 Braunschweig",
+      "hours": "Mon-Fri 09:00-15:00",
+      "tags": ["housing", "rent", "eviction", "shelter", "support"],
+      "description": "Housing support and emergency accommodation"
+    },
+    {
+      "name": "Physiotherapy Clinic ActiveMove",
+      "type": "clinic",
+      "specialty": "physiotherapy",
+      "address": "Bewegungsweg 11, 38120 Braunschweig",
+      "hours": "Mon-Fri 07:00-18:00",
+      "tags": ["rehabilitation", "mobility", "pain", "injury", "therapy"],
+      "description": "Rehabilitation and movement therapy"
+    },
+    {
+      "name": "Dermatology Practice SkinCare",
+      "type": "doctor",
+      "specialty": "dermatology",
+      "address": "Hautstraße 8, 38100 Braunschweig",
+      "hours": "Mon-Thu 09:00-14:00",
+      "tags": ["skin", "rash", "allergy", "infection", "acne"],
+      "description": "Skin disease and dermatological care"
+    }
+  ]
+}

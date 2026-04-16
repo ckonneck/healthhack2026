@@ -1,0 +1,8 @@
+{
+  "name": "vibe-wiki-backend",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "openai": "^4.0.0"
+  }
+}

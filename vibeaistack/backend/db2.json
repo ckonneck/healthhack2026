@@ -1,0 +1,53 @@
+[
+  {"id":"htn","title":"Hypertension","info":"High blood pressure condition","details":"Hypertension is a chronic condition involving elevated blood pressure requiring monitoring and lifestyle adjustments."},
+  {"id":"dm2","title":"Type 2 Diabetes","info":"Blood sugar disorder","details":"Type 2 diabetes involves insulin resistance and is managed with diet, medication, and monitoring."},
+  {"id":"asthma","title":"Asthma","info":"Respiratory condition","details":"Asthma causes airway inflammation and difficulty breathing, often triggered by allergens or exertion."},
+  {"id":"copd","title":"COPD","info":"Chronic lung disease","details":"COPD includes chronic bronchitis and emphysema, leading to airflow limitation."},
+  {"id":"fever","title":"Fever Management","info":"Elevated body temperature","details":"Fever is commonly treated with hydration, rest, and antipyretics if necessary."},
+  {"id":"wound","title":"Wound Care","info":"Basic wound treatment","details":"Clean wound with sterile solution, apply dressing, monitor for infection."},
+  {"id":"infection","title":"Infection Control","info":"Preventing spread of infection","details":"Hand hygiene and PPE are critical for infection prevention."},
+  {"id":"bp-monitor","title":"Blood Pressure Monitoring","info":"Vital sign tracking","details":"Measure regularly using a calibrated device, record readings for trends."},
+  {"id":"pulse","title":"Pulse Measurement","info":"Heart rate tracking","details":"Pulse can be measured at wrist or neck, normal range varies by age."},
+  {"id":"respiration","title":"Respiration Rate","info":"Breathing frequency","details":"Normal adult respiration is 12-20 breaths per minute."},
+
+  {"id":"fall-risk","title":"Fall Risk Assessment","info":"Preventing patient falls","details":"Assess mobility, environment hazards, and medication effects."},
+  {"id":"mobility","title":"Mobility Assistance","info":"Helping patients move safely","details":"Use assistive devices and proper body mechanics."},
+  {"id":"hydration","title":"Hydration Needs","info":"Fluid balance","details":"Adequate hydration supports organ function and recovery."},
+  {"id":"nutrition","title":"Basic Nutrition","info":"Dietary support","details":"Balanced diet includes proteins, carbs, fats, vitamins, and minerals."},
+  {"id":"pain","title":"Pain Management","info":"Managing discomfort","details":"Pain can be managed with medication, positioning, and therapy."},
+
+  {"id":"med-admin","title":"Medication Administration","info":"Giving medications safely","details":"Follow the 5 rights: right patient, drug, dose, route, time."},
+  {"id":"med-error","title":"Medication Errors","info":"Avoiding mistakes","details":"Double-check prescriptions and patient identity."},
+  {"id":"adherence","title":"Medication Adherence","info":"Following treatment plans","details":"Use reminders and simplify schedules."},
+
+  {"id":"mental-health","title":"Mental Health Support","info":"Emotional wellbeing","details":"Support includes communication, therapy, and medication when needed."},
+  {"id":"anxiety","title":"Anxiety","info":"Stress-related condition","details":"Symptoms include restlessness, tension, and rapid heart rate."},
+  {"id":"depression","title":"Depression","info":"Mood disorder","details":"Persistent sadness and loss of interest in activities."},
+
+  {"id":"elderly-care","title":"Elderly Care","info":"Aging patient support","details":"Focus on mobility, safety, and chronic condition management."},
+  {"id":"pediatric","title":"Pediatric Care","info":"Child healthcare","details":"Children require age-specific care and monitoring."},
+
+  {"id":"post-op","title":"Post-Operative Care","info":"After surgery care","details":"Monitor vitals, manage pain, prevent infection."},
+  {"id":"pre-op","title":"Pre-Operative Prep","info":"Before surgery","details":"Ensure patient readiness and informed consent."},
+
+  {"id":"oxygen","title":"Oxygen Therapy","info":"Supplemental oxygen","details":"Used for patients with low oxygen saturation."},
+  {"id":"iv","title":"IV Therapy","info":"Intravenous fluids","details":"Delivers fluids and medication directly into bloodstream."},
+
+  {"id":"cardiac","title":"Cardiac Monitoring","info":"Heart function tracking","details":"Monitor ECG, heart rate, and rhythm."},
+  {"id":"stroke","title":"Stroke Awareness","info":"Brain emergency","details":"FAST: Face droop, Arm weakness, Speech difficulty, Time to act."},
+
+  {"id":"allergy","title":"Allergy Management","info":"Immune reactions","details":"Avoid triggers and use antihistamines when needed."},
+  {"id":"rash","title":"Skin Rash","info":"Dermatological issue","details":"May result from allergy, infection, or irritation."},
+
+  {"id":"sleep","title":"Sleep Health","info":"Rest and recovery","details":"Adequate sleep improves healing and mental health."},
+  {"id":"fatigue","title":"Fatigue","info":"Low energy state","details":"May result from illness, stress, or poor sleep."},
+
+  {"id":"exercise","title":"Exercise Benefits","info":"Physical activity","details":"Improves cardiovascular health and overall wellbeing."},
+  {"id":"rehab","title":"Rehabilitation","info":"Recovery therapy","details":"Includes physical and occupational therapy."},
+
+  {"id":"triage","title":"Triage Basics","info":"Prioritizing care","details":"Assess severity to determine treatment priority."},
+  {"id":"emergency","title":"Emergency Response","info":"Immediate care","details":"Stabilize patient and call emergency services if needed."},
+
+  {"id":"documentation","title":"Clinical Documentation","info":"Recording patient data","details":"Accurate records are essential for care continuity."},
+  {"id":"privacy","title":"Patient Privacy","info":"Data protection","details":"Maintain confidentiality and secure records."}
+]

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vibe Wiki AI</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+
+    input {
+      width: 420px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #00ffcc;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+
+  max-width: 100%;
+  overflow: hidden;
+}
+
+    a {
+      color: #00ffcc;
+      margin-top: 10px;
+      display: block;
+    }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  color: #ddd;
+}
+  </style>
+</head>
+
+<body>
+
+<h1>🔍 Wiki AI Search</h1>
+
+<a href="/add.html">➕ Add Entry</a>
+<a href="/form.html">🩺 Health Check</a>
+
+<input id="q" placeholder="Search your wiki..." />
+
+<button onclick="search()">Search</button>
+
+<div id="results"></div>
+
+<script src="/api.js"></script>
+
+<script>async function search() {
+  const q = document.getElementById("q").value;
+
+  const res = await fetch("http://localhost:3000/services", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ query: q })
+  });
+
+  const data = await res.json();
+
+  const results = document.getElementById("results");
+
+  results.innerHTML = data.results.map(r => `
+    <div class="card">
+      <div class="title">${r.name}</div>
+      <div>${r.address}</div>
+      <div>${r.hours}</div>
+    </div>
+  `).join("");
+}
+</script>
+
+</body>
+</html>

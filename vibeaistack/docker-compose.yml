@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      OPENAI_API_KEY: "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"

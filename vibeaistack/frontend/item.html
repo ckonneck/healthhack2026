@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="content"></div>
+
+<script src="/data.js"></script>
+
+<script>
+const id = location.hash.replace("#", "");
+const item = getData().find(i => i.id === id);
+
+content.innerHTML = item
+  ? `<h1>${item.title}</h1><p>${item.details}</p>`
+  : "Not found";
+</script>
+
+</body>
+</html>

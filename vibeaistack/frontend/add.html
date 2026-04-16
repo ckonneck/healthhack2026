@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Add Entry</h1>
+
+<input id="id" placeholder="id" />
+<input id="title" placeholder="title" />
+<input id="info" placeholder="info" />
+<textarea id="details" placeholder="details"></textarea>
+
+<button onclick="save()">Save</button>
+
+<script src="/api.js"></script>
+
+<script>
+function save() {
+  const entry = {
+    id: id.value,
+    title: title.value,
+    info: info.value,
+    details: details.value
+  };
+
+  saveToBackend(entry);
+  alert("Saved!");
+  location.href = "/index.html";
+}
+</script>
+
+</body>
+</html>
