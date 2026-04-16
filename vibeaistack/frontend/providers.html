@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Care Compass | Submit a Service</title>
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .provider-hours-field {
+      display: grid;
+      gap: var(--space-3);
+      margin: 0;
+      padding: 0;
+      border: 0;
+      min-inline-size: 0;
+    }
+
+    .provider-hours-grid {
+      display: grid;
+      gap: var(--space-3);
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .provider-preview-details {
+      display: grid;
+      gap: var(--space-3);
+      margin: 0;
+    }
+
+    .provider-preview-row {
+      display: grid;
+      gap: 0.35rem;
+      margin: 0;
+    }
+
+    .provider-preview-row + .provider-preview-row {
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .provider-preview-value {
+      margin: 0;
+      color: var(--color-text);
+      font-size: var(--font-size-base);
+      line-height: var(--line-height-body);
+    }
+
+    .provider-preview-tags {
+      margin-top: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -65,11 +109,42 @@
           <p id="addressError" class="field-error" aria-live="polite"></p>
         </label>
 
-        <label class="field" for="hours">
-          <span class="field-label">Opening hours</span>
-          <input id="hours" name="hours" class="field-control" type="text" required autocomplete="off" />
+        <fieldset class="provider-hours-field" aria-describedby="hoursHint hoursError">
+          <legend class="field-label">Opening hours</legend>
+
+          <div class="provider-hours-grid">
+            <label class="field" for="hoursDays">
+              <span class="field-label">Days</span>
+              <select id="hoursDays" name="hoursDays" class="field-control" required>
+                <option value="Mon-Fri">Mon-Fri</option>
+                <option value="Mon-Thu">Mon-Thu</option>
+                <option value="Tue-Sat">Tue-Sat</option>
+                <option value="Mon-Sat">Mon-Sat</option>
+                <option value="Sat-Sun">Sat-Sun</option>
+                <option value="Mon-Sun">Mon-Sun</option>
+                <option value="custom">Custom range</option>
+              </select>
+            </label>
+
+            <label id="hoursCustomDaysField" class="field" for="hoursCustomDays" hidden>
+              <span class="field-label">Custom day range</span>
+              <input id="hoursCustomDays" name="hoursCustomDays" class="field-control" type="text" autocomplete="off" disabled />
+            </label>
+
+            <label class="field" for="hoursOpen">
+              <span class="field-label">Opens</span>
+              <input id="hoursOpen" name="hoursOpen" class="field-control" type="time" required />
+            </label>
+
+            <label class="field" for="hoursClose">
+              <span class="field-label">Closes</span>
+              <input id="hoursClose" name="hoursClose" class="field-control" type="time" required />
+            </label>
+          </div>
+
+          <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times.</p>
           <p id="hoursError" class="field-error" aria-live="polite"></p>
-        </label>
+        </fieldset>
 
         <label class="field" for="tags">
           <span class="field-label">Tags</span>
@@ -106,10 +181,41 @@
 
         <div class="card card-stack">
           <div class="section-header section-header--compact">
-            <p class="eyebrow">JSON Preview</p>
-            <h3 class="card-title">Schema-aligned payload</h3>
+            <p class="eyebrow">Listing preview</p>
+            <h3 class="card-title">How your service listing will look</h3>
           </div>
-          <pre id="payloadPreview"></pre>
+
+          <div class="stack-sm">
+            <h4 id="previewName" class="card-title"></h4>
+            <p id="previewDescription" class="card-copy"></p>
+          </div>
+
+          <dl class="provider-preview-details">
+            <div class="provider-preview-row">
+              <dt class="field-label">Service type</dt>
+              <dd id="previewType" class="provider-preview-value"></dd>
+            </div>
+
+            <div class="provider-preview-row">
+              <dt class="field-label">Specialty</dt>
+              <dd id="previewSpecialty" class="provider-preview-value"></dd>
+            </div>
+
+            <div class="provider-preview-row">
+              <dt class="field-label">Address</dt>
+              <dd id="previewAddress" class="provider-preview-value"></dd>
+            </div>
+
+            <div class="provider-preview-row">
+              <dt class="field-label">Opening hours</dt>
+              <dd id="previewHours" class="provider-preview-value"></dd>
+            </div>
+          </dl>
+
+          <div class="stack-sm">
+            <p class="field-label">Tags</p>
+            <div id="previewTags" class="tag-list provider-preview-tags"></div>
+          </div>
         </div>
 
         <div class="button-row">
@@ -127,10 +233,22 @@
     const providerForm = document.getElementById("providerForm");
     const formStatus = document.getElementById("formStatus");
     const submissionResult = document.getElementById("submissionResult");
-    const payloadPreview = document.getElementById("payloadPreview");
     const addAnotherButton = document.getElementById("addAnotherButton");
     const doneButton = document.getElementById("doneButton");
     const submissionStatus = document.getElementById("submissionStatus");
+    const hoursDaysInput = document.getElementById("hoursDays");
+    const hoursCustomDaysField = document.getElementById("hoursCustomDaysField");
+    const hoursCustomDaysInput = document.getElementById("hoursCustomDays");
+    const hoursOpenInput = document.getElementById("hoursOpen");
+    const hoursCloseInput = document.getElementById("hoursClose");
+    const hoursHint = document.getElementById("hoursHint");
+    const previewName = document.getElementById("previewName");
+    const previewType = document.getElementById("previewType");
+    const previewSpecialty = document.getElementById("previewSpecialty");
+    const previewAddress = document.getElementById("previewAddress");
+    const previewHours = document.getElementById("previewHours");
+    const previewTags = document.getElementById("previewTags");
+    const previewDescription = document.getElementById("previewDescription");
     const PROVIDER_STORAGE_KEY = "care_compass_provider_services";
     let lastSavedSignature = "";
     let lastSavedAt = 0;
@@ -146,9 +264,15 @@
       type: "",
       specialty: "",
       address: "",
-      hours: "",
       tags: "",
       description: ""
+    };
+
+    const hoursState = {
+      dayRange: "Mon-Fri",
+      customDays: "",
+      open: "",
+      close: ""
     };
 
     const formErrors = {
@@ -182,6 +306,22 @@
     };
 
     function getFieldElement(fieldName) {
+      if (fieldName === "hours") {
+        if (hoursState.dayRange === "custom" && !hoursState.customDays.trim()) {
+          return hoursCustomDaysInput;
+        }
+
+        if (!hoursState.open) {
+          return hoursOpenInput;
+        }
+
+        if (!hoursState.close) {
+          return hoursCloseInput;
+        }
+
+        return hoursDaysInput;
+      }
+
       return document.getElementById(fieldName);
     }
 
@@ -195,6 +335,62 @@
         .map(tag => tag.trim())
         .filter(Boolean)
         .map(tag => tag.toLowerCase());
+    }
+
+    function formatLabel(value) {
+      return String(value || "")
+        .replace(/_/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .replace(/\b\w/g, character => character.toUpperCase());
+    }
+
+    function getHoursDayRangeValue() {
+      return hoursState.dayRange === "custom"
+        ? hoursState.customDays.trim()
+        : hoursState.dayRange.trim();
+    }
+
+    function buildHoursValue() {
+      const dayRange = getHoursDayRangeValue();
+
+      if (!dayRange || !hoursState.open || !hoursState.close) {
+        return "";
+      }
+
+      return `${dayRange} ${hoursState.open}-${hoursState.close}`;
+    }
+
+    function updateHoursHint() {
+      const hoursValue = buildHoursValue();
+      hoursHint.textContent = hoursValue
+        ? `Saved as ${hoursValue}.`
+        : "Choose a day range plus opening and closing times.";
+    }
+
+    function applyHoursState() {
+      const errorText = touchedFields.hours ? formErrors.hours : "";
+      const isCustomRange = hoursState.dayRange === "custom";
+
+      hoursDaysInput.value = hoursState.dayRange;
+      hoursCustomDaysField.hidden = !isCustomRange;
+      hoursCustomDaysInput.disabled = !isCustomRange;
+      hoursCustomDaysInput.value = hoursState.customDays;
+      hoursOpenInput.value = hoursState.open;
+      hoursCloseInput.value = hoursState.close;
+
+      [hoursDaysInput, hoursOpenInput, hoursCloseInput].forEach(input => {
+        input.setAttribute("aria-invalid", errorText ? "true" : "false");
+      });
+
+      if (isCustomRange) {
+        hoursCustomDaysInput.setAttribute("aria-invalid", errorText ? "true" : "false");
+      } else {
+        hoursCustomDaysInput.removeAttribute("aria-invalid");
+      }
+
+      getErrorElement("hours").textContent = errorText;
+      updateHoursHint();
     }
 
     function getServiceSignature(service) {
@@ -264,6 +460,24 @@
     }
 
     function validateField(fieldName) {
+      if (fieldName === "hours") {
+        const dayRange = getHoursDayRangeValue();
+
+        if (!dayRange) {
+          return "Choose the days this service is open.";
+        }
+
+        if (!hoursState.open || !hoursState.close) {
+          return "Add both an opening and closing time.";
+        }
+
+        if (hoursState.close <= hoursState.open) {
+          return "Closing time must be later than opening time.";
+        }
+
+        return "";
+      }
+
       if (fieldName === "tags") {
         if (!parseTags(formState.tags).length) {
           return "Enter at least one tag.";
@@ -276,6 +490,11 @@
     }
 
     function applyFieldState(fieldName) {
+      if (fieldName === "hours") {
+        applyHoursState();
+        return;
+      }
+
       const input = getFieldElement(fieldName);
       const errorText = touchedFields[fieldName] ? formErrors[fieldName] : "";
       const errorElement = getErrorElement(fieldName);
@@ -288,7 +507,7 @@
     function validateAllFields() {
       let isValid = true;
 
-      Object.keys(formState).forEach(fieldName => {
+      Object.keys(formErrors).forEach(fieldName => {
         const error = validateField(fieldName);
         formErrors[fieldName] = error;
 
@@ -306,16 +525,33 @@
         type: formState.type.trim(),
         specialty: formState.specialty.trim(),
         address: formState.address.trim(),
-        hours: formState.hours.trim(),
+        hours: buildHoursValue(),
         tags: parseTags(formState.tags),
         description: formState.description.trim()
       };
     }
 
+    function renderPreviewTags(tags) {
+      previewTags.innerHTML = "";
+
+      tags.forEach(tag => {
+        const tagElement = document.createElement("span");
+        tagElement.className = "tag";
+        tagElement.textContent = tag;
+        previewTags.appendChild(tagElement);
+      });
+    }
+
     function showSubmissionResult(payload, persistenceResult) {
       providerForm.hidden = true;
       submissionResult.hidden = false;
-      payloadPreview.textContent = JSON.stringify(payload, null, 2);
+      previewName.textContent = payload.name;
+      previewType.textContent = formatLabel(payload.type);
+      previewSpecialty.textContent = payload.specialty;
+      previewAddress.textContent = payload.address;
+      previewHours.textContent = payload.hours;
+      previewDescription.textContent = payload.description;
+      renderPreviewTags(payload.tags);
 
       if (persistenceResult.duplicatePrevented) {
         submissionStatus.textContent = "An identical service was already stored a moment ago, so a duplicate entry was not added.";
@@ -341,9 +577,23 @@
         applyFieldState(fieldName);
       });
 
+      hoursState.dayRange = "Mon-Fri";
+      hoursState.customDays = "";
+      hoursState.open = "";
+      hoursState.close = "";
+      formErrors.hours = "";
+      touchedFields.hours = false;
+      applyHoursState();
+
       setFormStatus("");
-      payloadPreview.textContent = "";
       submissionStatus.textContent = "";
+      previewName.textContent = "";
+      previewType.textContent = "";
+      previewSpecialty.textContent = "";
+      previewAddress.textContent = "";
+      previewHours.textContent = "";
+      previewDescription.textContent = "";
+      previewTags.innerHTML = "";
       submissionResult.hidden = true;
       providerForm.hidden = false;
 
@@ -373,6 +623,39 @@
       applyFieldState(fieldName);
     });
 
+    function updateHoursValue(stateKey, value) {
+      hoursState[stateKey] = value;
+
+      if (stateKey === "dayRange" && value !== "custom") {
+        hoursState.customDays = "";
+      }
+
+      if (touchedFields.hours) {
+        formErrors.hours = validateField("hours");
+      }
+
+      applyHoursState();
+    }
+
+    [
+      { input: hoursDaysInput, stateKey: "dayRange", eventName: "change" },
+      { input: hoursCustomDaysInput, stateKey: "customDays", eventName: "input" },
+      { input: hoursOpenInput, stateKey: "open", eventName: "input" },
+      { input: hoursCloseInput, stateKey: "close", eventName: "input" }
+    ].forEach(({ input, stateKey, eventName }) => {
+      input.addEventListener(eventName, event => {
+        updateHoursValue(stateKey, event.target.value);
+      });
+
+      input.addEventListener("blur", () => {
+        touchedFields.hours = true;
+        formErrors.hours = validateField("hours");
+        applyHoursState();
+      });
+    });
+
+    applyHoursState();
+
     providerForm.addEventListener("submit", event => {
       event.preventDefault();
 
@@ -382,7 +665,7 @@
 
       const isValid = validateAllFields();
 
-      Object.keys(formState).forEach(applyFieldState);
+      Object.keys(formErrors).forEach(applyFieldState);
 
       if (!isValid) {
         setFormStatus("Please fix the highlighted fields before submitting this service entry.", "error");
