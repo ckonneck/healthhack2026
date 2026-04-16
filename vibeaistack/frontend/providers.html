@@ -22,10 +22,10 @@
 
       <div class="card card-stack">
         <p class="card-copy">
-          All fields are required in this step. Valid service entries are saved through the current backend route.
+          All fields are required in this step. This form prepares a service entry using the current service schema.
         </p>
         <p class="field-hint">
-          The saved entry will follow the same service schema already used in the backend service list.
+          Successful submissions are stored only in this browser for now, so you can review the final object before backend wiring.
         </p>
       </div>
 
@@ -85,7 +85,7 @@
         </label>
 
         <div class="button-row">
-          <button id="submitButton" type="submit" class="button button--primary">Submit service</button>
+          <button type="submit" class="button button--primary">Submit service</button>
           <a class="button button--secondary" href="/index.html">Back to search</a>
         </div>
 
@@ -99,8 +99,9 @@
             <h3 class="card-title">Service entry prepared successfully</h3>
           </div>
           <p class="card-copy">
-            The service object was created and saved through the existing backend submission path.
+            The service object was created locally for review and stored only in this browser for the provider flow.
           </p>
+          <p id="submissionStatus" class="field-hint"></p>
         </div>
 
         <div class="card card-stack">
@@ -113,24 +114,26 @@
 
         <div class="button-row">
           <button id="addAnotherButton" type="button" class="button button--primary">Add another service</button>
-          <a class="button button--secondary" href="/index.html">Done</a>
+          <button id="doneButton" type="button" class="button button--secondary">Done</button>
         </div>
       </div>
     </section>
   </main>
 
   <script src="/app.js"></script>
-  <script src="/api.js"></script>
 
   <script>
     const pageHeader = document.getElementById("pageHeader");
     const providerForm = document.getElementById("providerForm");
     const formStatus = document.getElementById("formStatus");
-    const submitButton = document.getElementById("submitButton");
     const submissionResult = document.getElementById("submissionResult");
     const payloadPreview = document.getElementById("payloadPreview");
     const addAnotherButton = document.getElementById("addAnotherButton");
-    let isSubmitting = false;
+    const doneButton = document.getElementById("doneButton");
+    const submissionStatus = document.getElementById("submissionStatus");
+    const PROVIDER_STORAGE_KEY = "care_compass_provider_services";
+    let lastSavedSignature = "";
+    let lastSavedAt = 0;
 
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
       title: "Submit a service",
@@ -194,15 +197,60 @@
         .map(tag => tag.toLowerCase());
     }
 
+    function getServiceSignature(service) {
+      return JSON.stringify(service);
+    }
+
+    function loadStoredServices() {
+      try {
+        const raw = localStorage.getItem(PROVIDER_STORAGE_KEY);
+
+        if (!raw) {
+          return [];
+        }
+
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch (error) {
+        console.warn("Unable to read provider services from localStorage:", error);
+        return [];
+      }
+    }
+
+    function persistServiceLocally(service) {
+      const signature = getServiceSignature(service);
+      const now = Date.now();
+
+      if (signature === lastSavedSignature && now - lastSavedAt < 5000) {
+        return {
+          saved: false,
+          duplicatePrevented: true,
+          total: loadStoredServices().length
+        };
+      }
+
+      const services = loadStoredServices();
+      services.push(service);
+
+      try {
+        localStorage.setItem(PROVIDER_STORAGE_KEY, JSON.stringify(services));
+      } catch (error) {
+        throw new Error("Unable to save this service locally right now.");
+      }
+
+      lastSavedSignature = signature;
+      lastSavedAt = now;
+
+      return {
+        saved: true,
+        duplicatePrevented: false,
+        total: services.length
+      };
+    }
+
     function setFormStatus(message = "", variant = "hint") {
       formStatus.textContent = message;
       formStatus.className = variant === "error" ? "field-error" : "field-hint";
-    }
-
-    function setSubmittingState(submitting) {
-      isSubmitting = submitting;
-      submitButton.disabled = submitting;
-      submitButton.textContent = submitting ? "Saving service..." : "Submit service";
     }
 
     function validateRequiredValue(fieldName) {
@@ -264,20 +312,28 @@
       };
     }
 
-    function showSubmissionResult(payload) {
+    function showSubmissionResult(payload, persistenceResult) {
       providerForm.hidden = true;
       submissionResult.hidden = false;
       payloadPreview.textContent = JSON.stringify(payload, null, 2);
+
+      if (persistenceResult.duplicatePrevented) {
+        submissionStatus.textContent = "An identical service was already stored a moment ago, so a duplicate entry was not added.";
+      } else {
+        submissionStatus.textContent = `Saved locally under ${PROVIDER_STORAGE_KEY}. Stored services in this browser: ${persistenceResult.total}.`;
+      }
 
       console.group("Provider submission payload");
       console.log("Final service object:");
       console.log(payload);
       console.log("JSON preview:");
       console.log(JSON.stringify(payload, null, 2));
+      console.log("Persistence result:");
+      console.log(persistenceResult);
       console.groupEnd();
     }
 
-    function resetFormState() {
+    function resetFormState(focusInput = true) {
       Object.keys(formState).forEach(fieldName => {
         formState[fieldName] = "";
         formErrors[fieldName] = "";
@@ -286,11 +342,14 @@
       });
 
       setFormStatus("");
-      setSubmittingState(false);
       payloadPreview.textContent = "";
+      submissionStatus.textContent = "";
       submissionResult.hidden = true;
       providerForm.hidden = false;
-      getFieldElement("name").focus();
+
+      if (focusInput) {
+        getFieldElement("name").focus();
+      }
     }
 
     Object.keys(formState).forEach(fieldName => {
@@ -314,12 +373,8 @@
       applyFieldState(fieldName);
     });
 
-    providerForm.addEventListener("submit", async event => {
+    providerForm.addEventListener("submit", event => {
       event.preventDefault();
-
-      if (isSubmitting) {
-        return;
-      }
 
       Object.keys(touchedFields).forEach(fieldName => {
         touchedFields[fieldName] = true;
@@ -341,22 +396,22 @@
       }
 
       const payload = buildServicePayload();
-      setSubmittingState(true);
-      setFormStatus("Saving this service entry.");
+      setFormStatus("");
 
       try {
-        const result = await saveToBackend(payload);
-        setFormStatus("");
-        showSubmissionResult(result.service || payload);
+        const persistenceResult = persistServiceLocally(payload);
+        showSubmissionResult(payload, persistenceResult);
       } catch (error) {
-        setFormStatus(error.message || "Unable to save this service right now.", "error");
-      } finally {
-        setSubmittingState(false);
+        setFormStatus(error.message || "Unable to save this service locally right now.", "error");
       }
     });
 
     addAnotherButton.addEventListener("click", () => {
-      resetFormState();
+      resetFormState(true);
+    });
+
+    doneButton.addEventListener("click", () => {
+      resetFormState(false);
     });
   </script>
 </body>
