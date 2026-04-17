@@ -25,3 +25,22 @@ async function saveToBackend(entry) {
 
   return data;
 }
+
+async function searchDirectoryServices(query, zip) {
+  const res = await fetch(`${BACKEND}/services`, {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      query: query || undefined,
+      zip: zip || undefined
+    })
+  });
+
+  const data = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    throw new Error(data.error || "Unable to search services right now.");
+  }
+
+  return data;
+}

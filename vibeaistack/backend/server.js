@@ -2,6 +2,8 @@ import express from "express";
 import fs from "fs";
 import cors from "cors";
 import OpenAI from "openai";
+import path from "path";
+import { fileURLToPath } from "url";
 import { buildAssessPrompt } from "./prompt.js";
 
 const app = express();
@@ -64,9 +66,9 @@ async function getEmbedding(text) {
 // ─────────────────────────────
 // DB HELPERS
 // ─────────────────────────────
-import path from "path";
-
-const DB_PATH = path.resolve(process.cwd(), "db.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DB_PATH = path.resolve(__dirname, "db.json");
 
 function loadDB() {
   try {
@@ -101,6 +103,57 @@ function saveDB(data) {
   }
 }
 
+function loadDBDocument() {
+  try {
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+    const parsed = JSON.parse(raw);
+
+    if (Array.isArray(parsed)) {
+      return { services: parsed };
+    }
+
+    if (Array.isArray(parsed.services)) {
+      return parsed;
+    }
+
+    return { services: [] };
+  } catch (err) {
+    console.error("⚠️ DB document load failed:", err.message);
+    return { services: [] };
+  }
+}
+
+function saveDBDocument(data) {
+  fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+}
+
+function normalizeServiceEntry(entry = {}) {
+  const cleanText = value => (typeof value === "string" ? value.trim() : "");
+  const rawTags = Array.isArray(entry.tags)
+    ? entry.tags
+    : typeof entry.tags === "string"
+      ? entry.tags.split(",")
+      : [];
+
+  const service = {
+    name: cleanText(entry.name),
+    type: cleanText(entry.type),
+    specialty: cleanText(entry.specialty),
+    address: cleanText(entry.address),
+    hours: cleanText(entry.hours),
+    tags: rawTags
+      .map(tag => cleanText(String(tag)).toLowerCase())
+      .filter(Boolean),
+    description: cleanText(entry.description)
+  };
+
+  const missing = Object.entries(service)
+    .filter(([key, value]) => (key === "tags" ? !value.length : !value))
+    .map(([key]) => key);
+
+  return { service, missing };
+}
+
 // ─────────────────────────────
 // OPENAI (OPTIONAL)
 // ─────────────────────────────
@@ -127,6 +180,115 @@ function safeText(...parts) {
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
+}
+
+function normalizeSearchText(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .trim();
+}
+
+function scoreServiceMatch(service = {}, queryText = "", zipText = "") {
+  const name = normalizeSearchText(service.name);
+  const type = normalizeSearchText(service.type);
+  const category = normalizeSearchText(service.category);
+  const specialty = normalizeSearchText(service.specialty);
+  const description = normalizeSearchText(service.description);
+  const address = normalizeSearchText(service.address);
+  const tags = Array.isArray(service.tags)
+    ? service.tags.map(tag => normalizeSearchText(tag)).filter(Boolean)
+    : [];
+
+  const allText = safeText(
+    name,
+    type,
+    category,
+    specialty,
+    description,
+    address,
+    ...tags
+  );
+
+  let score = 0;
+  let queryMatched = !queryText;
+
+  if (queryText) {
+    if (name.includes(queryText)) {
+      score += 10;
+      queryMatched = true;
+    }
+    if (specialty.includes(queryText)) {
+      score += 8;
+      queryMatched = true;
+    }
+    if (type.includes(queryText)) {
+      score += 7;
+      queryMatched = true;
+    }
+    if (category.includes(queryText)) {
+      score += 5;
+      queryMatched = true;
+    }
+    if (description.includes(queryText)) {
+      score += 5;
+      queryMatched = true;
+    }
+    if (address.includes(queryText)) {
+      score += 4;
+      queryMatched = true;
+    }
+    if (tags.some(tag => tag.includes(queryText))) {
+      score += 6;
+      queryMatched = true;
+    }
+    if (allText.includes(queryText)) {
+      score += 2;
+      queryMatched = true;
+    }
+  }
+
+  if (zipText && address.includes(zipText)) {
+    score += 10;
+  }
+
+  const terms = queryText.split(/\s+/).filter(Boolean);
+
+  terms.forEach(term => {
+    if (name.includes(term)) {
+      score += 4;
+      queryMatched = true;
+    }
+    if (specialty.includes(term)) {
+      score += 3;
+      queryMatched = true;
+    }
+    if (type.includes(term)) {
+      score += 3;
+      queryMatched = true;
+    }
+    if (category.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (description.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (address.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (tags.some(tag => tag.includes(term))) {
+      score += 3;
+      queryMatched = true;
+    }
+  });
+
+  if (!queryMatched) {
+    return 0;
+  }
+
+  return score;
 }
 
 // ─────────────────────────────
@@ -213,32 +375,24 @@ app.post("/search",async (req, res) => {
 // SERVICES (FIXED - WAS MISSING BEFORE)
 // ─────────────────────────────
 app.post("/services", (req, res) => {
-  const { query = "" } = req.body || {};
-  const db = loadDB();
+  const { query = "", zip = "" } = req.body || {};
+  const services = loadDB();
+  const queryText = normalizeSearchText(query);
+  const zipText = normalizeSearchText(zip);
 
-  const services = Array.isArray(db.services) ? db.services : [];
-
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!queryText && !zipText) {
+    return res.json({ results: [] });
+  }
 
   const results = services
-    .map(service => {
-      let score = 0;
-
-      const tags = Array.isArray(service.tags) ? service.tags : [];
-
-      words.forEach(word => {
-        if (service.name?.toLowerCase().includes(word)) score++;
-
-        tags.forEach(tag => {
-          if ((tag || "").toLowerCase().includes(word)) score++;
-        });
-      });
-
-      return { ...service, score };
-    })
-    .filter(s => s.score > 0)
+    .map(service => ({
+      service,
+      score: scoreServiceMatch(service, queryText, zipText)
+    }))
+    .filter(entry => entry.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 5);
+    .slice(0, 8)
+    .map(entry => entry.service);
 
   res.json({ results });
 });

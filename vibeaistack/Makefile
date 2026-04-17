@@ -57,7 +57,7 @@ shell-backend:
 # ─────────────────────────────
 clean:
 	$(COMPOSE) -p $(PROJECT) down --volumes --remove-orphans
-	$(SUDO) docker system prune -f
+	docker system prune -f
 
 # ─────────────────────────────
 # STATUS

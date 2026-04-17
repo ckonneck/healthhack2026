@@ -1,4 +1,6 @@
 .page-shell {
+  position: relative;
+  z-index: 1;
   width: min(100% - 2rem, 72rem);
   margin: 0 auto;
   padding: var(--space-6) 0 var(--space-7);

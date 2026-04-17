@@ -1,20 +1,26 @@
 (() => {
   const navigationItems = [
     { key: "search", href: "/index.html", label: "Service search" },
-    { key: "survey", href: "/form.html", label: "Health check" },
+    { key: "survey", href: "/form.html", label: "Get guidance" },
     { key: "add", href: "/providers.html", label: "For providers" }
   ];
+
+  const loaderState = {
+    element: null,
+    messageElement: null,
+    isVisible: false
+  };
 
   function joinClasses(...values) {
     return values.filter(Boolean).join(" ");
   }
 
-  function renderNavigation(currentNav) {
+  function renderNavigation(currentNav, navigationLabels = {}) {
     return `
       <nav class="nav-links page-header__nav" aria-label="Primary">
         ${navigationItems.map(item => `
           <a class="nav-link" ${item.key === currentNav ? 'aria-current="page"' : ""} href="${item.href}">
-            ${item.label}
+            ${navigationLabels[item.key] || item.label}
           </a>
         `).join("")}
       </nav>
@@ -27,6 +33,7 @@
     title,
     description = "",
     currentNav,
+    navigationLabels = {},
     compact = false,
     titleTag = "h1",
     titleClass = "brand-title"
@@ -42,7 +49,7 @@
         ${titleMarkup}
         ${descriptionMarkup}
       </div>
-      ${renderNavigation(currentNav)}
+      ${renderNavigation(currentNav, navigationLabels)}
     `;
   }
 
@@ -131,12 +138,95 @@
     `;
   }
 
+  function ensureGlobalLoader() {
+    if (loaderState.element) {
+      return loaderState.element;
+    }
+
+    const existingLoader = document.getElementById("globalPageLoader");
+
+    if (existingLoader) {
+      loaderState.element = existingLoader;
+      loaderState.messageElement = existingLoader.querySelector("[data-loader-message]");
+      return existingLoader;
+    }
+
+    const loader = document.createElement("div");
+    loader.id = "globalPageLoader";
+    loader.className = "global-loader";
+    loader.setAttribute("aria-hidden", "true");
+    loader.innerHTML = `
+      <div class="global-loader__panel" role="status" aria-live="polite" aria-atomic="true">
+        <div class="global-loader__frame" aria-hidden="true">
+          <span class="global-loader__ring"></span>
+          <img class="global-loader__logo" src="/public/logo.svg" alt="" />
+        </div>
+        <p class="global-loader__message" data-loader-message>Loading Care Compass...</p>
+      </div>
+    `;
+
+    document.body.appendChild(loader);
+    loaderState.element = loader;
+    loaderState.messageElement = loader.querySelector("[data-loader-message]");
+    return loader;
+  }
+
+  function showGlobalLoader(options = {}) {
+    const { message = "Loading Care Compass..." } = options;
+    const loader = ensureGlobalLoader();
+
+    if (loaderState.messageElement) {
+      loaderState.messageElement.textContent = message;
+    }
+
+    loader.classList.add("is-visible");
+    loader.setAttribute("aria-hidden", "false");
+    document.body.classList.add("has-global-loader");
+    loaderState.isVisible = true;
+  }
+
+  function hideGlobalLoader() {
+    if (!loaderState.isVisible) {
+      return;
+    }
+
+    const loader = ensureGlobalLoader();
+    loader.classList.remove("is-visible");
+    loader.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("has-global-loader");
+    loaderState.isVisible = false;
+  }
+
+  async function withGlobalLoader(task, options = {}) {
+    const {
+      message = "Loading Care Compass...",
+      delayMs = 320
+    } = options;
+    let shouldShow = true;
+    const showTimer = window.setTimeout(() => {
+      if (shouldShow) {
+        showGlobalLoader({ message });
+      }
+    }, Math.max(0, delayMs));
+
+    try {
+      return await task();
+    } finally {
+      shouldShow = false;
+      window.clearTimeout(showTimer);
+      hideGlobalLoader();
+    }
+  }
+
   window.CareCompassUI = {
     renderEmptyState,
     renderMetaStack,
     renderOptionTileGroup,
     renderPageHeader,
     renderProgressIndicator,
-    renderTagList
+    renderTagList,
+    showGlobalLoader,
+    hideGlobalLoader,
+    withGlobalLoader
   };
 })();
