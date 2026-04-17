@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Care Compass | Service Provider Form</title>
+  <link rel="icon" type="image/svg+xml" href="/public/logo.svg" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .provider-page {
       gap: var(--space-7);
     }
 
-    .provider-page > .section-header {
+    .provider-page>.section-header {
       gap: var(--space-4);
       max-width: 43rem;
     }
@@ -185,14 +187,14 @@
       background: var(--color-surface-subtle);
     }
 
-    .provider-tag-input:checked + .provider-tag-pill {
+    .provider-tag-input:checked+.provider-tag-pill {
       border-color: var(--color-border-accent);
       background: var(--color-accent-soft);
       color: var(--color-accent-hover);
       box-shadow: var(--shadow-inset-sm);
     }
 
-    .provider-tag-input:focus-visible + .provider-tag-pill {
+    .provider-tag-input:focus-visible+.provider-tag-pill {
       outline: 3px solid var(--color-focus-ring);
       outline-offset: 2px;
       border-color: var(--color-focus);
@@ -285,7 +287,7 @@
       margin: 0;
     }
 
-    .provider-preview-row + .provider-preview-row {
+    .provider-preview-row+.provider-preview-row {
       padding-top: var(--space-4);
       border-top: 1px solid var(--color-border);
     }
@@ -358,7 +360,7 @@
         padding: 1rem;
       }
 
-      .provider-form-actions > * {
+      .provider-form-actions>* {
         flex: 1 1 100%;
       }
     }
@@ -385,8 +387,10 @@
         </div>
         <ul class="provider-note-list">
           <li class="provider-note-item">Use the official service name, specialty, and full address.</li>
-          <li class="provider-note-item">Set the opening hours with the day and time selectors so they are easy to review.</li>
-          <li class="provider-note-item">Successful submissions are saved to the Care Compass service data through the existing backend.</li>
+          <li class="provider-note-item">Set the opening hours with the day and time selectors so they are easy to
+            review.</li>
+          <li class="provider-note-item">Successful submissions are saved to the Care Compass service data through the
+            existing backend.</li>
         </ul>
       </div>
 
@@ -405,16 +409,9 @@
                   <span class="provider-details-copy">
                     <span class="field-label">Service name</span>
                   </span>
-                  <input
-                    id="name"
-                    name="name"
-                    class="field-control provider-details-control"
-                    type="text"
-                    placeholder="Physiotherapy Clinic ActiveMove"
-                    required
-                    autocomplete="organization"
-                    aria-describedby="nameError"
-                  />
+                  <input id="name" name="name" class="field-control provider-details-control" type="text"
+                    placeholder="Physiotherapy Clinic ActiveMove" required autocomplete="organization"
+                    aria-describedby="nameError" />
                   <p id="nameError" class="field-error" aria-live="polite"></p>
                 </label>
 
@@ -422,13 +419,8 @@
                   <span class="provider-details-copy">
                     <span class="field-label">Service type</span>
                   </span>
-                  <select
-                    id="type"
-                    name="type"
-                    class="field-control provider-details-control"
-                    required
-                    aria-describedby="typeError"
-                  >
+                  <select id="type" name="type" class="field-control provider-details-control" required
+                    aria-describedby="typeError">
                     <option value="">Select a service type</option>
                     <option value="clinic">clinic</option>
                     <option value="counseling">counseling</option>
@@ -447,16 +439,8 @@
                   <span class="provider-details-copy">
                     <span class="field-label">Specialty</span>
                   </span>
-                  <input
-                    id="specialty"
-                    name="specialty"
-                    class="field-control provider-details-control"
-                    type="text"
-                    placeholder="physiotherapy"
-                    required
-                    autocomplete="off"
-                    aria-describedby="specialtyError"
-                  />
+                  <input id="specialty" name="specialty" class="field-control provider-details-control" type="text"
+                    placeholder="physiotherapy" required autocomplete="off" aria-describedby="specialtyError" />
                   <p id="specialtyError" class="field-error" aria-live="polite"></p>
                 </label>
 
@@ -464,16 +448,9 @@
                   <span class="provider-details-copy">
                     <span class="field-label">Address</span>
                   </span>
-                  <input
-                    id="address"
-                    name="address"
-                    class="field-control provider-details-control"
-                    type="text"
-                    placeholder="Bewegungsweg 11, 38120 Braunschweig"
-                    required
-                    autocomplete="street-address"
-                    aria-describedby="addressError"
-                  />
+                  <input id="address" name="address" class="field-control provider-details-control" type="text"
+                    placeholder="Bewegungsweg 11, 38120 Braunschweig" required autocomplete="street-address"
+                    aria-describedby="addressError" />
                   <p id="addressError" class="field-error" aria-live="polite"></p>
                 </label>
               </div>
@@ -483,7 +460,8 @@
               <div class="section-header section-header--compact">
                 <p class="eyebrow">Availability</p>
                 <h3 class="card-title">Opening hours</h3>
-                <p class="card-copy">Choose a day pattern and a clear time range so the final listing is easy to read.</p>
+                <p class="card-copy">Choose a day pattern and a clear time range so the final listing is easy to read.
+                </p>
               </div>
 
               <fieldset class="provider-hours-field" aria-describedby="hoursHint hoursError">
@@ -563,14 +541,9 @@
 
               <label class="field" for="description">
                 <span class="field-label">Description</span>
-                <textarea
-                  id="description"
-                  name="description"
-                  class="field-control field-control--textarea"
-                  placeholder="Rehabilitation and movement therapy"
-                  required
-                  aria-describedby="descriptionError"
-                ></textarea>
+                <textarea id="description" name="description" class="field-control field-control--textarea"
+                  placeholder="Rehabilitation and movement therapy" required
+                  aria-describedby="descriptionError"></textarea>
                 <p id="descriptionError" class="field-error" aria-live="polite"></p>
               </label>
             </section>
@@ -596,29 +569,35 @@
 
           <div class="provider-preview-surface">
             <div class="stack-sm">
-              <h4 id="previewName" class="provider-preview-heading provider-preview-placeholder">Service name will appear here</h4>
-              <p id="previewDescription" class="card-copy provider-preview-placeholder">Add a short description so the listing is easy to review.</p>
+              <h4 id="previewName" class="provider-preview-heading provider-preview-placeholder">Service name will
+                appear here</h4>
+              <p id="previewDescription" class="card-copy provider-preview-placeholder">Add a short description so the
+                listing is easy to review.</p>
             </div>
 
             <dl class="provider-preview-details">
               <div class="provider-preview-row">
                 <dt class="field-label">Service type</dt>
-                <dd id="previewType" class="provider-preview-value provider-preview-placeholder">Choose a service type</dd>
+                <dd id="previewType" class="provider-preview-value provider-preview-placeholder">Choose a service type
+                </dd>
               </div>
 
               <div class="provider-preview-row">
                 <dt class="field-label">Specialty</dt>
-                <dd id="previewSpecialty" class="provider-preview-value provider-preview-placeholder">Add the main specialty</dd>
+                <dd id="previewSpecialty" class="provider-preview-value provider-preview-placeholder">Add the main
+                  specialty</dd>
               </div>
 
               <div class="provider-preview-row">
                 <dt class="field-label">Address</dt>
-                <dd id="previewAddress" class="provider-preview-value provider-preview-placeholder">Add the full service address</dd>
+                <dd id="previewAddress" class="provider-preview-value provider-preview-placeholder">Add the full service
+                  address</dd>
               </div>
 
               <div class="provider-preview-row">
                 <dt class="field-label">Opening hours</dt>
-                <dd id="previewHours" class="provider-preview-value provider-preview-placeholder">Select days and times</dd>
+                <dd id="previewHours" class="provider-preview-value provider-preview-placeholder">Select days and times
+                </dd>
               </div>
             </dl>
 
@@ -1204,4 +1183,5 @@
     });
   </script>
 </body>
+
 </html>
