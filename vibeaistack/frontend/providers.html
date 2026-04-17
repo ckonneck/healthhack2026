@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Care Compass | Submit a Service</title>
+  <title>Care Compass | Service Provider Form</title>
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .provider-page {
@@ -82,6 +82,71 @@
 
     .provider-hours-grid--custom {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .provider-tags-field {
+      display: grid;
+      gap: var(--space-3);
+      margin: 0;
+      padding: 0;
+      border: 0;
+      min-inline-size: 0;
+    }
+
+    .provider-tag-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .provider-tag-option {
+      position: relative;
+    }
+
+    .provider-tag-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .provider-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.35rem;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      line-height: 1.35;
+      cursor: pointer;
+      transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .provider-tag-option:hover .provider-tag-pill {
+      border-color: var(--color-border-strong);
+      background: var(--color-surface-subtle);
+    }
+
+    .provider-tag-input:checked + .provider-tag-pill {
+      border-color: var(--color-border-accent);
+      background: var(--color-accent-soft);
+      color: var(--color-accent-hover);
+      box-shadow: var(--shadow-inset-sm);
+    }
+
+    .provider-tag-input:focus-visible + .provider-tag-pill {
+      outline: 3px solid var(--color-focus-ring);
+      outline-offset: 2px;
+      border-color: var(--color-focus);
+    }
+
+    .provider-tag-selector--invalid .provider-tag-pill {
+      border-color: var(--color-danger);
     }
 
     .provider-form-footer {
@@ -224,7 +289,7 @@
     <section class="panel page-section content-width--wide section-shell provider-page">
       <div class="section-header">
         <p class="eyebrow">For providers</p>
-        <h2 class="section-title">Submit a service</h2>
+        <h2 class="section-title">Prepare a service listing</h2>
         <p class="section-description">
           Share a new listing or service update so Care Compass can review it for the directory.
         </p>
@@ -365,12 +430,12 @@
                 <p class="card-copy">These details help make the service easier to identify and review.</p>
               </div>
 
-              <label class="field" for="tags">
-                <span class="field-label">Tags</span>
-                <input id="tags" name="tags" class="field-control" type="text" required autocomplete="off" aria-describedby="tagsHint tagsError" />
-                <p id="tagsHint" class="field-hint">Separate tags with commas so they can be stored as clear search terms.</p>
+              <fieldset class="provider-tags-field" aria-describedby="tagsHint tagsError">
+                <legend class="field-label">Tags</legend>
+                <div id="tagsSelector" class="provider-tag-selector" role="group" aria-label="Service tags"></div>
+                <p id="tagsHint" class="field-hint">Choose every tag that clearly applies to this service.</p>
                 <p id="tagsError" class="field-error" aria-live="polite"></p>
-              </label>
+              </fieldset>
 
               <label class="field" for="description">
                 <span class="field-label">Description</span>
@@ -462,6 +527,7 @@
     const addAnotherButton = document.getElementById("addAnotherButton");
     const doneButton = document.getElementById("doneButton");
     const submissionStatus = document.getElementById("submissionStatus");
+    const tagsSelector = document.getElementById("tagsSelector");
     const hoursPatternInput = document.getElementById("hoursPattern");
     const hoursCustomDaysField = document.getElementById("hoursCustomDaysField");
     const hoursStartDayInput = document.getElementById("hoursStartDay");
@@ -478,6 +544,28 @@
     const previewTagsEmpty = document.getElementById("previewTagsEmpty");
     const previewDescription = document.getElementById("previewDescription");
     const PROVIDER_STORAGE_KEY = "care_compass_provider_services";
+    const AVAILABLE_TAGS = [
+      "rehabilitation",
+      "mobility",
+      "pain",
+      "injury",
+      "therapy",
+      "mental health",
+      "legal aid",
+      "housing",
+      "financial support",
+      "family support",
+      "disability",
+      "elderly care",
+      "youth",
+      "language support",
+      "crisis support",
+      "addiction",
+      "food support",
+      "transport",
+      "social support",
+      "counseling"
+    ];
     const DAY_ORDER = {
       Mon: 0,
       Tue: 1,
@@ -491,7 +579,7 @@
     let lastSavedAt = 0;
 
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
-      title: "Submit a service",
+      title: "Service provider form",
       description: "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
       currentNav: "add"
     });
@@ -501,7 +589,7 @@
       type: "",
       specialty: "",
       address: "",
-      tags: "",
+      tags: [],
       description: ""
     };
 
@@ -544,6 +632,10 @@
     };
 
     function getFieldElement(fieldName) {
+      if (fieldName === "tags") {
+        return tagsSelector.querySelector("input") || tagsSelector;
+      }
+
       if (fieldName === "hours") {
         if (hoursState.pattern === "custom") {
           if (!hoursState.customStart) {
@@ -575,14 +667,6 @@
 
     function getErrorElement(fieldName) {
       return document.getElementById(`${fieldName}Error`);
-    }
-
-    function parseTags(value) {
-      return value
-        .split(",")
-        .map(tag => tag.trim())
-        .filter(Boolean)
-        .map(tag => tag.toLowerCase());
     }
 
     function formatLabel(value) {
@@ -731,6 +815,14 @@
     }
 
     function validateField(fieldName) {
+      if (fieldName === "tags") {
+        if (!formState.tags.length) {
+          return "Select at least one tag.";
+        }
+
+        return "";
+      }
+
       if (fieldName === "hours") {
         if (!hoursState.pattern) {
           return "Choose a day range for these opening hours.";
@@ -756,19 +848,18 @@
 
         return "";
       }
-
-      if (fieldName === "tags") {
-        if (!parseTags(formState.tags).length) {
-          return "Enter at least one tag.";
-        }
-
-        return "";
-      }
-
       return validateRequiredValue(fieldName);
     }
 
     function applyFieldState(fieldName) {
+      if (fieldName === "tags") {
+        const errorText = touchedFields.tags ? formErrors.tags : "";
+        tagsSelector.classList.toggle("provider-tag-selector--invalid", Boolean(errorText));
+        tagsSelector.setAttribute("aria-invalid", errorText ? "true" : "false");
+        getErrorElement("tags").textContent = errorText;
+        return;
+      }
+
       if (fieldName === "hours") {
         applyHoursState();
         return;
@@ -805,9 +896,23 @@
         specialty: formState.specialty.trim(),
         address: formState.address.trim(),
         hours: buildHoursValue(),
-        tags: parseTags(formState.tags),
+        tags: [...formState.tags],
         description: formState.description.trim()
       };
+    }
+
+    function renderTagSelector() {
+      tagsSelector.innerHTML = AVAILABLE_TAGS.map(tag => `
+        <label class="provider-tag-option">
+          <input
+            class="provider-tag-input"
+            type="checkbox"
+            value="${tag}"
+            ${formState.tags.includes(tag) ? "checked" : ""}
+          />
+          <span class="provider-tag-pill">${tag}</span>
+        </label>
+      `).join("");
     }
 
     function setPreviewText(element, value, fallback, formatter = input => input) {
@@ -865,7 +970,7 @@
 
     function resetFormState(focusInput = true) {
       Object.keys(formState).forEach(fieldName => {
-        formState[fieldName] = "";
+        formState[fieldName] = fieldName === "tags" ? [] : "";
         formErrors[fieldName] = "";
         touchedFields[fieldName] = false;
         applyFieldState(fieldName);
@@ -884,6 +989,8 @@
       setSubmissionStatus("");
       submissionResult.hidden = true;
       providerForm.hidden = false;
+      renderTagSelector();
+      applyFieldState("tags");
       renderPreview();
 
       if (focusInput) {
@@ -891,7 +998,7 @@
       }
     }
 
-    Object.keys(formState).forEach(fieldName => {
+    Object.keys(formState).filter(fieldName => fieldName !== "tags").forEach(fieldName => {
       const input = getFieldElement(fieldName);
       const syncField = event => {
         formState[fieldName] = event.target.value;
@@ -917,6 +1024,42 @@
       });
 
       applyFieldState(fieldName);
+    });
+
+    tagsSelector.addEventListener("change", event => {
+      const tagInput = event.target;
+
+      if (!(tagInput instanceof HTMLInputElement) || tagInput.type !== "checkbox") {
+        return;
+      }
+
+      const selectedTags = new Set(formState.tags);
+
+      if (tagInput.checked) {
+        selectedTags.add(tagInput.value);
+      } else {
+        selectedTags.delete(tagInput.value);
+      }
+
+      formState.tags = AVAILABLE_TAGS.filter(tag => selectedTags.has(tag));
+
+      if (touchedFields.tags) {
+        formErrors.tags = validateField("tags");
+      }
+
+      renderTagSelector();
+      applyFieldState("tags");
+      renderPreview();
+    });
+
+    tagsSelector.addEventListener("focusout", event => {
+      if (tagsSelector.contains(event.relatedTarget)) {
+        return;
+      }
+
+      touchedFields.tags = true;
+      formErrors.tags = validateField("tags");
+      applyFieldState("tags");
     });
 
     function updateHoursValue(stateKey, value) {
@@ -954,6 +1097,8 @@
     });
 
     applyHoursState();
+    renderTagSelector();
+    applyFieldState("tags");
     renderPreview();
 
     providerForm.addEventListener("submit", event => {
