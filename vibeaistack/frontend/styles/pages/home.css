@@ -47,6 +47,14 @@
   min-width: 11rem;
 }
 
+.hero-actions .button--primary,
+.hero-actions .button--primary:visited,
+.hero-actions .button--primary:hover,
+.hero-actions .button--primary:focus-visible,
+.hero-actions .button--primary:active {
+  color: var(--color-on-accent);
+}
+
 .search-row {
   display: grid;
   gap: var(--space-4);
@@ -92,4 +100,3 @@
     grid-template-columns: 1fr;
   }
 }
-
