@@ -59,7 +59,7 @@
 <body>
   <main class="page-shell">
 
-    <div class="lang-toggle" role="group" aria-label="Language selector">
+    <div id="langToggle" class="lang-toggle" role="group" aria-label="Language selector">
       <button class="lang-toggle__btn" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
       <button class="lang-toggle__btn" id="btn-de" aria-pressed="false" onclick="setLang('de')">DE</button>
     </div>
@@ -172,6 +172,8 @@
   <script>
     const TRANSLATIONS = {
       en: {
+        "lang.selector":           "Language selector",
+
         "hero.eyebrow":             "Care Navigation",
         "hero.title":               "Find the right health or community support without the guesswork.",
         "hero.subtitle":            "Start with a guided health check or search the directory directly to review practical service options and next steps.",
@@ -209,6 +211,9 @@
         "header.title":             "Health and community help",
         "header.description":       "Support and services, in one clear place.",
         "header.fallback":          "Care Compass",
+        "nav.search":              "Service search",
+        "nav.survey":              "Health check",
+        "nav.add":                 "For providers",
 
         "emergency.eyebrow":        "Emergency & Support",
         "emergency.title":          "Who to call in case of emergency",
@@ -224,8 +229,10 @@
       },
 
       de: {
+        "lang.selector":           "Sprachauswahl",
+
         "hero.eyebrow":             "Versorgungsnavigation",
-        "hero.title":               "Das passende Gesundheits- oder Sozialangebot – ohne langes Suchen.",
+        "hero.title":               "Das passende Gesundheits- oder Sozialangebot ohne lange Suche.",
         "hero.subtitle":            "Starten Sie mit einer geführten Beratung oder durchsuchen Sie das Verzeichnis direkt, um passende Angebote und nächste Schritte zu finden.",
         "hero.cta_primary":         "Beratung erhalten",
         "hero.cta_secondary":       "Angebote durchsuchen",
@@ -261,6 +268,9 @@
         "header.title":             "Gesundheit und Unterstützung",
         "header.description":       "Angebote und Hilfe an einem klaren Ort.",
         "header.fallback":          "Care Compass",
+        "nav.search":              "Servicesuche",
+        "nav.survey":              "Gesundheitscheck",
+        "nav.add":                 "Für Anbieter",
 
         "emergency.eyebrow":        "Notfall & Hilfe",
         "emergency.title":          "Wen Sie im Notfall anrufen",
@@ -347,9 +357,11 @@
         el.placeholder = t(el.dataset.i18nPlaceholder);
       });
 
+      const langToggle = document.getElementById("langToggle");
       const btnEn = document.getElementById("btn-en");
       const btnDe = document.getElementById("btn-de");
 
+      if (langToggle) langToggle.setAttribute("aria-label", t("lang.selector"));
       if (btnEn) btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
       if (btnDe) btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
 
@@ -381,6 +393,11 @@
             title: t("header.title"),
             description: t("header.description"),
             currentNav: "search",
+            navigationLabels: {
+              search: t("nav.search"),
+              survey: t("nav.survey"),
+              add: t("nav.add")
+            },
             titleTag: "p",
             titleClass: "brand-title"
           });
@@ -462,9 +479,9 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      applyTranslations();
+    applyTranslations();
 
+    document.addEventListener("DOMContentLoaded", () => {
       const qInput = document.getElementById("q");
       const zipInput = document.getElementById("zip");
 

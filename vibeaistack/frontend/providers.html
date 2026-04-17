@@ -417,18 +417,18 @@
 
 <body>
   <main class="page-shell">
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button class="lang-toggle__btn" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
-      <button class="lang-toggle__btn" id="btn-de" aria-pressed="false" onclick="setLang('de')">DE</button>
+    <div id="langToggle" class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-toggle__btn" id="btn-en" aria-label="Switch language to English" aria-pressed="true" onclick="setLang('en')">EN</button>
+      <button class="lang-toggle__btn" id="btn-de" aria-label="Switch language to German" aria-pressed="false" onclick="setLang('de')">DE</button>
     </div>
 
     <header id="pageHeader" class="page-header"></header>
 
     <section class="panel page-section content-width--wide section-shell provider-page">
       <div class="section-header">
-        <p class="eyebrow">For providers</p>
-        <h2 class="section-title">Prepare a service listing</h2>
-        <p class="section-description">
+        <p class="eyebrow" data-i18n="provider.hero.eyebrow">For providers</p>
+        <h2 class="section-title" data-i18n="provider.hero.title">Prepare a service listing</h2>
+        <p class="section-description" data-i18n="provider.hero.description">
           Share a new listing or service update so Care Compass can review it for the directory.
         </p>
       </div>
@@ -670,7 +670,40 @@
 
   <script>
 
+    const TRANSLATIONS = {
+      en: {
+        "lang.selector": "Language selector",
+        "lang.button.en": "Switch language to English",
+        "lang.button.de": "Switch language to German",
+        "header.title": "Service provider form",
+        "header.description": "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
+        "nav.search": "Service search",
+        "nav.survey": "Health check",
+        "nav.add": "For providers",
+        "provider.hero.eyebrow": "For providers",
+        "provider.hero.title": "Prepare a service listing",
+        "provider.hero.description": "Share a new listing or service update so Care Compass can review it for the directory."
+      },
+      de: {
+        "lang.selector": "Sprachauswahl",
+        "lang.button.en": "Sprache auf Englisch umstellen",
+        "lang.button.de": "Sprache auf Deutsch umstellen",
+        "header.title": "Formular für Leistungserbringer",
+        "header.description": "Nutzen Sie diese Seite für Anbieter, um einen neuen Eintrag oder ein Service-Update für Care Compass vorzubereiten.",
+        "nav.search": "Servicesuche",
+        "nav.survey": "Gesundheitscheck",
+        "nav.add": "Für Anbieter",
+        "provider.hero.eyebrow": "Für Anbieter",
+        "provider.hero.title": "Serviceeintrag vorbereiten",
+        "provider.hero.description": "Teilen Sie einen neuen Eintrag oder ein Service-Update, damit Care Compass es für das Verzeichnis prüfen kann."
+      }
+    };
+
     let currentLang = localStorage.getItem("cc-lang") || "en";
+
+    function t(key) {
+      return TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS.en?.[key] || key;
+    }
 
     function applyTranslations() {
       const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
@@ -681,11 +714,23 @@
 
       document.documentElement.lang = currentLang;
 
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = t(el.dataset.i18n);
+      });
+
+      const langToggle = document.getElementById("langToggle");
       const btnEn = document.getElementById("btn-en");
       const btnDe = document.getElementById("btn-de");
 
-      if (btnEn) btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
-      if (btnDe) btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+      if (langToggle) langToggle.setAttribute("aria-label", t("lang.selector"));
+      if (btnEn) {
+        btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
+        btnEn.setAttribute("aria-label", t("lang.button.en"));
+      }
+      if (btnDe) {
+        btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+        btnDe.setAttribute("aria-label", t("lang.button.de"));
+      }
     }
 
     function setLang(lang) {
@@ -698,6 +743,7 @@
         currentLang = lang;
         localStorage.setItem("cc-lang", lang);
         applyTranslations();
+        renderLocalizedHeader();
         document.body.classList.remove("lang-switching");
       }, 150);
     }
@@ -760,11 +806,20 @@
     let lastSubmittedAt = 0;
     let isSubmitting = false;
 
-    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
-      title: "Service provider form",
-      description: "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
-      currentNav: "add"
-    });
+    function renderLocalizedHeader() {
+      pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+        title: t("header.title"),
+        description: t("header.description"),
+        currentNav: "add",
+        navigationLabels: {
+          search: t("nav.search"),
+          survey: t("nav.survey"),
+          add: t("nav.add")
+        }
+      });
+    }
+
+    renderLocalizedHeader();
 
     const formState = {
       name: "",
