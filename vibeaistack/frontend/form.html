@@ -6,10 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Care Compass | Guided Action Check</title>
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .lang-toggle {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.5rem;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      background: var(--color-surface, #fff);
+      border: 1.5px solid var(--color-border, #e2e8f0);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 2px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .lang-toggle__btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      color: var(--color-text-muted, #64748b);
+      transition: background 0.18s ease, color 0.18s ease;
+      line-height: 1;
+    }
+
+    .lang-toggle__btn[aria-pressed="true"] {
+      background: var(--color-primary, #0f172a);
+      color: #fff;
+    }
+
+    .lang-toggle__btn:hover:not([aria-pressed="true"]) {
+      background: var(--color-border, #e2e8f0);
+      color: var(--color-text, #0f172a);
+    }
+
+    [data-i18n] {
+      transition: opacity 0.15s ease;
+    }
+
+    body.lang-switching [data-i18n] {
+      opacity: 0;
+    }
+  </style>
 </head>
 
 <body>
   <main class="page-shell">
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-toggle__btn" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+      <button class="lang-toggle__btn" id="btn-de" aria-pressed="false" onclick="setLang('de')">DE</button>
+    </div>
+
     <header id="pageHeader" class="page-header"></header>
 
     <div class="result-layout">
@@ -111,6 +165,40 @@
 
   <script src="/app.js"></script>
   <script>
+    let currentLang = localStorage.getItem("cc-lang") || "en";
+
+    function applyTranslations() {
+      const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
+      if (cookieLang && cookieLang !== currentLang) {
+        currentLang = cookieLang;
+        localStorage.setItem("cc-lang", currentLang);
+      }
+
+      document.documentElement.lang = currentLang;
+
+      const btnEn = document.getElementById("btn-en");
+      const btnDe = document.getElementById("btn-de");
+
+      if (btnEn) btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
+      if (btnDe) btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+    }
+
+    function setLang(lang) {
+      if (lang === currentLang) return;
+
+      document.cookie = `cc-lang=${lang}; path=/; max-age=300`;
+      document.body.classList.add("lang-switching");
+
+      setTimeout(() => {
+        currentLang = lang;
+        localStorage.setItem("cc-lang", lang);
+        applyTranslations();
+        document.body.classList.remove("lang-switching");
+      }, 150);
+    }
+
+    applyTranslations();
+
     const pageHeader = document.getElementById("pageHeader");
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
       title: "Tell us what is going on, Get a clear plan",

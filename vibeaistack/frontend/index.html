@@ -318,7 +318,21 @@
       `;
     }
 
+    // on document load get cc-lang from cookie if set
+    const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
+    if (cookieLang && cookieLang !== currentLang) {
+      currentLang = cookieLang;
+      localStorage.setItem("cc-lang", currentLang);
+      applyTranslations();
+    }
+
     function applyTranslations() {
+      // get cc-lang value from cookie
+      const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
+      if (cookieLang && cookieLang !== currentLang) {
+        currentLang = cookieLang;
+        localStorage.setItem("cc-lang", currentLang);
+      }
       document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -344,7 +358,8 @@
 
     function setLang(lang) {
       if (lang === currentLang) return;
-
+      // store lang code value into useragent cookie
+      document.cookie = `cc-lang=${lang}; path=/; max-age=300`; // expires in 5 minutes
       document.body.classList.add("lang-switching");
 
       setTimeout(() => {
