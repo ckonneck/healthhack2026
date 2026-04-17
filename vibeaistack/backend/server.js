@@ -247,14 +247,39 @@ app.post("/services", (req, res) => {
 // ASSESS
 // ─────────────────────────────
 app.post("/assess", async (req, res) => {
-  const { problem = "", notes = "", severity, duration } = req.body;
+  const {
+    problem = "",
+    notes = "",
+    situation = "",
+    support = "",
+    urgency = "",
+    barrier = "",
+    context = ""
+  } = req.body;
 
   const db = loadDB();
-  const text = `${problem} ${notes}`;
 
-  const { matches } = await getTopMatches(text, db);
+  // 🧠 Build a SAFE combined text (never empty)
+  const text = [
+    problem,
+    notes,
+    situation && `Situation: ${situation}`,
+    support && `Support: ${support}`,
+    urgency && `Urgency: ${urgency}`,
+    barrier && `Barrier: ${barrier}`,
+    context && `Context: ${context}`
+  ]
+    .filter(Boolean)
+    .join("\n");
 
-  console.log("Top matches:", matches.map(m => m.title));
+  // fallback safety
+  const finalText = text.trim() || "general support request";
+
+  const { matches } = await getTopMatches(finalText, db);
+
+  console.log("🧾 FINAL TEXT SENT TO AI:\n", finalText);
+  console.log("📦 MATCHES SENT:", matches?.length);
+  console.log("📦 MATCH SAMPLE:", matches?.slice(0, 2));
 
   // 🧱 FALLBACK
   if (!client) {
@@ -271,13 +296,15 @@ app.post("/assess", async (req, res) => {
 
   // 🤖 AI MODE
   try {
-    const messages = buildAssessPrompt({
-      problem,
-      duration,
-      severity,
-      notes,
-      context: matches
-    });
+const messages = buildAssessPrompt({
+  problem,
+  situation,
+  support,
+  urgency,
+  barrier,
+  context,
+  services: matches
+});
 
     const response = await client.chat.completions.create({
       model: "gpt-4.1-mini",

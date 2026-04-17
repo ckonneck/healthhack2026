@@ -1,10 +1,12 @@
 export function buildAssessPrompt({
   problem,
-  duration,
-  severity,
-  notes,
-  context
-}) {
+  situation,
+  support,
+  urgency,
+  barrier,
+  context,
+  services
+}){
   return [
     {
       role: "system",
@@ -32,16 +34,18 @@ IMPORTANT RULES:
     {
       role: "user",
       content: `
-USER INPUT
------------
-Problem: ${problem}
-Duration: ${duration}
-Severity: ${severity}
-Notes: ${notes}
+USER SITUATION:
+${problem}
 
-AVAILABLE SERVICES CONTEXT
---------------------------
-${JSON.stringify(context, null, 2)}
+STRUCTURED DATA:
+- Situation: ${situation}
+- Support: ${support}
+- Urgency: ${urgency}
+- Barrier: ${barrier}
+- Context: ${context}
+
+AVAILABLE SERVICES:
+${JSON.stringify(services, null, 2)}
 
 TASK
 ----
