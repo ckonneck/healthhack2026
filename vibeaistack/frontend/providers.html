@@ -145,10 +145,6 @@
       align-content: start;
     }
 
-    .provider-details-hint {
-      margin: 0;
-    }
-
     .provider-details-control {
       min-height: 3.05rem;
       align-self: start;
@@ -426,24 +422,22 @@
 
     <section class="panel page-section content-width--wide section-shell provider-page">
       <div class="section-header">
-        <p class="eyebrow">For providers</p>
-        <h2 class="section-title">Prepare a service listing</h2>
-        <p class="section-description">
+        <p class="eyebrow" data-i18n="page.eyebrow">For providers</p>
+        <h2 class="section-title" data-i18n="page.title">Prepare a service listing</h2>
+        <p class="section-description" data-i18n="page.description">
           Share a new listing or service update so Care Compass can review it for the directory.
         </p>
       </div>
 
       <div class="card card-stack">
         <div class="section-header section-header--compact">
-          <p class="eyebrow">Before you submit</p>
-          <h3 class="card-title">Prepare a clear, reviewable listing</h3>
+          <p class="eyebrow" data-i18n="intro.eyebrow">Before you submit</p>
+          <h3 class="card-title" data-i18n="intro.title">Prepare a clear, reviewable listing</h3>
         </div>
         <ul class="provider-note-list">
-          <li class="provider-note-item">Use the official service name, specialty, and full address.</li>
-          <li class="provider-note-item">Set the opening hours with the day and time selectors so they are easy to
-            review.</li>
-          <li class="provider-note-item">Successful submissions are saved to the Care Compass service data through the
-            existing backend.</li>
+          <li class="provider-note-item" data-i18n="intro.note1">Use the official service name, specialty, and full address.</li>
+          <li class="provider-note-item" data-i18n="intro.note2">Set the opening hours with the day and time selectors so they are easy to review.</li>
+          <li class="provider-note-item" data-i18n="intro.note3">Successful submissions are saved to the Care Compass service data through the existing backend.</li>
         </ul>
       </div>
 
@@ -452,17 +446,18 @@
           <form id="providerForm" class="provider-form-stack" novalidate>
             <section class="card card-stack provider-section-card provider-details-card">
               <div class="section-header section-header--compact provider-details-header">
-                <p class="eyebrow">Service details</p>
-                <h3 class="card-title">Basic listing information</h3>
-                <p class="card-copy">Add the main details providers need to recognize and review the service.</p>
+                <p class="eyebrow" data-i18n="details.eyebrow">Service details</p>
+                <h3 class="card-title" data-i18n="details.title">Basic listing information</h3>
+                <p class="card-copy" data-i18n="details.description">Add the main details providers need to recognize and review the service.</p>
               </div>
 
               <div class="provider-field-grid provider-details-grid">
                 <label class="field provider-details-field" for="name">
                   <span class="provider-details-copy">
-                    <span class="field-label">Service name</span>
+                    <span class="field-label" data-i18n="fields.name.label">Service name</span>
                   </span>
                   <input id="name" name="name" class="field-control provider-details-control" type="text"
+                    data-i18n-placeholder="fields.name.placeholder"
                     placeholder="Physiotherapy Clinic ActiveMove" required autocomplete="organization"
                     aria-describedby="nameError" />
                   <p id="nameError" class="field-error" aria-live="polite"></p>
@@ -470,38 +465,40 @@
 
                 <label class="field provider-details-field" for="type">
                   <span class="provider-details-copy">
-                    <span class="field-label">Service type</span>
+                    <span class="field-label" data-i18n="fields.type.label">Service type</span>
                   </span>
                   <select id="type" name="type" class="field-control provider-details-control" required
                     aria-describedby="typeError">
-                    <option value="">Select a service type</option>
-                    <option value="clinic">clinic</option>
-                    <option value="counseling">counseling</option>
-                    <option value="public_office">public office</option>
-                    <option value="support_center">support center</option>
-                    <option value="ngo">ngo</option>
-                    <option value="legal_aid">legal aid</option>
-                    <option value="housing_support">housing support</option>
-                    <option value="therapy">therapy</option>
-                    <option value="other">other</option>
+                    <option value="" data-i18n="fields.type.placeholder">Select a service type</option>
+                    <option value="clinic" data-i18n="serviceType.clinic">clinic</option>
+                    <option value="counseling" data-i18n="serviceType.counseling">counseling</option>
+                    <option value="public_office" data-i18n="serviceType.public_office">public office</option>
+                    <option value="support_center" data-i18n="serviceType.support_center">support center</option>
+                    <option value="ngo" data-i18n="serviceType.ngo">ngo</option>
+                    <option value="legal_aid" data-i18n="serviceType.legal_aid">legal aid</option>
+                    <option value="housing_support" data-i18n="serviceType.housing_support">housing support</option>
+                    <option value="therapy" data-i18n="serviceType.therapy">therapy</option>
+                    <option value="other" data-i18n="serviceType.other">other</option>
                   </select>
                   <p id="typeError" class="field-error" aria-live="polite"></p>
                 </label>
 
                 <label class="field provider-details-field" for="specialty">
                   <span class="provider-details-copy">
-                    <span class="field-label">Specialty</span>
+                    <span class="field-label" data-i18n="fields.specialty.label">Specialty</span>
                   </span>
                   <input id="specialty" name="specialty" class="field-control provider-details-control" type="text"
+                    data-i18n-placeholder="fields.specialty.placeholder"
                     placeholder="physiotherapy" required autocomplete="off" aria-describedby="specialtyError" />
                   <p id="specialtyError" class="field-error" aria-live="polite"></p>
                 </label>
 
                 <label class="field provider-details-field" for="address">
                   <span class="provider-details-copy">
-                    <span class="field-label">Address</span>
+                    <span class="field-label" data-i18n="fields.address.label">Address</span>
                   </span>
                   <input id="address" name="address" class="field-control provider-details-control" type="text"
+                    data-i18n-placeholder="fields.address.placeholder"
                     placeholder="Bewegungsweg 11, 38120 Braunschweig" required autocomplete="street-address"
                     aria-describedby="addressError" />
                   <p id="addressError" class="field-error" aria-live="polite"></p>
@@ -511,90 +508,90 @@
 
             <section class="card card-stack provider-hours-card">
               <div class="section-header section-header--compact">
-                <p class="eyebrow">Availability</p>
-                <h3 class="card-title">Opening hours</h3>
-                <p class="card-copy">Choose a day pattern and a clear time range so the final listing is easy to read.
-                </p>
+                <p class="eyebrow" data-i18n="hours.eyebrow">Availability</p>
+                <h3 class="card-title" data-i18n="hours.title">Opening hours</h3>
+                <p class="card-copy" data-i18n="hours.description">Choose a day pattern and a clear time range so the final listing is easy to read.</p>
               </div>
 
               <fieldset class="provider-hours-field" aria-describedby="hoursHint hoursError">
-                <legend class="provider-sr-only">Opening hours</legend>
+                <legend class="provider-sr-only" data-i18n="hours.legend">Opening hours</legend>
 
                 <div class="provider-hours-grid">
                   <label class="field" for="hoursPattern">
-                    <span class="field-label">Day range</span>
+                    <span class="field-label" data-i18n="hours.dayRange">Day range</span>
                     <select id="hoursPattern" name="hoursPattern" class="field-control" required>
-                      <option value="Mon-Fri">Mon-Fri</option>
-                      <option value="Mon-Sat">Mon-Sat</option>
-                      <option value="Mon-Sun">Mon-Sun</option>
-                      <option value="Sat-Sun">Weekends</option>
-                      <option value="custom">Custom day range</option>
+                      <option value="Mon-Fri" data-i18n="hours.pattern.monFri">Mon-Fri</option>
+                      <option value="Mon-Sat" data-i18n="hours.pattern.monSat">Mon-Sat</option>
+                      <option value="Mon-Sun" data-i18n="hours.pattern.monSun">Mon-Sun</option>
+                      <option value="Sat-Sun" data-i18n="hours.pattern.weekends">Weekends</option>
+                      <option value="custom" data-i18n="hours.pattern.custom">Custom day range</option>
                     </select>
                   </label>
 
                   <label class="field" for="hoursOpen">
-                    <span class="field-label">Opens</span>
+                    <span class="field-label" data-i18n="hours.opens">Opens</span>
                     <input id="hoursOpen" name="hoursOpen" class="field-control" type="time" required />
                   </label>
 
                   <label class="field" for="hoursClose">
-                    <span class="field-label">Closes</span>
+                    <span class="field-label" data-i18n="hours.closes">Closes</span>
                     <input id="hoursClose" name="hoursClose" class="field-control" type="time" required />
                   </label>
                 </div>
 
                 <div id="hoursCustomDaysField" class="provider-hours-grid provider-hours-grid--custom" hidden>
                   <label class="field" for="hoursStartDay">
-                    <span class="field-label">Start day</span>
+                    <span class="field-label" data-i18n="hours.startDay">Start day</span>
                     <select id="hoursStartDay" name="hoursStartDay" class="field-control" disabled>
-                      <option value="">Choose a start day</option>
-                      <option value="Mon">Mon</option>
-                      <option value="Tue">Tue</option>
-                      <option value="Wed">Wed</option>
-                      <option value="Thu">Thu</option>
-                      <option value="Fri">Fri</option>
-                      <option value="Sat">Sat</option>
-                      <option value="Sun">Sun</option>
+                      <option value="" data-i18n="hours.startDayPlaceholder">Choose a start day</option>
+                      <option value="Mon" data-i18n="day.mon">Mon</option>
+                      <option value="Tue" data-i18n="day.tue">Tue</option>
+                      <option value="Wed" data-i18n="day.wed">Wed</option>
+                      <option value="Thu" data-i18n="day.thu">Thu</option>
+                      <option value="Fri" data-i18n="day.fri">Fri</option>
+                      <option value="Sat" data-i18n="day.sat">Sat</option>
+                      <option value="Sun" data-i18n="day.sun">Sun</option>
                     </select>
                   </label>
 
                   <label class="field" for="hoursEndDay">
-                    <span class="field-label">End day</span>
+                    <span class="field-label" data-i18n="hours.endDay">End day</span>
                     <select id="hoursEndDay" name="hoursEndDay" class="field-control" disabled>
-                      <option value="">Choose an end day</option>
-                      <option value="Mon">Mon</option>
-                      <option value="Tue">Tue</option>
-                      <option value="Wed">Wed</option>
-                      <option value="Thu">Thu</option>
-                      <option value="Fri">Fri</option>
-                      <option value="Sat">Sat</option>
-                      <option value="Sun">Sun</option>
+                      <option value="" data-i18n="hours.endDayPlaceholder">Choose an end day</option>
+                      <option value="Mon" data-i18n="day.mon">Mon</option>
+                      <option value="Tue" data-i18n="day.tue">Tue</option>
+                      <option value="Wed" data-i18n="day.wed">Wed</option>
+                      <option value="Thu" data-i18n="day.thu">Thu</option>
+                      <option value="Fri" data-i18n="day.fri">Fri</option>
+                      <option value="Sat" data-i18n="day.sat">Sat</option>
+                      <option value="Sun" data-i18n="day.sun">Sun</option>
                     </select>
                   </label>
                 </div>
 
-                <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times.</p>
+                <p id="hoursHint" class="field-hint"></p>
                 <p id="hoursError" class="field-error" aria-live="polite"></p>
               </fieldset>
             </section>
 
             <section class="card card-stack provider-section-card">
               <div class="section-header section-header--compact">
-                <p class="eyebrow">Listing details</p>
-                <h3 class="card-title">Search and description details</h3>
-                <p class="card-copy">These details help make the service easier to identify and review.</p>
+                <p class="eyebrow" data-i18n="listing.eyebrow">Listing details</p>
+                <h3 class="card-title" data-i18n="listing.title">Search and description details</h3>
+                <p class="card-copy" data-i18n="listing.description">These details help make the service easier to identify and review.</p>
               </div>
 
               <fieldset class="provider-tags-field" aria-describedby="tagsHint tagsError">
-                <legend class="field-label">Tags</legend>
-                <div id="tagsSelector" class="provider-tag-selector" role="group" aria-label="Service tags"></div>
-                <p id="tagsHint" class="field-hint">Select all relevant tags for this service.</p>
+                <legend class="field-label" data-i18n="tags.legend">Tags</legend>
+                <div id="tagsSelector" class="provider-tag-selector" role="group"></div>
+                <p id="tagsHint" class="field-hint" data-i18n="tags.hint">Select all relevant tags for this service.</p>
                 <p id="tagsError" class="field-error" aria-live="polite"></p>
               </fieldset>
 
               <label class="field" for="description">
-                <span class="field-label">Description</span>
+                <span class="field-label" data-i18n="fields.description.label">Description</span>
                 <textarea id="description" name="description" class="field-control field-control--textarea"
+                  data-i18n-placeholder="fields.description.placeholder"
                   placeholder="Rehabilitation and movement therapy" required
                   aria-describedby="descriptionError"></textarea>
                 <p id="descriptionError" class="field-error" aria-live="polite"></p>
@@ -603,61 +600,54 @@
 
             <div class="provider-form-footer">
               <div class="button-row provider-form-actions">
-                <button type="submit" class="button button--primary">Submit service</button>
-                <a class="button button--secondary" href="/index.html">Back to search</a>
+                <button type="submit" class="button button--primary" data-i18n="actions.submit">Submit service</button>
+                <a class="button button--secondary" href="/index.html" data-i18n="actions.back">Back to search</a>
               </div>
 
               <p id="formStatus" class="provider-status" hidden aria-live="polite"></p>
             </div>
           </form>
-
         </div>
 
         <aside class="card card-stack provider-preview-card">
           <div class="section-header section-header--compact">
-            <p class="eyebrow">Listing preview</p>
-            <h3 class="card-title">How the service listing reads</h3>
-            <p class="card-copy">This preview updates as you complete the form.</p>
+            <p class="eyebrow" data-i18n="preview.eyebrow">Listing preview</p>
+            <h3 class="card-title" data-i18n="preview.title">How the service listing reads</h3>
+            <p class="card-copy" data-i18n="preview.description">This preview updates as you complete the form.</p>
           </div>
 
           <div class="provider-preview-surface">
             <div class="stack-sm">
-              <h4 id="previewName" class="provider-preview-heading provider-preview-placeholder">Service name will
-                appear here</h4>
-              <p id="previewDescription" class="card-copy provider-preview-placeholder">Add a short description so the
-                listing is easy to review.</p>
+              <h4 id="previewName" class="provider-preview-heading provider-preview-placeholder"></h4>
+              <p id="previewDescription" class="card-copy provider-preview-placeholder"></p>
             </div>
 
             <dl class="provider-preview-details">
               <div class="provider-preview-row">
-                <dt class="field-label">Service type</dt>
-                <dd id="previewType" class="provider-preview-value provider-preview-placeholder">Choose a service type
-                </dd>
+                <dt class="field-label" data-i18n="preview.typeLabel">Service type</dt>
+                <dd id="previewType" class="provider-preview-value provider-preview-placeholder"></dd>
               </div>
 
               <div class="provider-preview-row">
-                <dt class="field-label">Specialty</dt>
-                <dd id="previewSpecialty" class="provider-preview-value provider-preview-placeholder">Add the main
-                  specialty</dd>
+                <dt class="field-label" data-i18n="preview.specialtyLabel">Specialty</dt>
+                <dd id="previewSpecialty" class="provider-preview-value provider-preview-placeholder"></dd>
               </div>
 
               <div class="provider-preview-row">
-                <dt class="field-label">Address</dt>
-                <dd id="previewAddress" class="provider-preview-value provider-preview-placeholder">Add the full service
-                  address</dd>
+                <dt class="field-label" data-i18n="preview.addressLabel">Address</dt>
+                <dd id="previewAddress" class="provider-preview-value provider-preview-placeholder"></dd>
               </div>
 
               <div class="provider-preview-row">
-                <dt class="field-label">Opening hours</dt>
-                <dd id="previewHours" class="provider-preview-value provider-preview-placeholder">Select days and times
-                </dd>
+                <dt class="field-label" data-i18n="preview.hoursLabel">Opening hours</dt>
+                <dd id="previewHours" class="provider-preview-value provider-preview-placeholder"></dd>
               </div>
             </dl>
 
             <div class="stack-sm">
-              <p class="field-label">Tags</p>
+              <p class="field-label" data-i18n="preview.tagsLabel">Tags</p>
               <div id="previewTags" class="tag-list provider-preview-tags"></div>
-              <p id="previewTagsEmpty" class="field-hint">Tags will appear here after you add them.</p>
+              <p id="previewTagsEmpty" class="field-hint"></p>
             </div>
           </div>
         </aside>
@@ -669,8 +659,301 @@
   <script src="/api.js"></script>
 
   <script>
+    const TRANSLATIONS = {
+      en: {
+        "header.title": "Service provider form",
+        "header.description": "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
+        "header.fallback": "Care Compass",
+        "header.nav.search": "Search services",
+        "header.nav.guidance": "Get Guidance",
+        "header.nav.providers": "For providers",
+
+        "page.eyebrow": "For providers",
+        "page.title": "Prepare a service listing",
+        "page.description": "Share a new listing or service update so Care Compass can review it for the directory.",
+
+        "intro.eyebrow": "Before you submit",
+        "intro.title": "Prepare a clear, reviewable listing",
+        "intro.note1": "Use the official service name, specialty, and full address.",
+        "intro.note2": "Set the opening hours with the day and time selectors so they are easy to review.",
+        "intro.note3": "Successful submissions are saved to the Care Compass service data through the existing backend.",
+
+        "details.eyebrow": "Service details",
+        "details.title": "Basic listing information",
+        "details.description": "Add the main details providers need to recognize and review the service.",
+
+        "fields.name.label": "Service name",
+        "fields.name.placeholder": "Physiotherapy Clinic ActiveMove",
+        "fields.type.label": "Service type",
+        "fields.type.placeholder": "Select a service type",
+        "fields.specialty.label": "Specialty",
+        "fields.specialty.placeholder": "physiotherapy",
+        "fields.address.label": "Address",
+        "fields.address.placeholder": "Bewegungsweg 11, 38120 Braunschweig",
+        "fields.description.label": "Description",
+        "fields.description.placeholder": "Rehabilitation and movement therapy",
+
+        "serviceType.clinic": "clinic",
+        "serviceType.counseling": "counseling",
+        "serviceType.public_office": "public office",
+        "serviceType.support_center": "support center",
+        "serviceType.ngo": "ngo",
+        "serviceType.legal_aid": "legal aid",
+        "serviceType.housing_support": "housing support",
+        "serviceType.therapy": "therapy",
+        "serviceType.other": "other",
+
+        "hours.eyebrow": "Availability",
+        "hours.title": "Opening hours",
+        "hours.description": "Choose a day pattern and a clear time range so the final listing is easy to read.",
+        "hours.legend": "Opening hours",
+        "hours.dayRange": "Day range",
+        "hours.opens": "Opens",
+        "hours.closes": "Closes",
+        "hours.startDay": "Start day",
+        "hours.endDay": "End day",
+        "hours.startDayPlaceholder": "Choose a start day",
+        "hours.endDayPlaceholder": "Choose an end day",
+        "hours.pattern.monFri": "Mon-Fri",
+        "hours.pattern.monSat": "Mon-Sat",
+        "hours.pattern.monSun": "Mon-Sun",
+        "hours.pattern.weekends": "Weekends",
+        "hours.pattern.custom": "Custom day range",
+
+        "listing.eyebrow": "Listing details",
+        "listing.title": "Search and description details",
+        "listing.description": "These details help make the service easier to identify and review.",
+
+        "tags.legend": "Tags",
+        "tags.hint": "Select all relevant tags for this service.",
+        "tags.aria": "Service tags",
+
+        "actions.submit": "Submit service",
+        "actions.submitting": "Submitting...",
+        "actions.back": "Back to search",
+
+        "preview.eyebrow": "Listing preview",
+        "preview.title": "How the service listing reads",
+        "preview.description": "This preview updates as you complete the form.",
+        "preview.typeLabel": "Service type",
+        "preview.specialtyLabel": "Specialty",
+        "preview.addressLabel": "Address",
+        "preview.hoursLabel": "Opening hours",
+        "preview.tagsLabel": "Tags",
+        "preview.empty.name": "Service name will appear here",
+        "preview.empty.description": "Add a short description so the listing is easy to review.",
+        "preview.empty.type": "Choose a service type",
+        "preview.empty.specialty": "Add the main specialty",
+        "preview.empty.address": "Add the full service address",
+        "preview.empty.hours": "Select days and times",
+        "preview.empty.tags": "Tags will appear here after you add them.",
+
+        "day.mon": "Mon",
+        "day.tue": "Tue",
+        "day.wed": "Wed",
+        "day.thu": "Thu",
+        "day.fri": "Fri",
+        "day.sat": "Sat",
+        "day.sun": "Sun",
+
+        "tag.rehabilitation": "rehabilitation",
+        "tag.mobility": "mobility",
+        "tag.pain": "pain",
+        "tag.injury": "injury",
+        "tag.therapy": "therapy",
+        "tag.mental health": "mental health",
+        "tag.legal aid": "legal aid",
+        "tag.housing": "housing",
+        "tag.financial support": "financial support",
+        "tag.family support": "family support",
+        "tag.disability": "disability",
+        "tag.elderly care": "elderly care",
+        "tag.youth": "youth",
+        "tag.language support": "language support",
+        "tag.crisis support": "crisis support",
+        "tag.addiction": "addiction",
+        "tag.food support": "food support",
+        "tag.transport": "transport",
+        "tag.social support": "social support",
+        "tag.counseling": "counseling",
+
+        "status.savedAs": "This will be saved as {value}.",
+        "status.hoursCustomHint": "Choose a start day, an end day, and the opening and closing times.",
+        "status.hoursHint": "Choose a day range plus opening and closing times.",
+        "status.fixFields": "Please fix the highlighted fields before submitting this service entry.",
+        "status.duplicate": "This service was just submitted, so a duplicate entry was not added.",
+        "status.success": "Service saved successfully to the Care Compass service data.",
+        "status.unableSave": "Unable to save this service right now.",
+
+        "validation.required": "{field} is required.",
+        "validation.tagsRequired": "Select at least one tag.",
+        "validation.hoursPattern": "Choose a day range for these opening hours.",
+        "validation.hoursCustomDays": "Choose both the first and last day for the custom range.",
+        "validation.hoursOrder": "The end day must be the same day or later than the start day.",
+        "validation.hoursTimes": "Add both an opening and closing time.",
+        "validation.hoursTimeOrder": "Closing time must be later than opening time.",
+
+        "field.name": "Service name",
+        "field.type": "Service type",
+        "field.specialty": "Specialty",
+        "field.address": "Address",
+        "field.hours": "Opening hours",
+        "field.tags": "Tags",
+        "field.description": "Description"
+      },
+
+      de: {
+        "header.title": "Formular für Leistungsanbieter",
+        "header.description": "Nutzen Sie diese Anbieterseite, um einen neuen Eintrag oder eine Aktualisierung für Care Compass vorzubereiten.",
+        "header.fallback": "Care Compass",
+        "header.nav.search": "Angebote durchsuchen",
+        "header.nav.guidance": "Beratung erhalten",
+        "header.nav.providers": "Für Anbieter",
+
+        "page.eyebrow": "Für Anbieter",
+        "page.title": "Einen Eintrag vorbereiten",
+        "page.description": "Teilen Sie einen neuen Eintrag oder eine Aktualisierung, damit Care Compass ihn für das Verzeichnis prüfen kann.",
+
+        "intro.eyebrow": "Vor dem Absenden",
+        "intro.title": "Einen klaren, prüfbaren Eintrag vorbereiten",
+        "intro.note1": "Verwenden Sie den offiziellen Namen des Angebots, den Schwerpunkt und die vollständige Adresse.",
+        "intro.note2": "Legen Sie die Öffnungszeiten mit den Tages- und Zeitfeldern fest, damit sie leicht geprüft werden können.",
+        "intro.note3": "Erfolgreiche Einreichungen werden über das bestehende Backend in die Care-Compass-Daten übernommen.",
+
+        "details.eyebrow": "Angebotsdetails",
+        "details.title": "Grundlegende Informationen",
+        "details.description": "Fügen Sie die wichtigsten Angaben hinzu, damit Anbieter den Dienst erkennen und prüfen können.",
+
+        "fields.name.label": "Name des Angebots",
+        "fields.name.placeholder": "Physiotherapiepraxis ActiveMove",
+        "fields.type.label": "Art des Angebots",
+        "fields.type.placeholder": "Art des Angebots auswählen",
+        "fields.specialty.label": "Schwerpunkt",
+        "fields.specialty.placeholder": "Physiotherapie",
+        "fields.address.label": "Adresse",
+        "fields.address.placeholder": "Bewegungsweg 11, 38120 Braunschweig",
+        "fields.description.label": "Beschreibung",
+        "fields.description.placeholder": "Rehabilitation und Bewegungstherapie",
+
+        "serviceType.clinic": "Klinik",
+        "serviceType.counseling": "Beratung",
+        "serviceType.public_office": "Behörde",
+        "serviceType.support_center": "Unterstützungszentrum",
+        "serviceType.ngo": "NGO",
+        "serviceType.legal_aid": "Rechtshilfe",
+        "serviceType.housing_support": "Wohnhilfe",
+        "serviceType.therapy": "Therapie",
+        "serviceType.other": "Sonstiges",
+
+        "hours.eyebrow": "Verfügbarkeit",
+        "hours.title": "Öffnungszeiten",
+        "hours.description": "Wählen Sie einen Tagesbereich und eine klare Zeitspanne, damit der Eintrag gut lesbar ist.",
+        "hours.legend": "Öffnungszeiten",
+        "hours.dayRange": "Tagesbereich",
+        "hours.opens": "Öffnet",
+        "hours.closes": "Schließt",
+        "hours.startDay": "Starttag",
+        "hours.endDay": "Endtag",
+        "hours.startDayPlaceholder": "Starttag wählen",
+        "hours.endDayPlaceholder": "Endtag wählen",
+        "hours.pattern.monFri": "Mo-Fr",
+        "hours.pattern.monSat": "Mo-Sa",
+        "hours.pattern.monSun": "Mo-So",
+        "hours.pattern.weekends": "Wochenende",
+        "hours.pattern.custom": "Benutzerdefinierter Tagesbereich",
+
+        "listing.eyebrow": "Eintragsdetails",
+        "listing.title": "Such- und Beschreibungsdetails",
+        "listing.description": "Diese Angaben helfen dabei, das Angebot leichter zu identifizieren und zu prüfen.",
+
+        "tags.legend": "Tags",
+        "tags.hint": "Wählen Sie alle relevanten Tags für dieses Angebot aus.",
+        "tags.aria": "Tags des Angebots",
+
+        "actions.submit": "Angebot absenden",
+        "actions.submitting": "Wird gesendet...",
+        "actions.back": "Zurück zur Suche",
+
+        "preview.eyebrow": "Vorschau",
+        "preview.title": "So liest sich der Eintrag",
+        "preview.description": "Diese Vorschau aktualisiert sich beim Ausfüllen des Formulars.",
+        "preview.typeLabel": "Art des Angebots",
+        "preview.specialtyLabel": "Schwerpunkt",
+        "preview.addressLabel": "Adresse",
+        "preview.hoursLabel": "Öffnungszeiten",
+        "preview.tagsLabel": "Tags",
+        "preview.empty.name": "Der Name des Angebots erscheint hier",
+        "preview.empty.description": "Fügen Sie eine kurze Beschreibung hinzu, damit der Eintrag leicht geprüft werden kann.",
+        "preview.empty.type": "Wählen Sie eine Art des Angebots",
+        "preview.empty.specialty": "Fügen Sie den Hauptschwerpunkt hinzu",
+        "preview.empty.address": "Fügen Sie die vollständige Adresse hinzu",
+        "preview.empty.hours": "Wählen Sie Tage und Zeiten",
+        "preview.empty.tags": "Tags erscheinen hier, nachdem Sie sie hinzugefügt haben.",
+
+        "day.mon": "Mo",
+        "day.tue": "Di",
+        "day.wed": "Mi",
+        "day.thu": "Do",
+        "day.fri": "Fr",
+        "day.sat": "Sa",
+        "day.sun": "So",
+
+        "tag.rehabilitation": "Rehabilitation",
+        "tag.mobility": "Mobilität",
+        "tag.pain": "Schmerzen",
+        "tag.injury": "Verletzung",
+        "tag.therapy": "Therapie",
+        "tag.mental health": "Psychische Gesundheit",
+        "tag.legal aid": "Rechtshilfe",
+        "tag.housing": "Wohnen",
+        "tag.financial support": "Finanzielle Unterstützung",
+        "tag.family support": "Familienhilfe",
+        "tag.disability": "Behinderung",
+        "tag.elderly care": "Seniorenbetreuung",
+        "tag.youth": "Jugend",
+        "tag.language support": "Sprachunterstützung",
+        "tag.crisis support": "Krisenhilfe",
+        "tag.addiction": "Sucht",
+        "tag.food support": "Lebensmittelhilfe",
+        "tag.transport": "Transport",
+        "tag.social support": "Soziale Unterstützung",
+        "tag.counseling": "Beratung",
+
+        "status.savedAs": "Dies wird gespeichert als {value}.",
+        "status.hoursCustomHint": "Wählen Sie einen Starttag, einen Endtag sowie Öffnungs- und Schließzeiten.",
+        "status.hoursHint": "Wählen Sie einen Tagesbereich sowie Öffnungs- und Schließzeiten.",
+        "status.fixFields": "Bitte korrigieren Sie die markierten Felder, bevor Sie den Eintrag absenden.",
+        "status.duplicate": "Dieses Angebot wurde gerade erst eingereicht, daher wurde kein doppelter Eintrag hinzugefügt.",
+        "status.success": "Angebot erfolgreich in den Care-Compass-Daten gespeichert.",
+        "status.unableSave": "Dieses Angebot kann im Moment nicht gespeichert werden.",
+
+        "validation.required": "{field} ist erforderlich.",
+        "validation.tagsRequired": "Wählen Sie mindestens ein Tag aus.",
+        "validation.hoursPattern": "Wählen Sie einen Tagesbereich für diese Öffnungszeiten.",
+        "validation.hoursCustomDays": "Wählen Sie sowohl den ersten als auch den letzten Tag für den benutzerdefinierten Bereich.",
+        "validation.hoursOrder": "Der Endtag muss derselbe Tag oder später als der Starttag sein.",
+        "validation.hoursTimes": "Fügen Sie sowohl eine Öffnungs- als auch eine Schließzeit hinzu.",
+        "validation.hoursTimeOrder": "Die Schließzeit muss nach der Öffnungszeit liegen.",
+
+        "field.name": "Name des Angebots",
+        "field.type": "Art des Angebots",
+        "field.specialty": "Schwerpunkt",
+        "field.address": "Adresse",
+        "field.hours": "Öffnungszeiten",
+        "field.tags": "Tags",
+        "field.description": "Beschreibung"
+      }
+    };
 
     let currentLang = localStorage.getItem("cc-lang") || "en";
+
+    function t(key, vars = {}) {
+      let text = TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS.en?.[key] || key;
+      Object.entries(vars).forEach(([name, value]) => {
+        text = text.replaceAll(`{${name}}`, value);
+      });
+      return text;
+    }
 
     function applyTranslations() {
       const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
@@ -681,11 +964,29 @@
 
       document.documentElement.lang = currentLang;
 
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = t(el.dataset.i18n);
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+      });
+
       const btnEn = document.getElementById("btn-en");
       const btnDe = document.getElementById("btn-de");
 
       if (btnEn) btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
       if (btnDe) btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+
+      if (tagsSelector) {
+        tagsSelector.setAttribute("aria-label", t("tags.aria"));
+      }
+
+      renderHeader();
+      updateHoursHint();
+      renderTagSelector();
+      renderPreview();
+      refreshSubmitButtonLabel();
     }
 
     function setLang(lang) {
@@ -701,8 +1002,6 @@
         document.body.classList.remove("lang-switching");
       }, 150);
     }
-
-    applyTranslations();
 
     const pageHeader = document.getElementById("pageHeader");
     const providerForm = document.getElementById("providerForm");
@@ -724,6 +1023,7 @@
     const previewTags = document.getElementById("previewTags");
     const previewTagsEmpty = document.getElementById("previewTagsEmpty");
     const previewDescription = document.getElementById("previewDescription");
+
     const AVAILABLE_TAGS = [
       "rehabilitation",
       "mobility",
@@ -746,6 +1046,7 @@
       "social support",
       "counseling"
     ];
+
     const DAY_ORDER = {
       Mon: 0,
       Tue: 1,
@@ -755,16 +1056,10 @@
       Sat: 5,
       Sun: 6
     };
-    const submitButtonLabel = providerSubmitButton ? providerSubmitButton.textContent.trim() : "Submit service";
+
     let lastSubmittedSignature = "";
     let lastSubmittedAt = 0;
     let isSubmitting = false;
-
-    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
-      title: "Service provider form",
-      description: "Use this provider-facing page to prepare a new service listing or service update for Care Compass.",
-      currentNav: "add"
-    });
 
     const formState = {
       name: "",
@@ -803,15 +1098,39 @@
       description: false
     };
 
-    const fieldLabels = {
-      name: "Service name",
-      type: "Service type",
-      specialty: "Specialty",
-      address: "Address",
-      hours: "Opening hours",
-      tags: "Tags",
-      description: "Description"
-    };
+    function fieldLabel(fieldName) {
+      const map = {
+        name: t("field.name"),
+        type: t("field.type"),
+        specialty: t("field.specialty"),
+        address: t("field.address"),
+        hours: t("field.hours"),
+        tags: t("field.tags"),
+        description: t("field.description")
+      };
+      return map[fieldName] || fieldName;
+    }
+
+    function renderHeader() {
+      try {
+        if (typeof CareCompassUI !== "undefined" && typeof CareCompassUI.renderPageHeader === "function") {
+          pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+            title: t("header.title"),
+            description: t("header.description"),
+            currentNav: "add",
+            navLabels: {
+              search: t("header.nav.search"),
+              guidance: t("header.nav.guidance"),
+              providers: t("header.nav.providers")
+            }
+          });
+        } else {
+          pageHeader.innerHTML = `<div class="content-width--wide section-shell"><p class="site-name">${t("header.fallback")}</p></div>`;
+        }
+      } catch (error) {
+        pageHeader.innerHTML = `<div class="content-width--wide section-shell"><p class="site-name">${t("header.fallback")}</p></div>`;
+      }
+    }
 
     function getFieldElement(fieldName) {
       if (fieldName === "tags") {
@@ -820,26 +1139,13 @@
 
       if (fieldName === "hours") {
         if (hoursState.pattern === "custom") {
-          if (!hoursState.customStart) {
-            return hoursStartDayInput;
-          }
-
-          if (!hoursState.customEnd) {
-            return hoursEndDayInput;
-          }
-
-          if (DAY_ORDER[hoursState.customEnd] < DAY_ORDER[hoursState.customStart]) {
-            return hoursEndDayInput;
-          }
+          if (!hoursState.customStart) return hoursStartDayInput;
+          if (!hoursState.customEnd) return hoursEndDayInput;
+          if (DAY_ORDER[hoursState.customEnd] < DAY_ORDER[hoursState.customStart]) return hoursEndDayInput;
         }
 
-        if (!hoursState.open) {
-          return hoursOpenInput;
-        }
-
-        if (!hoursState.close) {
-          return hoursCloseInput;
-        }
+        if (!hoursState.open) return hoursOpenInput;
+        if (!hoursState.close) return hoursCloseInput;
 
         return hoursPatternInput;
       }
@@ -852,11 +1158,19 @@
     }
 
     function formatLabel(value) {
+      const key = `serviceType.${value}`;
+      const translated = TRANSLATIONS[currentLang]?.[key];
+      if (translated) return translated;
+
       return String(value || "")
         .replace(/_/g, " ")
         .replace(/\s+/g, " ")
         .trim()
         .replace(/\b\w/g, character => character.toUpperCase());
+    }
+
+    function translateTag(tag) {
+      return t(`tag.${tag}`);
     }
 
     function getHoursDayRangeValue() {
@@ -873,6 +1187,13 @@
         : `${hoursState.customStart}-${hoursState.customEnd}`;
     }
 
+    function translateDayRange(dayRange) {
+      return dayRange
+        .split("-")
+        .map(day => t(`day.${day.toLowerCase()}`))
+        .join("-");
+    }
+
     function buildHoursValue() {
       const dayRange = getHoursDayRangeValue();
 
@@ -883,13 +1204,22 @@
       return `${dayRange} ${hoursState.open}-${hoursState.close}`;
     }
 
+    function formatHoursForDisplay(hoursValue) {
+      if (!hoursValue) return "";
+
+      const [dayPart, timePart] = hoursValue.split(" ");
+      if (!dayPart || !timePart) return hoursValue;
+
+      return `${translateDayRange(dayPart)} ${timePart}`;
+    }
+
     function updateHoursHint() {
       const hoursValue = buildHoursValue();
       hoursHint.textContent = hoursValue
-        ? `This will be saved as ${hoursValue}.`
+        ? t("status.savedAs", { value: formatHoursForDisplay(hoursValue) })
         : hoursState.pattern === "custom"
-          ? "Choose a start day, an end day, and the opening and closing times."
-          : "Choose a day range plus opening and closing times.";
+          ? t("status.hoursCustomHint")
+          : t("status.hoursHint");
     }
 
     function applyHoursState() {
@@ -935,15 +1265,18 @@
       lastSubmittedAt = Date.now();
     }
 
+    function refreshSubmitButtonLabel() {
+      if (!providerSubmitButton) return;
+      providerSubmitButton.textContent = isSubmitting ? t("actions.submitting") : t("actions.submit");
+    }
+
     function setSubmittingState(submitting) {
       isSubmitting = submitting;
 
-      if (!providerSubmitButton) {
-        return;
-      }
+      if (!providerSubmitButton) return;
 
       providerSubmitButton.disabled = submitting;
-      providerSubmitButton.textContent = submitting ? "Submitting..." : submitButtonLabel;
+      refreshSubmitButtonLabel();
     }
 
     function setFormStatus(message = "", variant = "hint") {
@@ -966,7 +1299,7 @@
       const value = formState[fieldName].trim();
 
       if (!value) {
-        return `${fieldLabels[fieldName]} is required.`;
+        return t("validation.required", { field: fieldLabel(fieldName) });
       }
 
       return "";
@@ -975,7 +1308,7 @@
     function validateField(fieldName) {
       if (fieldName === "tags") {
         if (!formState.tags.length) {
-          return "Select at least one tag.";
+          return t("validation.tagsRequired");
         }
 
         return "";
@@ -983,29 +1316,30 @@
 
       if (fieldName === "hours") {
         if (!hoursState.pattern) {
-          return "Choose a day range for these opening hours.";
+          return t("validation.hoursPattern");
         }
 
         if (hoursState.pattern === "custom") {
           if (!hoursState.customStart || !hoursState.customEnd) {
-            return "Choose both the first and last day for the custom range.";
+            return t("validation.hoursCustomDays");
           }
 
           if (DAY_ORDER[hoursState.customEnd] < DAY_ORDER[hoursState.customStart]) {
-            return "The end day must be the same day or later than the start day.";
+            return t("validation.hoursOrder");
           }
         }
 
         if (!hoursState.open || !hoursState.close) {
-          return "Add both an opening and closing time.";
+          return t("validation.hoursTimes");
         }
 
         if (hoursState.close <= hoursState.open) {
-          return "Closing time must be later than opening time.";
+          return t("validation.hoursTimeOrder");
         }
 
         return "";
       }
+
       return validateRequiredValue(fieldName);
     }
 
@@ -1068,7 +1402,7 @@
             value="${tag}"
             ${formState.tags.includes(tag) ? "checked" : ""}
           />
-          <span class="provider-tag-pill">${tag}</span>
+          <span class="provider-tag-pill">${translateTag(tag)}</span>
         </label>
       `).join("");
     }
@@ -1082,26 +1416,27 @@
     function renderPreviewTags(tags) {
       previewTags.innerHTML = "";
       previewTagsEmpty.hidden = Array.isArray(tags) && tags.length > 0;
+      previewTagsEmpty.textContent = t("preview.empty.tags");
 
       (tags || []).forEach(tag => {
         const tagElement = document.createElement("span");
         tagElement.className = "tag";
-        tagElement.textContent = tag;
+        tagElement.textContent = translateTag(tag);
         previewTags.appendChild(tagElement);
       });
     }
 
     function renderPreview(service = buildServicePayload()) {
-      setPreviewText(previewName, service.name, "Service name will appear here");
+      setPreviewText(previewName, service.name, t("preview.empty.name"));
       setPreviewText(
         previewDescription,
         service.description,
-        "Add a short description so the listing is easy to review."
+        t("preview.empty.description")
       );
-      setPreviewText(previewType, service.type, "Choose a service type", formatLabel);
-      setPreviewText(previewSpecialty, service.specialty, "Add the main specialty", formatLabel);
-      setPreviewText(previewAddress, service.address, "Add the full service address");
-      setPreviewText(previewHours, service.hours, "Select days and times");
+      setPreviewText(previewType, service.type, t("preview.empty.type"), formatLabel);
+      setPreviewText(previewSpecialty, service.specialty, t("preview.empty.specialty"), formatLabel);
+      setPreviewText(previewAddress, service.address, t("preview.empty.address"));
+      setPreviewText(previewHours, service.hours, t("preview.empty.hours"), formatHoursForDisplay);
       renderPreviewTags(service.tags);
     }
 
@@ -1210,6 +1545,7 @@
     renderTagSelector();
     applyFieldState("tags");
     renderPreview();
+    applyTranslations();
 
     providerForm.addEventListener("submit", async event => {
       event.preventDefault();
@@ -1227,7 +1563,7 @@
       Object.keys(formErrors).forEach(applyFieldState);
 
       if (!isValid) {
-        setFormStatus("Please fix the highlighted fields before submitting this service entry.", "error");
+        setFormStatus(t("status.fixFields"), "error");
         const firstInvalidField = Object.keys(formErrors).find(fieldName => formErrors[fieldName]);
 
         if (firstInvalidField) {
@@ -1241,7 +1577,7 @@
 
       if (wasRecentlySubmitted(payload)) {
         renderPreview(payload);
-        setFormStatus("This service was just submitted, so a duplicate entry was not added.", "success");
+        setFormStatus(t("status.duplicate"), "success");
         return;
       }
 
@@ -1255,18 +1591,18 @@
         const savedService = response && response.service ? response.service : payload;
         rememberSubmittedService(savedService);
         renderPreview(savedService);
-        setFormStatus("Service saved successfully to the Care Compass service data.", "success");
+        setFormStatus(t("status.success"), "success");
 
-        console.group("Provider submission payload");
-        console.log("Final service object:");
+        console.group(currentLang === "de" ? "Payload der Anbieter-Einreichung" : "Provider submission payload");
+        console.log(currentLang === "de" ? "Finales Service-Objekt:" : "Final service object:");
         console.log(savedService);
         console.log("JSON preview:");
         console.log(JSON.stringify(savedService, null, 2));
-        console.log("Backend response:");
+        console.log(currentLang === "de" ? "Backend-Antwort:" : "Backend response:");
         console.log(response);
         console.groupEnd();
       } catch (error) {
-        setFormStatus(error.message || "Unable to save this service right now.", "error");
+        setFormStatus(error.message || t("status.unableSave"), "error");
       } finally {
         setSubmittingState(false);
       }
