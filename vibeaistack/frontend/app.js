@@ -1,7 +1,7 @@
 (() => {
   const navigationItems = [
     { key: "search", href: "/index.html", label: "Service search" },
-    { key: "survey", href: "/form.html", label: "Health check" },
+    { key: "survey", href: "/form.html", label: "Get guidance" },
     { key: "add", href: "/providers.html", label: "For providers" }
   ];
 
