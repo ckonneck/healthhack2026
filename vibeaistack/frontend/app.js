@@ -15,12 +15,12 @@
     return values.filter(Boolean).join(" ");
   }
 
-  function renderNavigation(currentNav) {
+  function renderNavigation(currentNav, navigationLabels = {}) {
     return `
       <nav class="nav-links page-header__nav" aria-label="Primary">
         ${navigationItems.map(item => `
           <a class="nav-link" ${item.key === currentNav ? 'aria-current="page"' : ""} href="${item.href}">
-            ${item.label}
+            ${navigationLabels[item.key] || item.label}
           </a>
         `).join("")}
       </nav>
@@ -33,6 +33,7 @@
     title,
     description = "",
     currentNav,
+    navigationLabels = {},
     compact = false,
     titleTag = "h1",
     titleClass = "brand-title"
@@ -48,7 +49,7 @@
         ${titleMarkup}
         ${descriptionMarkup}
       </div>
-      ${renderNavigation(currentNav)}
+      ${renderNavigation(currentNav, navigationLabels)}
     `;
   }
 

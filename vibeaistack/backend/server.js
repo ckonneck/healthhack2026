@@ -182,6 +182,115 @@ function safeText(...parts) {
     .toLowerCase();
 }
 
+function normalizeSearchText(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .trim();
+}
+
+function scoreServiceMatch(service = {}, queryText = "", zipText = "") {
+  const name = normalizeSearchText(service.name);
+  const type = normalizeSearchText(service.type);
+  const category = normalizeSearchText(service.category);
+  const specialty = normalizeSearchText(service.specialty);
+  const description = normalizeSearchText(service.description);
+  const address = normalizeSearchText(service.address);
+  const tags = Array.isArray(service.tags)
+    ? service.tags.map(tag => normalizeSearchText(tag)).filter(Boolean)
+    : [];
+
+  const allText = safeText(
+    name,
+    type,
+    category,
+    specialty,
+    description,
+    address,
+    ...tags
+  );
+
+  let score = 0;
+  let queryMatched = !queryText;
+
+  if (queryText) {
+    if (name.includes(queryText)) {
+      score += 10;
+      queryMatched = true;
+    }
+    if (specialty.includes(queryText)) {
+      score += 8;
+      queryMatched = true;
+    }
+    if (type.includes(queryText)) {
+      score += 7;
+      queryMatched = true;
+    }
+    if (category.includes(queryText)) {
+      score += 5;
+      queryMatched = true;
+    }
+    if (description.includes(queryText)) {
+      score += 5;
+      queryMatched = true;
+    }
+    if (address.includes(queryText)) {
+      score += 4;
+      queryMatched = true;
+    }
+    if (tags.some(tag => tag.includes(queryText))) {
+      score += 6;
+      queryMatched = true;
+    }
+    if (allText.includes(queryText)) {
+      score += 2;
+      queryMatched = true;
+    }
+  }
+
+  if (zipText && address.includes(zipText)) {
+    score += 10;
+  }
+
+  const terms = queryText.split(/\s+/).filter(Boolean);
+
+  terms.forEach(term => {
+    if (name.includes(term)) {
+      score += 4;
+      queryMatched = true;
+    }
+    if (specialty.includes(term)) {
+      score += 3;
+      queryMatched = true;
+    }
+    if (type.includes(term)) {
+      score += 3;
+      queryMatched = true;
+    }
+    if (category.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (description.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (address.includes(term)) {
+      score += 2;
+      queryMatched = true;
+    }
+    if (tags.some(tag => tag.includes(term))) {
+      score += 3;
+      queryMatched = true;
+    }
+  });
+
+  if (!queryMatched) {
+    return 0;
+  }
+
+  return score;
+}
+
 // ─────────────────────────────
 // KEYWORD SCORING (SAFE)
 // ─────────────────────────────
@@ -281,32 +390,24 @@ app.post("/search",async (req, res) => {
 // SERVICES (FIXED - WAS MISSING BEFORE)
 // ─────────────────────────────
 app.post("/services", (req, res) => {
-  const { query = "" } = req.body || {};
-  const db = loadDB();
+  const { query = "", zip = "" } = req.body || {};
+  const services = loadDB();
+  const queryText = normalizeSearchText(query);
+  const zipText = normalizeSearchText(zip);
 
-  const services = Array.isArray(db.services) ? db.services : [];
-
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!queryText && !zipText) {
+    return res.json({ results: [] });
+  }
 
   const results = services
-    .map(service => {
-      let score = 0;
-
-      const tags = Array.isArray(service.tags) ? service.tags : [];
-
-      words.forEach(word => {
-        if (service.name?.toLowerCase().includes(word)) score++;
-
-        tags.forEach(tag => {
-          if ((tag || "").toLowerCase().includes(word)) score++;
-        });
-      });
-
-      return { ...service, score };
-    })
-    .filter(s => s.score > 0)
+    .map(service => ({
+      service,
+      score: scoreServiceMatch(service, queryText, zipText)
+    }))
+    .filter(entry => entry.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 5);
+    .slice(0, 8)
+    .map(entry => entry.service);
 
   res.json({ results });
 });

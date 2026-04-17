@@ -38,7 +38,7 @@
     }
 
     .lang-toggle__btn[aria-pressed="true"] {
-      background: var(--color-primary, #0f172a);
+      background: var(--color-structure, #003a8f);
       color: #fff;
     }
 
@@ -59,9 +59,9 @@
 
 <body>
   <main class="page-shell">
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button class="lang-toggle__btn" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
-      <button class="lang-toggle__btn" id="btn-de" aria-pressed="false" onclick="setLang('de')">DE</button>
+    <div id="langToggle" class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-toggle__btn" id="btn-en" aria-label="Switch language to English" aria-pressed="true" onclick="setLang('en')">EN</button>
+      <button class="lang-toggle__btn" id="btn-de" aria-label="Switch language to German" aria-pressed="false" onclick="setLang('de')">DE</button>
     </div>
 
     <header id="pageHeader" class="page-header"></header>
@@ -87,76 +87,76 @@
 
             <div class="survey-steps">
 
-              <!-- STEP 1: SITUATION TYPE -->
-              <section class="survey-step" data-step-help="Select what best describes your situation.">
-                <div class="survey-step-header">
-                  <h2 class="survey-question">What is your main situation?</h2>
-                  <p class="survey-step-copy">
-                    This helps us focus on the right type of support.
-                  </p>
-                </div>
+            <!-- STEP 1: SITUATION TYPE -->
+            <section class="survey-step" data-step-help="Select what best describes your situation." data-i18n-step-help="survey.step1.help">
+              <div class="survey-step-header">
+                <h2 class="survey-question" data-i18n="survey.step1.question">What is your main situation?</h2>
+                <p class="survey-step-copy" data-i18n="survey.step1.copy">
+                  This helps us focus on the right type of support.
+                </p>
+              </div>
 
-                <div id="situationType"></div>
-                <label id="situationCustomField" class="field" hidden style="display:none;">
-                  <span class="field-label">Write your own situation</span>
-                  <input id="situationCustom" class="field-control" placeholder="Type your situation" />
-                </label>
-                <p id="situationError" class="field-error" hidden></p>
-              </section>
+              <div id="situationType"></div>
+              <label id="situationCustomField" class="field" hidden style="display:none;">
+                <span class="field-label" data-i18n="survey.step1.customLabel">Write your own situation</span>
+                <input id="situationCustom" class="field-control" data-i18n-placeholder="survey.step1.customPlaceholder" placeholder="Type your situation" />
+              </label>
+              <p id="situationError" class="field-error" hidden></p>
+            </section>
 
-              <!-- STEP 2: LEVEL OF SUPPORT -->
-              <section class="survey-step" data-step-help="This determines the type of services you need.">
-                <div class="survey-step-header">
-                  <h2 class="survey-question">How much help do you need?</h2>
-                  <p class="survey-step-copy">
-                    Choose the option closest to your situation.
-                  </p>
-                </div>
+            <!-- STEP 2: LEVEL OF SUPPORT -->
+            <section class="survey-step" data-step-help="This determines the type of services you need." data-i18n-step-help="survey.step2.help">
+              <div class="survey-step-header">
+                <h2 class="survey-question" data-i18n="survey.step2.question">How much help do you need?</h2>
+                <p class="survey-step-copy" data-i18n="survey.step2.copy">
+                  Choose the option closest to your situation.
+                </p>
+              </div>
 
                 <div id="supportLevel"></div>
               </section>
 
-              <!-- STEP 3: URGENCY -->
-              <section class="survey-step" data-step-help="Urgency helps prioritize the most relevant services.">
-                <div class="survey-step-header">
-                  <h2 class="survey-question">How urgent is your situation?</h2>
-                </div>
+            <!-- STEP 3: URGENCY -->
+            <section class="survey-step" data-step-help="Urgency helps prioritize the most relevant services." data-i18n-step-help="survey.step3.help">
+              <div class="survey-step-header">
+                <h2 class="survey-question" data-i18n="survey.step3.question">How urgent is your situation?</h2>
+              </div>
 
                 <div id="urgencyLevel"></div>
                 <p id="urgencyError" class="field-error" hidden></p>
               </section>
 
-              <!-- STEP 4: BARRIERS -->
-              <section class="survey-step" data-step-help="We adapt recommendations based on your constraints.">
-                <div class="survey-step-header">
-                  <h2 class="survey-question">What is your main barrier?</h2>
-                </div>
+            <!-- STEP 4: BARRIERS -->
+            <section class="survey-step" data-step-help="We adapt recommendations based on your constraints." data-i18n-step-help="survey.step4.help">
+              <div class="survey-step-header">
+                <h2 class="survey-question" data-i18n="survey.step4.question">What is your main barrier?</h2>
+              </div>
 
-                <div id="barriers"></div>
-                <label id="barrierCustomField" class="field" hidden style="display:none;">
-                  <span class="field-label">Write your own barrier</span>
-                  <input id="barrierCustom" class="field-control" placeholder="Type your barrier" />
-                </label>
-              </section>
+              <div id="barriers"></div>
+              <label id="barrierCustomField" class="field" hidden style="display:none;">
+                <span class="field-label" data-i18n="survey.step4.customLabel">Write your own barrier</span>
+                <input id="barrierCustom" class="field-control" data-i18n-placeholder="survey.step4.customPlaceholder" placeholder="Type your barrier" />
+              </label>
+            </section>
 
-              <!-- STEP 5: CONTEXT (SOCIOECONOMIC TRIGGER) -->
-              <section class="survey-step" data-step-help="This helps identify additional support needs.">
-                <div class="survey-step-header">
-                  <h2 class="survey-question">Are you facing any of these situations?</h2>
-                </div>
+            <!-- STEP 5: CONTEXT (SOCIOECONOMIC TRIGGER) -->
+            <section class="survey-step" data-step-help="This helps identify additional support needs." data-i18n-step-help="survey.step5.help">
+              <div class="survey-step-header">
+                <h2 class="survey-question" data-i18n="survey.step5.question">Are you facing any of these situations?</h2>
+              </div>
 
-                <div id="lifeContext"></div>
-                <label id="contextCustomField" class="field" hidden style="display:none;">
-                  <span class="field-label">Write your own life context</span>
-                  <input id="contextCustom" class="field-control" placeholder="Type your life context" />
-                </label>
-              </section>
+              <div id="lifeContext"></div>
+              <label id="contextCustomField" class="field" hidden style="display:none;">
+                <span class="field-label" data-i18n="survey.step5.customLabel">Write your own life context</span>
+                <input id="contextCustom" class="field-control" data-i18n-placeholder="survey.step5.customPlaceholder" placeholder="Type your life context" />
+              </label>
+            </section>
 
             </div>
 
             <div class="survey-actions">
-              <button id="prevButton" type="button" class="button button--secondary">Previous</button>
-              <button id="nextButton" type="button" class="button button--primary">Continue</button>
+              <button id="prevButton" type="button" class="button button--secondary" data-i18n="survey.button.previous">Previous</button>
+              <button id="nextButton" type="button" class="button button--primary" data-i18n="survey.button.continue">Continue</button>
             </div>
           </div>
 
@@ -193,9 +193,9 @@
 
       <section class="panel page-section content-width--wide section-shell">
         <div class="section-header">
-          <p class="eyebrow">Service Finder</p>
-          <h2 class="section-title">Recommended local services</h2>
-          <p class="section-description">
+          <p class="eyebrow" data-i18n="results.eyebrow">Service Finder</p>
+          <h2 class="section-title" data-i18n="results.title">Recommended local services</h2>
+          <p class="section-description" data-i18n="results.description">
             Based on your answers, these services are selected for relevance in Braunschweig.
           </p>
         </div>
@@ -207,7 +207,322 @@
 
   <script src="/app.js"></script>
   <script>
+    const TRANSLATIONS = {
+      en: {
+        "lang.selector": "Language selector",
+        "lang.button.en": "Switch language to English",
+        "lang.button.de": "Switch language to German",
+        "header.title": "Tell us what is going on, Get a clear plan",
+        "header.description": "This check turns your situation into practical, prioritized actions.",
+        "nav.search": "Service search",
+        "nav.survey": "Health check",
+        "nav.add": "For providers",
+        "survey.progress.eyebrow": "Guided Intake",
+        "survey.progress.stepLabel": "Step {current} of {total}",
+        "survey.step1.help": "Select what best describes your situation.",
+        "survey.step1.question": "What is your main situation?",
+        "survey.step1.copy": "This helps us focus on the right type of support.",
+        "survey.step1.customLabel": "Write your own situation",
+        "survey.step1.customPlaceholder": "Type your situation",
+        "survey.step2.help": "This determines the type of services you need.",
+        "survey.step2.question": "How much help do you need?",
+        "survey.step2.copy": "Choose the option closest to your situation.",
+        "survey.step3.help": "Urgency helps prioritize the most relevant services.",
+        "survey.step3.question": "How urgent is your situation?",
+        "survey.step4.help": "We adapt recommendations based on your constraints.",
+        "survey.step4.question": "What is your main barrier?",
+        "survey.step4.customLabel": "Write your own barrier",
+        "survey.step4.customPlaceholder": "Type your barrier",
+        "survey.step5.help": "This helps identify additional support needs.",
+        "survey.step5.question": "Are you facing any of these situations?",
+        "survey.step5.customLabel": "Write your own life context",
+        "survey.step5.customPlaceholder": "Type your life context",
+        "survey.field.hint.chooseOne": "Choose one.",
+        "survey.field.situation.label": "Situation type (required)",
+        "survey.field.situation.ariaLabel": "Situation type",
+        "survey.field.support.label": "Support level",
+        "survey.field.support.ariaLabel": "Support level",
+        "survey.field.urgency.label": "Urgency (required)",
+        "survey.field.urgency.ariaLabel": "Urgency",
+        "survey.field.barrier.label": "Main barrier",
+        "survey.field.barrier.ariaLabel": "Main barrier",
+        "survey.field.context.label": "Life context",
+        "survey.field.context.ariaLabel": "Life context",
+        "survey.option.custom": "Other (write your own)",
+        "survey.option.situation.health": "Health",
+        "survey.option.situation.mentalHealth": "Mental health",
+        "survey.option.situation.socialSupport": "Social support",
+        "survey.option.situation.employmentFinancial": "Employment / financial",
+        "survey.option.situation.housing": "Housing",
+        "survey.option.support.independent": "Independent",
+        "survey.option.support.someHelp": "Some help",
+        "survey.option.support.frequentHelp": "Frequent help",
+        "survey.option.support.dependent": "Dependent",
+        "survey.option.urgency.immediate": "Immediate",
+        "survey.option.urgency.soon": "Soon",
+        "survey.option.urgency.exploring": "Exploring",
+        "survey.option.barrier.navigation": "Navigation",
+        "survey.option.barrier.cost": "Cost",
+        "survey.option.barrier.transport": "Transport",
+        "survey.option.barrier.language": "Language",
+        "survey.option.context.losingJob": "Losing job",
+        "survey.option.context.financialStress": "Financial stress",
+        "survey.option.context.housingIssues": "Housing issues",
+        "survey.option.context.chronicCondition": "Chronic condition",
+        "survey.option.context.none": "None",
+        "survey.button.previous": "Previous",
+        "survey.button.continue": "Continue",
+        "survey.button.findServices": "Find services",
+        "survey.button.findingServices": "Finding services...",
+        "survey.validation.situationRequiredError": "Situation is required.",
+        "survey.validation.selectSituationToContinue": "Please select your situation to continue.",
+        "survey.validation.urgencyRequiredError": "Urgency is required.",
+        "survey.validation.selectUrgencyToContinue": "Please select urgency to continue.",
+        "survey.validation.completeRequiredBeforeSubmit": "Please complete required steps before submitting.",
+        "survey.validation.writeBarrier": "Please write your barrier or choose a listed option.",
+        "survey.validation.writeContext": "Please write your life context or choose a listed option.",
+        "survey.status.findingServices": "Finding services that match your situation.",
+        "survey.status.updateAnswersAndRetry": "Update your answers and try again.",
+        "survey.status.resultsBasedOnAnswers": "These services are based on your answers and local availability.",
+        "survey.status.loadingFailed": "Service loading failed. Please try again.",
+        "results.eyebrow": "Service Finder",
+        "results.title": "Recommended local services",
+        "results.description": "Based on your answers, these services are selected for relevance in Braunschweig.",
+        "results.shell.eyebrow": "Service recommendations",
+        "results.shell.yourSituation.subtitle": "Your situation",
+        "results.shell.yourSituation.title": "Based on your answers",
+        "results.shell.recommended.subtitle": "Recommended services",
+        "results.shell.recommended.title": "Best matches for your situation",
+        "results.shell.secondary.subtitle": "Other relevant options",
+        "results.shell.secondary.title": "Other services that can help",
+        "results.shell.refine.subtitle": "Not the right fit?",
+        "results.shell.refine.title": "Refine your matches",
+        "results.shell.refine.updateAnswers": "Update answers",
+        "results.recommended.none": "No strong service matches are available yet. Update your answers to refine the results.",
+        "results.summary.defaultMatched": "These services are matched to your answers and local availability.",
+        "results.state.initial.introTitle": "Your service matches will appear here",
+        "results.state.initial.introCopy": "Complete the check to see a small set of relevant local services.",
+        "results.state.initial.summary": "Based on your answers, we will summarize your situation before showing matches.",
+        "results.state.initial.fallback": "Update your answers anytime to refine your local service matches.",
+        "results.state.loading.introTitle": "Preparing your recommendations",
+        "results.state.loading.introCopy": "Filtering local services in Braunschweig based on your answers.",
+        "results.state.loading.summary": "We are interpreting your situation to find strong local matches.",
+        "results.state.loading.fallback": "Adjust your answers to improve match quality.",
+        "results.state.noMatches.introTitle": "We could not find strong matches yet",
+        "results.state.noMatches.introCopy": "Your inputs are shown below so you can refine the recommendations.",
+        "results.state.noMatches.fallback": "Update your answers to improve relevance and local matching.",
+        "results.state.success.introTitle": "Services that can help you now",
+        "results.state.success.introCopy": "These services match your situation and are prioritized for relevance.",
+        "results.state.success.fallback": "If these results are not the right fit, adjust your answers and search again.",
+        "results.state.error.introTitle": "Service recommendations unavailable right now",
+        "results.state.error.introCopy": "Please retry shortly. Your answers are still available on this page.",
+        "results.state.error.summary": "Your responses are still available if you want to try again.",
+        "results.state.error.fallback": "Retry shortly, or adjust your answers for better matching.",
+        "snapshot.label.situation": "Situation",
+        "snapshot.label.support": "Support",
+        "snapshot.label.urgency": "Urgency",
+        "snapshot.label.barrier": "Barrier",
+        "snapshot.label.context": "Context",
+        "snapshot.value.placeholder.situation": "Your situation will appear here",
+        "snapshot.value.placeholder.urgency": "Urgency level will appear here",
+        "snapshot.value.placeholder.context": "Context details will appear here",
+        "value.situation.health": "Health",
+        "value.situation.mental_health": "Mental health",
+        "value.situation.social_support": "Social support",
+        "value.situation.employment_financial": "Employment / financial",
+        "value.situation.housing": "Housing",
+        "value.support.independent": "Independent",
+        "value.support.some_help": "Some help",
+        "value.support.frequent_help": "Frequent help",
+        "value.support.dependent": "Dependent",
+        "value.urgency.immediate": "Immediate",
+        "value.urgency.soon": "Soon",
+        "value.urgency.exploring": "Exploring",
+        "value.barrier.navigation": "Navigation",
+        "value.barrier.cost": "Cost",
+        "value.barrier.transport": "Transport",
+        "value.barrier.language": "Language",
+        "value.context.losing_job": "Losing job",
+        "value.context.financial_stress": "Financial stress",
+        "value.context.housing_issues": "Housing issues",
+        "value.context.chronic_condition": "Chronic condition",
+        "value.context.none": "None",
+        "group.health": "Health",
+        "group.mental_health": "Mental health",
+        "group.social_support": "Social support",
+        "group.financial": "Financial",
+        "group.housing": "Housing",
+        "service.optionFallback": "Service option",
+        "service.matchReasonPrefix": "Why this match:",
+        "service.matchReasonFallback": "This service matches your situation and may help with {category} support.",
+        "service.meta.empty": "Address, hours, and service details will appear here when available.",
+        "service.action.contact": "Contact",
+        "service.action.visit": "Visit",
+        "service.action.learnMore": "Learn more"
+      },
+      de: {
+        "lang.selector": "Sprachauswahl",
+        "lang.button.en": "Sprache auf Englisch umstellen",
+        "lang.button.de": "Sprache auf Deutsch umstellen",
+        "header.title": "Erzählen Sie uns, was los ist. Erhalten Sie einen klaren Plan.",
+        "header.description": "Dieser Check übersetzt Ihre Situation in praktische, priorisierte Schritte.",
+        "nav.search": "Servicesuche",
+        "nav.survey": "Gesundheitscheck",
+        "nav.add": "Für Anbieter",
+        "survey.progress.eyebrow": "Geführte Erfassung",
+        "survey.progress.stepLabel": "Schritt {current} von {total}",
+        "survey.step1.help": "Wählen Sie aus, was Ihre Situation am besten beschreibt.",
+        "survey.step1.question": "Was ist Ihre Hauptsituation?",
+        "survey.step1.copy": "So können wir die passende Art von Unterstützung priorisieren.",
+        "survey.step1.customLabel": "Eigene Situation eingeben",
+        "survey.step1.customPlaceholder": "Situation eingeben",
+        "survey.step2.help": "Damit bestimmen wir, welche Art von Angeboten Sie brauchen.",
+        "survey.step2.question": "Wie viel Unterstützung benötigen Sie?",
+        "survey.step2.copy": "Wählen Sie die Option, die Ihrer Situation am nächsten kommt.",
+        "survey.step3.help": "Die Dringlichkeit hilft, die relevantesten Angebote zu priorisieren.",
+        "survey.step3.question": "Wie dringend ist Ihre Situation?",
+        "survey.step4.help": "Wir passen Empfehlungen an Ihre Einschränkungen an.",
+        "survey.step4.question": "Was ist Ihre größte Hürde?",
+        "survey.step4.customLabel": "Eigene Hürde eingeben",
+        "survey.step4.customPlaceholder": "Hürde eingeben",
+        "survey.step5.help": "So können zusätzliche Unterstützungsbedarfe erkannt werden.",
+        "survey.step5.question": "Treffen eine oder mehrere dieser Situationen auf Sie zu?",
+        "survey.step5.customLabel": "Eigenen Lebenskontext eingeben",
+        "survey.step5.customPlaceholder": "Lebenskontext eingeben",
+        "survey.field.hint.chooseOne": "Bitte eine Option wählen.",
+        "survey.field.situation.label": "Art der Situation (erforderlich)",
+        "survey.field.situation.ariaLabel": "Art der Situation",
+        "survey.field.support.label": "Unterstützungsgrad",
+        "survey.field.support.ariaLabel": "Unterstützungsgrad",
+        "survey.field.urgency.label": "Dringlichkeit (erforderlich)",
+        "survey.field.urgency.ariaLabel": "Dringlichkeit",
+        "survey.field.barrier.label": "Größte Hürde",
+        "survey.field.barrier.ariaLabel": "Größte Hürde",
+        "survey.field.context.label": "Lebenskontext",
+        "survey.field.context.ariaLabel": "Lebenskontext",
+        "survey.option.custom": "Sonstiges (eigene Angabe)",
+        "survey.option.situation.health": "Gesundheit",
+        "survey.option.situation.mentalHealth": "Psychische Gesundheit",
+        "survey.option.situation.socialSupport": "Soziale Unterstützung",
+        "survey.option.situation.employmentFinancial": "Arbeit / Finanzen",
+        "survey.option.situation.housing": "Wohnen",
+        "survey.option.support.independent": "Selbstständig",
+        "survey.option.support.someHelp": "Etwas Hilfe",
+        "survey.option.support.frequentHelp": "Häufige Hilfe",
+        "survey.option.support.dependent": "Abhängig",
+        "survey.option.urgency.immediate": "Sofort",
+        "survey.option.urgency.soon": "Bald",
+        "survey.option.urgency.exploring": "Orientierung",
+        "survey.option.barrier.navigation": "Orientierung",
+        "survey.option.barrier.cost": "Kosten",
+        "survey.option.barrier.transport": "Transport",
+        "survey.option.barrier.language": "Sprache",
+        "survey.option.context.losingJob": "Jobverlust",
+        "survey.option.context.financialStress": "Finanzieller Stress",
+        "survey.option.context.housingIssues": "Wohnprobleme",
+        "survey.option.context.chronicCondition": "Chronische Erkrankung",
+        "survey.option.context.none": "Keine",
+        "survey.button.previous": "Zurück",
+        "survey.button.continue": "Weiter",
+        "survey.button.findServices": "Services finden",
+        "survey.button.findingServices": "Services werden gesucht...",
+        "survey.validation.situationRequiredError": "Situation ist erforderlich.",
+        "survey.validation.selectSituationToContinue": "Bitte wählen Sie eine Situation, um fortzufahren.",
+        "survey.validation.urgencyRequiredError": "Dringlichkeit ist erforderlich.",
+        "survey.validation.selectUrgencyToContinue": "Bitte wählen Sie eine Dringlichkeit, um fortzufahren.",
+        "survey.validation.completeRequiredBeforeSubmit": "Bitte füllen Sie die erforderlichen Schritte vor dem Senden aus.",
+        "survey.validation.writeBarrier": "Bitte geben Sie Ihre Hürde ein oder wählen Sie eine vorhandene Option.",
+        "survey.validation.writeContext": "Bitte geben Sie Ihren Lebenskontext ein oder wählen Sie eine vorhandene Option.",
+        "survey.status.findingServices": "Passende Services für Ihre Situation werden gesucht.",
+        "survey.status.updateAnswersAndRetry": "Aktualisieren Sie Ihre Antworten und versuchen Sie es erneut.",
+        "survey.status.resultsBasedOnAnswers": "Diese Services basieren auf Ihren Antworten und der lokalen Verfügbarkeit.",
+        "survey.status.loadingFailed": "Die Services konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+        "results.eyebrow": "Service-Finder",
+        "results.title": "Empfohlene lokale Angebote",
+        "results.description": "Basierend auf Ihren Antworten werden diese Angebote nach Relevanz für Braunschweig ausgewählt.",
+        "results.shell.eyebrow": "Service-Empfehlungen",
+        "results.shell.yourSituation.subtitle": "Ihre Situation",
+        "results.shell.yourSituation.title": "Basierend auf Ihren Antworten",
+        "results.shell.recommended.subtitle": "Empfohlene Services",
+        "results.shell.recommended.title": "Beste Treffer für Ihre Situation",
+        "results.shell.secondary.subtitle": "Weitere relevante Optionen",
+        "results.shell.secondary.title": "Weitere Services, die helfen können",
+        "results.shell.refine.subtitle": "Nicht passend?",
+        "results.shell.refine.title": "Treffer verfeinern",
+        "results.shell.refine.updateAnswers": "Antworten anpassen",
+        "results.recommended.none": "Aktuell sind noch keine starken Service-Treffer verfügbar. Passen Sie Ihre Antworten an, um die Ergebnisse zu verfeinern.",
+        "results.summary.defaultMatched": "Diese Services wurden anhand Ihrer Antworten und der lokalen Verfügbarkeit zugeordnet.",
+        "results.state.initial.introTitle": "Ihre Service-Treffer erscheinen hier",
+        "results.state.initial.introCopy": "Schließen Sie den Check ab, um eine kleine Auswahl relevanter lokaler Services zu sehen.",
+        "results.state.initial.summary": "Auf Basis Ihrer Antworten fassen wir Ihre Situation zusammen, bevor passende Treffer angezeigt werden.",
+        "results.state.initial.fallback": "Aktualisieren Sie Ihre Antworten jederzeit, um lokale Service-Treffer zu verfeinern.",
+        "results.state.loading.introTitle": "Ihre Empfehlungen werden vorbereitet",
+        "results.state.loading.introCopy": "Lokale Services in Braunschweig werden anhand Ihrer Antworten gefiltert.",
+        "results.state.loading.summary": "Ihre Situation wird ausgewertet, um starke lokale Treffer zu finden.",
+        "results.state.loading.fallback": "Passen Sie Ihre Antworten an, um die Trefferqualität zu verbessern.",
+        "results.state.noMatches.introTitle": "Noch keine starken Treffer gefunden",
+        "results.state.noMatches.introCopy": "Ihre Eingaben werden unten angezeigt, damit Sie die Empfehlungen verfeinern können.",
+        "results.state.noMatches.fallback": "Passen Sie Ihre Antworten an, um Relevanz und lokale Zuordnung zu verbessern.",
+        "results.state.success.introTitle": "Services, die jetzt helfen können",
+        "results.state.success.introCopy": "Diese Services passen zu Ihrer Situation und wurden nach Relevanz priorisiert.",
+        "results.state.success.fallback": "Wenn diese Ergebnisse nicht passen, passen Sie Ihre Antworten an und suchen Sie erneut.",
+        "results.state.error.introTitle": "Service-Empfehlungen sind gerade nicht verfügbar",
+        "results.state.error.introCopy": "Bitte versuchen Sie es in Kürze erneut. Ihre Antworten bleiben auf dieser Seite erhalten.",
+        "results.state.error.summary": "Ihre Antworten sind weiterhin verfügbar, falls Sie es erneut versuchen möchten.",
+        "results.state.error.fallback": "Versuchen Sie es in Kürze erneut oder passen Sie Ihre Antworten für bessere Treffer an.",
+        "snapshot.label.situation": "Situation",
+        "snapshot.label.support": "Unterstützung",
+        "snapshot.label.urgency": "Dringlichkeit",
+        "snapshot.label.barrier": "Hürde",
+        "snapshot.label.context": "Kontext",
+        "snapshot.value.placeholder.situation": "Ihre Situation erscheint hier",
+        "snapshot.value.placeholder.urgency": "Die Dringlichkeitsstufe erscheint hier",
+        "snapshot.value.placeholder.context": "Kontextdetails erscheinen hier",
+        "value.situation.health": "Gesundheit",
+        "value.situation.mental_health": "Psychische Gesundheit",
+        "value.situation.social_support": "Soziale Unterstützung",
+        "value.situation.employment_financial": "Arbeit / Finanzen",
+        "value.situation.housing": "Wohnen",
+        "value.support.independent": "Selbstständig",
+        "value.support.some_help": "Etwas Hilfe",
+        "value.support.frequent_help": "Häufige Hilfe",
+        "value.support.dependent": "Abhängig",
+        "value.urgency.immediate": "Sofort",
+        "value.urgency.soon": "Bald",
+        "value.urgency.exploring": "Orientierung",
+        "value.barrier.navigation": "Orientierung",
+        "value.barrier.cost": "Kosten",
+        "value.barrier.transport": "Transport",
+        "value.barrier.language": "Sprache",
+        "value.context.losing_job": "Jobverlust",
+        "value.context.financial_stress": "Finanzieller Stress",
+        "value.context.housing_issues": "Wohnprobleme",
+        "value.context.chronic_condition": "Chronische Erkrankung",
+        "value.context.none": "Keine",
+        "group.health": "Gesundheit",
+        "group.mental_health": "Psychische Gesundheit",
+        "group.social_support": "Soziale Unterstützung",
+        "group.financial": "Finanzen",
+        "group.housing": "Wohnen",
+        "service.optionFallback": "Service-Option",
+        "service.matchReasonPrefix": "Warum dieser Treffer:",
+        "service.matchReasonFallback": "Dieser Service passt zu Ihrer Situation und kann bei {category}-Unterstützung helfen.",
+        "service.meta.empty": "Adresse, Zeiten und Servicedetails erscheinen hier, sobald sie verfügbar sind.",
+        "service.action.contact": "Kontakt",
+        "service.action.visit": "Ansehen",
+        "service.action.learnMore": "Mehr erfahren"
+      }
+    };
+
     let currentLang = localStorage.getItem("cc-lang") || "en";
+
+    function t(key) {
+      return TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS.en?.[key] || key;
+    }
+
+    function tf(key, values = {}) {
+      return t(key).replace(/\{(\w+)\}/g, (_, token) => String(values[token] ?? ""));
+    }
 
     function applyTranslations() {
       const cookieLang = document.cookie.split("; ").find(row => row.startsWith("cc-lang="))?.split("=")[1];
@@ -218,11 +533,31 @@
 
       document.documentElement.lang = currentLang;
 
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = t(el.dataset.i18n);
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        el.setAttribute("placeholder", t(el.dataset.i18nPlaceholder));
+      });
+
+      document.querySelectorAll("[data-i18n-step-help]").forEach(el => {
+        el.dataset.stepHelp = t(el.dataset.i18nStepHelp);
+      });
+
+      const langToggle = document.getElementById("langToggle");
       const btnEn = document.getElementById("btn-en");
       const btnDe = document.getElementById("btn-de");
 
-      if (btnEn) btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
-      if (btnDe) btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+      if (langToggle) langToggle.setAttribute("aria-label", t("lang.selector"));
+      if (btnEn) {
+        btnEn.setAttribute("aria-pressed", String(currentLang === "en"));
+        btnEn.setAttribute("aria-label", t("lang.button.en"));
+      }
+      if (btnDe) {
+        btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
+        btnDe.setAttribute("aria-label", t("lang.button.de"));
+      }
     }
 
     function setLang(lang) {
@@ -235,6 +570,11 @@
         currentLang = lang;
         localStorage.setItem("cc-lang", lang);
         applyTranslations();
+        renderLocalizedHeader();
+        rerenderLocalizedOptionGroups();
+        syncProgressTranslations();
+        updateSurveyStep({ preserveMessage: true });
+        renderCurrentResults();
         document.body.classList.remove("lang-switching");
       }, 150);
     }
@@ -242,95 +582,158 @@
     applyTranslations();
 
     const pageHeader = document.getElementById("pageHeader");
-    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
-      title: "Tell us what is going on, Get a clear plan",
-      description: "This check turns your situation into practical, prioritized actions.",
-      currentNav: "survey"
-    });
+    function renderLocalizedHeader() {
+      pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+        title: t("header.title"),
+        description: t("header.description"),
+        currentNav: "survey",
+        navigationLabels: {
+          search: t("nav.search"),
+          survey: t("nav.survey"),
+          add: t("nav.add")
+        }
+      });
+    }
+
+    renderLocalizedHeader();
 
     const surveyProgress = document.getElementById("surveyProgress");
     surveyProgress.innerHTML = CareCompassUI.renderProgressIndicator({
-      eyebrow: "Guided Intake",
+      eyebrow: t("survey.progress.eyebrow"),
       currentStep: 1,
       totalSteps: 5,
       labelId: "surveyStepLabel",
       fillId: "surveyProgressFill"
     });
 
+    function syncProgressTranslations() {
+      const progressEyebrow = surveyProgress.querySelector(".eyebrow");
+      if (progressEyebrow) {
+        progressEyebrow.textContent = t("survey.progress.eyebrow");
+      }
+    }
+
     const situationField = document.getElementById("situationType");
     const supportField = document.getElementById("supportLevel");
     const urgencyField = document.getElementById("urgencyLevel");
     const barrierField = document.getElementById("barriers");
     const contextField = document.getElementById("lifeContext");
+    const recommendationOrder = ["emergency", "medical", "mental_health", "social_support", "employment_financial", "financial", "housing"];
+    const GROUP_NAME_KEYS = {
+      emergency: "group.health",
+      medical: "group.health",
+      mental_health: "group.mental_health",
+      social_support: "group.social_support",
+      financial: "group.financial",
+      employment_financial: "group.financial",
+      housing: "group.housing"
+    };
+    const VALUE_LABEL_KEYS = {
+      situation: {
+        health: "value.situation.health",
+        mental_health: "value.situation.mental_health",
+        social_support: "value.situation.social_support",
+        employment_financial: "value.situation.employment_financial",
+        housing: "value.situation.housing"
+      },
+      support: {
+        independent: "value.support.independent",
+        some_help: "value.support.some_help",
+        frequent_help: "value.support.frequent_help",
+        dependent: "value.support.dependent"
+      },
+      urgency: {
+        immediate: "value.urgency.immediate",
+        soon: "value.urgency.soon",
+        exploring: "value.urgency.exploring"
+      },
+      barrier: {
+        navigation: "value.barrier.navigation",
+        cost: "value.barrier.cost",
+        transport: "value.barrier.transport",
+        language: "value.barrier.language"
+      },
+      context: {
+        losing_job: "value.context.losing_job",
+        financial_stress: "value.context.financial_stress",
+        housing_issues: "value.context.housing_issues",
+        chronic_condition: "value.context.chronic_condition",
+        none: "value.context.none"
+      }
+    };
 
-    situationField.innerHTML = CareCompassUI.renderOptionTileGroup({
-      label: "Situation type (required)",
-      name: "situation",
-      hint: "Choose one.",
-      ariaLabel: "Situation type",
-      options: [
-        { label: "Health", value: "health" },
-        { label: "Mental health", value: "mental_health" },
-        { label: "Social support", value: "social_support" },
-        { label: "Employment / financial", value: "employment_financial" },
-        { label: "Housing", value: "housing" },
-        { label: "Other (write your own)", value: "custom" }
-      ]
-    });
+    function renderLocalizedOptionGroups() {
+      situationField.innerHTML = CareCompassUI.renderOptionTileGroup({
+        label: t("survey.field.situation.label"),
+        name: "situation",
+        hint: t("survey.field.hint.chooseOne"),
+        ariaLabel: t("survey.field.situation.ariaLabel"),
+        options: [
+          { label: t("survey.option.situation.health"), value: "health" },
+          { label: t("survey.option.situation.mentalHealth"), value: "mental_health" },
+          { label: t("survey.option.situation.socialSupport"), value: "social_support" },
+          { label: t("survey.option.situation.employmentFinancial"), value: "employment_financial" },
+          { label: t("survey.option.situation.housing"), value: "housing" },
+          { label: t("survey.option.custom"), value: "custom" }
+        ]
+      });
 
-    supportField.innerHTML = CareCompassUI.renderOptionTileGroup({
-      label: "Support level",
-      name: "support",
-      hint: "Choose one.",
-      ariaLabel: "Support level",
-      options: [
-        { label: "Independent", value: "independent" },
-        { label: "Some help", value: "some_help" },
-        { label: "Frequent help", value: "frequent_help" },
-        { label: "Dependent", value: "dependent" }
-      ]
-    });
+      supportField.innerHTML = CareCompassUI.renderOptionTileGroup({
+        label: t("survey.field.support.label"),
+        name: "support",
+        hint: t("survey.field.hint.chooseOne"),
+        ariaLabel: t("survey.field.support.ariaLabel"),
+        options: [
+          { label: t("survey.option.support.independent"), value: "independent" },
+          { label: t("survey.option.support.someHelp"), value: "some_help" },
+          { label: t("survey.option.support.frequentHelp"), value: "frequent_help" },
+          { label: t("survey.option.support.dependent"), value: "dependent" }
+        ]
+      });
 
-    urgencyField.innerHTML = CareCompassUI.renderOptionTileGroup({
-      label: "Urgency (required)",
-      name: "urgency",
-      hint: "Choose one.",
-      ariaLabel: "Urgency",
-      options: [
-        { label: "Immediate", value: "immediate" },
-        { label: "Soon", value: "soon" },
-        { label: "Exploring", value: "exploring" }
-      ]
-    });
+      urgencyField.innerHTML = CareCompassUI.renderOptionTileGroup({
+        label: t("survey.field.urgency.label"),
+        name: "urgency",
+        hint: t("survey.field.hint.chooseOne"),
+        ariaLabel: t("survey.field.urgency.ariaLabel"),
+        options: [
+          { label: t("survey.option.urgency.immediate"), value: "immediate" },
+          { label: t("survey.option.urgency.soon"), value: "soon" },
+          { label: t("survey.option.urgency.exploring"), value: "exploring" }
+        ]
+      });
 
-    barrierField.innerHTML = CareCompassUI.renderOptionTileGroup({
-      label: "Main barrier",
-      name: "barrier",
-      hint: "Choose one.",
-      ariaLabel: "Main barrier",
-      options: [
-        { label: "Navigation", value: "navigation" },
-        { label: "Cost", value: "cost" },
-        { label: "Transport", value: "transport" },
-        { label: "Language", value: "language" },
-        { label: "Other (write your own)", value: "custom" }
-      ]
-    });
+      barrierField.innerHTML = CareCompassUI.renderOptionTileGroup({
+        label: t("survey.field.barrier.label"),
+        name: "barrier",
+        hint: t("survey.field.hint.chooseOne"),
+        ariaLabel: t("survey.field.barrier.ariaLabel"),
+        options: [
+          { label: t("survey.option.barrier.navigation"), value: "navigation" },
+          { label: t("survey.option.barrier.cost"), value: "cost" },
+          { label: t("survey.option.barrier.transport"), value: "transport" },
+          { label: t("survey.option.barrier.language"), value: "language" },
+          { label: t("survey.option.custom"), value: "custom" }
+        ]
+      });
 
-    contextField.innerHTML = CareCompassUI.renderOptionTileGroup({
-      label: "Life context",
-      name: "context",
-      hint: "Choose one.",
-      ariaLabel: "Life context",
-      options: [
-        { label: "Losing job", value: "losing_job" },
-        { label: "Financial stress", value: "financial_stress" },
-        { label: "Housing issues", value: "housing_issues" },
-        { label: "Chronic condition", value: "chronic_condition" },
-        { label: "None", value: "none" },
-        { label: "Other (write your own)", value: "custom" }
-      ]
-    });
+      contextField.innerHTML = CareCompassUI.renderOptionTileGroup({
+        label: t("survey.field.context.label"),
+        name: "context",
+        hint: t("survey.field.hint.chooseOne"),
+        ariaLabel: t("survey.field.context.ariaLabel"),
+        options: [
+          { label: t("survey.option.context.losingJob"), value: "losing_job" },
+          { label: t("survey.option.context.financialStress"), value: "financial_stress" },
+          { label: t("survey.option.context.housingIssues"), value: "housing_issues" },
+          { label: t("survey.option.context.chronicCondition"), value: "chronic_condition" },
+          { label: t("survey.option.context.none"), value: "none" },
+          { label: t("survey.option.custom"), value: "custom" }
+        ]
+      });
+    }
+
+    renderLocalizedOptionGroups();
 
     const surveySteps = Array.from(document.querySelectorAll(".survey-step"));
     const modeInputs = Array.from(document.querySelectorAll('input[name="intakeMode"]'));
@@ -340,6 +743,7 @@
     const surveyProgressFill = document.getElementById("surveyProgressFill");
     const surveyMessage = document.getElementById("surveyMessage");
     const prevButton = document.getElementById("prevButton");
+    const surveyStepsContainer = document.querySelector(".survey-steps");
     const nextButton = document.getElementById("nextButton");
     const aiPromptInput = document.getElementById("aiPromptInput");
     const aiSubmitButton = document.getElementById("aiSubmitButton");
@@ -354,20 +758,63 @@
     const contextCustomInput = document.getElementById("contextCustom");
     const situationError = document.getElementById("situationError");
     const urgencyError = document.getElementById("urgencyError");
-    const situationGroup = situationField.querySelector(".choice-group");
-    const urgencyGroup = urgencyField.querySelector(".choice-group");
-    const groupNames = {
-      emergency: "Health",
-      medical: "Health",
-      mental_health: "Mental health",
-      social_support: "Social support",
-      financial: "Financial",
-      employment_financial: "Financial",
-      housing: "Housing"
-    };
-    const recommendationOrder = ["emergency", "medical", "mental_health", "social_support", "employment_financial", "financial", "housing"];
-    let intakeMode = "default";
     let currentStep = 0;
+    let renderCurrentResults = () => {};
+
+    function captureSurveySelections() {
+      return {
+        situation: getSelectedValue("situation"),
+        support: getSelectedValue("support"),
+        urgency: getSelectedValue("urgency"),
+        barrier: getSelectedValue("barrier"),
+        context: getSelectedValue("context"),
+        situationCustom: situationCustomInput.value,
+        barrierCustom: barrierCustomInput.value,
+        contextCustom: contextCustomInput.value
+      };
+    }
+
+    function restoreSurveySelections(selections) {
+      if (!selections) {
+        return;
+      }
+
+      ["situation", "support", "urgency", "barrier", "context"].forEach(name => {
+        const selectedValue = selections[name];
+        if (!selectedValue) {
+          return;
+        }
+
+        const input = document.querySelector(`input[name="${name}"][value="${selectedValue}"]`);
+        if (input) {
+          input.checked = true;
+        }
+      });
+
+      situationCustomInput.value = selections.situationCustom || "";
+      barrierCustomInput.value = selections.barrierCustom || "";
+      contextCustomInput.value = selections.contextCustom || "";
+
+      toggleCustomField("situation", situationCustomField, situationCustomInput);
+      toggleCustomField("barrier", barrierCustomField, barrierCustomInput);
+      toggleCustomField("context", contextCustomField, contextCustomInput);
+    }
+
+    function rerenderLocalizedOptionGroups() {
+      const selections = captureSurveySelections();
+      renderLocalizedOptionGroups();
+      restoreSurveySelections(selections);
+      clearValidationErrors();
+      updateContinueState();
+    }
+
+    function getSituationGroup() {
+      return situationField.querySelector(".choice-group");
+    }
+
+    function getUrgencyGroup() {
+      return urgencyField.querySelector(".choice-group");
+    }
     const aiSubmitButtonDefaultLabel = aiSubmitButton ? aiSubmitButton.textContent.trim() : "Find services";
 
     function escapeHtml(value) {
@@ -445,8 +892,8 @@
     }
 
     function clearValidationErrors() {
-      clearFieldError(situationGroup, situationError);
-      clearFieldError(urgencyGroup, urgencyError);
+      clearFieldError(getSituationGroup(), situationError);
+      clearFieldError(getUrgencyGroup(), urgencyError);
     }
 
     function getSelectedValue(name) {
@@ -507,8 +954,8 @@
         const situationValue = getDecisionValue("situation", situationCustomInput);
 
         if (!situationValue) {
-          setFieldError(situationGroup, situationError, "Situation is required.");
-          setSurveyMessage("Please select your situation to continue.", "error");
+          setFieldError(getSituationGroup(), situationError, t("survey.validation.situationRequiredError"));
+          setSurveyMessage(t("survey.validation.selectSituationToContinue"), "error");
 
           if (getSelectedValue("situation") === "custom") {
             situationCustomInput.focus();
@@ -526,8 +973,8 @@
 
       if (currentStep === 2) {
         if (!getSelectedValue("urgency")) {
-          setFieldError(urgencyGroup, urgencyError, "Urgency is required.");
-          setSurveyMessage("Please select urgency to continue.", "error");
+          setFieldError(getUrgencyGroup(), urgencyError, t("survey.validation.urgencyRequiredError"));
+          setSurveyMessage(t("survey.validation.selectUrgencyToContinue"), "error");
           const firstUrgency = urgencyField.querySelector('input[name="urgency"]');
           if (firstUrgency) {
             firstUrgency.focus();
@@ -551,7 +998,7 @@
     }
 
     function updateSurveyStep(options = {}) {
-      const { focus = false } = options;
+      const { focus = false, preserveMessage = false } = options;
       const totalSteps = surveySteps.length;
       const progress = ((currentStep + 1) / totalSteps) * 100;
 
@@ -559,12 +1006,14 @@
         step.hidden = index !== currentStep;
       });
 
-      surveyStepLabel.textContent = `Step ${currentStep + 1} of ${totalSteps}`;
+      surveyStepLabel.textContent = tf("survey.progress.stepLabel", { current: currentStep + 1, total: totalSteps });
       surveyProgressFill.style.width = `${progress}%`;
       prevButton.disabled = currentStep === 0;
-      nextButton.textContent = currentStep === totalSteps - 1 ? "Find services" : "Continue";
+      nextButton.textContent = currentStep === totalSteps - 1 ? t("survey.button.findServices") : t("survey.button.continue");
       updateContinueState();
-      setSurveyMessage(surveySteps[currentStep].dataset.stepHelp || "", "helper");
+      if (!preserveMessage) {
+        setSurveyMessage(surveySteps[currentStep].dataset.stepHelp || "", "helper");
+      }
 
       if (focus) {
         focusActiveStep();
@@ -579,7 +1028,41 @@
       currentStep -= 1;
       updateSurveyStep({ focus: true });
     });
+    if (surveyStepsContainer) {
+      surveyStepsContainer.addEventListener("change", event => {
+        const target = event.target;
 
+        if (!(target instanceof HTMLInputElement)) {
+          return;
+        }
+
+        if (!target.classList.contains("choice-input") || !target.checked) {
+          return;
+        }
+
+        const activeStep = surveySteps[currentStep];
+        if (!activeStep || !activeStep.contains(target)) {
+          return;
+        }
+
+        // Do not auto-continue when custom text input is required.
+        if (target.value === "custom") {
+          return;
+        }
+
+        if (!validateCurrentStep()) {
+          return;
+        }
+
+        if (currentStep === surveySteps.length - 1) {
+          submitForm();
+          return;
+        }
+
+        currentStep += 1;
+        updateSurveyStep({ focus: true });
+      });
+    }
     nextButton.addEventListener("click", () => {
       if (!validateCurrentStep()) {
         return;
@@ -614,7 +1097,7 @@
 
     situationField.addEventListener("change", event => {
       if (event.target && event.target.name === "situation") {
-        clearFieldError(situationGroup, situationError);
+        clearFieldError(getSituationGroup(), situationError);
         toggleCustomField("situation", situationCustomField, situationCustomInput);
         updateContinueState();
       }
@@ -633,13 +1116,13 @@
     });
 
     situationCustomInput.addEventListener("input", () => {
-      clearFieldError(situationGroup, situationError);
+      clearFieldError(getSituationGroup(), situationError);
       updateContinueState();
     });
 
     urgencyField.addEventListener("change", event => {
       if (event.target && event.target.name === "urgency") {
-        clearFieldError(urgencyGroup, urgencyError);
+        clearFieldError(getUrgencyGroup(), urgencyError);
         updateContinueState();
       }
     });
@@ -649,16 +1132,35 @@
         return "";
       }
 
-      return value.charAt(0).toUpperCase() + value.slice(1);
+      const normalized = String(value).trim();
+      if (!normalized) {
+        return "";
+      }
+
+      return normalized.charAt(0).toUpperCase() + normalized.slice(1);
+    }
+
+    function getLocalizedValue(fieldName, rawValue) {
+      const normalizedValue = String(rawValue || "").trim();
+      if (!normalizedValue) {
+        return "";
+      }
+
+      const translationKey = VALUE_LABEL_KEYS[fieldName]?.[normalizedValue];
+      if (translationKey) {
+        return t(translationKey);
+      }
+
+      return formatValue(normalizedValue.replace(/_/g, " "));
     }
 
     function getSnapshotEntries(data) {
       return [
-        { label: "Situation", value: formatValue(data.situation || "") },
-        { label: "Support", value: formatValue((data.support || "").replace(/_/g, " ")) },
-        { label: "Urgency", value: formatValue(data.urgency || "") },
-        { label: "Barrier", value: formatValue(data.barrier || "") },
-        { label: "Context", value: formatValue((data.context || "").replace(/_/g, " ")) }
+        { label: t("snapshot.label.situation"), value: getLocalizedValue("situation", data.situation) },
+        { label: t("snapshot.label.support"), value: getLocalizedValue("support", data.support) },
+        { label: t("snapshot.label.urgency"), value: getLocalizedValue("urgency", data.urgency) },
+        { label: t("snapshot.label.barrier"), value: getLocalizedValue("barrier", data.barrier) },
+        { label: t("snapshot.label.context"), value: getLocalizedValue("context", data.context) }
       ].filter(entry => entry.value);
     }
 
@@ -666,7 +1168,7 @@
       return recommendationOrder
         .map(key => ({
           key,
-          label: groupNames[key] || key,
+          label: GROUP_NAME_KEYS[key] ? t(GROUP_NAME_KEYS[key]) : formatValue(String(key).replace(/_/g, " ")),
           items: Array.isArray(groups[key]) ? groups[key].filter(Boolean) : []
         }))
         .filter(group => group.items.length);
@@ -694,7 +1196,7 @@
         return service.reason;
       }
 
-      return `This service matches your situation and may help with ${fallbackCategory.toLowerCase()} support.`;
+      return tf("service.matchReasonFallback", { category: String(fallbackCategory || "").toLowerCase() });
     }
 
     function renderTagList(tags) {
@@ -704,7 +1206,7 @@
     function renderServiceMeta(service) {
       return CareCompassUI.renderMetaStack(
         [service.address, service.hours, service.specialty],
-        "Address, hours, and service details will appear here when available."
+        t("service.meta.empty")
       );
     }
 
@@ -722,18 +1224,21 @@
 
     function renderServiceActions(service) {
       const { contactHref, visitHref, learnMoreHref } = getServiceActionLinks(service);
+      const contactLabel = t("service.action.contact");
+      const visitLabel = t("service.action.visit");
+      const learnMoreLabel = t("service.action.learnMore");
 
       const contactAction = contactHref
-        ? `<a class="button button--primary" href="${contactHref}" target="_blank" rel="noopener">Contact</a>`
-        : `<button class="button button--primary" type="button" disabled>Contact</button>`;
+        ? `<a class="button button--primary" href="${contactHref}" target="_blank" rel="noopener">${contactLabel}</a>`
+        : `<button class="button button--primary" type="button" disabled>${contactLabel}</button>`;
 
       const visitAction = visitHref
-        ? `<a class="button button--secondary" href="${visitHref}" target="_blank" rel="noopener">Visit</a>`
-        : `<button class="button button--secondary" type="button" disabled>Visit</button>`;
+        ? `<a class="button button--secondary" href="${visitHref}" target="_blank" rel="noopener">${visitLabel}</a>`
+        : `<button class="button button--secondary" type="button" disabled>${visitLabel}</button>`;
 
       const learnMoreAction = learnMoreHref
-        ? `<a class="button button--secondary" href="${learnMoreHref}" target="_blank" rel="noopener">Learn more</a>`
-        : `<button class="button button--secondary" type="button" disabled>Learn more</button>`;
+        ? `<a class="button button--secondary" href="${learnMoreHref}" target="_blank" rel="noopener">${learnMoreLabel}</a>`
+        : `<button class="button button--secondary" type="button" disabled>${learnMoreLabel}</button>`;
 
       return `
         <div class="button-row results-actions">
@@ -748,9 +1253,9 @@
       const snapshotEntries = entries.length
         ? entries
         : [
-          { label: "Situation", value: "Your situation will appear here" },
-          { label: "Urgency", value: "Urgency level will appear here" },
-          { label: "Context", value: "Context details will appear here" }
+          { label: t("snapshot.label.situation"), value: t("snapshot.value.placeholder.situation") },
+          { label: t("snapshot.label.urgency"), value: t("snapshot.value.placeholder.urgency") },
+          { label: t("snapshot.label.context"), value: t("snapshot.value.placeholder.context") }
         ];
 
       return `
@@ -769,7 +1274,7 @@
       if (!recommendations.length) {
         return `
           <div class="fallback-box">
-            <p class="card-copy">No strong service matches are available yet. Update your answers to refine the results.</p>
+            <p class="card-copy">${t("results.recommended.none")}</p>
           </div>
         `;
       }
@@ -779,10 +1284,10 @@
           ${recommendations.slice(0, 6).map(({ groupLabel, service }, index) => `
             <article class="card service-card ${index === 0 ? "results-card--primary" : ""}">
               <div class="service-card-group">
-                <h4 class="card-title">${service.name || "Service option"}</h4>
+                <h4 class="card-title">${service.name || t("service.optionFallback")}</h4>
                 <span class="results-badge">${groupLabel}</span>
               </div>
-              <p class="card-copy"><strong>Why this match:</strong> ${getMatchReason(service, groupLabel)}</p>
+              <p class="card-copy"><strong>${t("service.matchReasonPrefix")}</strong> ${getMatchReason(service, groupLabel)}</p>
               ${renderServiceMeta(service)}
               ${renderTagList(service.tags)}
               ${renderServiceActions(service)}
@@ -802,10 +1307,10 @@
           ${secondaryRecommendations.slice(0, 4).map(({ groupLabel, service }) => `
             <article class="card service-card">
               <div class="service-card-group">
-                <h4 class="card-title">${service.name || "Service option"}</h4>
+                <h4 class="card-title">${service.name || t("service.optionFallback")}</h4>
                 <span class="results-badge">${groupLabel}</span>
               </div>
-              <p class="card-copy"><strong>Why this match:</strong> ${getMatchReason(service, groupLabel)}</p>
+              <p class="card-copy"><strong>${t("service.matchReasonPrefix")}</strong> ${getMatchReason(service, groupLabel)}</p>
               ${renderServiceMeta(service)}
               ${renderTagList(service.tags)}
               ${renderServiceActions(service)}
@@ -826,15 +1331,15 @@
     }) {
       return `
         <div class="results-intro">
-          <p class="eyebrow">Service recommendations</p>
+          <p class="eyebrow">${t("results.shell.eyebrow")}</p>
           <h3 class="results-title">${introTitle}</h3>
           <p class="results-lead">${introCopy}</p>
         </div>
 
         <article class="card results-card">
           <div class="stack-sm">
-            <p class="results-subtitle">Your situation</p>
-            <h3 class="results-title">Based on your answers</h3>
+            <p class="results-subtitle">${t("results.shell.yourSituation.subtitle")}</p>
+            <h3 class="results-title">${t("results.shell.yourSituation.title")}</h3>
             <p class="card-copy">${summaryText}</p>
           </div>
           ${renderSnapshotGrid(snapshotEntries)}
@@ -842,8 +1347,8 @@
 
         <article class="card results-card">
           <div class="stack-sm">
-            <p class="results-subtitle">Recommended services</p>
-            <h3 class="results-title">Best matches for your situation</h3>
+            <p class="results-subtitle">${t("results.shell.recommended.subtitle")}</p>
+            <h3 class="results-title">${t("results.shell.recommended.title")}</h3>
           </div>
           ${renderRecommendedServices(recommendedServices)}
         </article>
@@ -851,8 +1356,8 @@
         ${secondaryServices.length ? `
         <article class="card results-card">
           <div class="stack-sm">
-            <p class="results-subtitle">Other relevant options</p>
-            <h3 class="results-title">Other services that can help</h3>
+            <p class="results-subtitle">${t("results.shell.secondary.subtitle")}</p>
+            <h3 class="results-title">${t("results.shell.secondary.title")}</h3>
           </div>
           ${renderSecondaryServices(secondaryServices)}
         </article>
@@ -860,17 +1365,22 @@
 
         <article class="card results-card results-card--muted">
           <div class="stack-sm">
-            <p class="results-subtitle">Not the right fit?</p>
-            <h3 class="results-title">Refine your matches</h3>
+            <p class="results-subtitle">${t("results.shell.refine.subtitle")}</p>
+            <h3 class="results-title">${t("results.shell.refine.title")}</h3>
           </div>
           <div class="fallback-box">
             <p class="card-copy">${fallbackText}</p>
             <div class="button-row results-actions">
-              <a class="button button--secondary" href="/index.html">Update answers</a>
+              <a class="button button--secondary" href="/form.html">${t("results.shell.refine.updateAnswers")}</a>
             </div>
           </div>
         </article>
       `;
+    }
+
+    function setResultsRenderer(renderer) {
+      renderCurrentResults = renderer;
+      renderCurrentResults();
     }
 
     function renderAiModeResults(query, answer, contextUsed = []) {
@@ -955,18 +1465,18 @@
       };
 
       if (!data.situation || !data.urgency) {
-        setSurveyMessage("Please complete required steps before submitting.", "error");
+        setSurveyMessage(t("survey.validation.completeRequiredBeforeSubmit"), "error");
         return;
       }
 
       if (getSelectedValue("barrier") === "custom" && !data.barrier) {
-        setSurveyMessage("Please write your barrier or choose a listed option.", "error");
+        setSurveyMessage(t("survey.validation.writeBarrier"), "error");
         barrierCustomInput.focus();
         return;
       }
 
       if (getSelectedValue("context") === "custom" && !data.context) {
-        setSurveyMessage("Please write your life context or choose a listed option.", "error");
+        setSurveyMessage(t("survey.validation.writeContext"), "error");
         contextCustomInput.focus();
         return;
       }
@@ -974,16 +1484,18 @@
       const container = document.getElementById("result");
       nextButton.disabled = true;
       prevButton.disabled = true;
-      nextButton.textContent = "Finding services...";
-      setSurveyMessage("Finding services that match your situation.", "helper");
-      container.innerHTML = renderResultsShell({
-        introTitle: "Preparing your recommendations",
-        introCopy: "Filtering local services in Braunschweig based on your answers.",
-        summaryText: "We are interpreting your situation to find strong local matches.",
-        snapshotEntries: getSnapshotEntries(data),
-        recommendedServices: [],
-        secondaryServices: [],
-        fallbackText: "Adjust your answers to improve match quality."
+      nextButton.textContent = t("survey.button.findingServices");
+      setSurveyMessage(t("survey.status.findingServices"), "helper");
+      setResultsRenderer(() => {
+        container.innerHTML = renderResultsShell({
+          introTitle: t("results.state.loading.introTitle"),
+          introCopy: t("results.state.loading.introCopy"),
+          summaryText: t("results.state.loading.summary"),
+          snapshotEntries: getSnapshotEntries(data),
+          recommendedServices: [],
+          secondaryServices: [],
+          fallbackText: t("results.state.loading.fallback")
+        });
       });
 
       try {
@@ -1025,60 +1537,68 @@
         const rankedRecommendations = getRankedRecommendations(groups);
         const recommendedServices = rankedRecommendations.slice(0, 6);
         const secondaryServices = rankedRecommendations.slice(6, 10);
-        const summaryText = summary || "These services are matched to your answers and local availability.";
+        const summaryText = summary || t("results.summary.defaultMatched");
         const snapshotEntries = getSnapshotEntries(data);
 
         if (!groups || !rankedRecommendations.length) {
-          container.innerHTML = renderResultsShell({
-            introTitle: "We could not find strong matches yet",
-            introCopy: "Your inputs are shown below so you can refine the recommendations.",
-            summaryText,
-            snapshotEntries,
-            recommendedServices: [],
-            secondaryServices: [],
-            fallbackText: "Update your answers to improve relevance and local matching."
+          setResultsRenderer(() => {
+            container.innerHTML = renderResultsShell({
+              introTitle: t("results.state.noMatches.introTitle"),
+              introCopy: t("results.state.noMatches.introCopy"),
+              summaryText,
+              snapshotEntries,
+              recommendedServices: [],
+              secondaryServices: [],
+              fallbackText: t("results.state.noMatches.fallback")
+            });
           });
-          setSurveyMessage("Update your answers and try again.", "helper");
+          setSurveyMessage(t("survey.status.updateAnswersAndRetry"), "helper");
           return;
         }
 
-        container.innerHTML = renderResultsShell({
-          introTitle: "Services that can help you now",
-          introCopy: "These services match your situation and are prioritized for relevance.",
-          summaryText,
-          snapshotEntries,
-          recommendedServices,
-          secondaryServices,
-          fallbackText: "If these results are not the right fit, adjust your answers and search again."
+        setResultsRenderer(() => {
+          container.innerHTML = renderResultsShell({
+            introTitle: t("results.state.success.introTitle"),
+            introCopy: t("results.state.success.introCopy"),
+            summaryText,
+            snapshotEntries,
+            recommendedServices,
+            secondaryServices,
+            fallbackText: t("results.state.success.fallback")
+          });
         });
-        setSurveyMessage("These services are based on your answers and local availability.", "helper");
+        setSurveyMessage(t("survey.status.resultsBasedOnAnswers"), "helper");
       } catch (error) {
         console.error("Assess request failed:", error);
-        container.innerHTML = renderResultsShell({
-          introTitle: "Service recommendations unavailable right now",
-          introCopy: "Please retry shortly. Your answers are still available on this page.",
-          summaryText: "Your responses are still available if you want to try again.",
-          snapshotEntries: getSnapshotEntries(data),
-          recommendedServices: [],
-          secondaryServices: [],
-          fallbackText: "Retry shortly, or adjust your answers for better matching."
+        setResultsRenderer(() => {
+          container.innerHTML = renderResultsShell({
+            introTitle: t("results.state.error.introTitle"),
+            introCopy: t("results.state.error.introCopy"),
+            summaryText: t("results.state.error.summary"),
+            snapshotEntries: getSnapshotEntries(data),
+            recommendedServices: [],
+            secondaryServices: [],
+            fallbackText: t("results.state.error.fallback")
+          });
         });
-        setSurveyMessage("Service loading failed. Please try again.", "error");
+        setSurveyMessage(t("survey.status.loadingFailed"), "error");
       } finally {
         prevButton.disabled = currentStep === 0;
-        nextButton.textContent = currentStep === surveySteps.length - 1 ? "Find services" : "Continue";
+        nextButton.textContent = currentStep === surveySteps.length - 1 ? t("survey.button.findServices") : t("survey.button.continue");
         updateContinueState();
       }
     }
 
-    resultsContainer.innerHTML = renderResultsShell({
-      introTitle: "Your service matches will appear here",
-      introCopy: "Complete the check to see a small set of relevant local services.",
-      summaryText: "Based on your answers, we will summarize your situation before showing matches.",
-      snapshotEntries: [],
-      recommendedServices: [],
-      secondaryServices: [],
-      fallbackText: "Update your answers anytime to refine your local service matches."
+    setResultsRenderer(() => {
+      resultsContainer.innerHTML = renderResultsShell({
+        introTitle: t("results.state.initial.introTitle"),
+        introCopy: t("results.state.initial.introCopy"),
+        summaryText: t("results.state.initial.summary"),
+        snapshotEntries: [],
+        recommendedServices: [],
+        secondaryServices: [],
+        fallbackText: t("results.state.initial.fallback")
+      });
     });
 
     toggleCustomField("situation", situationCustomField, situationCustomInput);
