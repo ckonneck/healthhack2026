@@ -7,12 +7,21 @@
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .provider-page {
-      gap: var(--space-6);
+      gap: var(--space-7);
+    }
+
+    .provider-page > .section-header {
+      gap: var(--space-4);
+      max-width: 43rem;
+    }
+
+    .provider-page .card {
+      padding: clamp(1.15rem, 1.6vw, 1.5rem);
     }
 
     .provider-note-list {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -39,35 +48,79 @@
 
     .provider-workspace {
       display: grid;
-      gap: var(--space-5);
+      gap: var(--space-6);
       align-items: start;
       grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 1fr);
     }
 
     .provider-main-stack,
-    .provider-form-stack,
-    .provider-success-stack {
+    .provider-form-stack {
       display: grid;
-      gap: var(--space-4);
+      gap: var(--space-5);
+    }
+
+    .provider-page .section-header--compact {
+      gap: var(--space-3);
+    }
+
+    .provider-page .field {
+      gap: 0.7rem;
     }
 
     .provider-section-card {
-      gap: var(--space-4);
+      gap: var(--space-5);
+    }
+
+    .provider-details-card {
+      gap: var(--space-5);
+    }
+
+    .provider-details-header {
+      gap: var(--space-3);
+    }
+
+    .provider-details-grid {
+      gap: var(--space-5) var(--space-4);
+    }
+
+    .provider-details-field {
+      gap: var(--space-2);
+      align-content: start;
+    }
+
+    .provider-details-copy {
+      display: grid;
+      gap: 0.35rem;
+      min-height: 3.45rem;
+      align-content: start;
+    }
+
+    .provider-details-hint {
+      margin: 0;
+    }
+
+    .provider-details-control {
+      min-height: 3.05rem;
+      align-self: start;
+    }
+
+    .provider-details-field .field-error {
+      min-height: 1.5rem;
     }
 
     .provider-field-grid {
       display: grid;
-      gap: var(--space-4);
+      gap: var(--space-5) var(--space-4);
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .provider-hours-card {
-      gap: var(--space-4);
+      gap: var(--space-5);
     }
 
     .provider-hours-field {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       margin: 0;
       padding: 0;
       border: 0;
@@ -76,7 +129,7 @@
 
     .provider-hours-grid {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 
@@ -86,7 +139,7 @@
 
     .provider-tags-field {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       margin: 0;
       padding: 0;
       border: 0;
@@ -96,7 +149,7 @@
     .provider-tag-selector {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-2);
+      gap: 0.65rem;
     }
 
     .provider-tag-option {
@@ -151,16 +204,17 @@
 
     .provider-form-footer {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
+      padding-top: var(--space-2);
     }
 
-    .provider-form-actions,
-    .provider-success-actions {
+    .provider-form-actions {
+      gap: var(--space-3);
+      align-items: center;
       justify-content: flex-start;
     }
 
-    .provider-form-actions .button,
-    .provider-success-actions .button {
+    .provider-form-actions .button {
       min-width: 11rem;
     }
 
@@ -193,14 +247,15 @@
 
     .provider-preview-card {
       position: sticky;
-      top: var(--space-5);
+      top: var(--space-6);
       align-self: start;
+      gap: var(--space-5);
     }
 
     .provider-preview-surface {
       display: grid;
-      gap: var(--space-4);
-      padding: 1rem 1.05rem;
+      gap: var(--space-5);
+      padding: 1.15rem 1.2rem;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
       background: var(--color-surface-subtle);
@@ -220,18 +275,18 @@
 
     .provider-preview-details {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       margin: 0;
     }
 
     .provider-preview-row {
       display: grid;
-      gap: 0.35rem;
+      gap: 0.45rem;
       margin: 0;
     }
 
     .provider-preview-row + .provider-preview-row {
-      padding-top: var(--space-3);
+      padding-top: var(--space-4);
       border-top: 1px solid var(--color-border);
     }
 
@@ -259,8 +314,13 @@
     }
 
     @media (max-width: 900px) {
+      .provider-page {
+        gap: var(--space-6);
+      }
+
       .provider-workspace {
         grid-template-columns: 1fr;
+        gap: var(--space-5);
       }
 
       .provider-preview-card {
@@ -269,13 +329,36 @@
     }
 
     @media (max-width: 680px) {
-      .provider-field-grid,
-      .provider-hours-grid--custom {
-        grid-template-columns: 1fr;
+      .provider-page {
+        gap: var(--space-5);
       }
 
-      .provider-form-actions > *,
-      .provider-success-actions > * {
+      .provider-page .card {
+        padding: 1rem;
+      }
+
+      .provider-main-stack,
+      .provider-form-stack {
+        gap: var(--space-4);
+      }
+
+      .provider-field-grid,
+      .provider-hours-grid,
+      .provider-hours-grid--custom {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+      }
+
+      .provider-details-copy {
+        min-height: 0;
+      }
+
+      .provider-preview-surface {
+        gap: var(--space-4);
+        padding: 1rem;
+      }
+
+      .provider-form-actions > * {
         flex: 1 1 100%;
       }
     }
@@ -303,30 +386,50 @@
         <ul class="provider-note-list">
           <li class="provider-note-item">Use the official service name, specialty, and full address.</li>
           <li class="provider-note-item">Set the opening hours with the day and time selectors so they are easy to review.</li>
-          <li class="provider-note-item">Successful submissions stay in this browser only for now, so you can confirm the listing before backend wiring.</li>
+          <li class="provider-note-item">Successful submissions are saved to the Care Compass service data through the existing backend.</li>
         </ul>
       </div>
 
       <div class="provider-workspace">
         <div class="provider-main-stack">
           <form id="providerForm" class="provider-form-stack" novalidate>
-            <section class="card card-stack provider-section-card">
-              <div class="section-header section-header--compact">
+            <section class="card card-stack provider-section-card provider-details-card">
+              <div class="section-header section-header--compact provider-details-header">
                 <p class="eyebrow">Service details</p>
                 <h3 class="card-title">Basic listing information</h3>
                 <p class="card-copy">Add the main details providers need to recognize and review the service.</p>
               </div>
 
-              <div class="provider-field-grid">
-                <label class="field" for="name">
-                  <span class="field-label">Service name</span>
-                  <input id="name" name="name" class="field-control" type="text" required autocomplete="organization" />
+              <div class="provider-field-grid provider-details-grid">
+                <label class="field provider-details-field" for="name">
+                  <span class="provider-details-copy">
+                    <span class="field-label">Service name</span>
+                    <span id="nameHint" class="field-hint provider-details-hint">Example: Physiotherapy Clinic ActiveMove</span>
+                  </span>
+                  <input
+                    id="name"
+                    name="name"
+                    class="field-control provider-details-control"
+                    type="text"
+                    required
+                    autocomplete="organization"
+                    aria-describedby="nameHint nameError"
+                  />
                   <p id="nameError" class="field-error" aria-live="polite"></p>
                 </label>
 
-                <label class="field" for="type">
-                  <span class="field-label">Service type</span>
-                  <select id="type" name="type" class="field-control" required>
+                <label class="field provider-details-field" for="type">
+                  <span class="provider-details-copy">
+                    <span class="field-label">Service type</span>
+                    <span id="typeHint" class="field-hint provider-details-hint">Choose the closest service category.</span>
+                  </span>
+                  <select
+                    id="type"
+                    name="type"
+                    class="field-control provider-details-control"
+                    required
+                    aria-describedby="typeHint typeError"
+                  >
                     <option value="">Select a service type</option>
                     <option value="clinic">clinic</option>
                     <option value="counseling">counseling</option>
@@ -341,15 +444,37 @@
                   <p id="typeError" class="field-error" aria-live="polite"></p>
                 </label>
 
-                <label class="field" for="specialty">
-                  <span class="field-label">Specialty</span>
-                  <input id="specialty" name="specialty" class="field-control" type="text" required autocomplete="off" />
+                <label class="field provider-details-field" for="specialty">
+                  <span class="provider-details-copy">
+                    <span class="field-label">Specialty</span>
+                    <span id="specialtyHint" class="field-hint provider-details-hint">Example: physiotherapy</span>
+                  </span>
+                  <input
+                    id="specialty"
+                    name="specialty"
+                    class="field-control provider-details-control"
+                    type="text"
+                    required
+                    autocomplete="off"
+                    aria-describedby="specialtyHint specialtyError"
+                  />
                   <p id="specialtyError" class="field-error" aria-live="polite"></p>
                 </label>
 
-                <label class="field" for="address">
-                  <span class="field-label">Address</span>
-                  <input id="address" name="address" class="field-control" type="text" required autocomplete="street-address" />
+                <label class="field provider-details-field" for="address">
+                  <span class="provider-details-copy">
+                    <span class="field-label">Address</span>
+                    <span id="addressHint" class="field-hint provider-details-hint">Example: Bewegungsweg 11, 38120 Braunschweig</span>
+                  </span>
+                  <input
+                    id="address"
+                    name="address"
+                    class="field-control provider-details-control"
+                    type="text"
+                    required
+                    autocomplete="street-address"
+                    aria-describedby="addressHint addressError"
+                  />
                   <p id="addressError" class="field-error" aria-live="polite"></p>
                 </label>
               </div>
@@ -418,7 +543,7 @@
                   </label>
                 </div>
 
-                <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times.</p>
+                <p id="hoursHint" class="field-hint">Choose a day range plus opening and closing times. Example output: Mon-Fri 07:00-18:00.</p>
                 <p id="hoursError" class="field-error" aria-live="polite"></p>
               </fieldset>
             </section>
@@ -433,13 +558,20 @@
               <fieldset class="provider-tags-field" aria-describedby="tagsHint tagsError">
                 <legend class="field-label">Tags</legend>
                 <div id="tagsSelector" class="provider-tag-selector" role="group" aria-label="Service tags"></div>
-                <p id="tagsHint" class="field-hint">Choose every tag that clearly applies to this service.</p>
+                <p id="tagsHint" class="field-hint">Select all relevant tags for this service.</p>
                 <p id="tagsError" class="field-error" aria-live="polite"></p>
               </fieldset>
 
               <label class="field" for="description">
                 <span class="field-label">Description</span>
-                <textarea id="description" name="description" class="field-control field-control--textarea" required></textarea>
+                <textarea
+                  id="description"
+                  name="description"
+                  class="field-control field-control--textarea"
+                  required
+                  aria-describedby="descriptionHint descriptionError"
+                ></textarea>
+                <p id="descriptionHint" class="field-hint">Example: Rehabilitation and movement therapy</p>
                 <p id="descriptionError" class="field-error" aria-live="polite"></p>
               </label>
             </section>
@@ -454,21 +586,6 @@
             </div>
           </form>
 
-          <div id="submissionResult" class="provider-success-stack" hidden>
-            <div class="card card-stack" role="status" aria-live="polite">
-              <div class="section-header section-header--compact">
-                <p class="eyebrow">Submission ready</p>
-                <h3 class="card-title">Service listing prepared successfully</h3>
-                <p class="card-copy">Review the listing preview and add another service if you need to prepare one more entry.</p>
-              </div>
-              <p id="submissionStatus" class="provider-status provider-status--success" hidden></p>
-            </div>
-
-            <div class="button-row provider-success-actions">
-              <button id="addAnotherButton" type="button" class="button button--primary">Add another service</button>
-              <button id="doneButton" type="button" class="button button--secondary">Done</button>
-            </div>
-          </div>
         </div>
 
         <aside class="card card-stack provider-preview-card">
@@ -518,15 +635,13 @@
   </main>
 
   <script src="/app.js"></script>
+  <script src="/api.js"></script>
 
   <script>
     const pageHeader = document.getElementById("pageHeader");
     const providerForm = document.getElementById("providerForm");
+    const providerSubmitButton = providerForm.querySelector('button[type="submit"]');
     const formStatus = document.getElementById("formStatus");
-    const submissionResult = document.getElementById("submissionResult");
-    const addAnotherButton = document.getElementById("addAnotherButton");
-    const doneButton = document.getElementById("doneButton");
-    const submissionStatus = document.getElementById("submissionStatus");
     const tagsSelector = document.getElementById("tagsSelector");
     const hoursPatternInput = document.getElementById("hoursPattern");
     const hoursCustomDaysField = document.getElementById("hoursCustomDaysField");
@@ -543,7 +658,6 @@
     const previewTags = document.getElementById("previewTags");
     const previewTagsEmpty = document.getElementById("previewTagsEmpty");
     const previewDescription = document.getElementById("previewDescription");
-    const PROVIDER_STORAGE_KEY = "care_compass_provider_services";
     const AVAILABLE_TAGS = [
       "rehabilitation",
       "mobility",
@@ -575,8 +689,10 @@
       Sat: 5,
       Sun: 6
     };
-    let lastSavedSignature = "";
-    let lastSavedAt = 0;
+    const submitButtonLabel = providerSubmitButton ? providerSubmitButton.textContent.trim() : "Submit service";
+    let lastSubmittedSignature = "";
+    let lastSubmittedAt = 0;
+    let isSubmitting = false;
 
     pageHeader.innerHTML = CareCompassUI.renderPageHeader({
       title: "Service provider form",
@@ -706,8 +822,8 @@
       hoursHint.textContent = hoursValue
         ? `This will be saved as ${hoursValue}.`
         : hoursState.pattern === "custom"
-          ? "Choose a start day, an end day, and the opening and closing times."
-          : "Choose a day range plus opening and closing times.";
+          ? "Choose a start day, an end day, and the opening and closing times. Example output: Mon-Fri 07:00-18:00."
+          : "Choose a day range plus opening and closing times. Example output: Mon-Fri 07:00-18:00.";
     }
 
     function applyHoursState() {
@@ -743,51 +859,25 @@
       return JSON.stringify(service);
     }
 
-    function loadStoredServices() {
-      try {
-        const raw = localStorage.getItem(PROVIDER_STORAGE_KEY);
-
-        if (!raw) {
-          return [];
-        }
-
-        const parsed = JSON.parse(raw);
-        return Array.isArray(parsed) ? parsed : [];
-      } catch (error) {
-        console.warn("Unable to read provider services from localStorage:", error);
-        return [];
-      }
+    function wasRecentlySubmitted(service) {
+      const signature = getServiceSignature(service);
+      return signature === lastSubmittedSignature && Date.now() - lastSubmittedAt < 5000;
     }
 
-    function persistServiceLocally(service) {
-      const signature = getServiceSignature(service);
-      const now = Date.now();
+    function rememberSubmittedService(service) {
+      lastSubmittedSignature = getServiceSignature(service);
+      lastSubmittedAt = Date.now();
+    }
 
-      if (signature === lastSavedSignature && now - lastSavedAt < 5000) {
-        return {
-          saved: false,
-          duplicatePrevented: true,
-          total: loadStoredServices().length
-        };
+    function setSubmittingState(submitting) {
+      isSubmitting = submitting;
+
+      if (!providerSubmitButton) {
+        return;
       }
 
-      const services = loadStoredServices();
-      services.push(service);
-
-      try {
-        localStorage.setItem(PROVIDER_STORAGE_KEY, JSON.stringify(services));
-      } catch (error) {
-        throw new Error("Unable to save this service locally right now.");
-      }
-
-      lastSavedSignature = signature;
-      lastSavedAt = now;
-
-      return {
-        saved: true,
-        duplicatePrevented: false,
-        total: services.length
-      };
+      providerSubmitButton.disabled = submitting;
+      providerSubmitButton.textContent = submitting ? "Submitting..." : submitButtonLabel;
     }
 
     function setFormStatus(message = "", variant = "hint") {
@@ -795,13 +885,15 @@
       formStatus.textContent = message;
       formStatus.className = variant === "error"
         ? "provider-status provider-status--error"
-        : "provider-status";
+        : variant === "success"
+          ? "provider-status provider-status--success"
+          : "provider-status";
     }
 
-    function setSubmissionStatus(message = "") {
-      submissionStatus.hidden = !message;
-      submissionStatus.textContent = message;
-      submissionStatus.className = "provider-status provider-status--success";
+    function clearSubmittedStatus() {
+      if (formStatus.classList.contains("provider-status--success")) {
+        setFormStatus("");
+      }
     }
 
     function validateRequiredValue(fieldName) {
@@ -947,61 +1039,11 @@
       renderPreviewTags(service.tags);
     }
 
-    function showSubmissionResult(payload, persistenceResult) {
-      providerForm.hidden = true;
-      submissionResult.hidden = false;
-      renderPreview(payload);
-
-      if (persistenceResult.duplicatePrevented) {
-        setSubmissionStatus("An identical service was already stored a moment ago, so a duplicate entry was not added.");
-      } else {
-        setSubmissionStatus(`Saved locally under ${PROVIDER_STORAGE_KEY}. Stored services in this browser: ${persistenceResult.total}.`);
-      }
-
-      console.group("Provider submission payload");
-      console.log("Final service object:");
-      console.log(payload);
-      console.log("JSON preview:");
-      console.log(JSON.stringify(payload, null, 2));
-      console.log("Persistence result:");
-      console.log(persistenceResult);
-      console.groupEnd();
-    }
-
-    function resetFormState(focusInput = true) {
-      Object.keys(formState).forEach(fieldName => {
-        formState[fieldName] = fieldName === "tags" ? [] : "";
-        formErrors[fieldName] = "";
-        touchedFields[fieldName] = false;
-        applyFieldState(fieldName);
-      });
-
-      hoursState.pattern = "Mon-Fri";
-      hoursState.customStart = "";
-      hoursState.customEnd = "";
-      hoursState.open = "";
-      hoursState.close = "";
-      formErrors.hours = "";
-      touchedFields.hours = false;
-      applyHoursState();
-
-      setFormStatus("");
-      setSubmissionStatus("");
-      submissionResult.hidden = true;
-      providerForm.hidden = false;
-      renderTagSelector();
-      applyFieldState("tags");
-      renderPreview();
-
-      if (focusInput) {
-        getFieldElement("name").focus();
-      }
-    }
-
     Object.keys(formState).filter(fieldName => fieldName !== "tags").forEach(fieldName => {
       const input = getFieldElement(fieldName);
       const syncField = event => {
         formState[fieldName] = event.target.value;
+        clearSubmittedStatus();
 
         if (touchedFields[fieldName]) {
           formErrors[fieldName] = validateField(fieldName);
@@ -1042,6 +1084,7 @@
       }
 
       formState.tags = AVAILABLE_TAGS.filter(tag => selectedTags.has(tag));
+      clearSubmittedStatus();
 
       if (touchedFields.tags) {
         formErrors.tags = validateField("tags");
@@ -1064,6 +1107,7 @@
 
     function updateHoursValue(stateKey, value) {
       hoursState[stateKey] = value;
+      clearSubmittedStatus();
 
       if (stateKey === "pattern" && value !== "custom") {
         hoursState.customStart = "";
@@ -1101,8 +1145,12 @@
     applyFieldState("tags");
     renderPreview();
 
-    providerForm.addEventListener("submit", event => {
+    providerForm.addEventListener("submit", async event => {
       event.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
 
       Object.keys(touchedFields).forEach(fieldName => {
         touchedFields[fieldName] = true;
@@ -1124,22 +1172,36 @@
       }
 
       const payload = buildServicePayload();
+
+      if (wasRecentlySubmitted(payload)) {
+        renderPreview(payload);
+        setFormStatus("This service was just submitted, so a duplicate entry was not added.", "success");
+        return;
+      }
+
       setFormStatus("");
+      setSubmittingState(true);
 
       try {
-        const persistenceResult = persistServiceLocally(payload);
-        showSubmissionResult(payload, persistenceResult);
+        const response = await saveToBackend(payload);
+        const savedService = response && response.service ? response.service : payload;
+        rememberSubmittedService(savedService);
+        renderPreview(savedService);
+        setFormStatus("Service saved successfully to the Care Compass service data.", "success");
+
+        console.group("Provider submission payload");
+        console.log("Final service object:");
+        console.log(savedService);
+        console.log("JSON preview:");
+        console.log(JSON.stringify(savedService, null, 2));
+        console.log("Backend response:");
+        console.log(response);
+        console.groupEnd();
       } catch (error) {
-        setFormStatus(error.message || "Unable to save this service locally right now.", "error");
+        setFormStatus(error.message || "Unable to save this service right now.", "error");
+      } finally {
+        setSubmittingState(false);
       }
-    });
-
-    addAnotherButton.addEventListener("click", () => {
-      resetFormState(true);
-    });
-
-    doneButton.addEventListener("click", () => {
-      resetFormState(false);
     });
   </script>
 </body>

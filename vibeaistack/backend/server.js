@@ -2,6 +2,8 @@ import express from "express";
 import fs from "fs";
 import cors from "cors";
 import OpenAI from "openai";
+import path from "path";
+import { fileURLToPath } from "url";
 import { buildAssessPrompt } from "./prompt.js";
 
 const app = express();
@@ -64,9 +66,9 @@ async function getEmbedding(text) {
 // ─────────────────────────────
 // DB HELPERS
 // ─────────────────────────────
-import path from "path";
-
-const DB_PATH = path.resolve(process.cwd(), "db.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DB_PATH = path.resolve(__dirname, "db.json");
 
 function loadDB() {
   try {
@@ -103,7 +105,7 @@ function saveDB(data) {
 
 function loadDBDocument() {
   try {
-    const raw = fs.readFileSync("./db.json", "utf-8");
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
     const parsed = JSON.parse(raw);
 
     if (Array.isArray(parsed)) {
@@ -122,7 +124,7 @@ function loadDBDocument() {
 }
 
 function saveDBDocument(data) {
-  fs.writeFileSync("./db.json", JSON.stringify(data, null, 2));
+  fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
 }
 
 function normalizeServiceEntry(entry = {}) {
