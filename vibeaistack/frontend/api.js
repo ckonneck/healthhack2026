@@ -11,9 +11,17 @@ async function askBackend(query) {
 }
 
 async function saveToBackend(entry) {
-  await fetch(`${BACKEND}/add`, {
+  const res = await fetch(`${BACKEND}/add`, {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify(entry)
   });
+
+  const data = await res.json().catch(() => ({}));
+
+  if (!res.ok || data.ok === false) {
+    throw new Error(data.error || "Unable to save this service right now.");
+  }
+
+  return data;
 }

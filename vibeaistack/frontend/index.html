@@ -26,67 +26,29 @@
       </div>
     </section>
 
-    <section class="page-section content-width--wide section-shell">
-      <div class="section-header">
-        <p class="eyebrow">How It Works</p>
-        <h2 class="section-title">A simple path to your next step</h2>
-        <p class="section-description">
-          Care Compass helps you move from uncertainty to a short list of relevant support options.
-        </p>
-      </div>
+<section id="directory-search" class="panel page-section content-width--wide section-shell">
+  <div class="section-header">
+    <p class="eyebrow">Directory Search</p>
+    <h2 class="section-title">Search by need or ZIP code</h2>
+    <p class="section-description">
+      Use a keyword like "urgent care" or "food pantry", or enter a ZIP code — or both.
+    </p>
+  </div>
 
-      <div class="steps-grid">
-        <article class="card card-stack step-card">
-          <span class="step-number">1</span>
-          <div class="stack-sm">
-            <h3 class="card-title">Start with what you need</h3>
-            <p class="card-copy">
-              Use the guided health check or enter a plain-language search term.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-stack step-card">
-          <span class="step-number">2</span>
-          <div class="stack-sm">
-            <h3 class="card-title">Review matching services</h3>
-            <p class="card-copy">
-              See relevant options with practical details like location, hours, and specialty.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-stack step-card">
-          <span class="step-number">3</span>
-          <div class="stack-sm">
-            <h3 class="card-title">Choose a calmer next step</h3>
-            <p class="card-copy">
-              Use the results as a starting point for reaching the right kind of support.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="directory-search" class="panel page-section content-width--wide section-shell">
-      <div class="section-header">
-        <p class="eyebrow">Directory Search</p>
-        <h2 class="section-title">Search by need, topic, or service type</h2>
-        <p class="section-description">
-          Try everyday phrases like “urgent care”, “mental health support”, “weekend clinic”, or
-          “food assistance”.
-        </p>
-      </div>
-
-      <div class="search-row">
-        <div class="field">
-          <label class="field-label" for="q">Search services</label>
-          <input id="q" class="field-control" placeholder="Try: counselling, dental clinic, food pantry" />
-          <p class="field-hint">Use simple keywords to explore available health and support services.</p>
-        </div>
-        <button class="button button--primary" onclick="search()">Search</button>
-      </div>
-    </section>
+  <div class="search-row">
+    <div class="field">
+      <label class="field-label" for="q">Search by topic</label>
+      <input id="q" class="field-control" placeholder="Try: counselling, dental clinic, food pantry" />
+      <p class="field-hint">Use simple keywords to explore available health and support services.</p>
+    </div>
+    <div class="field">
+      <label class="field-label" for="zip">Search by ZIP code</label>
+      <input id="zip" class="field-control" placeholder="e.g. 90210" maxlength="10" />
+      <p class="field-hint">Browse services available near your location.</p>
+    </div>
+    <button class="button button--primary" onclick="search()">Search</button>
+  </div>
+</section>
 
     <section class="panel page-section content-width--wide section-shell">
       <div class="section-header">
@@ -106,6 +68,31 @@
         </div>
       </div>
     </section>
+
+
+<section class="panel page-section content-width--wide section-shell">
+  <div class="section-header">
+    <p class="eyebrow">Emergency & Support</p>
+    <h2 class="section-title">Who to call in case of emergency</h2>
+  </div>
+
+  <div class="card card-stack">
+    <ul class="card-copy" style="margin:0; padding:0; list-style:none;">
+      <li>Police — <strong>110</strong></li>
+      <li>Fire brigade &amp; ambulance — <strong>112</strong></li>
+      <li style="color: var(--color-text-muted); font-size: var(--text-sm);">For life-threatening situations — free, 24/7, any phone.</li>
+      <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
+      <li>On-call doctor — <strong>116 117</strong></li>
+      <li style="color: var(--color-text-muted); font-size: var(--text-sm);">Urgent but not life-threatening — evenings and weekends.</li>
+      <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
+      <li>Emotional support — <strong>0800 111 0 111</strong> or <strong>0800 111 0 222</strong></li>
+      <li>Violence against women — <strong>0800 0116 016</strong></li>
+      <li>Children &amp; youth helpline — <strong>0800 111 0 333</strong></li>
+      <li>Police Braunschweig (non-urgent) — <strong>0531 476-0</strong></li>
+    </ul>
+  </div>
+</section>
+
   </main>
 
   <script src="/app.js"></script>
@@ -128,49 +115,44 @@
       return CareCompassUI.renderEmptyState({ title, message });
     }
 
-    async function search() {
-      const q = queryInput.value.trim();
 
-      if (!q) {
-        resultsContainer.innerHTML = renderEmptyState(
-          "Enter a search term",
-          "Add a topic or need above to search the current service directory."
-        );
-        return;
-      }
+async function search() {
+  const q   = document.getElementById("q").value.trim();
+  const zip = document.getElementById("zip").value.trim();
 
-      resultsContainer.innerHTML = renderEmptyState(
-        "Searching directory",
-        "Looking for services that match your request."
-      );
+  if (!q && !zip) {
+    resultsContainer.innerHTML = renderEmptyState(
+      "Enter a search term",
+      "Add a topic, service type, or ZIP code to search the directory."
+    );
+    return;
+  }
 
-      const res = await fetch("http://localhost:3000/services", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: q })
-      });
+  resultsContainer.innerHTML = renderEmptyState("Searching directory", "Looking for matching services…");
 
-      const data = await res.json();
+  const res  = await fetch("http://localhost:3000/services", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: q || undefined, zip: zip || undefined })
+  });
+  const data = await res.json();
 
-      if (!data.results || data.results.length === 0) {
-        resultsContainer.innerHTML = renderEmptyState(
-          "No matches found",
-          "No services matched that search yet. Try a broader term or check the guided health form for another route."
-        );
-        return;
-      }
+  if (!data.results || data.results.length === 0) {
+    resultsContainer.innerHTML = renderEmptyState(
+      "No matches found",
+      "No services matched that search yet. Try a different term or ZIP code."
+    );
+    return;
+  }
 
-      resultsContainer.innerHTML = data.results.map(r => `
-        <article class="card card-stack">
-          <h3 class="card-title">${r.name || "Unnamed service"}</h3>
-          ${CareCompassUI.renderMetaStack([
-            r.address || "Location details are not available yet.",
-            r.hours || "Hours are not listed yet.",
-            r.specialty
-          ])}
-        </article>
-      `).join("");
-    }
-  </script>
-</body>
-</html>
+  resultsContainer.innerHTML = data.results.map(r => `
+    <article class="card card-stack">
+      <h3 class="card-title">${r.name || "Unnamed service"}</h3>
+      ${CareCompassUI.renderMetaStack([
+        r.address  || "Location details are not available yet.",
+        r.hours    || "Hours are not listed yet.",
+        r.specialty
+      ])}
+    </article>
+  `).join("");
+}

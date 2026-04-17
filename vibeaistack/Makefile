@@ -1,5 +1,5 @@
 SUDO=sudo
-COMPOSE=$(SUDO) docker compose
+COMPOSE= docker compose
 PROJECT=vibe-wiki-ai
 
 # ─────────────────────────────
