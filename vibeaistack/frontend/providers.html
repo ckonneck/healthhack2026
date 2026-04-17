@@ -731,6 +731,20 @@
         btnDe.setAttribute("aria-pressed", String(currentLang === "de"));
         btnDe.setAttribute("aria-label", t("lang.button.de"));
       }
+
+      const pageHeaderElement = document.getElementById("pageHeader");
+      if (pageHeaderElement && typeof CareCompassUI !== "undefined" && typeof CareCompassUI.renderPageHeader === "function") {
+        pageHeaderElement.innerHTML = CareCompassUI.renderPageHeader({
+          title: t("header.title"),
+          description: t("header.description"),
+          currentNav: "add",
+          navigationLabels: {
+            search: t("nav.search"),
+            survey: t("nav.survey"),
+            add: t("nav.add")
+          }
+        });
+      }
     }
 
     function setLang(lang) {

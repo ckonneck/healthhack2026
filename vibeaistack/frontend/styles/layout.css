@@ -13,7 +13,34 @@
   justify-content: space-between;
   gap: var(--space-5);
   flex-wrap: wrap;
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+  background: var(--color-structure);
+  border: 1px solid var(--color-structure-hover);
+  border-radius: var(--radius-lg);
+  color: var(--color-on-structure);
   margin-bottom: var(--space-6);
+}
+
+.page-header .eyebrow,
+.site-header .eyebrow {
+  color: var(--color-on-structure-muted);
+}
+
+.page-header .brand-title,
+.page-header .site-name,
+.page-header .section-title,
+.site-header .brand-title,
+.site-header .site-name,
+.site-header .section-title,
+.page-header__title {
+  color: var(--color-on-structure);
+}
+
+.page-header .page-header__description,
+.site-header .page-header__description,
+.page-header .brand-subtitle,
+.site-header .brand-subtitle {
+  color: var(--color-on-structure-muted);
 }
 
 .page-header__content,
