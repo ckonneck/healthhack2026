@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+
+  --brand-primary: #003a8f;
+  --brand-primary-interactive: #005ca9;
+  --brand-primary-hover: #004a87;
+  --brand-soft-primary: #cef4f5;
+  --brand-soft-section: #eaf9fa;
+  --brand-page-bg: #ffffff;
+  --brand-text-primary: #1a1a1a;
+  --brand-text-secondary: #6b6b6b;
+  --brand-border: #d9e3e4;
+  --brand-highlight: #f2a900;
+  --brand-white: #ffffff;
+  --brand-black: #000000;
+
+  --color-bg: var(--brand-page-bg);
+  --color-surface: var(--brand-white);
+  --color-surface-subtle: var(--brand-soft-section);
+  --color-surface-muted: #f2fbfc;
+  --color-surface-accent: var(--brand-soft-primary);
+  --color-border: var(--brand-border);
+  --color-border-strong: #b7c9cb;
+  --color-border-accent: #d6e8ea;
+  --color-border-accent-strong: #9ab3b6;
+  --color-text: var(--brand-text-primary);
+  --color-text-muted: var(--brand-text-secondary);
+  --color-text-soft: var(--brand-text-secondary);
+  --color-accent: var(--brand-primary-interactive);
+  --color-accent-hover: var(--brand-primary-hover);
+  --color-accent-soft: var(--brand-soft-primary);
+  --color-on-accent: var(--brand-white);
+  --color-focus: var(--brand-primary-hover);
+  --color-focus-ring: rgba(0, 92, 169, 0.26);
+  --color-placeholder: #6b7d80;
+  --color-disabled-bg: #f1f6f7;
+  --color-disabled-text: #87989a;
+  --color-danger: var(--brand-highlight);
+  --color-danger-soft: #fef7e4;
+  --color-danger-border: #f0d9a2;
+  --color-danger-text: #624900;
+  --color-link: var(--brand-primary-interactive);
+  --color-link-hover: var(--brand-primary-hover);
+  --color-structure: var(--brand-primary);
+  --color-structure-hover: #002f74;
+  --color-on-structure: var(--brand-white);
+  --color-on-structure-muted: #d7e4f8;
+  --color-structure-overlay: rgba(255, 255, 255, 0.12);
+  --color-structure-overlay-strong: rgba(255, 255, 255, 0.24);
+  --color-highlight: var(--brand-highlight);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.25rem;
+  --radius-pill: 0.25rem;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-danger-ring: 0 0 0 3px rgba(242, 169, 0, 0.25);
+  --shadow-selected-ring: inset 0 0 0 1px rgba(0, 92, 169, 0.25);
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: clamp(1.85rem, 3vw, 2.5rem);
+  --font-size-hero: clamp(2.25rem, 4vw, 3.25rem);
+
+  --line-height-tight: 1.2;
+  --line-height-body: 1.6;
+}

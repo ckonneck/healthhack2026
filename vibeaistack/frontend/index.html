@@ -1,105 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vibe Wiki AI</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f0f0f;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 60px;
-    }
-
-    input {
-      width: 420px;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      background: #00ffcc;
-      cursor: pointer;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 14px;
-  border-radius: 14px;
-  margin-bottom: 12px;
-  backdrop-filter: blur(10px);
-  transition: 0.2s;
-
-  max-width: 100%;
-  overflow: hidden;
-}
-
-    a {
-      color: #00ffcc;
-      margin-top: 10px;
-      display: block;
-    }
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  margin: 0;
-  color: #ddd;
-}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
+  <main class="page-shell">
+    <header id="pageHeader" class="page-header"></header>
 
-<h1>🔍 Wiki AI Search</h1>
+    <section class="panel hero page-section content-width--wide section-shell">
+      <div class="hero-content">
+        <p class="eyebrow">Care Navigation</p>
+        <h1 class="hero-title">Find the right health or community support without the guesswork.</h1>
+        <p class="hero-subtitle">
+          Start with a guided health check or search the directory directly to review practical
+          service options and next steps.
+        </p>
+        <div class="button-row hero-actions">
+          <a class="button button--primary" href="/form.html">Start health check</a>
+          <a class="button button--secondary" href="#directory-search">Search services</a>
+        </div>
+      </div>
+    </section>
 
-<a href="/add.html">➕ Add Entry</a>
-<a href="/form.html">🩺 Health Check</a>
+<section id="directory-search" class="panel page-section content-width--wide section-shell">
+  <div class="section-header">
+    <p class="eyebrow">Directory Search</p>
+    <h2 class="section-title">Search by need or ZIP code</h2>
+    <p class="section-description">
+      Use a keyword like "urgent care" or "food pantry", or enter a ZIP code — or both.
+    </p>
+  </div>
 
-<input id="q" placeholder="Search your wiki..." />
+  <div class="search-row">
+    <div class="field">
+      <label class="field-label" for="q">Search by topic</label>
+      <input id="q" class="field-control" placeholder="Try: counselling, dental clinic, food pantry" />
+      <p class="field-hint">Use simple keywords to explore available health and support services.</p>
+    </div>
+    <div class="field">
+      <label class="field-label" for="zip">Search by ZIP code</label>
+      <input id="zip" class="field-control" placeholder="e.g. 90210" maxlength="10" />
+      <p class="field-hint">Browse services available near your location.</p>
+    </div>
+    <button class="button button--primary" onclick="search()">Search</button>
+  </div>
+</section>
 
-<button onclick="search()">Search</button>
+    <section class="panel page-section content-width--wide section-shell">
+      <div class="section-header">
+        <p class="eyebrow">Results</p>
+        <h2 class="section-title">Service matches</h2>
+        <p class="section-description">
+          Matching services will appear here with location and availability details when available.
+        </p>
+      </div>
 
-<div id="results"></div>
+      <div id="results" class="results-grid" aria-live="polite">
+        <div class="card card-stack empty-state">
+          <div class="empty-state__title empty-title">Start with a search</div>
+          <p class="empty-state__copy empty-copy">
+            Enter a need, service type, or keyword above to explore available support options.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<script src="/api.js"></script>
 
-<script>async function search() {
-  const q = document.getElementById("q").value;
+<section class="panel page-section content-width--wide section-shell">
+  <div class="section-header">
+    <p class="eyebrow">Emergency & Support</p>
+    <h2 class="section-title">Who to call in case of emergency</h2>
+  </div>
 
-  const res = await fetch("http://localhost:3000/services", {
+  <div class="card card-stack">
+    <ul class="card-copy" style="margin:0; padding:0; list-style:none;">
+      <li>Police — <strong>110</strong></li>
+      <li>Fire brigade &amp; ambulance — <strong>112</strong></li>
+      <li style="color: var(--color-text-muted); font-size: var(--text-sm);">For life-threatening situations — free, 24/7, any phone.</li>
+      <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
+      <li>On-call doctor — <strong>116 117</strong></li>
+      <li style="color: var(--color-text-muted); font-size: var(--text-sm);">Urgent but not life-threatening — evenings and weekends.</li>
+      <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
+      <li>Emotional support — <strong>0800 111 0 111</strong> or <strong>0800 111 0 222</strong></li>
+      <li>Violence against women — <strong>0800 0116 016</strong></li>
+      <li>Children &amp; youth helpline — <strong>0800 111 0 333</strong></li>
+      <li>Police Braunschweig (non-urgent) — <strong>0531 476-0</strong></li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+
+  <script src="/app.js"></script>
+  <script src="/api.js"></script>
+
+  <script>
+    const pageHeader = document.getElementById("pageHeader");
+    const queryInput = document.getElementById("q");
+    const resultsContainer = document.getElementById("results");
+
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Health and community support, in one clear place.",
+      currentNav: "search",
+      compact: true,
+      titleTag: "p",
+      titleClass: "site-name"
+    });
+
+    function renderEmptyState(title, message) {
+      return CareCompassUI.renderEmptyState({ title, message });
+    }
+
+
+async function search() {
+  const q   = document.getElementById("q").value.trim();
+  const zip = document.getElementById("zip").value.trim();
+
+  if (!q && !zip) {
+    resultsContainer.innerHTML = renderEmptyState(
+      "Enter a search term",
+      "Add a topic, service type, or ZIP code to search the directory."
+    );
+    return;
+  }
+
+  resultsContainer.innerHTML = renderEmptyState("Searching directory", "Looking for matching services…");
+
+  const res  = await fetch("http://localhost:3000/services", {
     method: "POST",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({ query: q })
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: q || undefined, zip: zip || undefined })
   });
-
   const data = await res.json();
 
-  const results = document.getElementById("results");
+  if (!data.results || data.results.length === 0) {
+    resultsContainer.innerHTML = renderEmptyState(
+      "No matches found",
+      "No services matched that search yet. Try a different term or ZIP code."
+    );
+    return;
+  }
 
-  results.innerHTML = data.results.map(r => `
-    <div class="card">
-      <div class="title">${r.name}</div>
-      <div>${r.address}</div>
-      <div>${r.hours}</div>
-    </div>
+  resultsContainer.innerHTML = data.results.map(r => `
+    <article class="card card-stack">
+      <h3 class="card-title">${r.name || "Unnamed service"}</h3>
+      ${CareCompassUI.renderMetaStack([
+        r.address  || "Location details are not available yet.",
+        r.hours    || "Hours are not listed yet.",
+        r.specialty
+      ])}
+    </article>
   `).join("");
 }
-</script>
-
-</body>
-</html>
