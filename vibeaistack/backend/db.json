@@ -17,9 +17,7 @@
         "certificate",
         "bescheinigung"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Mandatory address registration and official residence documentation"
     },
     {
@@ -39,9 +37,7 @@
         "student",
         "studierende"
       ],
-      "eligibility": [
-        "non_eu"
-      ],
+      "eligibility": ["non_eu"],
       "description": "Residence permits, visa extensions, and legal stay management"
     },
     {
@@ -61,9 +57,7 @@
         "finance",
         "finanzen"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Tax identification and income tax matters"
     },
     {
@@ -81,10 +75,7 @@
         "housing_support",
         "mietzuschuss"
       ],
-      "eligibility": [
-        "low_income",
-        "job_seekers"
-      ],
+      "eligibility": ["low_income", "job_seekers"],
       "description": "Financial support and reintegration into the labor market"
     },
     {
@@ -102,10 +93,7 @@
         "internships",
         "praktikum"
       ],
-      "eligibility": [
-        "students",
-        "job_seekers"
-      ],
+      "eligibility": ["students", "job_seekers"],
       "description": "Career counseling, job search, and employment services"
     },
     {
@@ -123,9 +111,7 @@
         "social_aid",
         "sozialhilfe"
       ],
-      "eligibility": [
-        "vulnerable_groups"
-      ],
+      "eligibility": ["vulnerable_groups"],
       "description": "Social assistance and emergency support"
     },
     {
@@ -143,9 +129,7 @@
         "housing_benefit",
         "wohngeld"
       ],
-      "eligibility": [
-        "low_income"
-      ],
+      "eligibility": ["low_income"],
       "description": "Housing allowance support"
     },
     {
@@ -163,10 +147,7 @@
         "accommodation",
         "wohnraum"
       ],
-      "eligibility": [
-        "low_income",
-        "families"
-      ],
+      "eligibility": ["low_income", "families"],
       "description": "Access to subsidized housing programs"
     },
     {
@@ -184,9 +165,7 @@
         "certificate",
         "bescheinigung"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Public health services and certifications"
     },
     {
@@ -196,17 +175,8 @@
       "specialty": "family_support",
       "address": "Eiermarkt 4-5, 38100 Braunschweig",
       "hours": "Mon-Fri 09:00-16:00",
-      "tags": [
-        "family",
-        "familie",
-        "children",
-        "kinder",
-        "advice",
-        "beratung"
-      ],
-      "eligibility": [
-        "families"
-      ],
+      "tags": ["family", "familie", "children", "kinder", "advice", "beratung"],
+      "eligibility": ["families"],
       "description": "Advisory services for families and parents"
     },
     {
@@ -224,10 +194,7 @@
         "support",
         "unterstützung"
       ],
-      "eligibility": [
-        "families",
-        "minors"
-      ],
+      "eligibility": ["families", "minors"],
       "description": "Child and youth welfare services"
     },
     {
@@ -237,16 +204,8 @@
       "specialty": "childcare",
       "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-16:00",
-      "tags": [
-        "kita",
-        "childcare",
-        "kinderbetreuung",
-        "daycare",
-        "betreuung"
-      ],
-      "eligibility": [
-        "families"
-      ],
+      "tags": ["kita", "childcare", "kinderbetreuung", "daycare", "betreuung"],
+      "eligibility": ["families"],
       "description": "Kindergarten placement services"
     },
     {
@@ -264,9 +223,7 @@
         "family support",
         "familienleistung"
       ],
-      "eligibility": [
-        "families"
-      ],
+      "eligibility": ["families"],
       "description": "Parental financial support"
     },
     {
@@ -283,9 +240,7 @@
         "students",
         "studierende"
       ],
-      "eligibility": [
-        "students"
-      ],
+      "eligibility": ["students"],
       "description": "Student financial aid (BAföG)"
     },
     {
@@ -305,9 +260,7 @@
         "license plate",
         "kennzeichen"
       ],
-      "eligibility": [
-        "vehicle_owners"
-      ],
+      "eligibility": ["vehicle_owners"],
       "description": "Vehicle registration services"
     },
     {
@@ -325,9 +278,7 @@
         "driver license",
         "führerschein"
       ],
-      "eligibility": [
-        "drivers"
-      ],
+      "eligibility": ["drivers"],
       "description": "Driving license issuance and conversion"
     },
     {
@@ -337,17 +288,8 @@
       "specialty": "dog_registration",
       "address": "Platz der Deutschen Einheit 1, 38100 Braunschweig",
       "hours": "Mon-Fri 08:00-16:00",
-      "tags": [
-        "dog",
-        "hund",
-        "tax",
-        "steuer",
-        "pet",
-        "haustier"
-      ],
-      "eligibility": [
-        "pet_owners"
-      ],
+      "tags": ["dog", "hund", "tax", "steuer", "pet", "haustier"],
+      "eligibility": ["pet_owners"],
       "description": "Dog registration and taxation"
     },
     {
@@ -365,9 +307,7 @@
         "language course",
         "sprachkurs"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Language and integration courses"
     },
     {
@@ -377,17 +317,8 @@
       "specialty": "library",
       "address": "Schlossplatz 2, 38100 Braunschweig",
       "hours": "Mon-Sat 10:00-18:00",
-      "tags": [
-        "study",
-        "lernen",
-        "books",
-        "bücher",
-        "library",
-        "bibliothek"
-      ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "tags": ["study", "lernen", "books", "bücher", "library", "bibliothek"],
+      "eligibility": ["all_residents"],
       "description": "Public library and study spaces"
     },
     {
@@ -409,9 +340,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Civil registry services (birth, marriage certificates)"
     },
     {
@@ -433,9 +362,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Public order, permits, and regulatory services"
     },
     {
@@ -459,9 +386,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Main police station for emergencies, crime reporting, and public safety"
     },
     {
@@ -485,9 +410,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Police station for the southern districts of Braunschweig"
     },
     {
@@ -511,9 +434,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Police station covering northern Braunschweig districts"
     },
     {
@@ -536,9 +457,7 @@
         "geklaut",
         "diebstahl"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Emergency police hotline for immediate danger situations"
     },
     {
@@ -557,9 +476,7 @@
         "students",
         "schüler"
       ],
-      "eligibility": [
-        "students"
-      ],
+      "eligibility": ["students"],
       "description": "Secondary school providing general education leading to Abitur"
     },
     {
@@ -579,9 +496,7 @@
         "education",
         "bildung"
       ],
-      "eligibility": [
-        "children"
-      ],
+      "eligibility": ["children"],
       "description": "Primary school for early childhood education"
     },
     {
@@ -601,9 +516,7 @@
         "education",
         "bildung"
       ],
-      "eligibility": [
-        "students"
-      ],
+      "eligibility": ["students"],
       "description": "Public university offering a wide range of academic programs"
     },
     {
@@ -623,9 +536,7 @@
         "checkup",
         "untersuchung"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "General practitioner for primary healthcare and medical advice"
     },
     {
@@ -645,9 +556,7 @@
         "health",
         "gesundheit"
       ],
-      "eligibility": [
-        "children"
-      ],
+      "eligibility": ["children"],
       "description": "Medical care for infants, children, and adolescents"
     },
     {
@@ -667,9 +576,7 @@
         "treatment",
         "behandlung"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Dental care and oral health services"
     },
     {
@@ -689,9 +596,7 @@
         "doctor",
         "arzt"
       ],
-      "eligibility": [
-        "all_residents"
-      ],
+      "eligibility": ["all_residents"],
       "description": "Emergency medical care for urgent and life-threatening conditions"
     },
     {
@@ -701,18 +606,8 @@
       "specialty": "kita",
       "address": "Ziegelkamp 8, 38104 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "awo",
-        "volkmarode"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "awo", "volkmarode"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -726,14 +621,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "querumer_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -747,14 +638,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "schefflerstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -764,18 +651,8 @@
       "specialty": "kita",
       "address": "Bruchweg 6, 38124 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "awo",
-        "stoeckheim"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "awo", "stoeckheim"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -789,14 +666,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "staedt_klinikum_betriebskita"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -810,14 +683,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "roseliesstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -827,18 +696,8 @@
       "specialty": "kita",
       "address": "Ilmenaustraße 31, 38120 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "awo",
-        "muldeweg"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "awo", "muldeweg"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -852,14 +711,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "ilmenaustrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -869,18 +724,8 @@
       "specialty": "kita",
       "address": "Kirchstraße 10 b, 38120 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "awo",
-        "timmerlah"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "awo", "timmerlah"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -894,14 +739,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "kinderwerk_betriebskita"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -915,14 +756,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "chemnitzstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -936,14 +773,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "fremersdorfer_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -957,14 +790,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "awo",
         "lammer_busch_ost_ii"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: AWO."
     },
     {
@@ -978,14 +807,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_marien"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -999,14 +824,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_nikolaus_aussengruppe_auctorhaus"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1020,14 +841,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_nikolaus"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1041,14 +858,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_bernward"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1062,14 +875,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_maximilian_kolbe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1083,14 +892,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_kjeld"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1104,14 +909,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "caritasverband",
         "st_joseph"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Caritasverband."
     },
     {
@@ -1125,14 +926,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "christuszentrum_bs",
         "schatzkiste"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: ChristusZentrum BS."
     },
     {
@@ -1146,14 +943,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "cjd",
         "st_leonhard_international"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: CJD."
     },
     {
@@ -1167,14 +960,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "cjd",
         "st_leonhard_international_postanschrift"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: CJD."
     },
     {
@@ -1188,14 +977,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "der_paritaetische",
         "mein_weg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
     },
     {
@@ -1209,14 +994,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "der_paritaetische",
         "broitzem"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
     },
     {
@@ -1230,14 +1011,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "der_paritaetische",
         "farbklecks"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
     },
     {
@@ -1251,14 +1028,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "der_paritaetische",
         "geitelde"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
     },
     {
@@ -1272,14 +1045,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "der_paritaetische",
         "quaeker_nachbarschaftsheim"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Der Paritätische."
     },
     {
@@ -1293,14 +1062,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "drk",
         "broitzemer_strasse_aussengruppe_ilmweg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
     },
     {
@@ -1314,14 +1079,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "drk",
         "broitzemer_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
     },
     {
@@ -1335,14 +1096,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "drk",
         "spinnerstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
     },
     {
@@ -1352,18 +1109,8 @@
       "specialty": "kita",
       "address": "Lammer Busch 9, 38116 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "drk",
-        "wilde_wiese"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "drk", "wilde_wiese"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: DRK."
     },
     {
@@ -1377,14 +1124,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "kind_in_hondelage_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1398,14 +1141,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "kleine_raupe_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1419,14 +1158,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "heinrichstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1440,14 +1175,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "kobold_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1461,14 +1192,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "kindergarten_an_st_matthaeus_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1482,14 +1209,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "ag_kinderstall_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1503,14 +1226,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "grabowski_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1524,14 +1243,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "kinderbutze_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1545,14 +1260,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "rasselbande_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1566,14 +1277,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "froehlicher_anfang_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1587,14 +1294,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "heidberger_kindergarten"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1608,14 +1311,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "die_sieben_zwerge_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1629,14 +1328,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "ruebe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1650,14 +1345,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "flohkiste"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1671,14 +1362,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "eltern_kind_gruppe",
         "hoefenstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Eltern-Kind-Gruppe."
     },
     {
@@ -1692,14 +1379,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_freik_kindergarten_heidberg_e_v",
         "stephanus_kindergarten"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-Freik. Kindergarten Heidberg e.V.."
     },
     {
@@ -1713,14 +1396,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_thomas_volkmarode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1734,14 +1413,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_thomas_volkmarode_aussengruppe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1755,14 +1430,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "schapen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1776,14 +1447,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "liliput_bienrode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1797,14 +1464,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "zachaeus_waggum"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1818,14 +1481,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "bevenrode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1839,14 +1498,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_pauli_matthaeus"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1860,14 +1515,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_magni"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1881,14 +1532,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_johannis"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1902,14 +1549,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_magni_aussengruppe_adolfstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1923,14 +1566,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "dietrich_bonhoeffer_melverode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1944,14 +1583,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "stoeckheim"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1965,14 +1600,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "mascherode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -1986,14 +1617,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "arche_noah"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2007,14 +1634,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "mittenmank"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2028,14 +1651,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "ahrplatz"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2049,14 +1668,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_petri_rueningen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2070,14 +1685,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_martini"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2091,14 +1702,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "kreuzkirche"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2112,14 +1719,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "wichern"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2133,14 +1736,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "geschwister_sperling"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2154,14 +1753,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "voelkenrode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2175,14 +1770,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "watenbuettel"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2196,14 +1787,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_marien_lamme"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2217,14 +1804,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "sternschnuppe_wenden"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2238,14 +1821,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "schunterarche_thune"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2259,14 +1838,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "schunterzwerge"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2280,14 +1855,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_andreas"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2301,14 +1872,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "christuskirche"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2322,14 +1889,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "st_georg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2343,14 +1906,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "ev_luth_propsteiverband",
         "dankeskirche"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Ev.-luth. Propsteiverband."
     },
     {
@@ -2364,14 +1923,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "falkenheim",
         "heinrich_jasper_haus"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Falkenheim."
     },
     {
@@ -2385,14 +1940,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "froebel",
         "siekids_ackermaeuse_betriebskita"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Fröbel."
     },
     {
@@ -2406,14 +1957,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "froebel",
         "heinrich_der_loewe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Fröbel."
     },
     {
@@ -2423,17 +1970,8 @@
       "specialty": "kita",
       "address": "Madamenweg 162, 38118 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "gluehwuermchen"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "gluehwuermchen"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Glühwürmchen."
     },
     {
@@ -2447,14 +1985,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "hubeta",
         "hubeta_kindergarten"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Hubeta."
     },
     {
@@ -2468,14 +2002,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "humanistischer_verband_deutschlands",
         "wilde_hummel"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Humanistischer Verband Deutschlands."
     },
     {
@@ -2489,14 +2019,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "impuls",
         "vw_loewenkinder"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Impuls."
     },
     {
@@ -2510,14 +2036,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "impuls",
         "betriebskita_vw_financial_kita_frech_daxe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Impuls."
     },
     {
@@ -2531,14 +2053,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "johanniter",
         "die_kleinen_murmeltiere_betriebskita_krippe"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
     },
     {
@@ -2552,14 +2070,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "johanniter",
         "mitgaustrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
     },
     {
@@ -2573,14 +2087,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "johanniter",
         "warnekamp"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Johanniter."
     },
     {
@@ -2594,14 +2104,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "karamba",
         "kitakaramba"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Karamba."
     },
     {
@@ -2615,14 +2121,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "kath_kirchengemeinde",
         "st_albertus_magnus"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Kath. Kirchengemeinde."
     },
     {
@@ -2632,17 +2134,8 @@
       "specialty": "kita",
       "address": "Celler Heerstraße 38, 38114 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "kindergarten_oelper"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "kindergarten_oelper"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Kindergarten Ölper."
     },
     {
@@ -2656,14 +2149,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "kita_augensternchen_ug",
         "augensternchen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Kita Augensternchen UG. Hinweis: eröffnet voraussichtlich zu Nov. 2024"
     },
     {
@@ -2673,17 +2162,8 @@
       "specialty": "kita",
       "address": "Mühlenpfordtstraße 5, 38106 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "klitzeklein"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "klitzeklein"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Klitzeklein."
     },
     {
@@ -2697,14 +2177,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "klitzeklein",
         "kornblumenstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Klitzeklein."
     },
     {
@@ -2718,14 +2194,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "kruemelkeks",
         "kruemelkeks_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Krümelkeks."
     },
     {
@@ -2735,17 +2207,8 @@
       "specialty": "kita",
       "address": "Bundesallee 34, 38116 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "kruemelkiste"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "kruemelkiste"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Krümelkiste."
     },
     {
@@ -2755,17 +2218,8 @@
       "specialty": "kita",
       "address": "Sackring 33, 38118 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "kuschelnest"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "kuschelnest"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Kuschelnest."
     },
     {
@@ -2779,14 +2233,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "lebenshilfe",
         "aussengruppe_peterskamp"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe. Hinweis: schließt zum 31.07.2024"
     },
     {
@@ -2800,14 +2250,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "lebenshilfe",
         "schiefer_berg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe."
     },
     {
@@ -2821,14 +2267,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "lebenshilfe",
         "hasenwinkel"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Lebenshilfe."
     },
     {
@@ -2838,17 +2280,8 @@
       "specialty": "kita",
       "address": "Pippelweg 69 d, 38118 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "liebevoll"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "liebevoll"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: liebevoll."
     },
     {
@@ -2858,17 +2291,8 @@
       "specialty": "kita",
       "address": "Goeppert-Mayer-Straße 2, 38126 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "marienkaefer"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "marienkaefer"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Marienkäfer."
     },
     {
@@ -2882,14 +2306,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "netzwerk_naechstenliebe",
         "spatz_21"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Netzwerk Nächstenliebe."
     },
     {
@@ -2899,17 +2319,8 @@
       "specialty": "kita",
       "address": "Braunstraße 22, 38122 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "sonnenschein"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "sonnenschein"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Sonnenschein."
     },
     {
@@ -2923,14 +2334,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "hondelage_aussengruppe_dibbesdorf"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -2944,14 +2351,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "alsterplatz"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -2965,14 +2368,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "alsterplatz"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -2986,14 +2385,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "siegmundstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3007,14 +2402,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "hondelage"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3028,14 +2419,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "gliesmarode"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3049,14 +2436,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "riddagshausen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3070,14 +2453,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "peterskamp"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig. Hinweis: schließt zum 31.07.2024"
     },
     {
@@ -3091,14 +2470,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "querum"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3112,14 +2487,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "boecklinstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3133,14 +2504,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "karlstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3154,14 +2521,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "kasernenstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3175,14 +2538,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "gruenewaldstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3196,14 +2555,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "prinzenpark"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3217,14 +2572,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "prinzenpark_aussenstelle_kastanienallee"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3238,14 +2589,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "volkskindergarten"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3259,14 +2606,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "neue_knochenhauerstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3280,14 +2623,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "magnitorwall"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3301,14 +2640,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "leiferde"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3322,14 +2657,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "lindenbergsiedlung"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3343,14 +2674,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "fichtengrund"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3364,14 +2691,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "suedstadt"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3385,14 +2708,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "rautheim"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3406,14 +2725,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "recknitzstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3427,14 +2742,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "christian_friedrich_krull_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3448,14 +2759,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "frankfurter_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3469,14 +2776,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "schwedenheim"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3490,14 +2793,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "madamenweg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3511,14 +2810,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "schoelkestrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3532,14 +2827,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "leibnizplatz"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3553,14 +2844,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "gartenstadt"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3574,14 +2861,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "dorothea_erxleben_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3595,14 +2878,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "schoelkestrasse_aussengruppe_oelper"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3616,14 +2895,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "lamme"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3637,14 +2912,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "ruehme"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3658,14 +2929,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "pfaelzerstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3679,14 +2946,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "stadt_braunschweig",
         "schuntersiedlung"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Stadt Braunschweig."
     },
     {
@@ -3696,17 +2959,8 @@
       "specialty": "kita",
       "address": "Alter Weg 8, 38124 Braunschweig",
       "hours": "Unknown",
-      "tags": [
-        "kita",
-        "kindertagesstaette",
-        "familie",
-        "braunschweig",
-        "sterntaler"
-      ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "tags": ["kita", "kindertagesstaette", "familie", "sterntaler"],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Sterntaler."
     },
     {
@@ -3720,14 +2974,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "sterntaler",
         "morgenstern"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Sterntaler."
     },
     {
@@ -3741,14 +2991,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "studentenwerk",
         "kita_zwerge"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Studentenwerk."
     },
     {
@@ -3762,14 +3008,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "studentenwerk",
         "spatzennest"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Studentenwerk."
     },
     {
@@ -3783,14 +3025,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "rumpelstilzchen_e_v"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3804,14 +3042,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "meerkatzen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3825,14 +3059,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "bevenroder_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3846,14 +3076,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "waldgruppen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3867,14 +3093,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "husarenstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3888,14 +3110,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "kleine_riesen"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3909,14 +3127,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "kurt_schumacher_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3930,14 +3144,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "bimbambule"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3951,14 +3161,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "am_grasplatz"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3972,14 +3178,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "daimlerstrasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -3993,14 +3195,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "till_eulenspiegel",
         "hopfengarten"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Till Eulenspiegel."
     },
     {
@@ -4014,14 +3212,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "waldkindergarten_bs_e_v",
         "waldkindergarten_bs"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Waldkindergarten BS e.V.."
     },
     {
@@ -4035,14 +3229,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "waldorfkindergarten",
         "am_giersberg"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Waldorfkindergarten."
     },
     {
@@ -4056,14 +3246,10 @@
         "kita",
         "kindertagesstaette",
         "familie",
-        "braunschweig",
         "waldorfkindergarten",
         "rudolf_steiner_strasse"
       ],
-      "eligibility": [
-        "children_0_6",
-        "families"
-      ],
+      "eligibility": ["children_0_6", "families"],
       "description": "Kindertagesstaette in Braunschweig. Traeger: Waldorfkindergarten."
     },
     {
@@ -4078,15 +3264,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "awo_kreisverband_braunschweig",
         "kinder_und_jugendtreff_im_bebelhof"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
     },
     {
@@ -4101,15 +3282,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "awo_kreisverband_braunschweig",
         "kinder_und_jugendzentrum_broitzem_schiene"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
     },
     {
@@ -4124,15 +3300,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "awo_kreisverband_braunschweig",
         "kinder_und_jugendtreff_geitelde"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: AWO, Kreisverband Braunschweig."
     },
     {
@@ -4147,15 +3318,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "bethanien_diakonissen_stiftung",
         "kinder_und_jugendzentrum_kreuzstrasse"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Bethanien Diakonissen Stiftung."
     },
     {
@@ -4170,15 +3336,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "bund_der_deutschen_katholischen_jugend_bdkj",
         "akki_aktivspielplatz_schwarzer_berg"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Bund der Deutschen Katholischen Jugend (BDKJ)."
     },
     {
@@ -4193,15 +3354,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "der_paritaetische_braunschweig",
         "kinder_und_jugendzentrum_lamme"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: DER PARITÄTISCHE Braunschweig."
     },
     {
@@ -4216,15 +3372,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "drk_braunschweig",
         "kinder_und_jugendzentrum_wenden"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: DRK Braunschweig."
     },
     {
@@ -4239,15 +3390,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_luth_kircheng_riddagsh_gliesmarode",
         "kinder_und_jugendzentrum_gliesmarode"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kircheng. Riddagsh. -Gliesmarode."
     },
     {
@@ -4262,15 +3408,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_luth_kircheng_riddagsh_gliesmarode",
         "aktivspielplatz_gliesmarode"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kircheng. Riddagsh.-Gliesmarode."
     },
     {
@@ -4285,15 +3426,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_luth_kirchengemeinde_st_magni",
         "kinder_und_jugendzentrum_magni"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Kirchengemeinde St. Magni."
     },
     {
@@ -4308,15 +3444,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_luth_pfarramt_st_johannes",
         "kinder_und_jugendzentrum_hondelage"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Pfarramt St. Johannes."
     },
     {
@@ -4331,15 +3462,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_luth_propstei_braunschweig",
         "kinder_und_jugendzentrum_kiez"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-luth. Propstei Braunschweig."
     },
     {
@@ -4354,15 +3480,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "ev_meth_kirche_e_v",
         "kinder_und_jugendzentrum_kreuzstrasse"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Ev.-meth. Kirche e. V.."
     },
     {
@@ -4377,15 +3498,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "falkenheim_e_v",
         "heinrich_jasper_haus"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Falkenheim e. V.."
     },
     {
@@ -4400,15 +3516,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "jugendzentrum_stoeckheim_e_v",
         "jugendzentrum_stoeckheim"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
     },
     {
@@ -4423,15 +3534,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "jugendzentrum_stoeckheim_e_v",
         "kinder_und_jugendzentrum_in_der_grundschule"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
     },
     {
@@ -4446,15 +3552,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "jugendzentrum_stoeckheim_e_v",
         "kinder_und_jugendtreff_leiferde"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Jugendzentrum Stöckheim e. V.."
     },
     {
@@ -4469,15 +3570,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "pptz_e_v_paedagogisch_psychologisches_therapie_zentrum",
         "kinder_und_jugendzentrum_drachenflug"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: PPTZ e. V. (Pädagogisch-Psychologisches Therapie-Zentrum)."
     },
     {
@@ -4492,15 +3588,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_muehle"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4515,15 +3606,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_b_58"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4538,15 +3624,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_selam"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4561,15 +3642,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_heidberg"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4584,15 +3660,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_rueningen"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4607,15 +3678,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "spielstube_hebbelstrasse"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4630,15 +3696,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_rotation"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4653,15 +3714,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_turm"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4676,15 +3732,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_ruehme"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4699,15 +3750,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "jugendtreff_waggum"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4722,15 +3768,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "jugendzentrum_querum"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4745,15 +3786,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendtreff_rautheim"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4768,15 +3804,10 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "stadt_bs",
         "kinder_und_jugendzentrum_roxy"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Stadt BS."
     },
     {
@@ -4791,16 +3822,2661 @@
         "kinder",
         "teenager",
         "freizeit",
-        "braunschweig",
         "verein_zur_foerderung_der_offenen_kinder_und_jugendarbeit_in_melverode_e_v",
         "abenteuerspielplatz_melverode"
       ],
-      "eligibility": [
-        "children",
-        "teens",
-        "families"
-      ],
+      "eligibility": ["children", "teens", "families"],
       "description": "Kinder- und Jugendzentrum in Braunschweig. Traeger: Verein zur Förderung der offenen Kinder- und Jugendarbeit in Melverode e. V.."
+    },
+    {
+      "name": "ambet - ambulante Betreuung hilfs- und pflegebedürftiger Menschen e. V.",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Triftweg 73, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "ambet",
+        "ambulante",
+        "betreuung",
+        "hilfs",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "ambet - ambulante Betreuung hilfs- und pflegebedürftiger Menschen e. V. - Sozialstation",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Saarplatz 1, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "ambet",
+        "ambulante",
+        "betreuung",
+        "hilfs",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Arbeiter-Samariter-Bund - Regionalverband Braunschweiger Land",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Sudetenstraße 11, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "arbeiter",
+        "samariter",
+        "bund",
+        "regionalverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Arbeiterwohlfahrt (AWO) - Bezirksverband e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Marie-Juchacz-Platz 7, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "arbeiterwohlfahrt",
+        "awo",
+        "bezirksverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Arbeiterwohlfahrt (AWO) - Kreisverband Braunschweig e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Schloßstraße 8, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "arbeiterwohlfahrt",
+        "awo",
+        "kreisverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "auris - Stadt- und Regionalverband der Hörgeschädigten Braunschweig e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Güldenstraße 19, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "auris",
+        "stadt",
+        "und",
+        "regionalverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Bahnhofsmission",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Willy-Brandt-Platz 1, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "bahnhofsmission",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Beratung für Familien, Erziehende und junge Menschen e. V. (BEJ)",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Domplatz 4, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "fuer",
+        "familien",
+        "erziehende",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Beratung für Familien, Erziehende und junge Menschen e. V. (BEJ) - Erziehungsberatung Jasperallee",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Jasperallee 44, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "fuer",
+        "familien",
+        "erziehende",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Beratungsstelle Achtung!Leben - NETZWERK NÄCHSTENLIEBE e.V. - im Familienzentrum SPATZ 21",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Spatzenstieg 21, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "beratungsstelle",
+        "achtung",
+        "leben",
+        "netzwerk",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "Bildungsvereinigung ARBEIT UND LEBEN Niedersachsen Ost gGmbH",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Bohlweg 55, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "bildungsvereinigung",
+        "arbeit",
+        "und",
+        "leben",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Braunschweiger AIDS-Hilfe e. V.",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Eulenstraße 5, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "braunschweiger",
+        "aids",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Braunschweiger Büro für Leichte Sprache",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Fabrikstraße 1F, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "braunschweiger",
+        "buero",
+        "fuer",
+        "leichte",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "braunschweiger forum - Verein zur Förderung bürgernaher Stadtplanung e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Spitzwegstraße 33, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "braunschweiger",
+        "forum",
+        "verein",
+        "zur",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Braunschweiger Tafel e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Goslarsche Straße 93, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "braunschweiger",
+        "tafel",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Bundesverband evang. Behindertenhilfe e. V. (BeB) - \"Mit uns\" Ev.-luth. Pfarrstelle für Menschen mit geistiger Behinderung",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Recknitzstraße 13, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "bundesverband",
+        "evang",
+        "behindertenhilfe",
+        "beb",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Caritasverband Braunschweig e. V. und Sozialstation",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Kasernenstraße 30, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "caritasverband",
+        "und",
+        "sozialstation",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Christlicher Verein Junger Menschen (CVJM) Braunschweig e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Wollmarkt 9-11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "christlicher",
+        "verein",
+        "junger",
+        "menschen",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "CURA e. V., Anlaufstelle für Straffällige",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Münzstraße 5, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "cura",
+        "anlaufstelle",
+        "fuer",
+        "straffaellige",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "DEKRA Akademie Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Frankfurter Straße 226, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "dekra", "akademie", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Der Weg e. V. - Verein für gemeindenahe sozialpsychiatrische Hilfen",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Bruchtorwall 9-11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "der",
+        "weg",
+        "verein",
+        "fuer",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsche Lebens-Rettungs-Gesellschaft e. V. (DLRG) - Ortsgruppe Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Friedrich-Kreiß-Weg 7, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsche",
+        "lebens",
+        "rettungs",
+        "gesellschaft",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsche Multiple-Sklerose-Gesellschaft (DMSG) - Beratungsstelle Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Juliusstraße 2, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "frau",
+        "beckner",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutscher Kinderschutzbund e. V. - Ortsverband Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Hinter der Magnikirche 6A, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutscher",
+        "kinderschutzbund",
+        "ortsverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutscher Schwerhörigenbund e. V. - Ortsverein Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Ederweg 7, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutscher",
+        "schwerhoerigenbund",
+        "ortsverein",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - BETA - BETA Beratungsstelle für Eltern in Trennungssituationen und Alleinerziehende",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Neustadtring 30 A, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "beta",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Erste Hilfe-Ausbildung",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Am Hauptgüterbahnhof 26, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "erste",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Jugendrotkreuz (JRK)",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "An der Neustadtmühle 3, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "jugendrotkreuz",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Schuldnerberatung",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Münzstraße 16, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "schuldnerberatung",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Sozialstation Braunschweig - Pflege und Betreuung gGmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Am Queckenberg 1, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "sozialstation",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Sprungbrett gGmbH - Sprungbrett & DRK-KaufBar",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Helmstedter Straße 135, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "sprungbrett",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsches Rotes Kreuz - Kreisverband Braunschweig-Salzgitter e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Adolfstraße 20, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "deutsches",
+        "rotes",
+        "kreuz",
+        "kreisverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Diakonie im Braunschweiger Land gemeinnützige GmbH",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Peter-Joseph-Krahe-Straße 11, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "diakonie",
+        "braunschweiger",
+        "land",
+        "gemeinnuetzige",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Diakoniestationen Harz-Heide gemeinnützige GmbH",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Lange Straße 33-34, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "diakoniestationen",
+        "harz",
+        "heide",
+        "gemeinnuetzige",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Diakonische Gesellschaft Wohnen und Beraten mbH - Die Wohnungsnotfallhilfe in der Region Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Münchenstraße 11, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "diakonische",
+        "gesellschaft",
+        "wohnen",
+        "und",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Ehe-, Familien- und Lebensberatung (kath.)",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Ägidienmarkt 11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "ehe",
+        "familien",
+        "und",
+        "lebensberatung",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Ev. Ehe-, Lebens- und Krisenberatung in Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Parkstraße 8 A, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "ehe",
+        "lebens",
+        "und",
+        "krisenberatung",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Evangelische Frauenhilfe, Landesverband Braunschweig e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Dietrich-Bonhoeffer-Straße 1, 38300 Wolfenbüttel",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "evangelische",
+        "frauenhilfe",
+        "landesverband",
+        "wolfenbuettel",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Wolfenbüttel."
+    },
+    {
+      "name": "Familienzentrum Spatz 21 - NETZWERK NÄCHSTENLIEBE e.V.",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Spatzenstieg 21, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "familienzentrum",
+        "spatz",
+        "netzwerk",
+        "naechstenliebe",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "FamS - Zentrales Familien-Service-Büro Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Brabandtstraße 5, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "fams",
+        "zentrales",
+        "familien",
+        "service",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Flüchtlingshilfe e. V. Braunschweig \"Refugium\"",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Steinweg 5, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "fluechtlingshilfe",
+        "refugium",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Fontäne - Bildungs- und Informationszentrum e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Poststraße 11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "fontaene",
+        "bildungs",
+        "und",
+        "informationszentrum",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Förderverein \"Camiri\" e. V. - c/o Michael Czech",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Franke-und-Heidecke-Straße 7, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "foerderverein",
+        "camiri",
+        "michael",
+        "czech",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Frauenberatungsstelle",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Steinweg 4, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "frauenberatungsstelle",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Frauenhaus Braunschweig - AWO Kreisverband Braunschweig e.V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Postfach 20 33, 38010 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "frauenhaus",
+        "awo",
+        "kreisverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Haus der Familie GmbH",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Kaiserstraße 48, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "haus",
+        "der",
+        "familie",
+        "gmbh",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Institut für Persönliche Hilfen e. V. (Betreuungsverein)",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Bruchtorwall 9-11, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "institut",
+        "fuer",
+        "persoenliche",
+        "hilfen",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Johanniter-Unfall-Hilfe e. V. - Ortsverband Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Ludwig-Winter-Straße 9, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "johanniter",
+        "unfall",
+        "hilfe",
+        "ortsverband",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Jugend- und Drogenberatung Braunschweig (DROBS)",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Kurt-Schumacher-Straße 26, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "und",
+        "drogenberatung",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "Jugendberatung BiB",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Domplatz 4, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "jugendberatung",
+        "bib",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "Jugendberatung mondo X e. V.",
+      "type": "youth",
+      "category": "family",
+      "specialty": "youth_services",
+      "address": "Paul-Jonas-Meier-Straße 42, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "jugend",
+        "familie",
+        "beratung",
+        "jugendberatung",
+        "mondo",
+        "youth_services"
+      ],
+      "eligibility": ["minors", "teens", "families"],
+      "description": "Youth and family support service. Located in Braunschweig."
+    },
+    {
+      "name": "KIBIS - Kontakt, Information und Beratung im Selbsthilfebereich im Paritätischen Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Kaiserstraße 18, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "kibis",
+        "kontakt",
+        "information",
+        "und",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "KÖKI - Verein zur Förderung körperbehinderter Kinder e.V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Hermann-von-Vechelde-Straße 7, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "koeki",
+        "verein",
+        "zur",
+        "foerderung",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Lebenshilfe Braunschweig - Beratungsstelle",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Kaiserstraße 18, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "lebenshilfe",
+        "beratungsstelle",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Malteser Hilfsdienst e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Berliner Straße 52 f, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "malteser",
+        "hilfsdienst",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Mansfeld-Löbbecke-Stiftung von 1833",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Alte Heerstraße 15 B, 38644 Goslar",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "mansfeld",
+        "loebbecke",
+        "stiftung",
+        "von",
+        "goslar",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Goslar."
+    },
+    {
+      "name": "NETZWERK NÄCHSTENLIEBE e.V. – Schuldnerberatung",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Spatzenstieg 21, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "netzwerk",
+        "naechstenliebe",
+        "schuldnerberatung",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "NKR - Initiative Leben spenden",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Mellendorfer Straße 7-9, 30625 Hannover",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "nkr",
+        "initiative",
+        "leben",
+        "spenden",
+        "hannover",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Hannover."
+    },
+    {
+      "name": "PARITÄTISCHER Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Saarbrückener Straße 50, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "paritaetischer",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "pro familia, Landesverband Niedersachsen e. V. - Beratungsstelle Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Kaiserstraße 18, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "pro",
+        "familia",
+        "landesverband",
+        "niedersachsen",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Seniorenrat Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Kleine Burg 14, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "seniorenrat",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Sozialverband Deutschland e. V. - Sozialberatungszentrum Braunschweig",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Bäckerklint 8, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "sozialverband",
+        "deutschland",
+        "sozialberatungszentrum",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Stadtsportbund Braunschweig e. V.",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Frankfurter Straße 279, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "stadtsportbund",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Volksgesundheitsverein e. V.",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Fallersleber-Tor-Wall 21, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "volksgesundheitsverein",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "wellcome – praktische Hilfe nach der Geburt - Beratungsstelle Achtung!Leben",
+      "type": "public_service",
+      "category": "social",
+      "specialty": "social_support",
+      "address": "Spatzenstieg 21, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "beratung",
+        "unterstuetzung",
+        "sozial",
+        "wellcome",
+        "praktische",
+        "hilfe",
+        "nach",
+        "social_support"
+      ],
+      "eligibility": ["all_residents", "vulnerable_groups"],
+      "description": "Social support and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Augenklinik Dr. Hoffmann - Gemeinschaftspraxis Dr. D. Genée, Dr. U. Weigmann",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Wolfenbütteler Straße 82, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "augenklinik",
+        "hoffmann",
+        "gemeinschaftspraxis",
+        "genee",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Klinik am Zuckerberg GmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Zuckerbergweg 2, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "klinik",
+        "zuckerberg",
+        "gmbh",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Kliniken Herzogin-Elisabeth-Hospital",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Leipziger Straße 24, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "kliniken",
+        "herzogin",
+        "elisabeth",
+        "hospital",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Klinikum Braunschweig gGmbH - Hauptverwaltung",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Freisestraße 9-10, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "klinikum",
+        "ggmbh",
+        "hauptverwaltung",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Klinikum Braunschweig gGmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Celler Straße 38, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "klinikum",
+        "ggmbh",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Klinikum Braunschweig gGmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Salzdahlumer Straße 90, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "klinikum",
+        "ggmbh",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Krankenhaus Marienstift gGmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Helmstedter Straße 35, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "krankenhaus",
+        "marienstift",
+        "ggmbh",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Venenzentrum Braunschweig - Fachklinik für Diagnostik und Therapie von Gefäßerkrankungen GmbH",
+      "type": "healthcare",
+      "category": "health",
+      "specialty": "health_support",
+      "address": "Zuckerbergweg 2, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "gesundheit",
+        "hilfe",
+        "beratung",
+        "venenzentrum",
+        "fachklinik",
+        "fuer",
+        "health_support"
+      ],
+      "eligibility": ["all_residents"],
+      "description": "Healthcare and counseling service. Located in Braunschweig."
+    },
+    {
+      "name": "Abendgymnasium",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Wolfenbütteler Straße 57, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "abendgymnasium", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Braunschweig-Kolleg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Wolfenbütteler Straße 57, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "kolleg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Astrid-Lindgren-Schule, FöS L - Astrid-Lindgren-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Tostmannplatz 9, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "astrid",
+        "lindgren",
+        "foes",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Hans-Würtz-Schule, FöS KME - Hans-Würtz-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kruppstraße 24a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "hans",
+        "wuertz",
+        "foes",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Landesbildungszentrum für Hörgeschädigte Braunschweig, FöS H",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Charlottenhöhe 44, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "landesbildungszentrum",
+        "fuer",
+        "hoergeschaedigte",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Lotte-Lemke-Schule, FöS ESE",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Marie-Juchacz-Platz 9, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "lotte",
+        "lemke",
+        "foes",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Oswald-Berkhan-Schule, FöS GE - Oswald-Berkhan-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Oswald-Berkhan-Straße 4, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "oswald",
+        "berkhan",
+        "foes",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Remenhof-Schule, FöS ESE",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Berliner Heerstraße 39, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "remenhof",
+        "foes",
+        "ese",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Christliche Schule Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Steinriedendamm 40, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "christliche", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Freie Schule Braunschweig e.V.",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Herzogin-Elisabeth-Straße 85, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "freie", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Am Schwarzen Berge",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Am Schwarzen Berge 73, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "schwarzen",
+        "berge",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Bebelhof",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kruppstraße 24a, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "bebelhof", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Bebelhof",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kruppstraße 24a, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "bebelhof", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Broitzem",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Große Grubestraße 30, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "broitzem", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Bültenweg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Bültenweg 9, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "bueltenweg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Bürgerstraße - Grundschule Bürgerstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Bürgerstraße 2, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "buergerstrasse",
+        "grundschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Comeniusstraße - Grundschule Comeniusstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Comeniusstraße 11, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "comeniusstrasse",
+        "grundschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Diesterwegstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Diesterwegstraße 7, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "diesterwegstrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Edith Stein - GS Edith-Stein",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Friesenstraße 50, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "edith", "stein", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Gartenstadt",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Achtermannstraße 1, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "gartenstadt", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Gliesmarode",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Paul-Jonas-Meier-Straße 28, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "gliesmarode", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Heidberg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Dresdenstraße 139, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "heidberg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Heidberg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Altmühlstraße 21, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "heidberg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Heinrichstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Heinrichstraße 30, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "heinrichstrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Hinter der Masch und Außenstelle (ehemals GS St. Josef) - GS Hinter der Masch",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Hinter der Masch 18, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "hinter",
+        "der",
+        "masch",
+        "und",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Hohestieg - Grundschule Hohestieg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Hohestieg 2, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "hohestieg",
+        "grundschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Hondelage",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "In den Heistern 1, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "hondelage", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Ilmenaustraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Ilmenaustraße 29, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "ilmenaustrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Isoldestraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Isoldestraße 60, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "isoldestrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Klint",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Klint 26, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "klint", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Lamme",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Lammer Heide 9, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "lamme", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Lehndorf",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Saarplatz 2, 38116 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "lehndorf", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Lindenberg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Bunsenstraße 22, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "lindenberg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Mascheroder Holz",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Retemeyerstraße 15, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "mascheroder",
+        "holz",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Melverode",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Görlitzstraße 9, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "melverode", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Querum",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Eichhahnweg 1, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "querum", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Rautheim",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Schulstraße 7, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "rautheim", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Rheinring",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Rheinring 10, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "rheinring", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Rühme",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Eichenstieg 6, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "ruehme", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Schölkestraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Schölkestraße 10, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "schoelkestrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Schunteraue",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Albert-Schweitzer-Straße 10, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "schunteraue", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Stöckheim",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Rüninger Weg 11, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "stoeckheim", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Timmerlah",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Schülerweg 1, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "timmerlah", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Veltenhof",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Pfälzer Straße 34, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "veltenhof", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Völkenrode/Watenbüttel - GS Völkenrode",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Peiner Straße 124, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "voelkenrode",
+        "watenbuettel",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Volkmarode",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Unterdorf 24, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "volkmarode", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Waggum",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Claudiusstraße 1, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "waggum", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GS Wenden",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Heideblick 18, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "wenden", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Hans-Georg-Karg-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "St. Leonhard 5, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "hans",
+        "georg",
+        "karg",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "CJD-Gymnasium",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Georg-Westermann-Allee 76, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "cjd", "gymnasium", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gaußschule Gymnasium am Löwenwall - Gaußschule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Löwenwall 18a, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gaussschule",
+        "gymnasium",
+        "loewenwall",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gymnasium Hoffmann-v.-Fallersleben-Schule - Gymnasium Hoffmann-von-Fallersleben-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Sackring 15, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gymnasium",
+        "hoffmann",
+        "fallersleben",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gymnasium Kleine Burg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kleine Burg 5, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gymnasium",
+        "kleine",
+        "burg",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gymnasium Martino-Katharineum",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Breite Straße 3, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gymnasium",
+        "martino",
+        "katharineum",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gymnasium Raabeschule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Stettinstraße 1, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gymnasium",
+        "raabeschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Gymnasium Ricarda-Huch-Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Mendelssohnstraße 6, 38106 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "gymnasium",
+        "ricarda",
+        "huch",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Lessinggymnasium",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Heideblick 20, 38110 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "lessinggymnasium", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Wilhelm-Gymnasium",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Leonhardstraße 63, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "wilhelm",
+        "gymnasium",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "DAA Braunschweig Fachschule für Sozialpädagogik (Ersatzschule)",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Julius-Konegen-Straße 24a, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "daa",
+        "fachschule",
+        "fuer",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Deutsche Müllerschule Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Salzdahlumer Straße 85, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "deutsche",
+        "muellerschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Dr. von Morgenstern Schulen",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Freisestraße 14, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "von",
+        "morgenstern",
+        "schulen",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Heinrich-Büssing-Schule, Berufsbildende Schulen Technik Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Salzdahlumer Straße 85, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "heinrich",
+        "buessing",
+        "berufsbildende",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Helene-Engelbrecht-Schule, Berufsbildende Schulen Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Salzdahlumer Straße 84, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "helene",
+        "engelbrecht",
+        "berufsbildende",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Johannes-Selenka-Schule, Berufsbildende Schulen Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Inselwall 1a, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "johannes",
+        "selenka",
+        "berufsbildende",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Martha-Fuchs-Schule, Berufsbildende Schulen der Stadt Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kastanienallee 71, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "martha",
+        "fuchs",
+        "berufsbildende",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Oskar Kämmer Schule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Heinrich-Büssing-Ring 41 A, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "oskar", "kaemmer", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Otto-Bennemann-Schule, Berufsbildende Schulen Wirtschaft und Verwaltung Braunschweig",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Alte Waage 2-3, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "otto",
+        "bennemann",
+        "berufsbildende",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Technikakademie der Stadt Braunschweig, Berufsbildende Schule, Fachschule für Technik",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Kastanienallee 71, 38102 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "technikakademie",
+        "der",
+        "stadt",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "TEUTLOFF Technische Akademie gGmbH",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Frankfurter Straße 254, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "teutloff",
+        "technische",
+        "akademie",
+        "ggmbh",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Freie Waldorfschule Braunschweig e.V.",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Rudolf-Steiner-Straße 2, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "grundschule",
+        "integrierte",
+        "gesamtschule",
+        "foerderschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GHS Pestalozzistraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Pestalozzistraße 18, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "grundschule",
+        "hauptschule",
+        "ghs",
+        "pestalozzistrasse",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "GHS Rüningen",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Thiedestraße 24a, 38122 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "ghs", "rueningen", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "HS Sophienstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Sophienstraße 17, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "sophienstrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "IGS Franzsches Feld",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Grünewaldstraße 12, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "igs",
+        "franzsches",
+        "feld",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "IGS Heidberg",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Stettinstraße 1, 38124 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "igs", "heidberg", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "IGS Querum",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Essener Straße 85, 38108 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "igs", "querum", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Sally-Perel-Gesamtschule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Seikenkamp 10a, 38104 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "sally",
+        "perel",
+        "gesamtschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Wilhelm-Bracke-Gesamtschule - IGS Wilhelm-Bracke-Gesamtschule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Rheinring 12, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "wilhelm",
+        "bracke",
+        "gesamtschule",
+        "igs",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "International School",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Helmstedter Straße 37, 38126 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "grundschule",
+        "integrierte",
+        "gesamtschule",
+        "internationale",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "Nibelungen-Realschule",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Ortwinstraße 2, 38112 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "nibelungen",
+        "realschule",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "RS Georg-Eckert-Straße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Georg-Eckert-Straße 1, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "georg",
+        "eckert",
+        "strasse",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "RS John-F.-Kennedy-Platz - RS J.-F.-Kennedy-Platz",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "John-F.-Kennedy-Platz 1, 38100 Braunschweig",
+      "hours": "Unknown",
+      "tags": [
+        "bildung",
+        "schule",
+        "lernen",
+        "john",
+        "kennedy",
+        "platz",
+        "education"
+      ],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "RS LebenLernen®",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Moselstraße 17, 38120 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "lebenlernen", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "RS Maschstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Maschstraße 41, 38114 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "maschstrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
+    },
+    {
+      "name": "RS Sidonienstraße",
+      "type": "public_service",
+      "category": "education",
+      "specialty": "education",
+      "address": "Sidonienstraße 3, 38118 Braunschweig",
+      "hours": "Unknown",
+      "tags": ["bildung", "schule", "lernen", "sidonienstrasse", "education"],
+      "eligibility": ["students"],
+      "description": "Educational institution and learning service. Located in Braunschweig."
     }
   ]
 }
