@@ -141,7 +141,7 @@
         <h2 class="section-title" data-i18n="emergency.title">Who to call in case of emergency</h2>
       </div>
 
-      <div class="card card-stack">
+      <div class="card card-stack results-card--muted">
         <ul class="card-copy" style="margin:0; padding:0; list-style:none;">
           <li data-i18n-html="emergency.police">Police — <strong>110</strong></li>
           <li data-i18n-html="emergency.fire" style="color: var(--color-text-muted); font-size: var(--text-sm);">Fire
@@ -419,24 +419,9 @@
       );
 
       try {
-        const response = await CareCompassUI.withGlobalLoader(async () => {
-          return await fetch("./services", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              query: q || undefined,
-              zip: zip || undefined
-            })
-          });
+        const data = await CareCompassUI.withGlobalLoader(async () => {
+          return await searchDirectoryServices(q, zip);
         }, { message: t("results.searching_sub"), delayMs: 320 });
-
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
-        }
-
-        const data = await response.json();
         const results = Array.isArray(data?.results) ? data.results : [];
 
         if (results.length === 0) {
@@ -448,13 +433,14 @@
         }
 
         resultsContainer.innerHTML = results.map(service => `
-          <article class="card card-stack">
+          <article class="card card-stack results-card--muted">
             <h3 class="card-title">${escapeHtml(service?.name || t("results.unnamed"))}</h3>
             ${renderMetaStack([
-          service?.address || t("results.no_address"),
-          service?.hours || t("results.no_hours"),
-          service?.specialty || ""
-        ])}
+              service?.address || t("results.no_address"),
+              service?.hours || t("results.no_hours"),
+              service?.specialty || "",
+              service?.description || ""
+            ])}
           </article>
         `).join("");
       } catch (error) {
