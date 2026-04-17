@@ -799,11 +799,13 @@
       });
 
       try {
-        const res = await fetch("http://localhost:3000/assess", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+        const res = await CareCompassUI.withGlobalLoader(async () => {
+          return await fetch("http://localhost:3000/assess", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+        }, { message: "Matching local services...", delayMs: 320 });
 
         const result = await res.json();
 

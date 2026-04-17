@@ -1249,7 +1249,9 @@
       setSubmittingState(true);
 
       try {
-        const response = await saveToBackend(payload);
+        const response = await CareCompassUI.withGlobalLoader(async () => {
+          return await saveToBackend(payload);
+        }, { message: "Submitting service listing...", delayMs: 320 });
         const savedService = response && response.service ? response.service : payload;
         rememberSubmittedService(savedService);
         renderPreview(savedService);
