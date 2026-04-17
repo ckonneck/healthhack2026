@@ -55,7 +55,7 @@ async function getEmbedding(text) {
   }
 
   const res = await client.embeddings.create({
-    model: "text-embedding-3-small",
+    model: "text-embedding-3-large",
     input: text
   });
 
