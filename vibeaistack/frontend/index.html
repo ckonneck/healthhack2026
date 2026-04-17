@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +19,7 @@
       border-radius: 999px;
       padding: 3px;
       gap: 2px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .lang-toggle__btn {
@@ -69,14 +70,16 @@
     <section class="panel hero page-section content-width--wide section-shell">
       <div class="hero-content">
         <p class="eyebrow" data-i18n="hero.eyebrow">Care Navigation</p>
-        <h1 class="hero-title" data-i18n="hero.title">Find the right health or community support without the guesswork.</h1>
+        <h1 class="hero-title" data-i18n="hero.title">Find the right health or community support without the guesswork.
+        </h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">
           Start with a guided health check or search the directory directly to review practical
           service options and next steps.
         </p>
         <div class="button-row hero-actions">
           <a class="button button--primary" href="./form.html" data-i18n="hero.cta_primary">Get Guidance</a>
-          <a class="button button--secondary" href="#directory-search" data-i18n="hero.cta_secondary">Search services</a>
+          <a class="button button--secondary" href="#directory-search" data-i18n="hero.cta_secondary">Search
+            services</a>
         </div>
       </div>
     </section>
@@ -93,12 +96,8 @@
       <div class="search-row">
         <div class="field">
           <label class="field-label" for="q" data-i18n="search.label_topic">Search by topic</label>
-          <input
-            id="q"
-            class="field-control"
-            data-i18n-placeholder="search.placeholder_topic"
-            placeholder="Try: counselling, dental clinic, food pantry"
-          />
+          <input id="q" class="field-control" data-i18n-placeholder="search.placeholder_topic"
+            placeholder="Try: counselling, dental clinic, food pantry" />
           <p class="field-hint" data-i18n="search.hint_topic">
             Use simple keywords to explore available health and support services.
           </p>
@@ -106,13 +105,8 @@
 
         <div class="field">
           <label class="field-label" for="zip" data-i18n="search.label_zip">Search by ZIP code</label>
-          <input
-            id="zip"
-            class="field-control"
-            data-i18n-placeholder="search.placeholder_zip"
-            placeholder="e.g. 38100"
-            maxlength="10"
-          />
+          <input id="zip" class="field-control" data-i18n-placeholder="search.placeholder_zip" placeholder="e.g. 38100"
+            maxlength="10" />
           <p class="field-hint" data-i18n="search.hint_zip">
             Browse services available near your location.
           </p>
@@ -150,13 +144,21 @@
       <div class="card card-stack">
         <ul class="card-copy" style="margin:0; padding:0; list-style:none;">
           <li data-i18n-html="emergency.police">Police — <strong>110</strong></li>
-          <li data-i18n-html="emergency.fire" style="color: var(--color-text-muted); font-size: var(--text-sm);">Fire brigade &amp; ambulance — <strong>112</strong></li>
-          <li style="color: var(--color-text-muted); font-size: var(--text-sm);" data-i18n="emergency.note_112">For life-threatening situations — free, 24/7, any phone.</li>
-          <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
+          <li data-i18n-html="emergency.fire" style="color: var(--color-text-muted); font-size: var(--text-sm);">Fire
+            brigade &amp; ambulance — <strong>112</strong></li>
+          <li style="color: var(--color-text-muted); font-size: var(--text-sm);" data-i18n="emergency.note_112">For
+            life-threatening situations — free, 24/7, any phone.</li>
+          <li>
+            <hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" />
+          </li>
           <li data-i18n-html="emergency.doctor">On-call doctor — <strong>116 117</strong></li>
-          <li style="color: var(--color-text-muted); font-size: var(--text-sm);" data-i18n="emergency.note_doctor">Urgent but not life-threatening — evenings and weekends.</li>
-          <li><hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" /></li>
-          <li data-i18n-html="emergency.emotional">Emotional support — <strong>0800 111 0 111</strong> or <strong>0800 111 0 222</strong></li>
+          <li style="color: var(--color-text-muted); font-size: var(--text-sm);" data-i18n="emergency.note_doctor">
+            Urgent but not life-threatening — evenings and weekends.</li>
+          <li>
+            <hr style="border:none; border-top:1px solid var(--color-border); margin: 1.5rem 0;" />
+          </li>
+          <li data-i18n-html="emergency.emotional">Emotional support — <strong>0800 111 0 111</strong> or <strong>0800
+              111 0 222</strong></li>
           <li data-i18n-html="emergency.violence">Violence against women — <strong>0800 0116 016</strong></li>
           <li data-i18n-html="emergency.children">Children &amp; youth helpline — <strong>0800 111 0 333</strong></li>
           <li data-i18n-html="emergency.police_bs">Police Braunschweig (non-urgent) — <strong>0531 476-0</strong></li>
@@ -172,107 +174,107 @@
   <script>
     const TRANSLATIONS = {
       en: {
-        "hero.eyebrow":             "Care Navigation",
-        "hero.title":               "Find the right health or community support without the guesswork.",
-        "hero.subtitle":            "Start with a guided health check or search the directory directly to review practical service options and next steps.",
-        "hero.cta_primary":         "Get Guidance",
-        "hero.cta_secondary":       "Search services",
+        "hero.eyebrow": "Care Navigation",
+        "hero.title": "Find the right health or community support without the guesswork.",
+        "hero.subtitle": "Start with a guided health check or search the directory directly to review practical service options and next steps.",
+        "hero.cta_primary": "Get Guidance",
+        "hero.cta_secondary": "Search services",
 
-        "search.eyebrow":           "Directory Search",
-        "search.title":             "Search by need or ZIP code",
-        "search.description":       "Use a keyword like \"urgent care\" or \"food pantry\", or enter a ZIP code — or both.",
-        "search.label_topic":       "Search by topic",
+        "search.eyebrow": "Directory Search",
+        "search.title": "Search by need or ZIP code",
+        "search.description": "Use a keyword like \"urgent care\" or \"food pantry\", or enter a ZIP code — or both.",
+        "search.label_topic": "Search by topic",
         "search.placeholder_topic": "Try: counselling, dental clinic, food pantry",
-        "search.hint_topic":        "Use simple keywords to explore available health and support services.",
-        "search.label_zip":         "Search by ZIP code",
-        "search.placeholder_zip":   "e.g. 38100",
-        "search.hint_zip":          "Browse services available near your location.",
-        "search.button":            "Search",
+        "search.hint_topic": "Use simple keywords to explore available health and support services.",
+        "search.label_zip": "Search by ZIP code",
+        "search.placeholder_zip": "e.g. 38100",
+        "search.hint_zip": "Browse services available near your location.",
+        "search.button": "Search",
 
-        "results.eyebrow":          "Results",
-        "results.title":            "Service matches",
-        "results.description":      "Matching services will appear here with location and availability details when available.",
-        "results.empty_title":      "Start with a search",
-        "results.empty_copy":       "Enter a need, service type, or keyword above to explore available support options.",
-        "results.searching":        "Searching directory",
-        "results.searching_sub":    "Looking for matching services…",
-        "results.no_results":       "No matches found",
-        "results.no_results_sub":   "No services matched that search yet. Try a different term or ZIP code.",
-        "results.enter_term":       "Enter a search term",
-        "results.enter_term_sub":   "Add a topic, service type, or ZIP code to search the directory.",
-        "results.no_address":       "Location details are not available yet.",
-        "results.no_hours":         "Hours are not listed yet.",
-        "results.unnamed":          "Unnamed service",
-        "results.error_title":      "Something went wrong",
-        "results.error_copy":       "The search could not be completed. Please check whether the backend is running and try again.",
+        "results.eyebrow": "Results",
+        "results.title": "Service matches",
+        "results.description": "Matching services will appear here with location and availability details when available.",
+        "results.empty_title": "Start with a search",
+        "results.empty_copy": "Enter a need, service type, or keyword above to explore available support options.",
+        "results.searching": "Searching directory",
+        "results.searching_sub": "Looking for matching services…",
+        "results.no_results": "No matches found",
+        "results.no_results_sub": "No services matched that search yet. Try a different term or ZIP code.",
+        "results.enter_term": "Enter a search term",
+        "results.enter_term_sub": "Add a topic, service type, or ZIP code to search the directory.",
+        "results.no_address": "Location details are not available yet.",
+        "results.no_hours": "Hours are not listed yet.",
+        "results.unnamed": "Unnamed service",
+        "results.error_title": "Something went wrong",
+        "results.error_copy": "The search could not be completed. Please check whether the backend is running and try again.",
 
-        "header.title":             "Health and community help",
-        "header.description":       "Support and services, in one clear place.",
-        "header.fallback":          "Care Compass",
+        "header.title": "Health and community help",
+        "header.description": "Support and services, in one clear place.",
+        "header.fallback": "Care Compass",
 
-        "emergency.eyebrow":        "Emergency & Support",
-        "emergency.title":          "Who to call in case of emergency",
-        "emergency.police":         "Police — <strong>110</strong>",
-        "emergency.fire":           "Fire brigade &amp; ambulance — <strong>112</strong>",
-        "emergency.note_112":       "For life-threatening situations — free, 24/7, any phone.",
-        "emergency.doctor":         "On-call doctor — <strong>116 117</strong>",
-        "emergency.note_doctor":    "Urgent but not life-threatening — evenings and weekends.",
-        "emergency.emotional":      "Emotional support — <strong>0800 111 0 111</strong> or <strong>0800 111 0 222</strong>",
-        "emergency.violence":       "Violence against women — <strong>0800 0116 016</strong>",
-        "emergency.children":       "Children &amp; youth helpline — <strong>0800 111 0 333</strong>",
-        "emergency.police_bs":      "Police Braunschweig (non-urgent) — <strong>0531 476-0</strong>"
+        "emergency.eyebrow": "Emergency & Support",
+        "emergency.title": "Who to call in case of emergency",
+        "emergency.police": "Police — <strong>110</strong>",
+        "emergency.fire": "Fire brigade &amp; ambulance — <strong>112</strong>",
+        "emergency.note_112": "For life-threatening situations — free, 24/7, any phone.",
+        "emergency.doctor": "On-call doctor — <strong>116 117</strong>",
+        "emergency.note_doctor": "Urgent but not life-threatening — evenings and weekends.",
+        "emergency.emotional": "Emotional support — <strong>0800 111 0 111</strong> or <strong>0800 111 0 222</strong>",
+        "emergency.violence": "Violence against women — <strong>0800 0116 016</strong>",
+        "emergency.children": "Children &amp; youth helpline — <strong>0800 111 0 333</strong>",
+        "emergency.police_bs": "Police Braunschweig (non-urgent) — <strong>0531 476-0</strong>"
       },
 
       de: {
-        "hero.eyebrow":             "Versorgungsnavigation",
-        "hero.title":               "Das passende Gesundheits- oder Sozialangebot – ohne langes Suchen.",
-        "hero.subtitle":            "Starten Sie mit einer geführten Beratung oder durchsuchen Sie das Verzeichnis direkt, um passende Angebote und nächste Schritte zu finden.",
-        "hero.cta_primary":         "Beratung erhalten",
-        "hero.cta_secondary":       "Angebote durchsuchen",
+        "hero.eyebrow": "Versorgungsnavigation",
+        "hero.title": "Das passende Gesundheits- oder Sozialangebot – ohne langes Suchen.",
+        "hero.subtitle": "Starten Sie mit einer geführten Beratung oder durchsuchen Sie das Verzeichnis direkt, um passende Angebote und nächste Schritte zu finden.",
+        "hero.cta_primary": "Beratung erhalten",
+        "hero.cta_secondary": "Angebote durchsuchen",
 
-        "search.eyebrow":           "Verzeichnissuche",
-        "search.title":             "Nach Bedarf oder Postleitzahl suchen",
-        "search.description":       "Geben Sie einen Begriff wie „Notaufnahme“ oder „Lebensmittelausgabe“ ein, oder eine Postleitzahl – oder beides.",
-        "search.label_topic":       "Nach Thema suchen",
+        "search.eyebrow": "Verzeichnissuche",
+        "search.title": "Nach Bedarf oder Postleitzahl suchen",
+        "search.description": "Geben Sie einen Begriff wie „Notaufnahme“ oder „Lebensmittelausgabe“ ein, oder eine Postleitzahl – oder beides.",
+        "search.label_topic": "Nach Thema suchen",
         "search.placeholder_topic": "z. B. Beratung, Zahnarzt, Lebensmittelausgabe",
-        "search.hint_topic":        "Nutzen Sie einfache Schlagwörter, um Gesundheits- und Sozialangebote zu finden.",
-        "search.label_zip":         "Nach Postleitzahl suchen",
-        "search.placeholder_zip":   "z. B. 38100",
-        "search.hint_zip":          "Angebote in Ihrer Nähe durchsuchen.",
-        "search.button":            "Suchen",
+        "search.hint_topic": "Nutzen Sie einfache Schlagwörter, um Gesundheits- und Sozialangebote zu finden.",
+        "search.label_zip": "Nach Postleitzahl suchen",
+        "search.placeholder_zip": "z. B. 38100",
+        "search.hint_zip": "Angebote in Ihrer Nähe durchsuchen.",
+        "search.button": "Suchen",
 
-        "results.eyebrow":          "Ergebnisse",
-        "results.title":            "Passende Angebote",
-        "results.description":      "Gefundene Angebote erscheinen hier mit Standort- und Verfügbarkeitsinfos.",
-        "results.empty_title":      "Jetzt suchen",
-        "results.empty_copy":       "Geben Sie oben einen Bedarf, Angebotstyp oder ein Schlagwort ein.",
-        "results.searching":        "Verzeichnis wird durchsucht",
-        "results.searching_sub":    "Passende Angebote werden gesucht…",
-        "results.no_results":       "Keine Treffer",
-        "results.no_results_sub":   "Für diese Suche wurden keine Angebote gefunden. Bitte anderen Begriff oder PLZ versuchen.",
-        "results.enter_term":       "Suchbegriff eingeben",
-        "results.enter_term_sub":   "Thema, Angebotstyp oder Postleitzahl eingeben, um das Verzeichnis zu durchsuchen.",
-        "results.no_address":       "Standortangaben noch nicht verfügbar.",
-        "results.no_hours":         "Öffnungszeiten noch nicht angegeben.",
-        "results.unnamed":          "Unbenanntes Angebot",
-        "results.error_title":      "Etwas ist schiefgelaufen",
-        "results.error_copy":       "Die Suche konnte nicht abgeschlossen werden. Bitte prüfen Sie, ob das Backend läuft, und versuchen Sie es erneut.",
+        "results.eyebrow": "Ergebnisse",
+        "results.title": "Passende Angebote",
+        "results.description": "Gefundene Angebote erscheinen hier mit Standort- und Verfügbarkeitsinfos.",
+        "results.empty_title": "Jetzt suchen",
+        "results.empty_copy": "Geben Sie oben einen Bedarf, Angebotstyp oder ein Schlagwort ein.",
+        "results.searching": "Verzeichnis wird durchsucht",
+        "results.searching_sub": "Passende Angebote werden gesucht…",
+        "results.no_results": "Keine Treffer",
+        "results.no_results_sub": "Für diese Suche wurden keine Angebote gefunden. Bitte anderen Begriff oder PLZ versuchen.",
+        "results.enter_term": "Suchbegriff eingeben",
+        "results.enter_term_sub": "Thema, Angebotstyp oder Postleitzahl eingeben, um das Verzeichnis zu durchsuchen.",
+        "results.no_address": "Standortangaben noch nicht verfügbar.",
+        "results.no_hours": "Öffnungszeiten noch nicht angegeben.",
+        "results.unnamed": "Unbenanntes Angebot",
+        "results.error_title": "Etwas ist schiefgelaufen",
+        "results.error_copy": "Die Suche konnte nicht abgeschlossen werden. Bitte prüfen Sie, ob das Backend läuft, und versuchen Sie es erneut.",
 
-        "header.title":             "Gesundheit und Unterstützung",
-        "header.description":       "Angebote und Hilfe an einem klaren Ort.",
-        "header.fallback":          "Care Compass",
+        "header.title": "Gesundheit und Unterstützung",
+        "header.description": "Angebote und Hilfe an einem klaren Ort.",
+        "header.fallback": "Care Compass",
 
-        "emergency.eyebrow":        "Notfall & Hilfe",
-        "emergency.title":          "Wen Sie im Notfall anrufen",
-        "emergency.police":         "Polizei — <strong>110</strong>",
-        "emergency.fire":           "Feuerwehr &amp; Rettungsdienst — <strong>112</strong>",
-        "emergency.note_112":       "Bei lebensbedrohlichen Situationen – kostenlos, rund um die Uhr, von jedem Telefon.",
-        "emergency.doctor":         "Ärztlicher Bereitschaftsdienst — <strong>116 117</strong>",
-        "emergency.note_doctor":    "Dringend, aber nicht lebensbedrohlich – abends und am Wochenende.",
-        "emergency.emotional":      "Telefonseelsorge — <strong>0800 111 0 111</strong> oder <strong>0800 111 0 222</strong>",
-        "emergency.violence":       "Hilfetelefon Gewalt gegen Frauen — <strong>0800 0116 016</strong>",
-        "emergency.children":       "Kinder- und Jugendtelefon — <strong>0800 111 0 333</strong>",
-        "emergency.police_bs":      "Polizei Braunschweig (kein Notfall) — <strong>0531 476-0</strong>"
+        "emergency.eyebrow": "Notfall & Hilfe",
+        "emergency.title": "Wen Sie im Notfall anrufen",
+        "emergency.police": "Polizei — <strong>110</strong>",
+        "emergency.fire": "Feuerwehr &amp; Rettungsdienst — <strong>112</strong>",
+        "emergency.note_112": "Bei lebensbedrohlichen Situationen – kostenlos, rund um die Uhr, von jedem Telefon.",
+        "emergency.doctor": "Ärztlicher Bereitschaftsdienst — <strong>116 117</strong>",
+        "emergency.note_doctor": "Dringend, aber nicht lebensbedrohlich – abends und am Wochenende.",
+        "emergency.emotional": "Telefonseelsorge — <strong>0800 111 0 111</strong> oder <strong>0800 111 0 222</strong>",
+        "emergency.violence": "Hilfetelefon Gewalt gegen Frauen — <strong>0800 0116 016</strong>",
+        "emergency.children": "Kinder- und Jugendtelefon — <strong>0800 111 0 333</strong>",
+        "emergency.police_bs": "Polizei Braunschweig (kein Notfall) — <strong>0531 476-0</strong>"
       }
     };
 
@@ -417,16 +419,18 @@
       );
 
       try {
-        const response = await fetch("./services", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            query: q || undefined,
-            zip: zip || undefined
-          })
-        });
+        const response = await CareCompassUI.withGlobalLoader(async () => {
+          return await fetch("./services", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              query: q || undefined,
+              zip: zip || undefined
+            })
+          });
+        }, { message: t("results.searching_sub"), delayMs: 320 });
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
@@ -447,10 +451,10 @@
           <article class="card card-stack">
             <h3 class="card-title">${escapeHtml(service?.name || t("results.unnamed"))}</h3>
             ${renderMetaStack([
-              service?.address || t("results.no_address"),
-              service?.hours || t("results.no_hours"),
-              service?.specialty || ""
-            ])}
+          service?.address || t("results.no_address"),
+          service?.hours || t("results.no_hours"),
+          service?.specialty || ""
+        ])}
           </article>
         `).join("");
       } catch (error) {
@@ -482,4 +486,5 @@
     });
   </script>
 </body>
+
 </html>
