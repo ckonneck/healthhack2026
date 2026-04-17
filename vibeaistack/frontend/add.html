@@ -1,83 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Care Compass | Add Entry</title>
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-
+<html>
 <body>
-  <main class="page-shell">
-    <header id="pageHeader" class="page-header"></header>
 
-    <section class="panel page-section content-width--narrow section-shell">
-      <div class="section-header">
-        <p class="eyebrow">Entry Form</p>
-        <h2 class="section-title">Resource details</h2>
-        <p class="section-description">
-          Keep entries concise and clear so people can quickly understand what support is offered.
-        </p>
-      </div>
+<h1>Add Entry</h1>
 
-      <div class="form-grid">
-        <label class="field">
-          <span class="field-label">Entry ID</span>
-          <input id="id" class="field-control" placeholder="clinic-001" />
-        </label>
+<input id="id" placeholder="id" />
+<input id="title" placeholder="title" />
+<input id="info" placeholder="info" />
+<textarea id="details" placeholder="details"></textarea>
 
-        <label class="field">
-          <span class="field-label">Title</span>
-          <input id="title" class="field-control" placeholder="Downtown Community Clinic" />
-        </label>
+<button onclick="save()">Save</button>
 
-        <label class="field">
-          <span class="field-label">Short info</span>
-          <input id="info" class="field-control" placeholder="Walk-in primary care and health guidance" />
-        </label>
+<script src="/api.js"></script>
 
-        <label class="field">
-          <span class="field-label">Details</span>
-          <textarea id="details" class="field-control field-control--textarea" placeholder="Add practical details, eligibility notes, or access instructions."></textarea>
-          <p class="field-hint">Helpful details include who the service is for, when it is available, and how to access it.</p>
-        </label>
-      </div>
+<script>
+function save() {
+  const entry = {
+    id: id.value,
+    title: title.value,
+    info: info.value,
+    details: details.value
+  };
 
-      <div class="button-row">
-        <button class="button button--primary" onclick="save()">Save entry</button>
-        <a class="button button--secondary" href="/index.html">Back to search</a>
-      </div>
-    </section>
-  </main>
+  saveToBackend(entry);
+  alert("Saved!");
+  location.href = "/index.html";
+}
+</script>
 
-  <script src="/app.js"></script>
-  <script src="/api.js"></script>
-
-  <script>
-    const pageHeader = document.getElementById("pageHeader");
-    const idInput = document.getElementById("id");
-    const titleInput = document.getElementById("title");
-    const infoInput = document.getElementById("info");
-    const detailsInput = document.getElementById("details");
-
-    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
-      title: "Add or update a directory entry.",
-      description: "Use this form to add a new resource record without changing the rest of the application flow.",
-      currentNav: "add"
-    });
-
-    function save() {
-      const entry = {
-        id: idInput.value,
-        title: titleInput.value,
-        info: infoInput.value,
-        details: detailsInput.value
-      };
-
-      saveToBackend(entry);
-      alert("Saved!");
-      location.href = "/index.html";
-    }
-  </script>
 </body>
 </html>
