@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Care Compass | Entry</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
 <body>
+  <main class="page-shell">
+    <header id="pageHeader" class="page-header"></header>
 
-<div id="content"></div>
+    <section class="panel page-section content-width--narrow section-shell">
+      <div id="content" class="detail-body"></div>
+    </section>
+  </main>
 
-<script src="/data.js"></script>
+  <script src="/app.js"></script>
+  <script src="/data.js"></script>
 
-<script>
-const id = location.hash.replace("#", "");
-const item = getData().find(i => i.id === id);
+  <script>
+    const pageHeader = document.getElementById("pageHeader");
+    const content = document.getElementById("content");
 
-content.innerHTML = item
-  ? `<h1>${item.title}</h1><p>${item.details}</p>`
-  : "Not found";
-</script>
+    pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+      title: "Directory entry details",
+      description: "Review the full entry details stored for this resource.",
+      currentNav: ""
+    });
 
+    const id = location.hash.replace("#", "");
+    const item = getData().find(i => i.id === id);
+
+    content.innerHTML = item
+      ? `
+          <div class="section-header section-header--compact">
+            <p class="eyebrow">Saved Entry</p>
+            <h2 class="section-title">${item.title}</h2>
+          </div>
+          <div class="card card-stack">
+            <p class="detail-copy">${item.details}</p>
+          </div>
+          <a class="button button--secondary" href="/index.html">Back to search</a>
+        `
+      : `
+          ${CareCompassUI.renderEmptyState({
+            title: "Entry not found",
+            message: "We could not find a saved item for this link."
+          })}
+          <a class="button button--secondary" href="/index.html">Back to search</a>
+        `;
+  </script>
 </body>
 </html>
