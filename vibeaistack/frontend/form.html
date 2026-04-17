@@ -69,82 +69,124 @@
     <div class="result-layout">
       <section class="panel page-section content-width--narrow survey-panel">
         <div class="survey-shell">
-          <div id="surveyProgress"></div>
-
-          <p id="surveyMessage" class="survey-message survey-message--helper" aria-live="polite"></p>
-
-          <div class="survey-steps">
-
-            <!-- STEP 1: SITUATION TYPE -->
-            <section class="survey-step" data-step-help="Select what best describes your situation.">
-              <div class="survey-step-header">
-                <h2 class="survey-question">What is your main situation?</h2>
-                <p class="survey-step-copy">
-                  This helps us focus on the right type of support.
-                </p>
-              </div>
-
-              <div id="situationType"></div>
-              <label id="situationCustomField" class="field" hidden style="display:none;">
-                <span class="field-label">Write your own situation</span>
-                <input id="situationCustom" class="field-control" placeholder="Type your situation" />
-              </label>
-              <p id="situationError" class="field-error" hidden></p>
-            </section>
-
-            <!-- STEP 2: LEVEL OF SUPPORT -->
-            <section class="survey-step" data-step-help="This determines the type of services you need.">
-              <div class="survey-step-header">
-                <h2 class="survey-question">How much help do you need?</h2>
-                <p class="survey-step-copy">
-                  Choose the option closest to your situation.
-                </p>
-              </div>
-
-              <div id="supportLevel"></div>
-            </section>
-
-            <!-- STEP 3: URGENCY -->
-            <section class="survey-step" data-step-help="Urgency helps prioritize the most relevant services.">
-              <div class="survey-step-header">
-                <h2 class="survey-question">How urgent is your situation?</h2>
-              </div>
-
-              <div id="urgencyLevel"></div>
-              <p id="urgencyError" class="field-error" hidden></p>
-            </section>
-
-            <!-- STEP 4: BARRIERS -->
-            <section class="survey-step" data-step-help="We adapt recommendations based on your constraints.">
-              <div class="survey-step-header">
-                <h2 class="survey-question">What is your main barrier?</h2>
-              </div>
-
-              <div id="barriers"></div>
-              <label id="barrierCustomField" class="field" hidden style="display:none;">
-                <span class="field-label">Write your own barrier</span>
-                <input id="barrierCustom" class="field-control" placeholder="Type your barrier" />
-              </label>
-            </section>
-
-            <!-- STEP 5: CONTEXT (SOCIOECONOMIC TRIGGER) -->
-            <section class="survey-step" data-step-help="This helps identify additional support needs.">
-              <div class="survey-step-header">
-                <h2 class="survey-question">Are you facing any of these situations?</h2>
-              </div>
-
-              <div id="lifeContext"></div>
-              <label id="contextCustomField" class="field" hidden style="display:none;">
-                <span class="field-label">Write your own life context</span>
-                <input id="contextCustom" class="field-control" placeholder="Type your life context" />
-              </label>
-            </section>
-
+          <div class="survey-mode-toggle" role="radiogroup" aria-label="Guidance mode">
+            <label class="survey-mode-option">
+              <input class="survey-mode-input" type="radio" name="intakeMode" value="default" checked />
+              <span class="survey-mode-chip">Guided questions</span>
+            </label>
+            <label class="survey-mode-option">
+              <input class="survey-mode-input" type="radio" name="intakeMode" value="ai" />
+              <span class="survey-mode-chip">AI prompt mode</span>
+            </label>
           </div>
 
-          <div class="survey-actions">
-            <button id="prevButton" type="button" class="button button--secondary">Previous</button>
-            <button id="nextButton" type="button" class="button button--primary">Continue</button>
+          <div id="defaultSurveyFlow" class="survey-flow">
+            <div id="surveyProgress"></div>
+
+            <p id="surveyMessage" class="survey-message survey-message--helper" aria-live="polite"></p>
+
+            <div class="survey-steps">
+
+              <!-- STEP 1: SITUATION TYPE -->
+              <section class="survey-step" data-step-help="Select what best describes your situation.">
+                <div class="survey-step-header">
+                  <h2 class="survey-question">What is your main situation?</h2>
+                  <p class="survey-step-copy">
+                    This helps us focus on the right type of support.
+                  </p>
+                </div>
+
+                <div id="situationType"></div>
+                <label id="situationCustomField" class="field" hidden style="display:none;">
+                  <span class="field-label">Write your own situation</span>
+                  <input id="situationCustom" class="field-control" placeholder="Type your situation" />
+                </label>
+                <p id="situationError" class="field-error" hidden></p>
+              </section>
+
+              <!-- STEP 2: LEVEL OF SUPPORT -->
+              <section class="survey-step" data-step-help="This determines the type of services you need.">
+                <div class="survey-step-header">
+                  <h2 class="survey-question">How much help do you need?</h2>
+                  <p class="survey-step-copy">
+                    Choose the option closest to your situation.
+                  </p>
+                </div>
+
+                <div id="supportLevel"></div>
+              </section>
+
+              <!-- STEP 3: URGENCY -->
+              <section class="survey-step" data-step-help="Urgency helps prioritize the most relevant services.">
+                <div class="survey-step-header">
+                  <h2 class="survey-question">How urgent is your situation?</h2>
+                </div>
+
+                <div id="urgencyLevel"></div>
+                <p id="urgencyError" class="field-error" hidden></p>
+              </section>
+
+              <!-- STEP 4: BARRIERS -->
+              <section class="survey-step" data-step-help="We adapt recommendations based on your constraints.">
+                <div class="survey-step-header">
+                  <h2 class="survey-question">What is your main barrier?</h2>
+                </div>
+
+                <div id="barriers"></div>
+                <label id="barrierCustomField" class="field" hidden style="display:none;">
+                  <span class="field-label">Write your own barrier</span>
+                  <input id="barrierCustom" class="field-control" placeholder="Type your barrier" />
+                </label>
+              </section>
+
+              <!-- STEP 5: CONTEXT (SOCIOECONOMIC TRIGGER) -->
+              <section class="survey-step" data-step-help="This helps identify additional support needs.">
+                <div class="survey-step-header">
+                  <h2 class="survey-question">Are you facing any of these situations?</h2>
+                </div>
+
+                <div id="lifeContext"></div>
+                <label id="contextCustomField" class="field" hidden style="display:none;">
+                  <span class="field-label">Write your own life context</span>
+                  <input id="contextCustom" class="field-control" placeholder="Type your life context" />
+                </label>
+              </section>
+
+            </div>
+
+            <div class="survey-actions">
+              <button id="prevButton" type="button" class="button button--secondary">Previous</button>
+              <button id="nextButton" type="button" class="button button--primary">Continue</button>
+            </div>
+          </div>
+
+          <div id="aiSurveyFlow" class="survey-flow ai-survey-flow" hidden>
+            <div class="survey-step-header">
+              <h2 class="survey-question">Describe your situation directly</h2>
+              <p class="survey-step-copy">
+                Use AI mode if your context is complex and easier to explain in your own words.
+              </p>
+            </div>
+
+            <label class="field" for="aiPromptInput">
+              <span class="field-label">Your situation prompt</span>
+              <textarea id="aiPromptInput" class="field-control field-control--textarea"
+                placeholder="Write your situation in your own words..."></textarea>
+              <p class="field-hint">
+                Include symptoms, urgency, constraints, and what kind of support you are looking for.
+              </p>
+              <p class="field-hint">
+                Example prompt: "I lost my job two months ago, feel anxious most days, and need low-cost counseling and
+                financial support near Braunschweig."
+              </p>
+              <p id="aiPromptError" class="field-error" hidden></p>
+            </label>
+
+            <div class="survey-actions survey-actions--single">
+              <button id="aiSubmitButton" type="button" class="button button--primary">Find services</button>
+            </div>
+
+            <p id="aiStatusMessage" class="survey-message survey-message--helper" aria-live="polite"></p>
           </div>
         </div>
       </section>
@@ -291,11 +333,18 @@
     });
 
     const surveySteps = Array.from(document.querySelectorAll(".survey-step"));
+    const modeInputs = Array.from(document.querySelectorAll('input[name="intakeMode"]'));
+    const defaultSurveyFlow = document.getElementById("defaultSurveyFlow");
+    const aiSurveyFlow = document.getElementById("aiSurveyFlow");
     const surveyStepLabel = document.getElementById("surveyStepLabel");
     const surveyProgressFill = document.getElementById("surveyProgressFill");
     const surveyMessage = document.getElementById("surveyMessage");
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
+    const aiPromptInput = document.getElementById("aiPromptInput");
+    const aiSubmitButton = document.getElementById("aiSubmitButton");
+    const aiPromptError = document.getElementById("aiPromptError");
+    const aiStatusMessage = document.getElementById("aiStatusMessage");
     const resultsContainer = document.getElementById("result");
     const situationCustomField = document.getElementById("situationCustomField");
     const situationCustomInput = document.getElementById("situationCustom");
@@ -317,13 +366,62 @@
       housing: "Housing"
     };
     const recommendationOrder = ["emergency", "medical", "mental_health", "social_support", "employment_financial", "financial", "housing"];
+    let intakeMode = "default";
     let currentStep = 0;
+    const aiSubmitButtonDefaultLabel = aiSubmitButton ? aiSubmitButton.textContent.trim() : "Find services";
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
 
     function setSurveyMessage(text, variant = "helper") {
       surveyMessage.textContent = text || "";
       surveyMessage.className = `survey-message survey-message--${variant}`;
       surveyMessage.setAttribute("aria-live", variant === "error" ? "assertive" : "polite");
       surveyMessage.setAttribute("role", variant === "error" ? "alert" : "status");
+    }
+
+    function setAiStatusMessage(text, variant = "helper") {
+      aiStatusMessage.textContent = text || "";
+      aiStatusMessage.className = `survey-message survey-message--${variant}`;
+      aiStatusMessage.setAttribute("aria-live", variant === "error" ? "assertive" : "polite");
+      aiStatusMessage.setAttribute("role", variant === "error" ? "alert" : "status");
+    }
+
+    function clearAiPromptError() {
+      aiPromptInput.removeAttribute("aria-invalid");
+      aiPromptError.textContent = "";
+      aiPromptError.hidden = true;
+    }
+
+    function setAiPromptError(message) {
+      aiPromptInput.setAttribute("aria-invalid", "true");
+      aiPromptError.textContent = message;
+      aiPromptError.hidden = false;
+    }
+
+    function setIntakeMode(mode) {
+      intakeMode = mode;
+      const isAiMode = mode === "ai";
+
+      defaultSurveyFlow.hidden = isAiMode;
+      aiSurveyFlow.hidden = !isAiMode;
+      defaultSurveyFlow.style.display = isAiMode ? "none" : "grid";
+      aiSurveyFlow.style.display = isAiMode ? "grid" : "none";
+
+      if (isAiMode) {
+        clearValidationErrors();
+        setAiStatusMessage("Describe your situation and ask AI for guidance.", "helper");
+        aiPromptInput.focus();
+      } else {
+        setAiStatusMessage("");
+        updateSurveyStep();
+      }
     }
 
     function setFieldError(control, errorElement, message) {
@@ -494,6 +592,24 @@
 
       currentStep += 1;
       updateSurveyStep({ focus: true });
+    });
+
+    modeInputs.forEach(input => {
+      input.addEventListener("change", event => {
+        if (!event.target.checked) {
+          return;
+        }
+
+        setIntakeMode(event.target.value);
+      });
+    });
+
+    aiPromptInput.addEventListener("input", () => {
+      clearAiPromptError();
+    });
+
+    aiSubmitButton.addEventListener("click", () => {
+      submitAiPrompt();
     });
 
     situationField.addEventListener("change", event => {
@@ -757,6 +873,78 @@
       `;
     }
 
+    function renderAiModeResults(query, answer, contextUsed = []) {
+      const aiServices = Array.isArray(contextUsed) ? contextUsed : [];
+      const recommendedServices = aiServices.slice(0, 6).map(service => ({
+        groupLabel: "AI match",
+        service: {
+          ...service,
+          name: service?.name || service?.title || "Service option",
+          specialty: service?.specialty || service?.details || ""
+        }
+      }));
+      const secondaryServices = aiServices.slice(6, 10).map(service => ({
+        groupLabel: "AI match",
+        service: {
+          ...service,
+          name: service?.name || service?.title || "Service option",
+          specialty: service?.specialty || service?.details || ""
+        }
+      }));
+      const aiSummaryText = "These recommendations are generated from your prompt and matched against local service data.";
+
+      resultsContainer.innerHTML = renderResultsShell({
+        introTitle: "Services that can help you now",
+        introCopy: "These services match your situation and are prioritized for relevance.",
+        summaryText: aiSummaryText,
+        snapshotEntries: [{ label: "Situation", value: query }],
+        recommendedServices,
+        secondaryServices,
+        fallbackText: "If these results are not the right fit, adjust your prompt and search again."
+      });
+    }
+
+    async function submitAiPrompt() {
+      const query = aiPromptInput.value.trim();
+      clearAiPromptError();
+
+      if (!query) {
+        setAiPromptError("Please enter your situation before sending to AI mode.");
+        setAiStatusMessage("Prompt is required for AI mode.", "error");
+        aiPromptInput.focus();
+        return;
+      }
+
+      aiSubmitButton.disabled = true;
+      aiSubmitButton.textContent = "Matching services...";
+      setAiStatusMessage("Requesting AI guidance for your situation...", "helper");
+
+      try {
+        const response = await CareCompassUI.withGlobalLoader(async () => {
+          return await fetch("http://localhost:3000/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query })
+          });
+        }, { message: "Matching services...", delayMs: 320 });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error("AI request failed.");
+        }
+
+        renderAiModeResults(query, result.answer, result.contextUsed);
+        setAiStatusMessage("Services are ready based on your prompt and local availability.", "helper");
+      } catch (error) {
+        console.error("AI prompt request failed:", error);
+        setAiStatusMessage("AI guidance could not be loaded right now. Please try again.", "error");
+      } finally {
+        aiSubmitButton.disabled = false;
+        aiSubmitButton.textContent = aiSubmitButtonDefaultLabel;
+      }
+    }
+
     async function submitForm() {
       const data = {
         situation: getDecisionValue("situation", situationCustomInput),
@@ -897,6 +1085,7 @@
     toggleCustomField("barrier", barrierCustomField, barrierCustomInput);
     toggleCustomField("context", contextCustomField, contextCustomInput);
 
+    setIntakeMode("default");
     updateSurveyStep();
   </script>
 </body>
