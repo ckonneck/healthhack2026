@@ -206,7 +206,8 @@
         "results.error_title":      "Something went wrong",
         "results.error_copy":       "The search could not be completed. Please check whether the backend is running and try again.",
 
-        "header.title":             "Health and community support, in one clear place.",
+        "header.title":             "Health and community help",
+        "header.description":       "Support and services, in one clear place.",
         "header.fallback":          "Care Compass",
 
         "emergency.eyebrow":        "Emergency & Support",
@@ -257,7 +258,8 @@
         "results.error_title":      "Etwas ist schiefgelaufen",
         "results.error_copy":       "Die Suche konnte nicht abgeschlossen werden. Bitte prüfen Sie, ob das Backend läuft, und versuchen Sie es erneut.",
 
-        "header.title":             "Gesundheits- und Sozialangebote an einem klaren Ort.",
+        "header.title":             "Gesundheit und Unterstützung",
+        "header.description":       "Angebote und Hilfe an einem klaren Ort.",
         "header.fallback":          "Care Compass",
 
         "emergency.eyebrow":        "Notfall & Hilfe",
@@ -375,11 +377,12 @@
       try {
         if (typeof CareCompassUI !== "undefined" && typeof CareCompassUI.renderPageHeader === "function") {
           pageHeader.innerHTML = CareCompassUI.renderPageHeader({
+            eyebrow: t("header.fallback"),
             title: t("header.title"),
+            description: t("header.description"),
             currentNav: "search",
-            compact: true,
             titleTag: "p",
-            titleClass: "site-name"
+            titleClass: "brand-title"
           });
         } else {
           pageHeader.innerHTML = renderSimpleHeader();
